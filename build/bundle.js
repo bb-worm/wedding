@@ -134,14 +134,6 @@ var app = (function () {
     function onMount(fn) {
         get_current_component().$$.on_mount.push(fn);
     }
-    /**
-     * Schedules a callback to run immediately after the component has been updated.
-     *
-     * The first time the callback runs will be after the initial `onMount`
-     */
-    function afterUpdate(fn) {
-        get_current_component().$$.after_update.push(fn);
-    }
 
     const dirty_components = [];
     const binding_callbacks = [];
@@ -1951,26 +1943,26 @@ var app = (function () {
     			t8 = text("\n                저희 두 사람의 새로운 시작을\n                ");
     			br7 = element("br");
     			t9 = text("\n                함께하시어 축복해 주시면 감사하겠습니다.");
-    			attr_dev(span, "class", "title svelte-x5y3w4");
-    			add_location(span, file$b, 18, 4, 442);
-    			attr_dev(div0, "class", "mainImg svelte-x5y3w4");
-    			add_location(div0, file$b, 20, 8, 504);
-    			add_location(br0, file$b, 26, 16, 725);
-    			add_location(br1, file$b, 28, 16, 788);
-    			add_location(br2, file$b, 30, 16, 846);
-    			add_location(br3, file$b, 30, 20, 850);
-    			add_location(br4, file$b, 32, 16, 910);
-    			add_location(br5, file$b, 34, 16, 965);
-    			add_location(br6, file$b, 34, 20, 969);
-    			add_location(br7, file$b, 36, 16, 1023);
+    			attr_dev(span, "class", "title svelte-95mdcb");
+    			add_location(span, file$b, 6, 4, 142);
+    			attr_dev(div0, "class", "mainImg svelte-95mdcb");
+    			add_location(div0, file$b, 8, 8, 204);
+    			add_location(br0, file$b, 14, 16, 425);
+    			add_location(br1, file$b, 16, 16, 488);
+    			add_location(br2, file$b, 18, 16, 546);
+    			add_location(br3, file$b, 18, 20, 550);
+    			add_location(br4, file$b, 20, 16, 610);
+    			add_location(br5, file$b, 22, 16, 665);
+    			add_location(br6, file$b, 22, 20, 669);
+    			add_location(br7, file$b, 24, 16, 723);
     			set_style(p, "margin-bottom", "0px");
-    			add_location(p, file$b, 24, 12, 640);
-    			attr_dev(div1, "class", "mainText svelte-x5y3w4");
-    			add_location(div1, file$b, 23, 8, 605);
-    			attr_dev(div2, "class", "main svelte-x5y3w4");
-    			add_location(div2, file$b, 19, 4, 477);
-    			attr_dev(div3, "class", "greeting svelte-x5y3w4");
-    			add_location(div3, file$b, 17, 0, 395);
+    			add_location(p, file$b, 12, 12, 340);
+    			attr_dev(div1, "class", "mainText svelte-95mdcb");
+    			add_location(div1, file$b, 11, 8, 305);
+    			attr_dev(div2, "class", "main svelte-95mdcb");
+    			add_location(div2, file$b, 7, 4, 177);
+    			attr_dev(div3, "class", "greeting svelte-95mdcb");
+    			add_location(div3, file$b, 5, 0, 115);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2000,7 +1992,6 @@ var app = (function () {
     			append_dev(p, t8);
     			append_dev(p, br7);
     			append_dev(p, t9);
-    			/*div3_binding*/ ctx[4](div3);
     			current = true;
     		},
     		p: noop,
@@ -2016,7 +2007,6 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
     			destroy_component(fa);
-    			/*div3_binding*/ ctx[4](null);
     		}
     	};
 
@@ -2034,78 +2024,20 @@ var app = (function () {
     function instance$b($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Greeting', slots, []);
-    	let { window_top } = $$props;
-    	let { animation } = $$props;
-    	let { offset } = $$props;
-    	let outline;
-
-    	afterUpdate(() => {
-    		if (window_top + offset > outline.offsetTop) {
-    			outline.classList.add(animation);
-    		}
-    	});
-
-    	$$self.$$.on_mount.push(function () {
-    		if (window_top === undefined && !('window_top' in $$props || $$self.$$.bound[$$self.$$.props['window_top']])) {
-    			console.warn("<Greeting> was created without expected prop 'window_top'");
-    		}
-
-    		if (animation === undefined && !('animation' in $$props || $$self.$$.bound[$$self.$$.props['animation']])) {
-    			console.warn("<Greeting> was created without expected prop 'animation'");
-    		}
-
-    		if (offset === undefined && !('offset' in $$props || $$self.$$.bound[$$self.$$.props['offset']])) {
-    			console.warn("<Greeting> was created without expected prop 'offset'");
-    		}
-    	});
-
-    	const writable_props = ['window_top', 'animation', 'offset'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Greeting> was created with unknown prop '${key}'`);
     	});
 
-    	function div3_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			outline = $$value;
-    			$$invalidate(0, outline);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		Fa,
-    		faHeart,
-    		afterUpdate,
-    		window_top,
-    		animation,
-    		offset,
-    		outline
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    		if ('outline' in $$props) $$invalidate(0, outline = $$props.outline);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [outline, window_top, animation, offset, div3_binding];
+    	$$self.$capture_state = () => ({ Fa, faHeart });
+    	return [];
     }
 
     class Greeting extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$b, create_fragment$b, safe_not_equal, { window_top: 1, animation: 2, offset: 3 });
+    		init(this, options, instance$b, create_fragment$b, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2114,59 +2046,36 @@ var app = (function () {
     			id: create_fragment$b.name
     		});
     	}
-
-    	get window_top() {
-    		throw new Error("<Greeting>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set window_top(value) {
-    		throw new Error("<Greeting>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animation() {
-    		throw new Error("<Greeting>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animation(value) {
-    		throw new Error("<Greeting>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get offset() {
-    		throw new Error("<Greeting>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set offset(value) {
-    		throw new Error("<Greeting>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
     }
 
     /* src/calander.svelte generated by Svelte v3.55.1 */
+
     const file$a = "src/calander.svelte";
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[6] = list[i];
+    	child_ctx[1] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
-    	child_ctx[11] = i;
+    	child_ctx[4] = list[i];
+    	child_ctx[6] = i;
     	return child_ctx;
     }
 
-    // (59:8) {:else}
+    // (47:8) {:else}
     function create_else_block$1(ctx) {
     	let td;
-    	let t_value = /*date*/ ctx[9] + "";
+    	let t_value = /*date*/ ctx[4] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			td = element("td");
     			t = text(t_value);
-    			add_location(td, file$a, 59, 20, 1463);
+    			add_location(td, file$a, 47, 20, 1163);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, td, anchor);
@@ -2182,25 +2091,25 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(59:8) {:else}",
+    		source: "(47:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:29) 
+    // (45:29) 
     function create_if_block_2(ctx) {
     	let td;
-    	let t_value = /*date*/ ctx[9] + "";
+    	let t_value = /*date*/ ctx[4] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			td = element("td");
     			t = text(t_value);
-    			attr_dev(td, "class", "saturday svelte-1stwk0t");
-    			add_location(td, file$a, 57, 20, 1396);
+    			attr_dev(td, "class", "saturday svelte-1iikqpu");
+    			add_location(td, file$a, 45, 20, 1096);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, td, anchor);
@@ -2216,25 +2125,25 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(57:29) ",
+    		source: "(45:29) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:29) 
+    // (43:29) 
     function create_if_block_1(ctx) {
     	let td;
-    	let t_value = /*date*/ ctx[9] + "";
+    	let t_value = /*date*/ ctx[4] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			td = element("td");
     			t = text(t_value);
-    			attr_dev(td, "class", "sunday svelte-1stwk0t");
-    			add_location(td, file$a, 55, 20, 1317);
+    			attr_dev(td, "class", "sunday svelte-1iikqpu");
+    			add_location(td, file$a, 43, 20, 1017);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, td, anchor);
@@ -2250,17 +2159,17 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(55:29) ",
+    		source: "(43:29) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:8) {#if date == 22}
+    // (41:8) {#if date == 22}
     function create_if_block$2(ctx) {
     	let td;
-    	let t_value = /*date*/ ctx[9] + "";
+    	let t_value = /*date*/ ctx[4] + "";
     	let t;
 
     	const block = {
@@ -2268,8 +2177,8 @@ var app = (function () {
     			td = element("td");
     			t = text(t_value);
     			attr_dev(td, "id", "d_day");
-    			attr_dev(td, "class", "svelte-1stwk0t");
-    			add_location(td, file$a, 53, 20, 1242);
+    			attr_dev(td, "class", "svelte-1iikqpu");
+    			add_location(td, file$a, 41, 20, 942);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, td, anchor);
@@ -2285,21 +2194,21 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(53:8) {#if date == 22}",
+    		source: "(41:8) {#if date == 22}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:4) {#each week as date, i}
+    // (40:4) {#each week as date, i}
     function create_each_block_1$1(ctx) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*date*/ ctx[9] == 22) return create_if_block$2;
-    		if (/*i*/ ctx[11] % 7 == 0) return create_if_block_1;
-    		if (/*i*/ ctx[11] % 7 == 6) return create_if_block_2;
+    		if (/*date*/ ctx[4] == 22) return create_if_block$2;
+    		if (/*i*/ ctx[6] % 7 == 0) return create_if_block_1;
+    		if (/*i*/ ctx[6] % 7 == 6) return create_if_block_2;
     		return create_else_block$1;
     	}
 
@@ -2328,18 +2237,18 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(52:4) {#each week as date, i}",
+    		source: "(40:4) {#each week as date, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:0) {#each weeks as week}
+    // (38:0) {#each weeks as week}
     function create_each_block$2(ctx) {
     	let tr;
     	let t;
-    	let each_value_1 = /*week*/ ctx[6];
+    	let each_value_1 = /*week*/ ctx[1];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -2356,7 +2265,7 @@ var app = (function () {
     			}
 
     			t = space();
-    			add_location(tr, file$a, 50, 16, 1164);
+    			add_location(tr, file$a, 38, 16, 864);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -2368,8 +2277,8 @@ var app = (function () {
     			append_dev(tr, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*weeks*/ 2) {
-    				each_value_1 = /*week*/ ctx[6];
+    			if (dirty & /*weeks*/ 1) {
+    				each_value_1 = /*week*/ ctx[1];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -2402,7 +2311,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(50:0) {#each weeks as week}",
+    		source: "(38:0) {#each weeks as week}",
     		ctx
     	});
 
@@ -2432,7 +2341,7 @@ var app = (function () {
     	let th6;
     	let t15;
     	let tbody;
-    	let each_value = /*weeks*/ ctx[1];
+    	let each_value = /*weeks*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -2477,24 +2386,24 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "month svelte-1stwk0t");
-    			add_location(div0, file$a, 33, 8, 711);
-    			add_location(th0, file$a, 39, 20, 852);
-    			add_location(th1, file$a, 40, 20, 885);
-    			add_location(th2, file$a, 41, 20, 918);
-    			add_location(th3, file$a, 42, 20, 951);
-    			add_location(th4, file$a, 43, 20, 984);
-    			add_location(th5, file$a, 44, 20, 1017);
-    			add_location(th6, file$a, 45, 20, 1050);
-    			add_location(tr, file$a, 38, 16, 827);
-    			add_location(thead, file$a, 37, 12, 803);
-    			add_location(tbody, file$a, 48, 12, 1118);
-    			attr_dev(table, "class", "weeks svelte-1stwk0t");
-    			add_location(table, file$a, 36, 8, 769);
-    			attr_dev(div1, "class", "calander svelte-1stwk0t");
-    			add_location(div1, file$a, 32, 4, 680);
-    			attr_dev(div2, "class", "calanderOutline svelte-1stwk0t");
-    			add_location(div2, file$a, 31, 0, 626);
+    			attr_dev(div0, "class", "month svelte-1iikqpu");
+    			add_location(div0, file$a, 21, 8, 411);
+    			add_location(th0, file$a, 27, 20, 552);
+    			add_location(th1, file$a, 28, 20, 585);
+    			add_location(th2, file$a, 29, 20, 618);
+    			add_location(th3, file$a, 30, 20, 651);
+    			add_location(th4, file$a, 31, 20, 684);
+    			add_location(th5, file$a, 32, 20, 717);
+    			add_location(th6, file$a, 33, 20, 750);
+    			add_location(tr, file$a, 26, 16, 527);
+    			add_location(thead, file$a, 25, 12, 503);
+    			add_location(tbody, file$a, 36, 12, 818);
+    			attr_dev(table, "class", "weeks svelte-1iikqpu");
+    			add_location(table, file$a, 24, 8, 469);
+    			attr_dev(div1, "class", "calander svelte-1iikqpu");
+    			add_location(div1, file$a, 20, 4, 380);
+    			attr_dev(div2, "class", "calanderOutline svelte-1iikqpu");
+    			add_location(div2, file$a, 19, 0, 346);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2526,12 +2435,10 @@ var app = (function () {
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
-
-    			/*div2_binding*/ ctx[5](div2);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*weeks*/ 2) {
-    				each_value = /*weeks*/ ctx[1];
+    			if (dirty & /*weeks*/ 1) {
+    				each_value = /*weeks*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
 
@@ -2559,7 +2466,6 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
     			destroy_each(each_blocks, detaching);
-    			/*div2_binding*/ ctx[5](null);
     		}
     	};
 
@@ -2587,16 +2493,6 @@ var app = (function () {
     function instance$a($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Calander', slots, []);
-    	let { window_top } = $$props;
-    	let { animation } = $$props;
-    	let { offset } = $$props;
-    	let outline;
-
-    	afterUpdate(() => {
-    		if (window_top + offset > outline.offsetTop) {
-    			outline.classList.add(animation);
-    		}
-    	});
 
     	let weeks = [
     		['', '', '', '', '', '', 1],
@@ -2607,68 +2503,29 @@ var app = (function () {
     		[30]
     	];
 
-    	$$self.$$.on_mount.push(function () {
-    		if (window_top === undefined && !('window_top' in $$props || $$self.$$.bound[$$self.$$.props['window_top']])) {
-    			console.warn("<Calander> was created without expected prop 'window_top'");
-    		}
-
-    		if (animation === undefined && !('animation' in $$props || $$self.$$.bound[$$self.$$.props['animation']])) {
-    			console.warn("<Calander> was created without expected prop 'animation'");
-    		}
-
-    		if (offset === undefined && !('offset' in $$props || $$self.$$.bound[$$self.$$.props['offset']])) {
-    			console.warn("<Calander> was created without expected prop 'offset'");
-    		}
-    	});
-
-    	const writable_props = ['window_top', 'animation', 'offset'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Calander> was created with unknown prop '${key}'`);
     	});
 
-    	function div2_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			outline = $$value;
-    			$$invalidate(0, outline);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('window_top' in $$props) $$invalidate(2, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(3, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(4, offset = $$props.offset);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		afterUpdate,
-    		window_top,
-    		animation,
-    		offset,
-    		outline,
-    		range,
-    		weeks
-    	});
+    	$$self.$capture_state = () => ({ range, weeks });
 
     	$$self.$inject_state = $$props => {
-    		if ('window_top' in $$props) $$invalidate(2, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(3, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(4, offset = $$props.offset);
-    		if ('outline' in $$props) $$invalidate(0, outline = $$props.outline);
-    		if ('weeks' in $$props) $$invalidate(1, weeks = $$props.weeks);
+    		if ('weeks' in $$props) $$invalidate(0, weeks = $$props.weeks);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [outline, weeks, window_top, animation, offset, div2_binding];
+    	return [weeks];
     }
 
     class Calander extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$a, create_fragment$a, safe_not_equal, { window_top: 2, animation: 3, offset: 4 });
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2676,30 +2533,6 @@ var app = (function () {
     			options,
     			id: create_fragment$a.name
     		});
-    	}
-
-    	get window_top() {
-    		throw new Error("<Calander>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set window_top(value) {
-    		throw new Error("<Calander>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animation() {
-    		throw new Error("<Calander>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animation(value) {
-    		throw new Error("<Calander>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get offset() {
-    		throw new Error("<Calander>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set offset(value) {
-    		throw new Error("<Calander>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -12121,19 +11954,19 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[12] = list[i];
-    	child_ctx[14] = i;
+    	child_ctx[7] = list[i];
+    	child_ctx[9] = i;
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[12] = list[i];
-    	child_ctx[14] = i;
+    	child_ctx[7] = list[i];
+    	child_ctx[9] = i;
     	return child_ctx;
     }
 
-    // (47:0) {#each imgs as img, i}
+    // (37:0) {#each imgs as img, i}
     function create_each_block_1(ctx) {
     	let swiper_slide;
     	let img;
@@ -12145,14 +11978,14 @@ var app = (function () {
     			swiper_slide = element("swiper-slide");
     			img = element("img");
     			t = space();
-    			if (!src_url_equal(img.src, img_src_value = /*imgs*/ ctx[2][/*i*/ ctx[14]])) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = /*imgs*/ ctx[1][/*i*/ ctx[9]])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			attr_dev(img, "class", "svelte-oxhna2");
-    			add_location(img, file$9, 48, 16, 2883);
+    			attr_dev(img, "class", "svelte-jffll7");
+    			add_location(img, file$9, 38, 16, 2613);
     			set_custom_element_data(swiper_slide, "lazy", "true");
-    			set_custom_element_data(swiper_slide, "class", "svelte-oxhna2");
-    			add_location(swiper_slide, file$9, 47, 12, 2839);
+    			set_custom_element_data(swiper_slide, "class", "svelte-jffll7");
+    			add_location(swiper_slide, file$9, 37, 12, 2569);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, swiper_slide, anchor);
@@ -12169,14 +12002,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(47:0) {#each imgs as img, i}",
+    		source: "(37:0) {#each imgs as img, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (63:4) {:else}
+    // (53:4) {:else}
     function create_else_block(ctx) {
     	let div;
     	let img;
@@ -12185,25 +12018,25 @@ var app = (function () {
     	let dispose;
 
     	function click_handler_1() {
-    		return /*click_handler_1*/ ctx[9](/*i*/ ctx[14]);
+    		return /*click_handler_1*/ ctx[5](/*i*/ ctx[9]);
     	}
 
     	function keypress_handler_1() {
-    		return /*keypress_handler_1*/ ctx[10](/*i*/ ctx[14]);
+    		return /*keypress_handler_1*/ ctx[6](/*i*/ ctx[9]);
     	}
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			img = element("img");
-    			attr_dev(img, "class", "image svelte-oxhna2");
-    			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[12])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "class", "image svelte-jffll7");
+    			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 64, 20, 3480);
-    			attr_dev(div, "class", "snap-image svelte-oxhna2");
+    			add_location(img, file$9, 54, 20, 3210);
+    			attr_dev(div, "class", "snap-image svelte-jffll7");
     			set_style(div, "margin-right", "5px");
-    			add_location(div, file$9, 63, 16, 3409);
+    			add_location(div, file$9, 53, 16, 3139);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12232,14 +12065,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(63:4) {:else}",
+    		source: "(53:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (59:4) {#if i%5 == 4}
+    // (49:4) {#if i%5 == 4}
     function create_if_block$1(ctx) {
     	let div;
     	let img;
@@ -12248,24 +12081,24 @@ var app = (function () {
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[7](/*i*/ ctx[14]);
+    		return /*click_handler*/ ctx[3](/*i*/ ctx[9]);
     	}
 
     	function keypress_handler() {
-    		return /*keypress_handler*/ ctx[8](/*i*/ ctx[14]);
+    		return /*keypress_handler*/ ctx[4](/*i*/ ctx[9]);
     	}
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			img = element("img");
-    			attr_dev(img, "class", "image svelte-oxhna2");
-    			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[12])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "class", "image svelte-jffll7");
+    			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 60, 20, 3216);
-    			attr_dev(div, "class", "snap-image svelte-oxhna2");
-    			add_location(div, file$9, 59, 16, 3171);
+    			add_location(img, file$9, 50, 20, 2946);
+    			attr_dev(div, "class", "snap-image svelte-jffll7");
+    			add_location(div, file$9, 49, 16, 2901);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12294,20 +12127,20 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(59:4) {#if i%5 == 4}",
+    		source: "(49:4) {#if i%5 == 4}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:0) {#each imgs as img, i}
+    // (47:0) {#each imgs as img, i}
     function create_each_block$1(ctx) {
     	let button;
     	let t;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*i*/ ctx[14] % 5 == 4) return create_if_block$1;
+    		if (/*i*/ ctx[9] % 5 == 4) return create_if_block$1;
     		return create_else_block;
     	}
 
@@ -12319,8 +12152,8 @@ var app = (function () {
     			button = element("button");
     			if_block.c();
     			t = space();
-    			attr_dev(button, "class", "snap-bnt svelte-oxhna2");
-    			add_location(button, file$9, 57, 12, 3110);
+    			attr_dev(button, "class", "snap-bnt svelte-jffll7");
+    			add_location(button, file$9, 47, 12, 2840);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -12340,7 +12173,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(57:0) {#each imgs as img, i}",
+    		source: "(47:0) {#each imgs as img, i}",
     		ctx
     	});
 
@@ -12365,7 +12198,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	let each_value_1 = /*imgs*/ ctx[2];
+    	let each_value_1 = /*imgs*/ ctx[1];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -12373,7 +12206,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*imgs*/ ctx[2];
+    	let each_value = /*imgs*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -12403,19 +12236,19 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "snap-head svelte-oxhna2");
-    			add_location(div0, file$9, 39, 4, 2613);
+    			attr_dev(div0, "class", "snap-head svelte-jffll7");
+    			add_location(div0, file$9, 29, 4, 2343);
     			set_custom_element_data(swiper_container, "auto-height", "true");
     			set_custom_element_data(swiper_container, "navigation", "true");
-    			add_location(swiper_container, file$9, 45, 8, 2731);
+    			add_location(swiper_container, file$9, 35, 8, 2461);
     			attr_dev(div1, "class", "swiper");
-    			add_location(div1, file$9, 44, 4, 2702);
-    			attr_dev(div2, "class", "snap-grid svelte-oxhna2");
-    			add_location(div2, file$9, 55, 8, 3051);
-    			attr_dev(div3, "class", "snap-main svelte-oxhna2");
-    			add_location(div3, file$9, 54, 4, 3019);
-    			attr_dev(div4, "class", "snap-outline svelte-oxhna2");
-    			add_location(div4, file$9, 38, 0, 2562);
+    			add_location(div1, file$9, 34, 4, 2432);
+    			attr_dev(div2, "class", "snap-grid svelte-jffll7");
+    			add_location(div2, file$9, 45, 8, 2781);
+    			attr_dev(div3, "class", "snap-main svelte-jffll7");
+    			add_location(div3, file$9, 44, 4, 2749);
+    			attr_dev(div4, "class", "snap-outline svelte-jffll7");
+    			add_location(div4, file$9, 28, 0, 2312);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12433,7 +12266,7 @@ var app = (function () {
     				each_blocks_1[i].m(swiper_container, null);
     			}
 
-    			/*swiper_container_binding*/ ctx[6](swiper_container);
+    			/*swiper_container_binding*/ ctx[2](swiper_container);
     			append_dev(div4, t2);
     			append_dev(div4, div3);
     			append_dev(div3, div2);
@@ -12442,12 +12275,11 @@ var app = (function () {
     				each_blocks[i].m(div2, null);
     			}
 
-    			/*div4_binding*/ ctx[11](div4);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*imgs*/ 4) {
-    				each_value_1 = /*imgs*/ ctx[2];
+    			if (dirty & /*imgs*/ 2) {
+    				each_value_1 = /*imgs*/ ctx[1];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -12470,8 +12302,8 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*imgs, swiperEl*/ 6) {
-    				each_value = /*imgs*/ ctx[2];
+    			if (dirty & /*imgs, swiperEl*/ 3) {
+    				each_value = /*imgs*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -12507,9 +12339,8 @@ var app = (function () {
     			if (detaching) detach_dev(div4);
     			destroy_component(fa);
     			destroy_each(each_blocks_1, detaching);
-    			/*swiper_container_binding*/ ctx[6](null);
+    			/*swiper_container_binding*/ ctx[2](null);
     			destroy_each(each_blocks, detaching);
-    			/*div4_binding*/ ctx[11](null);
     		}
     	};
 
@@ -12527,17 +12358,6 @@ var app = (function () {
     function instance$9($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Snap', slots, []);
-    	let { window_top } = $$props;
-    	let { animation } = $$props;
-    	let { offset } = $$props;
-    	let outline;
-
-    	afterUpdate(() => {
-    		if (window_top + offset > outline.offsetTop) {
-    			outline.classList.add(animation);
-    		}
-    	});
-
     	register();
 
     	let imgs = [
@@ -12554,22 +12374,7 @@ var app = (function () {
     	];
 
     	let swiperEl;
-
-    	$$self.$$.on_mount.push(function () {
-    		if (window_top === undefined && !('window_top' in $$props || $$self.$$.bound[$$self.$$.props['window_top']])) {
-    			console.warn("<Snap> was created without expected prop 'window_top'");
-    		}
-
-    		if (animation === undefined && !('animation' in $$props || $$self.$$.bound[$$self.$$.props['animation']])) {
-    			console.warn("<Snap> was created without expected prop 'animation'");
-    		}
-
-    		if (offset === undefined && !('offset' in $$props || $$self.$$.bound[$$self.$$.props['offset']])) {
-    			console.warn("<Snap> was created without expected prop 'offset'");
-    		}
-    	});
-
-    	const writable_props = ['window_top', 'animation', 'offset'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Snap> was created with unknown prop '${key}'`);
@@ -12578,7 +12383,7 @@ var app = (function () {
     	function swiper_container_binding($$value) {
     		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
     			swiperEl = $$value;
-    			$$invalidate(1, swiperEl);
+    			$$invalidate(0, swiperEl);
     		});
     	}
 
@@ -12586,19 +12391,6 @@ var app = (function () {
     	const keypress_handler = i => swiperEl.swiper.slideTo(i);
     	const click_handler_1 = i => swiperEl.swiper.slideTo(i);
     	const keypress_handler_1 = i => swiperEl.swiper.slideTo(i);
-
-    	function div4_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			outline = $$value;
-    			$$invalidate(0, outline);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('window_top' in $$props) $$invalidate(3, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(4, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(5, offset = $$props.offset);
-    	};
 
     	$$self.$capture_state = () => ({
     		Fa,
@@ -12609,22 +12401,13 @@ var app = (function () {
     		faCircleChevronLeft,
     		faCircleChevronRight,
     		onMount,
-    		afterUpdate,
-    		window_top,
-    		animation,
-    		offset,
-    		outline,
     		imgs,
     		swiperEl
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('window_top' in $$props) $$invalidate(3, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(4, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(5, offset = $$props.offset);
-    		if ('outline' in $$props) $$invalidate(0, outline = $$props.outline);
-    		if ('imgs' in $$props) $$invalidate(2, imgs = $$props.imgs);
-    		if ('swiperEl' in $$props) $$invalidate(1, swiperEl = $$props.swiperEl);
+    		if ('imgs' in $$props) $$invalidate(1, imgs = $$props.imgs);
+    		if ('swiperEl' in $$props) $$invalidate(0, swiperEl = $$props.swiperEl);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -12632,25 +12415,20 @@ var app = (function () {
     	}
 
     	return [
-    		outline,
     		swiperEl,
     		imgs,
-    		window_top,
-    		animation,
-    		offset,
     		swiper_container_binding,
     		click_handler,
     		keypress_handler,
     		click_handler_1,
-    		keypress_handler_1,
-    		div4_binding
+    		keypress_handler_1
     	];
     }
 
     class Snap extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { window_top: 3, animation: 4, offset: 5 });
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -12658,30 +12436,6 @@ var app = (function () {
     			options,
     			id: create_fragment$9.name
     		});
-    	}
-
-    	get window_top() {
-    		throw new Error("<Snap>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set window_top(value) {
-    		throw new Error("<Snap>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animation() {
-    		throw new Error("<Snap>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animation(value) {
-    		throw new Error("<Snap>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get offset() {
-    		throw new Error("<Snap>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set offset(value) {
-    		throw new Error("<Snap>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -12713,8 +12467,8 @@ var app = (function () {
     			t1 = space();
     			div1 = element("div");
     			iframe = element("iframe");
-    			attr_dev(div0, "class", "video-head svelte-nkqpg6");
-    			add_location(div0, file$8, 17, 4, 450);
+    			attr_dev(div0, "class", "video-head svelte-76dvrn");
+    			add_location(div0, file$8, 6, 4, 152);
     			attr_dev(iframe, "title", "");
     			attr_dev(iframe, "width", "425px");
     			attr_dev(iframe, "height", "240px");
@@ -12722,11 +12476,11 @@ var app = (function () {
     			attr_dev(iframe, "frameborder", "0");
     			attr_dev(iframe, "allow", "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;");
     			iframe.allowFullscreen = true;
-    			add_location(iframe, file$8, 22, 8, 572);
+    			add_location(iframe, file$8, 11, 8, 274);
     			attr_dev(div1, "class", "video-main");
-    			add_location(div1, file$8, 21, 4, 539);
-    			attr_dev(div2, "class", "video-outline svelte-nkqpg6");
-    			add_location(div2, file$8, 16, 0, 398);
+    			add_location(div1, file$8, 10, 4, 241);
+    			attr_dev(div2, "class", "video-outline svelte-76dvrn");
+    			add_location(div2, file$8, 5, 0, 120);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12739,7 +12493,6 @@ var app = (function () {
     			append_dev(div2, t1);
     			append_dev(div2, div1);
     			append_dev(div1, iframe);
-    			/*div2_binding*/ ctx[4](div2);
     			current = true;
     		},
     		p: noop,
@@ -12755,7 +12508,6 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
     			destroy_component(fa);
-    			/*div2_binding*/ ctx[4](null);
     		}
     	};
 
@@ -12773,78 +12525,20 @@ var app = (function () {
     function instance$8($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Video', slots, []);
-    	let { window_top } = $$props;
-    	let { animation } = $$props;
-    	let { offset } = $$props;
-    	let outline;
-
-    	afterUpdate(() => {
-    		if (window_top + offset > outline.offsetTop) {
-    			outline.classList.add(animation);
-    		}
-    	});
-
-    	$$self.$$.on_mount.push(function () {
-    		if (window_top === undefined && !('window_top' in $$props || $$self.$$.bound[$$self.$$.props['window_top']])) {
-    			console.warn("<Video> was created without expected prop 'window_top'");
-    		}
-
-    		if (animation === undefined && !('animation' in $$props || $$self.$$.bound[$$self.$$.props['animation']])) {
-    			console.warn("<Video> was created without expected prop 'animation'");
-    		}
-
-    		if (offset === undefined && !('offset' in $$props || $$self.$$.bound[$$self.$$.props['offset']])) {
-    			console.warn("<Video> was created without expected prop 'offset'");
-    		}
-    	});
-
-    	const writable_props = ['window_top', 'animation', 'offset'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Video> was created with unknown prop '${key}'`);
     	});
 
-    	function div2_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			outline = $$value;
-    			$$invalidate(0, outline);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		Fa,
-    		faCirclePlay,
-    		afterUpdate,
-    		window_top,
-    		animation,
-    		offset,
-    		outline
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    		if ('outline' in $$props) $$invalidate(0, outline = $$props.outline);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [outline, window_top, animation, offset, div2_binding];
+    	$$self.$capture_state = () => ({ Fa, faCirclePlay });
+    	return [];
     }
 
     class Video extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, { window_top: 1, animation: 2, offset: 3 });
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -12853,33 +12547,10 @@ var app = (function () {
     			id: create_fragment$8.name
     		});
     	}
-
-    	get window_top() {
-    		throw new Error("<Video>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set window_top(value) {
-    		throw new Error("<Video>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animation() {
-    		throw new Error("<Video>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animation(value) {
-    		throw new Error("<Video>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get offset() {
-    		throw new Error("<Video>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set offset(value) {
-    		throw new Error("<Video>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
     }
 
     /* src/notiBox.svelte generated by Svelte v3.55.1 */
+
     const file$7 = "src/notiBox.svelte";
 
     function create_fragment$7(ctx) {
@@ -12925,21 +12596,21 @@ var app = (function () {
     			t7 = text("\n            멀리서 축하해주시는 마음\n            ");
     			br6 = element("br");
     			t8 = text("\n            감사히 받겠습니다.");
-    			attr_dev(div0, "class", "title svelte-1ijkc3h");
-    			add_location(div0, file$7, 16, 8, 385);
-    			add_location(br0, file$7, 19, 12, 490);
-    			add_location(br1, file$7, 21, 12, 541);
-    			add_location(br2, file$7, 23, 12, 592);
-    			add_location(br3, file$7, 23, 16, 596);
-    			add_location(br4, file$7, 25, 12, 647);
-    			add_location(br5, file$7, 27, 12, 696);
-    			add_location(br6, file$7, 29, 12, 739);
-    			attr_dev(div1, "class", "main-text svelte-1ijkc3h");
-    			add_location(div1, file$7, 17, 8, 428);
-    			attr_dev(div2, "class", "noti-box svelte-1ijkc3h");
-    			add_location(div2, file$7, 15, 4, 354);
-    			attr_dev(div3, "class", "noti-box-outline svelte-1ijkc3h");
-    			add_location(div3, file$7, 14, 0, 299);
+    			attr_dev(div0, "class", "title svelte-qkxpcc");
+    			add_location(div0, file$7, 5, 8, 86);
+    			add_location(br0, file$7, 8, 12, 191);
+    			add_location(br1, file$7, 10, 12, 242);
+    			add_location(br2, file$7, 12, 12, 293);
+    			add_location(br3, file$7, 12, 16, 297);
+    			add_location(br4, file$7, 14, 12, 348);
+    			add_location(br5, file$7, 16, 12, 397);
+    			add_location(br6, file$7, 18, 12, 440);
+    			attr_dev(div1, "class", "main-text svelte-qkxpcc");
+    			add_location(div1, file$7, 6, 8, 129);
+    			attr_dev(div2, "class", "noti-box svelte-qkxpcc");
+    			add_location(div2, file$7, 4, 4, 55);
+    			attr_dev(div3, "class", "noti-box-outline svelte-qkxpcc");
+    			add_location(div3, file$7, 3, 0, 20);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12964,14 +12635,12 @@ var app = (function () {
     			append_dev(div1, t7);
     			append_dev(div1, br6);
     			append_dev(div1, t8);
-    			/*div3_binding*/ ctx[4](div3);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
-    			/*div3_binding*/ ctx[4](null);
     		}
     	};
 
@@ -12986,79 +12655,22 @@ var app = (function () {
     	return block;
     }
 
-    function instance$7($$self, $$props, $$invalidate) {
+    function instance$7($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NotiBox', slots, []);
-    	let { window_top } = $$props;
-    	let { animation } = $$props;
-    	let { offset } = $$props;
-    	let outline;
-
-    	afterUpdate(() => {
-    		if (window_top + offset > outline.offsetTop) {
-    			outline.classList.add(animation);
-    		}
-    	});
-
-    	$$self.$$.on_mount.push(function () {
-    		if (window_top === undefined && !('window_top' in $$props || $$self.$$.bound[$$self.$$.props['window_top']])) {
-    			console.warn("<NotiBox> was created without expected prop 'window_top'");
-    		}
-
-    		if (animation === undefined && !('animation' in $$props || $$self.$$.bound[$$self.$$.props['animation']])) {
-    			console.warn("<NotiBox> was created without expected prop 'animation'");
-    		}
-
-    		if (offset === undefined && !('offset' in $$props || $$self.$$.bound[$$self.$$.props['offset']])) {
-    			console.warn("<NotiBox> was created without expected prop 'offset'");
-    		}
-    	});
-
-    	const writable_props = ['window_top', 'animation', 'offset'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NotiBox> was created with unknown prop '${key}'`);
     	});
 
-    	function div3_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			outline = $$value;
-    			$$invalidate(0, outline);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		afterUpdate,
-    		window_top,
-    		animation,
-    		offset,
-    		outline
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    		if ('outline' in $$props) $$invalidate(0, outline = $$props.outline);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [outline, window_top, animation, offset, div3_binding];
+    	return [];
     }
 
     class NotiBox extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { window_top: 1, animation: 2, offset: 3 });
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -13066,30 +12678,6 @@ var app = (function () {
     			options,
     			id: create_fragment$7.name
     		});
-    	}
-
-    	get window_top() {
-    		throw new Error("<NotiBox>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set window_top(value) {
-    		throw new Error("<NotiBox>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animation() {
-    		throw new Error("<NotiBox>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animation(value) {
-    		throw new Error("<NotiBox>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get offset() {
-    		throw new Error("<NotiBox>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set offset(value) {
-    		throw new Error("<NotiBox>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -14159,18 +13747,18 @@ var app = (function () {
 
     	writing = new Writing({
     			props: {
-    				display: /*writing_display*/ ctx[1],
-    				change_display: /*change_writing_display*/ ctx[3],
+    				display: /*writing_display*/ ctx[0],
+    				change_display: /*change_writing_display*/ ctx[2],
     				backend_url,
-    				swap_to_comment_display: /*swap_to_comment_display*/ ctx[5]
+    				swap_to_comment_display: /*swap_to_comment_display*/ ctx[4]
     			},
     			$$inline: true
     		});
 
     	comment = new Comment({
     			props: {
-    				display: /*comment_display*/ ctx[2],
-    				change_display: /*change_comment_display*/ ctx[4],
+    				display: /*comment_display*/ ctx[1],
+    				change_display: /*change_comment_display*/ ctx[3],
     				backend_url
     			},
     			$$inline: true
@@ -14210,21 +13798,21 @@ var app = (function () {
     			t9 = space();
     			button1 = element("button");
     			button1.textContent = "방명록 전체보기";
-    			attr_dev(div0, "class", "title svelte-dovc27");
-    			add_location(div0, file$4, 50, 4, 1706);
-    			add_location(br0, file$4, 54, 12, 1904);
-    			add_location(br1, file$4, 56, 12, 1942);
+    			attr_dev(div0, "class", "title svelte-1hyvqfg");
+    			add_location(div0, file$4, 39, 4, 1407);
+    			add_location(br0, file$4, 43, 12, 1605);
+    			add_location(br1, file$4, 45, 12, 1643);
     			set_style(div1, "padding-bottom", "25px");
-    			add_location(div1, file$4, 52, 8, 1776);
-    			attr_dev(button0, "class", "writing-guestbook svelte-dovc27");
-    			add_location(button0, file$4, 60, 12, 2015);
-    			attr_dev(button1, "class", "comment-guestbook svelte-dovc27");
-    			add_location(button1, file$4, 63, 12, 2166);
-    			add_location(div2, file$4, 59, 8, 1997);
-    			attr_dev(div3, "class", "guestbook-main svelte-dovc27");
-    			add_location(div3, file$4, 51, 4, 1739);
-    			attr_dev(div4, "class", "guestbook-outline svelte-dovc27");
-    			add_location(div4, file$4, 49, 0, 1650);
+    			add_location(div1, file$4, 41, 8, 1477);
+    			attr_dev(button0, "class", "writing-guestbook svelte-1hyvqfg");
+    			add_location(button0, file$4, 49, 12, 1716);
+    			attr_dev(button1, "class", "comment-guestbook svelte-1hyvqfg");
+    			add_location(button1, file$4, 52, 12, 1867);
+    			add_location(div2, file$4, 48, 8, 1698);
+    			attr_dev(div3, "class", "guestbook-main svelte-1hyvqfg");
+    			add_location(div3, file$4, 40, 4, 1440);
+    			attr_dev(div4, "class", "guestbook-outline svelte-1hyvqfg");
+    			add_location(div4, file$4, 38, 0, 1371);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14250,13 +13838,12 @@ var app = (function () {
     			append_dev(div2, button0);
     			append_dev(div2, t9);
     			append_dev(div2, button1);
-    			/*div4_binding*/ ctx[11](div4);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*click_handler*/ ctx[9], false, false, false),
-    					listen_dev(button1, "click", /*click_handler_1*/ ctx[10], false, false, false)
+    					listen_dev(button0, "click", /*click_handler*/ ctx[5], false, false, false),
+    					listen_dev(button1, "click", /*click_handler_1*/ ctx[6], false, false, false)
     				];
 
     				mounted = true;
@@ -14264,10 +13851,10 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			const writing_changes = {};
-    			if (dirty & /*writing_display*/ 2) writing_changes.display = /*writing_display*/ ctx[1];
+    			if (dirty & /*writing_display*/ 1) writing_changes.display = /*writing_display*/ ctx[0];
     			writing.$set(writing_changes);
     			const comment_changes = {};
-    			if (dirty & /*comment_display*/ 4) comment_changes.display = /*comment_display*/ ctx[2];
+    			if (dirty & /*comment_display*/ 2) comment_changes.display = /*comment_display*/ ctx[1];
     			comment.$set(comment_changes);
     		},
     		i: function intro(local) {
@@ -14290,7 +13877,6 @@ var app = (function () {
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div4);
     			destroy_component(fa);
-    			/*div4_binding*/ ctx[11](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -14312,61 +13898,36 @@ var app = (function () {
     function instance$4($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Guestbook', slots, []);
-    	let { window_top } = $$props;
-    	let { animation } = $$props;
-    	let { offset } = $$props;
-    	let outline;
-
-    	afterUpdate(() => {
-    		if (window_top + offset > outline.offsetTop) {
-    			outline.classList.add(animation);
-    		}
-    	});
-
     	let writing_display = "none";
     	let comment_display = "none";
     	let body_overflow_y = "visible";
 
     	function change_writing_display() {
     		if (writing_display == "none") {
-    			$$invalidate(1, writing_display = "block");
+    			$$invalidate(0, writing_display = "block");
     			document.body.style["overflow-y"] = "hidden";
     		} else {
-    			$$invalidate(1, writing_display = "none");
+    			$$invalidate(0, writing_display = "none");
     			document.body.style["overflow-y"] = "visible";
     		}
     	}
 
     	function change_comment_display() {
     		if (comment_display == "none") {
-    			$$invalidate(2, comment_display = "block");
+    			$$invalidate(1, comment_display = "block");
     			document.body.style["overflow-y"] = "hidden";
     		} else {
-    			$$invalidate(2, comment_display = "none");
+    			$$invalidate(1, comment_display = "none");
     			document.body.style["overflow-y"] = "visible";
     		}
     	}
 
     	function swap_to_comment_display() {
-    		$$invalidate(1, writing_display = "none");
-    		$$invalidate(2, comment_display = "block");
+    		$$invalidate(0, writing_display = "none");
+    		$$invalidate(1, comment_display = "block");
     	}
 
-    	$$self.$$.on_mount.push(function () {
-    		if (window_top === undefined && !('window_top' in $$props || $$self.$$.bound[$$self.$$.props['window_top']])) {
-    			console.warn("<Guestbook> was created without expected prop 'window_top'");
-    		}
-
-    		if (animation === undefined && !('animation' in $$props || $$self.$$.bound[$$self.$$.props['animation']])) {
-    			console.warn("<Guestbook> was created without expected prop 'animation'");
-    		}
-
-    		if (offset === undefined && !('offset' in $$props || $$self.$$.bound[$$self.$$.props['offset']])) {
-    			console.warn("<Guestbook> was created without expected prop 'offset'");
-    		}
-    	});
-
-    	const writable_props = ['window_top', 'animation', 'offset'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Guestbook> was created with unknown prop '${key}'`);
@@ -14375,29 +13936,11 @@ var app = (function () {
     	const click_handler = () => change_writing_display();
     	const click_handler_1 = () => change_comment_display();
 
-    	function div4_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			outline = $$value;
-    			$$invalidate(0, outline);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('window_top' in $$props) $$invalidate(6, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(7, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(8, offset = $$props.offset);
-    	};
-
     	$$self.$capture_state = () => ({
     		Fa,
     		faPencil,
-    		afterUpdate,
     		Writing,
     		Comment,
-    		window_top,
-    		animation,
-    		offset,
-    		outline,
     		backend_url,
     		writing_display,
     		comment_display,
@@ -14408,12 +13951,8 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('window_top' in $$props) $$invalidate(6, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(7, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(8, offset = $$props.offset);
-    		if ('outline' in $$props) $$invalidate(0, outline = $$props.outline);
-    		if ('writing_display' in $$props) $$invalidate(1, writing_display = $$props.writing_display);
-    		if ('comment_display' in $$props) $$invalidate(2, comment_display = $$props.comment_display);
+    		if ('writing_display' in $$props) $$invalidate(0, writing_display = $$props.writing_display);
+    		if ('comment_display' in $$props) $$invalidate(1, comment_display = $$props.comment_display);
     		if ('body_overflow_y' in $$props) body_overflow_y = $$props.body_overflow_y;
     	};
 
@@ -14422,25 +13961,20 @@ var app = (function () {
     	}
 
     	return [
-    		outline,
     		writing_display,
     		comment_display,
     		change_writing_display,
     		change_comment_display,
     		swap_to_comment_display,
-    		window_top,
-    		animation,
-    		offset,
     		click_handler,
-    		click_handler_1,
-    		div4_binding
+    		click_handler_1
     	];
     }
 
     class Guestbook extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { window_top: 6, animation: 7, offset: 8 });
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -14448,30 +13982,6 @@ var app = (function () {
     			options,
     			id: create_fragment$4.name
     		});
-    	}
-
-    	get window_top() {
-    		throw new Error("<Guestbook>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set window_top(value) {
-    		throw new Error("<Guestbook>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animation() {
-    		throw new Error("<Guestbook>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animation(value) {
-    		throw new Error("<Guestbook>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get offset() {
-    		throw new Error("<Guestbook>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set offset(value) {
-    		throw new Error("<Guestbook>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -14744,86 +14254,86 @@ var app = (function () {
     			t30 = space();
     			a11 = element("a");
     			create_component(fa11.$$.fragment);
-    			attr_dev(div0, "class", "title svelte-15sclad");
-    			add_location(div0, file$3, 17, 4, 463);
-    			attr_dev(span0, "class", "contact-block f17 svelte-15sclad");
-    			add_location(span0, file$3, 23, 16, 628);
+    			attr_dev(div0, "class", "title svelte-15s9n7q");
+    			add_location(div0, file$3, 6, 4, 164);
+    			attr_dev(span0, "class", "contact-block f17 svelte-15s9n7q");
+    			add_location(span0, file$3, 12, 16, 329);
     			attr_dev(a0, "href", "tel:010-4193-2615");
-    			attr_dev(a0, "class", "fa-icon svelte-15sclad");
-    			add_location(a0, file$3, 25, 20, 720);
+    			attr_dev(a0, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a0, file$3, 14, 20, 421);
     			attr_dev(a1, "href", "sms:010-4193-2615");
-    			attr_dev(a1, "class", "fa-icon svelte-15sclad");
-    			add_location(a1, file$3, 28, 20, 891);
-    			add_location(span1, file$3, 24, 16, 693);
-    			attr_dev(li0, "class", "contact-list svelte-15sclad");
-    			add_location(li0, file$3, 22, 12, 586);
-    			attr_dev(span2, "class", "contact-block f17 svelte-15sclad");
-    			add_location(span2, file$3, 34, 16, 1132);
+    			attr_dev(a1, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a1, file$3, 17, 20, 592);
+    			add_location(span1, file$3, 13, 16, 394);
+    			attr_dev(li0, "class", "contact-list svelte-15s9n7q");
+    			add_location(li0, file$3, 11, 12, 287);
+    			attr_dev(span2, "class", "contact-block f17 svelte-15s9n7q");
+    			add_location(span2, file$3, 23, 16, 833);
     			attr_dev(a2, "href", "tel:010-5067-3805");
-    			attr_dev(a2, "class", "fa-icon svelte-15sclad");
-    			add_location(a2, file$3, 36, 20, 1224);
+    			attr_dev(a2, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a2, file$3, 25, 20, 925);
     			attr_dev(a3, "href", "sms:010-5067-3805");
-    			attr_dev(a3, "class", "fa-icon svelte-15sclad");
-    			add_location(a3, file$3, 39, 20, 1411);
-    			add_location(span3, file$3, 35, 16, 1197);
-    			attr_dev(li1, "class", "contact-list svelte-15sclad");
-    			add_location(li1, file$3, 33, 12, 1090);
-    			attr_dev(ul0, "class", "contact-us svelte-15sclad");
-    			add_location(ul0, file$3, 21, 8, 550);
-    			attr_dev(div1, "class", "contact-honju f16 svelte-15sclad");
-    			add_location(div1, file$3, 45, 8, 1621);
-    			attr_dev(span4, "class", "honju svelte-15sclad");
+    			attr_dev(a3, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a3, file$3, 28, 20, 1112);
+    			add_location(span3, file$3, 24, 16, 898);
+    			attr_dev(li1, "class", "contact-list svelte-15s9n7q");
+    			add_location(li1, file$3, 22, 12, 791);
+    			attr_dev(ul0, "class", "contact-us svelte-15s9n7q");
+    			add_location(ul0, file$3, 10, 8, 251);
+    			attr_dev(div1, "class", "contact-honju f16 svelte-15s9n7q");
+    			add_location(div1, file$3, 34, 8, 1322);
+    			attr_dev(span4, "class", "honju svelte-15s9n7q");
     			set_style(span4, "color", "#78c0e9");
-    			add_location(span4, file$3, 50, 16, 1776);
-    			attr_dev(span5, "class", "contact-block svelte-15sclad");
-    			add_location(span5, file$3, 51, 16, 1849);
+    			add_location(span4, file$3, 39, 16, 1477);
+    			attr_dev(span5, "class", "contact-block svelte-15s9n7q");
+    			add_location(span5, file$3, 40, 16, 1550);
     			attr_dev(a4, "href", "tel:010-4675-2615");
-    			attr_dev(a4, "class", "fa-icon svelte-15sclad");
-    			add_location(a4, file$3, 53, 20, 1935);
+    			attr_dev(a4, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a4, file$3, 42, 20, 1636);
     			attr_dev(a5, "href", "sms:010-4675-2615");
-    			attr_dev(a5, "class", "fa-icon svelte-15sclad");
-    			add_location(a5, file$3, 56, 20, 2122);
-    			add_location(span6, file$3, 52, 16, 1908);
-    			attr_dev(span7, "class", "contact-block svelte-15sclad");
-    			add_location(span7, file$3, 60, 16, 2308);
+    			attr_dev(a5, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a5, file$3, 45, 20, 1823);
+    			add_location(span6, file$3, 41, 16, 1609);
+    			attr_dev(span7, "class", "contact-block svelte-15s9n7q");
+    			add_location(span7, file$3, 49, 16, 2009);
     			attr_dev(a6, "href", "tel:010-7538-2605");
-    			attr_dev(a6, "class", "fa-icon svelte-15sclad");
-    			add_location(a6, file$3, 62, 20, 2394);
+    			attr_dev(a6, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a6, file$3, 51, 20, 2095);
     			attr_dev(a7, "href", "sms:010-7538-2605");
-    			attr_dev(a7, "class", "fa-icon svelte-15sclad");
-    			add_location(a7, file$3, 65, 20, 2581);
-    			add_location(span8, file$3, 61, 16, 2367);
-    			attr_dev(li2, "class", "contact-list svelte-15sclad");
-    			add_location(li2, file$3, 49, 12, 1734);
-    			attr_dev(span9, "class", "honju svelte-15sclad");
+    			attr_dev(a7, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a7, file$3, 54, 20, 2282);
+    			add_location(span8, file$3, 50, 16, 2068);
+    			attr_dev(li2, "class", "contact-list svelte-15s9n7q");
+    			add_location(li2, file$3, 38, 12, 1435);
+    			attr_dev(span9, "class", "honju svelte-15s9n7q");
     			set_style(span9, "color", "#f79e9e");
-    			add_location(span9, file$3, 71, 16, 2823);
-    			attr_dev(span10, "class", "contact-block svelte-15sclad");
-    			add_location(span10, file$3, 72, 16, 2896);
+    			add_location(span9, file$3, 60, 16, 2524);
+    			attr_dev(span10, "class", "contact-block svelte-15s9n7q");
+    			add_location(span10, file$3, 61, 16, 2597);
     			attr_dev(a8, "href", "tel:010-4020-3804");
-    			attr_dev(a8, "class", "fa-icon svelte-15sclad");
-    			add_location(a8, file$3, 74, 20, 2982);
+    			attr_dev(a8, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a8, file$3, 63, 20, 2683);
     			attr_dev(a9, "href", "sms:010-4020-3804");
-    			attr_dev(a9, "class", "fa-icon svelte-15sclad");
-    			add_location(a9, file$3, 77, 20, 3169);
-    			add_location(span11, file$3, 73, 16, 2955);
-    			attr_dev(span12, "class", "contact-block svelte-15sclad");
-    			add_location(span12, file$3, 81, 16, 3355);
+    			attr_dev(a9, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a9, file$3, 66, 20, 2870);
+    			add_location(span11, file$3, 62, 16, 2656);
+    			attr_dev(span12, "class", "contact-block svelte-15s9n7q");
+    			add_location(span12, file$3, 70, 16, 3056);
     			attr_dev(a10, "href", "tel:010-4468-3805");
-    			attr_dev(a10, "class", "fa-icon svelte-15sclad");
-    			add_location(a10, file$3, 83, 20, 3441);
+    			attr_dev(a10, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a10, file$3, 72, 20, 3142);
     			attr_dev(a11, "href", "sms:010-4468-3805");
-    			attr_dev(a11, "class", "fa-icon svelte-15sclad");
-    			add_location(a11, file$3, 86, 20, 3628);
-    			add_location(span13, file$3, 82, 16, 3414);
-    			attr_dev(li3, "class", "contact-list svelte-15sclad");
-    			add_location(li3, file$3, 70, 12, 2781);
-    			attr_dev(ul1, "class", "contact-us svelte-15sclad");
-    			add_location(ul1, file$3, 48, 8, 1698);
+    			attr_dev(a11, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a11, file$3, 75, 20, 3329);
+    			add_location(span13, file$3, 71, 16, 3115);
+    			attr_dev(li3, "class", "contact-list svelte-15s9n7q");
+    			add_location(li3, file$3, 59, 12, 2482);
+    			attr_dev(ul1, "class", "contact-us svelte-15s9n7q");
+    			add_location(ul1, file$3, 37, 8, 1399);
     			attr_dev(div2, "class", "contact-main");
-    			add_location(div2, file$3, 20, 4, 515);
-    			attr_dev(div3, "class", "contact-outline svelte-15sclad");
-    			add_location(div3, file$3, 16, 0, 409);
+    			add_location(div2, file$3, 9, 4, 216);
+    			attr_dev(div3, "class", "contact-outline svelte-15s9n7q");
+    			add_location(div3, file$3, 5, 0, 130);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14898,7 +14408,6 @@ var app = (function () {
     			append_dev(span13, t30);
     			append_dev(span13, a11);
     			mount_component(fa11, a11, null);
-    			/*div3_binding*/ ctx[4](div3);
     			current = true;
     		},
     		p: noop,
@@ -14947,7 +14456,6 @@ var app = (function () {
     			destroy_component(fa9);
     			destroy_component(fa10);
     			destroy_component(fa11);
-    			/*div3_binding*/ ctx[4](null);
     		}
     	};
 
@@ -14965,79 +14473,20 @@ var app = (function () {
     function instance$3($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Contact', slots, []);
-    	let { window_top } = $$props;
-    	let { animation } = $$props;
-    	let { offset } = $$props;
-    	let outline;
-
-    	afterUpdate(() => {
-    		if (window_top + offset > outline.offsetTop) {
-    			outline.classList.add(animation);
-    		}
-    	});
-
-    	$$self.$$.on_mount.push(function () {
-    		if (window_top === undefined && !('window_top' in $$props || $$self.$$.bound[$$self.$$.props['window_top']])) {
-    			console.warn("<Contact> was created without expected prop 'window_top'");
-    		}
-
-    		if (animation === undefined && !('animation' in $$props || $$self.$$.bound[$$self.$$.props['animation']])) {
-    			console.warn("<Contact> was created without expected prop 'animation'");
-    		}
-
-    		if (offset === undefined && !('offset' in $$props || $$self.$$.bound[$$self.$$.props['offset']])) {
-    			console.warn("<Contact> was created without expected prop 'offset'");
-    		}
-    	});
-
-    	const writable_props = ['window_top', 'animation', 'offset'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Contact> was created with unknown prop '${key}'`);
     	});
 
-    	function div3_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			outline = $$value;
-    			$$invalidate(0, outline);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		Fa,
-    		faPhoneAlt,
-    		faEnvelope,
-    		afterUpdate,
-    		window_top,
-    		animation,
-    		offset,
-    		outline
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    		if ('outline' in $$props) $$invalidate(0, outline = $$props.outline);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [outline, window_top, animation, offset, div3_binding];
+    	$$self.$capture_state = () => ({ Fa, faPhoneAlt, faEnvelope });
+    	return [];
     }
 
     class Contact extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { window_top: 1, animation: 2, offset: 3 });
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -15046,33 +14495,10 @@ var app = (function () {
     			id: create_fragment$3.name
     		});
     	}
-
-    	get window_top() {
-    		throw new Error("<Contact>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set window_top(value) {
-    		throw new Error("<Contact>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animation() {
-    		throw new Error("<Contact>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animation(value) {
-    		throw new Error("<Contact>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get offset() {
-    		throw new Error("<Contact>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set offset(value) {
-    		throw new Error("<Contact>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
     }
 
     /* src/bottomImg.svelte generated by Svelte v3.55.1 */
+
     const file$2 = "src/bottomImg.svelte";
 
     function create_fragment$2(ctx) {
@@ -15097,16 +14523,16 @@ var app = (function () {
     			t1 = text("\n                우리는 언제나 손을 잡고 있게 될 것이다.\n                ");
     			br1 = element("br");
     			t2 = text("\n                이이체, 인연");
-    			add_location(br0, file$2, 19, 16, 494);
-    			add_location(br1, file$2, 21, 16, 555);
-    			attr_dev(div0, "class", "bottom-content svelte-1e13xx4");
-    			add_location(div0, file$2, 17, 12, 421);
-    			attr_dev(div1, "class", "cover svelte-1e13xx4");
-    			add_location(div1, file$2, 16, 8, 389);
-    			attr_dev(div2, "class", "bottom-img svelte-1e13xx4");
-    			add_location(div2, file$2, 15, 4, 356);
-    			attr_dev(div3, "class", "bottom-img-outline svelte-1e13xx4");
-    			add_location(div3, file$2, 14, 0, 299);
+    			add_location(br0, file$2, 8, 16, 195);
+    			add_location(br1, file$2, 10, 16, 256);
+    			attr_dev(div0, "class", "bottom-content svelte-1ccxwmz");
+    			add_location(div0, file$2, 6, 12, 122);
+    			attr_dev(div1, "class", "cover svelte-1ccxwmz");
+    			add_location(div1, file$2, 5, 8, 90);
+    			attr_dev(div2, "class", "bottom-img svelte-1ccxwmz");
+    			add_location(div2, file$2, 4, 4, 57);
+    			attr_dev(div3, "class", "bottom-img-outline");
+    			add_location(div3, file$2, 3, 0, 20);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15121,14 +14547,12 @@ var app = (function () {
     			append_dev(div0, t1);
     			append_dev(div0, br1);
     			append_dev(div0, t2);
-    			/*div3_binding*/ ctx[4](div3);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
-    			/*div3_binding*/ ctx[4](null);
     		}
     	};
 
@@ -15143,79 +14567,22 @@ var app = (function () {
     	return block;
     }
 
-    function instance$2($$self, $$props, $$invalidate) {
+    function instance$2($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('BottomImg', slots, []);
-    	let { window_top } = $$props;
-    	let { animation } = $$props;
-    	let { offset } = $$props;
-    	let outline;
-
-    	afterUpdate(() => {
-    		if (window_top + offset > outline.offsetTop) {
-    			outline.classList.add(animation);
-    		}
-    	});
-
-    	$$self.$$.on_mount.push(function () {
-    		if (window_top === undefined && !('window_top' in $$props || $$self.$$.bound[$$self.$$.props['window_top']])) {
-    			console.warn("<BottomImg> was created without expected prop 'window_top'");
-    		}
-
-    		if (animation === undefined && !('animation' in $$props || $$self.$$.bound[$$self.$$.props['animation']])) {
-    			console.warn("<BottomImg> was created without expected prop 'animation'");
-    		}
-
-    		if (offset === undefined && !('offset' in $$props || $$self.$$.bound[$$self.$$.props['offset']])) {
-    			console.warn("<BottomImg> was created without expected prop 'offset'");
-    		}
-    	});
-
-    	const writable_props = ['window_top', 'animation', 'offset'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<BottomImg> was created with unknown prop '${key}'`);
     	});
 
-    	function div3_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			outline = $$value;
-    			$$invalidate(0, outline);
-    		});
-    	}
-
-    	$$self.$$set = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		afterUpdate,
-    		window_top,
-    		animation,
-    		offset,
-    		outline
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
-    		if ('animation' in $$props) $$invalidate(2, animation = $$props.animation);
-    		if ('offset' in $$props) $$invalidate(3, offset = $$props.offset);
-    		if ('outline' in $$props) $$invalidate(0, outline = $$props.outline);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [outline, window_top, animation, offset, div3_binding];
+    	return [];
     }
 
     class BottomImg extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { window_top: 1, animation: 2, offset: 3 });
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -15223,30 +14590,6 @@ var app = (function () {
     			options,
     			id: create_fragment$2.name
     		});
-    	}
-
-    	get window_top() {
-    		throw new Error("<BottomImg>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set window_top(value) {
-    		throw new Error("<BottomImg>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get animation() {
-    		throw new Error("<BottomImg>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set animation(value) {
-    		throw new Error("<BottomImg>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get offset() {
-    		throw new Error("<BottomImg>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set offset(value) {
-    		throw new Error("<BottomImg>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -15362,22 +14705,14 @@ var app = (function () {
 
     /* src/App.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1, setTimeout: setTimeout_1, window: window_1 } = globals;
+    const { console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (65:0) {#if show_guestbook}
+    // (59:0) {#if show_guestbook}
     function create_if_block(ctx) {
     	let guestbook;
     	let current;
-
-    	guestbook = new Guestbook({
-    			props: {
-    				window_top: /*window_top*/ ctx[1],
-    				animation,
-    				offset
-    			},
-    			$$inline: true
-    		});
+    	guestbook = new Guestbook({ $$inline: true });
 
     	const block = {
     		c: function create() {
@@ -15386,11 +14721,6 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			mount_component(guestbook, target, anchor);
     			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const guestbook_changes = {};
-    			if (dirty & /*window_top*/ 2) guestbook_changes.window_top = /*window_top*/ ctx[1];
-    			guestbook.$set(guestbook_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -15410,7 +14740,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(65:0) {#if show_guestbook}",
+    		source: "(59:0) {#if show_guestbook}",
     		ctx
     	});
 
@@ -15418,13 +14748,6 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	let scrolling = false;
-
-    	let clear_scrolling = () => {
-    		scrolling = false;
-    	};
-
-    	let scrolling_timeout;
     	let audio;
     	let t0;
     	let div;
@@ -15449,78 +14772,17 @@ var app = (function () {
     	let t10;
     	let share;
     	let current;
-    	let mounted;
-    	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[2]);
     	audio = new Audio({ $$inline: true });
     	header = new Header({ $$inline: true });
     	mainimg = new MainImg({ $$inline: true });
-
-    	greeting = new Greeting({
-    			props: {
-    				window_top: /*window_top*/ ctx[1],
-    				animation,
-    				offset
-    			},
-    			$$inline: true
-    		});
-
-    	calander = new Calander({
-    			props: {
-    				window_top: /*window_top*/ ctx[1],
-    				animation,
-    				offset
-    			},
-    			$$inline: true
-    		});
-
-    	snap = new Snap({
-    			props: {
-    				window_top: /*window_top*/ ctx[1],
-    				animation,
-    				offset
-    			},
-    			$$inline: true
-    		});
-
-    	video = new Video({
-    			props: {
-    				window_top: /*window_top*/ ctx[1],
-    				animation,
-    				offset
-    			},
-    			$$inline: true
-    		});
-
-    	notibox = new NotiBox({
-    			props: {
-    				window_top: /*window_top*/ ctx[1],
-    				animation,
-    				offset
-    			},
-    			$$inline: true
-    		});
-
+    	greeting = new Greeting({ $$inline: true });
+    	calander = new Calander({ $$inline: true });
+    	snap = new Snap({ $$inline: true });
+    	video = new Video({ $$inline: true });
+    	notibox = new NotiBox({ $$inline: true });
     	let if_block = /*show_guestbook*/ ctx[0] && create_if_block(ctx);
-
-    	contact = new Contact({
-    			props: {
-    				window_top: /*window_top*/ ctx[1],
-    				animation,
-    				offset
-    			},
-    			$$inline: true
-    		});
-
-    	bottomimg = new BottomImg({
-    			props: {
-    				window_top: /*window_top*/ ctx[1],
-    				animation,
-    				offset
-    			},
-    			$$inline: true
-    		});
-
+    	contact = new Contact({ $$inline: true });
+    	bottomimg = new BottomImg({ $$inline: true });
     	share = new Share({ $$inline: true });
 
     	const block = {
@@ -15550,7 +14812,7 @@ var app = (function () {
     			t10 = space();
     			create_component(share.$$.fragment);
     			attr_dev(div, "class", "page-cover svelte-1nibao8");
-    			add_location(div, file, 56, 0, 3356);
+    			add_location(div, file, 50, 0, 3234);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15581,46 +14843,10 @@ var app = (function () {
     			append_dev(div, t10);
     			mount_component(share, div, null);
     			current = true;
-
-    			if (!mounted) {
-    				dispose = listen_dev(window_1, "scroll", () => {
-    					scrolling = true;
-    					clearTimeout(scrolling_timeout);
-    					scrolling_timeout = setTimeout_1(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[2]();
-    				});
-
-    				mounted = true;
-    			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*window_top*/ 2 && !scrolling) {
-    				scrolling = true;
-    				clearTimeout(scrolling_timeout);
-    				scrollTo(window_1.pageXOffset, /*window_top*/ ctx[1]);
-    				scrolling_timeout = setTimeout_1(clear_scrolling, 100);
-    			}
-
-    			const greeting_changes = {};
-    			if (dirty & /*window_top*/ 2) greeting_changes.window_top = /*window_top*/ ctx[1];
-    			greeting.$set(greeting_changes);
-    			const calander_changes = {};
-    			if (dirty & /*window_top*/ 2) calander_changes.window_top = /*window_top*/ ctx[1];
-    			calander.$set(calander_changes);
-    			const snap_changes = {};
-    			if (dirty & /*window_top*/ 2) snap_changes.window_top = /*window_top*/ ctx[1];
-    			snap.$set(snap_changes);
-    			const video_changes = {};
-    			if (dirty & /*window_top*/ 2) video_changes.window_top = /*window_top*/ ctx[1];
-    			video.$set(video_changes);
-    			const notibox_changes = {};
-    			if (dirty & /*window_top*/ 2) notibox_changes.window_top = /*window_top*/ ctx[1];
-    			notibox.$set(notibox_changes);
-
     			if (/*show_guestbook*/ ctx[0]) {
     				if (if_block) {
-    					if_block.p(ctx, dirty);
-
     					if (dirty & /*show_guestbook*/ 1) {
     						transition_in(if_block, 1);
     					}
@@ -15639,13 +14865,6 @@ var app = (function () {
 
     				check_outros();
     			}
-
-    			const contact_changes = {};
-    			if (dirty & /*window_top*/ 2) contact_changes.window_top = /*window_top*/ ctx[1];
-    			contact.$set(contact_changes);
-    			const bottomimg_changes = {};
-    			if (dirty & /*window_top*/ 2) bottomimg_changes.window_top = /*window_top*/ ctx[1];
-    			bottomimg.$set(bottomimg_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -15693,8 +14912,6 @@ var app = (function () {
     			destroy_component(contact);
     			destroy_component(bottomimg);
     			destroy_component(share);
-    			mounted = false;
-    			dispose();
     		}
     	};
 
@@ -15708,9 +14925,6 @@ var app = (function () {
 
     	return block;
     }
-
-    const offset = 700;
-    const animation = "slideUp";
 
     async function health_check() {
     	return await fetch("https://api.leechohyuntaeryong.com").then(res => {
@@ -15751,16 +14965,11 @@ var app = (function () {
     		}
     	});
 
-    	let window_top;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
     	});
-
-    	function onwindowscroll() {
-    		$$invalidate(1, window_top = window_1.pageYOffset);
-    	}
 
     	$$self.$capture_state = () => ({
     		Audio,
@@ -15778,22 +14987,18 @@ var app = (function () {
     		onMount,
     		show_guestbook,
     		health_check,
-    		sleep,
-    		window_top,
-    		offset,
-    		animation
+    		sleep
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('show_guestbook' in $$props) $$invalidate(0, show_guestbook = $$props.show_guestbook);
-    		if ('window_top' in $$props) $$invalidate(1, window_top = $$props.window_top);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [show_guestbook, window_top, onwindowscroll];
+    	return [show_guestbook];
     }
 
     class App extends SvelteComponentDev {
