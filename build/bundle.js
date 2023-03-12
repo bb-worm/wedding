@@ -1815,7 +1815,7 @@ var app = (function () {
     			t0 = space();
     			div1 = element("div");
     			div1.textContent = "2023. 04. 22. Saturday 6:00 PM";
-    			if (!src_url_equal(img.src, img_src_value = "https://lh3.googleusercontent.com/_ImEw0ifU6km4gUuWbjd5dy6YBYCmIiW4WWRZG0bICRJ7y0aNUIKmOkg9bzuO9ZXSutbuVO8rI04BQv_SY_45HYDP2W9ZG38gZpAqVyA3IjG1ofoCJMcpWMvr7MH32odRT7PjEjLfLg=w2400")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "main");
     			attr_dev(img, "width", "425px");
     			add_location(img, file$c, 6, 8, 90);
@@ -11968,7 +11968,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (59:0) {#each imgs as img, i}
+    // (61:0) {#each imgs as img, i}
     function create_each_block_1(ctx) {
     	let swiper_slide;
     	let img;
@@ -11984,10 +11984,10 @@ var app = (function () {
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
     			attr_dev(img, "class", "svelte-c6u2c3");
-    			add_location(img, file$9, 60, 16, 4824);
+    			add_location(img, file$9, 62, 16, 4839);
     			set_custom_element_data(swiper_slide, "lazy", "true");
     			set_custom_element_data(swiper_slide, "class", "svelte-c6u2c3");
-    			add_location(swiper_slide, file$9, 59, 12, 4780);
+    			add_location(swiper_slide, file$9, 61, 12, 4795);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, swiper_slide, anchor);
@@ -12004,14 +12004,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(59:0) {#each imgs as img, i}",
+    		source: "(61:0) {#each imgs as img, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (75:4) {:else}
+    // (77:4) {:else}
     function create_else_block(ctx) {
     	let div;
     	let img;
@@ -12035,10 +12035,10 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 76, 20, 5409);
+    			add_location(img, file$9, 78, 20, 5424);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
     			set_style(div, "margin-right", "5px");
-    			add_location(div, file$9, 75, 16, 5338);
+    			add_location(div, file$9, 77, 16, 5353);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12067,14 +12067,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(75:4) {:else}",
+    		source: "(77:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:4) {#if i%5 == 4}
+    // (73:4) {#if i%5 == 4}
     function create_if_block$1(ctx) {
     	let div;
     	let img;
@@ -12098,9 +12098,9 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 72, 20, 5145);
+    			add_location(img, file$9, 74, 20, 5160);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
-    			add_location(div, file$9, 71, 16, 5100);
+    			add_location(div, file$9, 73, 16, 5115);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12129,14 +12129,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(71:4) {#if i%5 == 4}",
+    		source: "(73:4) {#if i%5 == 4}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (69:0) {#each imgs as img, i}
+    // (71:0) {#each imgs as img, i}
     function create_each_block$1(ctx) {
     	let button;
     	let t;
@@ -12155,7 +12155,7 @@ var app = (function () {
     			if_block.c();
     			t = space();
     			attr_dev(button, "class", "snap-bnt svelte-c6u2c3");
-    			add_location(button, file$9, 69, 12, 5039);
+    			add_location(button, file$9, 71, 12, 5054);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -12175,7 +12175,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(69:0) {#each imgs as img, i}",
+    		source: "(71:0) {#each imgs as img, i}",
     		ctx
     	});
 
@@ -12239,18 +12239,18 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "snap-head svelte-c6u2c3");
-    			add_location(div0, file$9, 51, 4, 4558);
+    			add_location(div0, file$9, 53, 4, 4573);
     			set_custom_element_data(swiper_container, "init", "false");
     			set_custom_element_data(swiper_container, "navigation", "true");
-    			add_location(swiper_container, file$9, 57, 8, 4676);
+    			add_location(swiper_container, file$9, 59, 8, 4691);
     			attr_dev(div1, "class", "swiper svelte-c6u2c3");
-    			add_location(div1, file$9, 56, 4, 4647);
+    			add_location(div1, file$9, 58, 4, 4662);
     			attr_dev(div2, "class", "snap-grid svelte-c6u2c3");
-    			add_location(div2, file$9, 67, 8, 4980);
+    			add_location(div2, file$9, 69, 8, 4995);
     			attr_dev(div3, "class", "snap-main svelte-c6u2c3");
-    			add_location(div3, file$9, 66, 4, 4948);
+    			add_location(div3, file$9, 68, 4, 4963);
     			attr_dev(div4, "class", "snap-outline svelte-c6u2c3");
-    			add_location(div4, file$9, 50, 0, 4527);
+    			add_location(div4, file$9, 52, 0, 4542);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12363,26 +12363,27 @@ var app = (function () {
     	register();
 
     	let imgs = [
-    		"https://lh3.googleusercontent.com/KIBJYvIaL5ik5GsvdXnFxvmpEZDepJ9IZiFw4NqKt-QxHA5QxcEfIp9pz6jCm-afIVFhlEoOMoWnOa3312DFUx_wo-q3_AMFCbjLAig2dIrL5On7WAihOISjWPYREN1r4unF9brtGxA=w2400",
-    		"https://lh3.googleusercontent.com/pVj6HbgP5VUVkXIle9cfNjnaIotp3rYCfrMQh-lr2DGFT72k6dPjfrB7ZuJo6qoFFeHsj_EoMvTEiDmaHOaljh7T6UWESM4OcDtnvfZcCDf-3Pvy67_yW_ONdb7Rrk6Uln6fy7eylfY=w2400",
-    		"https://lh3.googleusercontent.com/XRlmjF2EhDCNUvs1qcYdDN5isQLdO7WAKuyCX6FCxsOeZsCqv4Ts90wp74Npinn1myCDTJuGjInKAepNgoFuQ0Hee7269n7AAIG5AyyVBdmPKc4KQPM4VWHoq6-YnWIbGT4DCftO9ss=w2400",
-    		"https://lh3.googleusercontent.com/QU3a9nW45cAQCw14QD_PP1Mk3bZpBa0wVGIdaDq8kQCH3LcoCXr7h823rm1kVvX3Uz6WM_ELs5pfBjOo_Tbz0eAWHe7LEGXCf2HtnK30rYez7D13uGABjwVfk2abGFCCKNANUvJS8XI=w2400",
-    		"https://lh3.googleusercontent.com/m0s4kE37zi5U7M0Q-HO8rzMX2iPtS8M-GvqA-zrGu6IXptpOmVgMwImjWxsSHc7YdH470h-LwdyCPCBc-lf0avFdmyGVKCy76FVD8NqBmrp2X3vsmxa7ymBW4h-BqU_GW_MOOdVtq_A=w2400",
-    		"https://lh3.googleusercontent.com/tERtEWLUoOfoKID4u73U4uQjFIi60fDNG6NiJOQGoPZXLnAKfDQ2aCnZ3ptLKbbvCja34lwaNonXgNihszEeAO59yOst-6oU66pzE_I2qZs29zWFqw7QpGnGgo6pZqLpGYCskVf54eM=w2400",
-    		"https://lh3.googleusercontent.com/5_JI0eUeyugOJigglgpEPmReMdB6zy2FcPQnBrg_2L5h6BB9asiO8iRf27ZOHvMegcfi7k9AN03x8rM7vluhF8bQcQb86Hs6MgVucfBR6O9bP0lsepqLFGqogjJajsPXxJtrCML0_3s=w2400",
-    		"https://lh3.googleusercontent.com/vbTq0r8me_Xk1vq3kXZKrS079yQWV0tWuCfpDOR4UK8OheHSbgyU62jWIzuBQihR_jXBAK04QVji4TotATCN9trjWZqEEupT2BucsaVvh1x1NkJ8zDzwv52ivq1BX8DzTkf31zSORM8=w2400",
-    		"https://lh3.googleusercontent.com/PkwHG8DPJI4EYYgs-ubXo3PwZV2a92p3nVYixuPA8LSWwyAnfq2xLvnlGaZ6KedWRnnXiPISWsYuglM5F6Z0R312FDwjV3yDQnQRVf4Dr8xhA53IgtQyvxkzGHJeNdmjGxXai-wlGEg=w2400",
-    		"https://lh3.googleusercontent.com/msAUQLSQgq7YE7rMaD22pXn_mM-I4cF9J5Gl5NlPlMxePwdW3yjjgYTdtlOCKtG1nxN6KAh76meT7gkVTQecViB3N2tPmKumSBNsNU0jFJkO0XKwj4J1PSdZLmXEXJXsvYZMPrEkPNI=w2400",
-    		"https://lh3.googleusercontent.com/A2arEKg4PQYdBq302MCLDMkzoXcBQNktiBwWWUC4zwJA8U4RDnEi0qQa3vWq0Md26lAQe7PexhUHuNRss1gRTxTvKJdvHt_5ZNjVlURzhjus-4D7w2BT-6V_jthEBG2AvgjmU_NJCbw=w2400",
-    		"https://lh3.googleusercontent.com/3xeq3JVCbsfl1R7sqDIwflIS0j1kSzeUMp0vTSPmGZuOsj2pMqM1D3b81VGPbDLFj2O-ZRwHFjSDOaxMNuz_Y8zpPbTbU_PPHvhk5D2nOE1gs9i7VAF9lig8LT_yOYM9eW7oj5ytoOA=w2400",
-    		"https://lh3.googleusercontent.com/QxB3hYXFi1AQxKrMhENCc_eYmYntTOUFTs2lN2Mymzl0fY8FAo0QqQBarZadStbex8iQqu8JTuq4RcLppjL5e2fKTB_x2FpgAvNXQFKgHZ1rVYq-RUWjaHD4ZJik0AwtkGhji4TDUvM=w2400",
-    		"https://lh3.googleusercontent.com/vzGQDU5I2dbwpfkZO0IW4G2eDF_-vc1vvGnb5PB56X9FYgoZA1apHBCXzH1lhJeAcMgL0jesLskvVlRXh-R4Klh-ZE4I7hIKXPj0rCSoP7O3coX29ilNIp-4PVkMf6SrsIYTfQdHaWo=w2400",
-    		"https://lh3.googleusercontent.com/oyelq1qiOd9d6b0QSjNOEbwCdKfyWbF0HuXiq5Of0SixoxRmkdi5_ofe6adGLAj7-YTUHesDtmsNNzazlQEIiA2gRk761WqRQkj9d1g4ov41Np7MWjHjEnVnNw8fjkjulJOFJD8B9uQ=w2400",
-    		"https://lh3.googleusercontent.com/ENt8y4zMwlKDVQqeGVMJNVukT6yQsZkMZWoQEekRpkIsxGIarcD7dgwNWORRGP8brwJsVe3WdGWubwH61Ef4UiZaBbouuFH5R5nzqyAtrKGyS6h-cyhwReJVF4h7N39P-fXp4ZymaQQ=w2400",
-    		"https://lh3.googleusercontent.com/JC9Ps6XOnXx3gqPJHF8NFWqiyvy7Sv8btiGnlvCAYqpJ-ZQEyYdWZbqHuBD3RgHiRFmr07wumTFsrL8Z6FrDFKRGXK60kIi34RJ9ZMj6siWRgofBlfpK-mIHpj4l82LENsjAdh1Wa5M=w2400",
-    		"https://lh3.googleusercontent.com/MGpGwU9FQ-BeuOilJ1UewvRyc4NQ_gCM7HUQO_QgkIlKRCU_TNci-WZqWVS_jQbMfSBrA9VDNxUo4RHcuQDLf-3d9kELnCo5rV6vEkPqR22HpN4EKufQOSTU5vyblrQZH6iKNkbWsbo=w2400",
-    		"https://lh3.googleusercontent.com/85BB-5SwpCZVL7bnI1q7tZktc41fbR9SUfsggscL8otplC42_nFKvritX_O7yHyXAReOv6Dc-vdymljNhmwe1v8iPOBJwHZF8lMX32oid2VhDvgYfmy-oNpICf4OUSmxs05NMo5H-hE=w2400",
-    		"https://lh3.googleusercontent.com/q1sz2KbLY1jAbK-ASf4m5CmCIw4H4SpLWdKbw4_5GNBVx-Ef99i5bJPNHE2heVWyJfOqDkT15yW0InsaQExzK0DF4vc3m8ueWZCtsMyxm-iBNTsfZ7Z3qI8qDK2M5R3oSGBMtcFucgI=w2400"
+    		// 가로
+    		"https://lh3.googleusercontent.com/g89bg39IzVKlsHq40QqISD16fzn48jR90kewluLrjNx9u9I_c9Ksz2ACaGutQBWD65-wqy4hFVzEuPSacLv1_yKGwVHrMBqUzx5IbIWLfBgHwtJ1tlUi1a8WshamhSao7F16OxFjTAg=w2400",
+    		"https://lh3.googleusercontent.com/V1-nAlUXFgG0lN6r70wEXaaR_Lt4bcVEZmqqR0bN4ZPdfMbTVP1ARt2bhULEB1_A7ZoNDKvdfLbns4EOABTeoAJibIxAkqMQJ7N5e77yWczQej3balPnum2QBHvG1sSELFRrCIeV1G0=w2400",
+    		"https://lh3.googleusercontent.com/oSvZR0JKplTs9WVLDw4vUbc7NbiU9sTDIRGamX-1aITMdShgy9bya66G08ZZhhD8wTbhFDqgXn0EUBkcNVRwK6-ZDeMB77GNspOz2NqAsSoqSRQdtf_oSx3k_SZtHkT1Ag1ot6qG0E4=w2400",
+    		"https://lh3.googleusercontent.com/PPB9rVxySd0E8O609AE2s6R-SR-sGcyJyPGfV-A0-90nKjZCyl9sZwJYV-gedqQineIXbBYqcT87ll9fmZEEway1JW03xC4pNl8K8dgpSveVr01cDTK_Yz3bd5P7gPLCdZPEZTyXYy8=w2400",
+    		"https://lh3.googleusercontent.com/evGqvz0X19RNrw3l4k24QnYw7qWfMhKroYVSqh0cNF1nO2TtH6IbpoQagEqe5x9p94tAqI-632ySxN56lfw02S55Wy5mlYfb4ryP1TyUUbS4Lvg1ZMJ1Z_nIDdJfaJB0ySgl15WYnIk=w2400",
+    		"https://lh3.googleusercontent.com/ZmLZdGVBqW_YbLI8NeqLlmR7JgkRpe7IWDlSsbXBCQ4Bkg7TC61-R51ot-GyPr4phjt5EGk4gENzggdOdIiWVrMTR9b2CETYjiQI8huruvtG5Dfo5IAFnNEHWRqBudfVbvlGDIhD8fI=w2400",
+    		"https://lh3.googleusercontent.com/i3AmzKEIgPltdp-Y-KuuRW69CTTuQekVfD-D75NB-gg2zwsBrDIVed0vhk8mbjEdXWycAq-kLbJEht8B_H42AowN5-Ik98yc02gK05JUuqOwz8v-jU7nMYLfap-Whrd-o8xKZ_n1fms=w2400",
+    		"https://lh3.googleusercontent.com/XHSuok_I2txLIZx6htuQXODFJIJt-3IWcSCI8Fm37NPXx5oyS9N2-JUCID2bXDJeE6cE-EY7_PKQB-6nyt5mOlxIUN1E8jNHHBqRQWwY4hceWRXe-_K3APukMR9ZiBQGwrh8fMKcsQ8=w2400",
+    		"https://lh3.googleusercontent.com/I9D9jeLxrM_2WnqYq9ZJgSHwqioV-HbkAiWGPlKkbwkc7q77G36IzkHLzG9OJ9oD7CqMcCeyM30uvwmS3RzNpRNWdwFSgCJyYqbKsa8oMV4v2NoDntATvGrUH-stiKyWyk1QlIsLxAQ=w2400",
+    		"https://lh3.googleusercontent.com/FBeCd9muTXN22COWeXSLWBO7lJqyC1FrPNob9yJMtW5xEoBEAwFAb_-u-yygbjdi2fklQS58cdp1qZ3o_d2CBmlSl52Te9FA1kMTHlhnD-CJyAcNM68ahmohjKoeklsxDu6hnneiKuk=w2400",
+    		"https://lh3.googleusercontent.com/Mzf7MwZdAqi0efTKpRvq96tqmRIQ7pUB2Uz87EF-LrGs5zD1TydCsqFLWnAOz2K1UkEY3GJ9ME-emwshYxMteQ-jWJj2LgqXe-8csaMSysDFlMmr-XJTNi711deYIZu8fwr10QPZCOY=w2400",
+    		"https://lh3.googleusercontent.com/kQ5zIA0tG750WPsUmQ20vkoy8jbPrfPmdpULarln2yae3iecOaTuDUf2yu76KFfLI4jInKCDB-GOB57jnzbhFhSUJeV0jzWOhi8k2lcsq6AUS_m9l--RGB8qZ_OZ1_2uMjMpFSfNpAk=w2400",
+    		"https://lh3.googleusercontent.com/9Z9eqQt0bYdRMWVG-cK6DIqtuU0vNxbPyjYWlAKVJwWsZl4PlgWOtkgu4PHF1HkHkVFPoZ74uchPareywoG3RxPEHyGOQ1Q7I2jqUeE2xLX62w6fEO5CUZcR5AFS3r0M88RKpn6scAM=w2400",
+    		"https://lh3.googleusercontent.com/TnYdZxIyFZcWS6CkFPlhWyMzSSBQWAmMQePVPfYeLTc5F7mRGP0SsCVFbY26tichCpAlsYHMgxE67Q6DjhTUBCyDlSNYYPomahLhw5AhMcr3oRUoykL2iLE8vakm-qM3_j_2bA0kVwk=w2400",
+    		"https://lh3.googleusercontent.com/dR4TSznWaS8eA2aBAItROu18RGAT_J0wppueqpnYpQQKaxo9zXWMEatCqSw11jx7brgRDYPtC_HMjs-MHPq4KX4CZzzC_3Gzu0J3FThmGGHAZNf_q9yd2yqXxjACNHznldD2B2-0Ldk=w2400",
+    		"https://lh3.googleusercontent.com/VuKJ3AOrGqQHqMpS2YJ_XA6mIcg4VbMbDE627RNT_nvlwCcfdqfpK1RfQY0s9M2q9MsekRc9HbfRjsVAPcewXvZq7KmQByeo2EXnPduicQa_xNbZTJj13SY5-ZMyEFOd_XbDtpr0NVA=w2400",
+    		"https://lh3.googleusercontent.com/-eb42-aLT-ZsfhOD6eHmdMb8Oq0fbxL5qgFfZAvijv-gm7ILhq-UTjkiWIxjLjDANvV3xrStzzXwE6XItIWepeuMo0IuR4lnSZFUI5Wp7gebzPUiSCIYAmVsIGWKbeRNmJNZ-JCZK78=w2400",
+    		"https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400",
+    		"https://lh3.googleusercontent.com/hye_gtyvUpzbp7ij3kkLgZIHK8lzAgAgbzFEH1Qc1KCuz8oK8kVsLrb0WspHHuiQjzGYsttrs8V-QHD90EkOrZCi3XzAX9a1fWbMcS28-PPea_CF9ZIzVlYHNlWqLQEhHeEcvHxOBFw=w2400",
+    		"https://lh3.googleusercontent.com/_ADVdjONR1UjlrJ5x00S4nMfc_erpDkpgoWjEAFIYVGGMxid_YLC--lf8zT5ajgwCPESijMSR6i0QGaw59wQvQWrbB0pfUBN8e1wvDvbqGz3lmGkUAHTKfAYOuXXfJt0Ymys3T5TF50=w2400"
     	];
 
     	let swiperEl;
