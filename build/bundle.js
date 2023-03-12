@@ -11975,10 +11975,10 @@ var app = (function () {
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
     			attr_dev(img, "class", "svelte-c6u2c3");
-    			add_location(img, file$9, 61, 16, 4840);
+    			add_location(img, file$9, 61, 16, 4844);
     			set_custom_element_data(swiper_slide, "lazy", "true");
     			set_custom_element_data(swiper_slide, "class", "svelte-c6u2c3");
-    			add_location(swiper_slide, file$9, 60, 12, 4796);
+    			add_location(swiper_slide, file$9, 60, 12, 4800);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, swiper_slide, anchor);
@@ -12026,10 +12026,10 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 77, 20, 5425);
+    			add_location(img, file$9, 77, 20, 5429);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
     			set_style(div, "margin-right", "5px");
-    			add_location(div, file$9, 76, 16, 5354);
+    			add_location(div, file$9, 76, 16, 5358);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12089,9 +12089,9 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 73, 20, 5161);
+    			add_location(img, file$9, 73, 20, 5165);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
-    			add_location(div, file$9, 72, 16, 5116);
+    			add_location(div, file$9, 72, 16, 5120);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12146,7 +12146,7 @@ var app = (function () {
     			if_block.c();
     			t = space();
     			attr_dev(button, "class", "snap-bnt svelte-c6u2c3");
-    			add_location(button, file$9, 70, 12, 5055);
+    			add_location(button, file$9, 70, 12, 5059);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -12202,7 +12202,7 @@ var app = (function () {
     		c: function create() {
     			div4 = element("div");
     			div0 = element("div");
-    			div0.textContent = "스냅";
+    			div0.textContent = "우리의 모습";
     			t1 = space();
     			div1 = element("div");
     			swiper_container = element("swiper-container");
@@ -12223,13 +12223,13 @@ var app = (function () {
     			add_location(div0, file$9, 52, 4, 4567);
     			set_custom_element_data(swiper_container, "init", "false");
     			set_custom_element_data(swiper_container, "navigation", "true");
-    			add_location(swiper_container, file$9, 58, 8, 4692);
+    			add_location(swiper_container, file$9, 58, 8, 4696);
     			attr_dev(div1, "class", "swiper svelte-c6u2c3");
-    			add_location(div1, file$9, 57, 4, 4663);
+    			add_location(div1, file$9, 57, 4, 4667);
     			attr_dev(div2, "class", "snap-grid svelte-c6u2c3");
-    			add_location(div2, file$9, 68, 8, 4996);
+    			add_location(div2, file$9, 68, 8, 5000);
     			attr_dev(div3, "class", "snap-main svelte-c6u2c3");
-    			add_location(div3, file$9, 67, 4, 4964);
+    			add_location(div3, file$9, 67, 4, 4968);
     			attr_dev(div4, "class", "snap-outline svelte-c6u2c3");
     			add_location(div4, file$9, 51, 0, 4536);
     		},
@@ -12581,7 +12581,7 @@ var app = (function () {
     			t8 = text("\n            감사합니다.\n            ");
     			br9 = element("br");
     			br10 = element("br");
-    			t9 = text("\n            - 이초현태룡 드림");
+    			t9 = text("\n            - 현태룡, 이초현 드림");
     			attr_dev(div0, "class", "title svelte-qkxpcc");
     			add_location(div0, file$7, 5, 8, 86);
     			add_location(br0, file$7, 8, 12, 194);
@@ -14592,11 +14592,11 @@ var app = (function () {
     			div0 = element("div");
     			div0.textContent = "카카오톡으로 초대장 보내기";
     			attr_dev(div0, "class", "share-content svelte-1srld98");
-    			add_location(div0, file$1, 31, 8, 976);
+    			add_location(div0, file$1, 31, 8, 988);
     			attr_dev(button, "class", "share-kakao svelte-1srld98");
-    			add_location(button, file$1, 30, 4, 915);
+    			add_location(button, file$1, 30, 4, 927);
     			attr_dev(div1, "class", "share-outline");
-    			add_location(div1, file$1, 29, 0, 883);
+    			add_location(div1, file$1, 29, 0, 895);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14636,8 +14636,8 @@ var app = (function () {
     	Kakao.Share.sendDefault({
     		objectType: 'feed',
     		content: {
-    			title: '4월 22일 현태룡 ♥ 이초현 결혼합니다.',
-    			imageUrl: 'https://lh3.googleusercontent.com/rY9Wii-4nEcPrpI1QITGOP7DqBeYg4fy8_53o7zCVWQERI9lcYog2jfYMGaB2txRB1nNkMng430EjxF789JQUwDSGxafXjZxjnC2O-WoOg9fofWIv5LOvmlqfWg8FNMPerEuMhzTM_U=w2400',
+    			title: '2023년 4월 22일 (토) 저녁 6시, 제주',
+    			imageUrl: 'https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400',
     			link: {
     				// [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
     				mobileWebUrl: 'https://bb-worm.github.io/wedding',
@@ -14646,7 +14646,7 @@ var app = (function () {
     		},
     		buttons: [
     			{
-    				title: '모바일청첩장',
+    				title: '현태룡 ♥ 이초현 결혼합니다',
     				link: {
     					mobileWebUrl: 'https://bb-worm.github.io/wedding',
     					webUrl: 'https://bb-worm.github.io/wedding'
