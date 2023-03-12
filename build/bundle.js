@@ -11973,10 +11973,8 @@ var app = (function () {
     			t = space();
     			if (!src_url_equal(img.src, img_src_value = /*imgs*/ ctx[1][/*i*/ ctx[9]])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			attr_dev(img, "loading", "lazy");
     			attr_dev(img, "class", "svelte-c6u2c3");
-    			add_location(img, file$9, 61, 16, 4844);
-    			set_custom_element_data(swiper_slide, "lazy", "true");
+    			add_location(img, file$9, 61, 16, 4832);
     			set_custom_element_data(swiper_slide, "class", "svelte-c6u2c3");
     			add_location(swiper_slide, file$9, 60, 12, 4800);
     		},
@@ -12026,10 +12024,10 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 77, 20, 5429);
+    			add_location(img, file$9, 77, 20, 5402);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
     			set_style(div, "margin-right", "5px");
-    			add_location(div, file$9, 76, 16, 5358);
+    			add_location(div, file$9, 76, 16, 5331);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12089,9 +12087,9 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 73, 20, 5165);
+    			add_location(img, file$9, 73, 20, 5138);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
-    			add_location(div, file$9, 72, 16, 5120);
+    			add_location(div, file$9, 72, 16, 5093);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12146,7 +12144,7 @@ var app = (function () {
     			if_block.c();
     			t = space();
     			attr_dev(button, "class", "snap-bnt svelte-c6u2c3");
-    			add_location(button, file$9, 70, 12, 5059);
+    			add_location(button, file$9, 70, 12, 5032);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -12227,9 +12225,9 @@ var app = (function () {
     			attr_dev(div1, "class", "swiper svelte-c6u2c3");
     			add_location(div1, file$9, 57, 4, 4667);
     			attr_dev(div2, "class", "snap-grid svelte-c6u2c3");
-    			add_location(div2, file$9, 68, 8, 5000);
+    			add_location(div2, file$9, 68, 8, 4973);
     			attr_dev(div3, "class", "snap-main svelte-c6u2c3");
-    			add_location(div3, file$9, 67, 4, 4968);
+    			add_location(div3, file$9, 67, 4, 4941);
     			attr_dev(div4, "class", "snap-outline svelte-c6u2c3");
     			add_location(div4, file$9, 51, 0, 4536);
     		},
