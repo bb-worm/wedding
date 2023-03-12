@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -11990,10 +11990,10 @@ var app = (function () {
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
     			attr_dev(img, "class", "svelte-c6u2c3");
-    			add_location(img, file$9, 61, 16, 4843);
+    			add_location(img, file$9, 61, 16, 4835);
     			set_custom_element_data(swiper_slide, "lazy", "true");
     			set_custom_element_data(swiper_slide, "class", "svelte-c6u2c3");
-    			add_location(swiper_slide, file$9, 60, 12, 4800);
+    			add_location(swiper_slide, file$9, 60, 12, 4792);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, swiper_slide, anchor);
@@ -12041,10 +12041,10 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 77, 20, 5430);
+    			add_location(img, file$9, 77, 20, 5422);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
     			set_style(div, "margin-right", "5px");
-    			add_location(div, file$9, 76, 16, 5359);
+    			add_location(div, file$9, 76, 16, 5351);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12104,9 +12104,9 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 73, 20, 5164);
+    			add_location(img, file$9, 73, 20, 5156);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
-    			add_location(div, file$9, 72, 16, 5119);
+    			add_location(div, file$9, 72, 16, 5111);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12161,7 +12161,7 @@ var app = (function () {
     			if_block.c();
     			t = space();
     			attr_dev(button, "class", "snap-bnt svelte-c6u2c3");
-    			add_location(button, file$9, 70, 12, 5058);
+    			add_location(button, file$9, 70, 12, 5050);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -12235,18 +12235,18 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "snap-head svelte-c6u2c3");
-    			add_location(div0, file$9, 52, 4, 4567);
+    			add_location(div0, file$9, 52, 4, 4559);
     			set_custom_element_data(swiper_container, "init", "false");
     			set_custom_element_data(swiper_container, "navigation", "true");
-    			add_location(swiper_container, file$9, 58, 8, 4696);
+    			add_location(swiper_container, file$9, 58, 8, 4688);
     			attr_dev(div1, "class", "swiper svelte-c6u2c3");
-    			add_location(div1, file$9, 57, 4, 4667);
+    			add_location(div1, file$9, 57, 4, 4659);
     			attr_dev(div2, "class", "snap-grid svelte-c6u2c3");
-    			add_location(div2, file$9, 68, 8, 4999);
+    			add_location(div2, file$9, 68, 8, 4991);
     			attr_dev(div3, "class", "snap-main svelte-c6u2c3");
-    			add_location(div3, file$9, 67, 4, 4967);
+    			add_location(div3, file$9, 67, 4, 4959);
     			attr_dev(div4, "class", "snap-outline svelte-c6u2c3");
-    			add_location(div4, file$9, 51, 0, 4536);
+    			add_location(div4, file$9, 51, 0, 4528);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12347,26 +12347,26 @@ var app = (function () {
     	register();
 
     	let imgs = [
-    		"https://lh3.googleusercontent.com/_ADVdjONR1UjlrJ5x00S4nMfc_erpDkpgoWjEAFIYVGGMxid_YLC--lf8zT5ajgwCPESijMSR6i0QGaw59wQvQWrbB0pfUBN8e1wvDvbqGz3lmGkUAHTKfAYOuXXfJt0Ymys3T5TF50=w2400",
-    		"https://lh3.googleusercontent.com/hye_gtyvUpzbp7ij3kkLgZIHK8lzAgAgbzFEH1Qc1KCuz8oK8kVsLrb0WspHHuiQjzGYsttrs8V-QHD90EkOrZCi3XzAX9a1fWbMcS28-PPea_CF9ZIzVlYHNlWqLQEhHeEcvHxOBFw=w2400",
-    		"https://lh3.googleusercontent.com/dR4TSznWaS8eA2aBAItROu18RGAT_J0wppueqpnYpQQKaxo9zXWMEatCqSw11jx7brgRDYPtC_HMjs-MHPq4KX4CZzzC_3Gzu0J3FThmGGHAZNf_q9yd2yqXxjACNHznldD2B2-0Ldk=w2400",
-    		"https://lh3.googleusercontent.com/VuKJ3AOrGqQHqMpS2YJ_XA6mIcg4VbMbDE627RNT_nvlwCcfdqfpK1RfQY0s9M2q9MsekRc9HbfRjsVAPcewXvZq7KmQByeo2EXnPduicQa_xNbZTJj13SY5-ZMyEFOd_XbDtpr0NVA=w2400",
-    		"https://lh3.googleusercontent.com/kQ5zIA0tG750WPsUmQ20vkoy8jbPrfPmdpULarln2yae3iecOaTuDUf2yu76KFfLI4jInKCDB-GOB57jnzbhFhSUJeV0jzWOhi8k2lcsq6AUS_m9l--RGB8qZ_OZ1_2uMjMpFSfNpAk=w2400",
-    		"https://lh3.googleusercontent.com/TnYdZxIyFZcWS6CkFPlhWyMzSSBQWAmMQePVPfYeLTc5F7mRGP0SsCVFbY26tichCpAlsYHMgxE67Q6DjhTUBCyDlSNYYPomahLhw5AhMcr3oRUoykL2iLE8vakm-qM3_j_2bA0kVwk=w2400",
-    		"https://lh3.googleusercontent.com/9Z9eqQt0bYdRMWVG-cK6DIqtuU0vNxbPyjYWlAKVJwWsZl4PlgWOtkgu4PHF1HkHkVFPoZ74uchPareywoG3RxPEHyGOQ1Q7I2jqUeE2xLX62w6fEO5CUZcR5AFS3r0M88RKpn6scAM=w2400",
-    		"https://lh3.googleusercontent.com/-eb42-aLT-ZsfhOD6eHmdMb8Oq0fbxL5qgFfZAvijv-gm7ILhq-UTjkiWIxjLjDANvV3xrStzzXwE6XItIWepeuMo0IuR4lnSZFUI5Wp7gebzPUiSCIYAmVsIGWKbeRNmJNZ-JCZK78=w2400",
-    		"https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400",
-    		"https://lh3.googleusercontent.com/FBeCd9muTXN22COWeXSLWBO7lJqyC1FrPNob9yJMtW5xEoBEAwFAb_-u-yygbjdi2fklQS58cdp1qZ3o_d2CBmlSl52Te9FA1kMTHlhnD-CJyAcNM68ahmohjKoeklsxDu6hnneiKuk=w2400",
-    		"https://lh3.googleusercontent.com/I9D9jeLxrM_2WnqYq9ZJgSHwqioV-HbkAiWGPlKkbwkc7q77G36IzkHLzG9OJ9oD7CqMcCeyM30uvwmS3RzNpRNWdwFSgCJyYqbKsa8oMV4v2NoDntATvGrUH-stiKyWyk1QlIsLxAQ=w2400",
-    		"https://lh3.googleusercontent.com/g89bg39IzVKlsHq40QqISD16fzn48jR90kewluLrjNx9u9I_c9Ksz2ACaGutQBWD65-wqy4hFVzEuPSacLv1_yKGwVHrMBqUzx5IbIWLfBgHwtJ1tlUi1a8WshamhSao7F16OxFjTAg=w2400",
-    		"https://lh3.googleusercontent.com/PPB9rVxySd0E8O609AE2s6R-SR-sGcyJyPGfV-A0-90nKjZCyl9sZwJYV-gedqQineIXbBYqcT87ll9fmZEEway1JW03xC4pNl8K8dgpSveVr01cDTK_Yz3bd5P7gPLCdZPEZTyXYy8=w2400",
-    		"https://lh3.googleusercontent.com/oSvZR0JKplTs9WVLDw4vUbc7NbiU9sTDIRGamX-1aITMdShgy9bya66G08ZZhhD8wTbhFDqgXn0EUBkcNVRwK6-ZDeMB77GNspOz2NqAsSoqSRQdtf_oSx3k_SZtHkT1Ag1ot6qG0E4=w2400",
-    		"https://lh3.googleusercontent.com/Mzf7MwZdAqi0efTKpRvq96tqmRIQ7pUB2Uz87EF-LrGs5zD1TydCsqFLWnAOz2K1UkEY3GJ9ME-emwshYxMteQ-jWJj2LgqXe-8csaMSysDFlMmr-XJTNi711deYIZu8fwr10QPZCOY=w2400",
-    		"https://lh3.googleusercontent.com/XHSuok_I2txLIZx6htuQXODFJIJt-3IWcSCI8Fm37NPXx5oyS9N2-JUCID2bXDJeE6cE-EY7_PKQB-6nyt5mOlxIUN1E8jNHHBqRQWwY4hceWRXe-_K3APukMR9ZiBQGwrh8fMKcsQ8=w2400",
-    		"https://lh3.googleusercontent.com/i3AmzKEIgPltdp-Y-KuuRW69CTTuQekVfD-D75NB-gg2zwsBrDIVed0vhk8mbjEdXWycAq-kLbJEht8B_H42AowN5-Ik98yc02gK05JUuqOwz8v-jU7nMYLfap-Whrd-o8xKZ_n1fms=w2400",
-    		"https://lh3.googleusercontent.com/V1-nAlUXFgG0lN6r70wEXaaR_Lt4bcVEZmqqR0bN4ZPdfMbTVP1ARt2bhULEB1_A7ZoNDKvdfLbns4EOABTeoAJibIxAkqMQJ7N5e77yWczQej3balPnum2QBHvG1sSELFRrCIeV1G0=w2400",
+    		"https://lh3.googleusercontent.com/ZmLZdGVBqW_YbLI8NeqLlmR7JgkRpe7IWDlSsbXBCQ4Bkg7TC61-R51ot-GyPr4phjt5EGk4gENzggdOdIiWVrMTR9b2CETYjiQI8huruvtG5Dfo5IAFnNEHWRqBudfVbvlGDIhD8fI=w2400",
     		"https://lh3.googleusercontent.com/evGqvz0X19RNrw3l4k24QnYw7qWfMhKroYVSqh0cNF1nO2TtH6IbpoQagEqe5x9p94tAqI-632ySxN56lfw02S55Wy5mlYfb4ryP1TyUUbS4Lvg1ZMJ1Z_nIDdJfaJB0ySgl15WYnIk=w2400",
-    		"https://lh3.googleusercontent.com/ZmLZdGVBqW_YbLI8NeqLlmR7JgkRpe7IWDlSsbXBCQ4Bkg7TC61-R51ot-GyPr4phjt5EGk4gENzggdOdIiWVrMTR9b2CETYjiQI8huruvtG5Dfo5IAFnNEHWRqBudfVbvlGDIhD8fI=w2400"
+    		"https://lh3.googleusercontent.com/V1-nAlUXFgG0lN6r70wEXaaR_Lt4bcVEZmqqR0bN4ZPdfMbTVP1ARt2bhULEB1_A7ZoNDKvdfLbns4EOABTeoAJibIxAkqMQJ7N5e77yWczQej3balPnum2QBHvG1sSELFRrCIeV1G0=w2400",
+    		"https://lh3.googleusercontent.com/i3AmzKEIgPltdp-Y-KuuRW69CTTuQekVfD-D75NB-gg2zwsBrDIVed0vhk8mbjEdXWycAq-kLbJEht8B_H42AowN5-Ik98yc02gK05JUuqOwz8v-jU7nMYLfap-Whrd-o8xKZ_n1fms=w2400",
+    		"https://lh3.googleusercontent.com/XHSuok_I2txLIZx6htuQXODFJIJt-3IWcSCI8Fm37NPXx5oyS9N2-JUCID2bXDJeE6cE-EY7_PKQB-6nyt5mOlxIUN1E8jNHHBqRQWwY4hceWRXe-_K3APukMR9ZiBQGwrh8fMKcsQ8=w2400",
+    		"https://lh3.googleusercontent.com/Mzf7MwZdAqi0efTKpRvq96tqmRIQ7pUB2Uz87EF-LrGs5zD1TydCsqFLWnAOz2K1UkEY3GJ9ME-emwshYxMteQ-jWJj2LgqXe-8csaMSysDFlMmr-XJTNi711deYIZu8fwr10QPZCOY=w2400",
+    		"https://lh3.googleusercontent.com/oSvZR0JKplTs9WVLDw4vUbc7NbiU9sTDIRGamX-1aITMdShgy9bya66G08ZZhhD8wTbhFDqgXn0EUBkcNVRwK6-ZDeMB77GNspOz2NqAsSoqSRQdtf_oSx3k_SZtHkT1Ag1ot6qG0E4=w2400",
+    		"https://lh3.googleusercontent.com/PPB9rVxySd0E8O609AE2s6R-SR-sGcyJyPGfV-A0-90nKjZCyl9sZwJYV-gedqQineIXbBYqcT87ll9fmZEEway1JW03xC4pNl8K8dgpSveVr01cDTK_Yz3bd5P7gPLCdZPEZTyXYy8=w2400",
+    		"https://lh3.googleusercontent.com/g89bg39IzVKlsHq40QqISD16fzn48jR90kewluLrjNx9u9I_c9Ksz2ACaGutQBWD65-wqy4hFVzEuPSacLv1_yKGwVHrMBqUzx5IbIWLfBgHwtJ1tlUi1a8WshamhSao7F16OxFjTAg=w2400",
+    		"https://lh3.googleusercontent.com/I9D9jeLxrM_2WnqYq9ZJgSHwqioV-HbkAiWGPlKkbwkc7q77G36IzkHLzG9OJ9oD7CqMcCeyM30uvwmS3RzNpRNWdwFSgCJyYqbKsa8oMV4v2NoDntATvGrUH-stiKyWyk1QlIsLxAQ=w2400",
+    		"https://lh3.googleusercontent.com/FBeCd9muTXN22COWeXSLWBO7lJqyC1FrPNob9yJMtW5xEoBEAwFAb_-u-yygbjdi2fklQS58cdp1qZ3o_d2CBmlSl52Te9FA1kMTHlhnD-CJyAcNM68ahmohjKoeklsxDu6hnneiKuk=w2400",
+    		"https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400",
+    		"https://lh3.googleusercontent.com/-eb42-aLT-ZsfhOD6eHmdMb8Oq0fbxL5qgFfZAvijv-gm7ILhq-UTjkiWIxjLjDANvV3xrStzzXwE6XItIWepeuMo0IuR4lnSZFUI5Wp7gebzPUiSCIYAmVsIGWKbeRNmJNZ-JCZK78=w2400",
+    		"https://lh3.googleusercontent.com/9Z9eqQt0bYdRMWVG-cK6DIqtuU0vNxbPyjYWlAKVJwWsZl4PlgWOtkgu4PHF1HkHkVFPoZ74uchPareywoG3RxPEHyGOQ1Q7I2jqUeE2xLX62w6fEO5CUZcR5AFS3r0M88RKpn6scAM=w2400",
+    		"https://lh3.googleusercontent.com/TnYdZxIyFZcWS6CkFPlhWyMzSSBQWAmMQePVPfYeLTc5F7mRGP0SsCVFbY26tichCpAlsYHMgxE67Q6DjhTUBCyDlSNYYPomahLhw5AhMcr3oRUoykL2iLE8vakm-qM3_j_2bA0kVwk=w2400",
+    		"https://lh3.googleusercontent.com/kQ5zIA0tG750WPsUmQ20vkoy8jbPrfPmdpULarln2yae3iecOaTuDUf2yu76KFfLI4jInKCDB-GOB57jnzbhFhSUJeV0jzWOhi8k2lcsq6AUS_m9l--RGB8qZ_OZ1_2uMjMpFSfNpAk=w2400",
+    		"https://lh3.googleusercontent.com/VuKJ3AOrGqQHqMpS2YJ_XA6mIcg4VbMbDE627RNT_nvlwCcfdqfpK1RfQY0s9M2q9MsekRc9HbfRjsVAPcewXvZq7KmQByeo2EXnPduicQa_xNbZTJj13SY5-ZMyEFOd_XbDtpr0NVA=w2400",
+    		"https://lh3.googleusercontent.com/dR4TSznWaS8eA2aBAItROu18RGAT_J0wppueqpnYpQQKaxo9zXWMEatCqSw11jx7brgRDYPtC_HMjs-MHPq4KX4CZzzC_3Gzu0J3FThmGGHAZNf_q9yd2yqXxjACNHznldD2B2-0Ldk=w2400",
+    		"https://lh3.googleusercontent.com/hye_gtyvUpzbp7ij3kkLgZIHK8lzAgAgbzFEH1Qc1KCuz8oK8kVsLrb0WspHHuiQjzGYsttrs8V-QHD90EkOrZCi3XzAX9a1fWbMcS28-PPea_CF9ZIzVlYHNlWqLQEhHeEcvHxOBFw=w2400",
+    		"https://lh3.googleusercontent.com/_ADVdjONR1UjlrJ5x00S4nMfc_erpDkpgoWjEAFIYVGGMxid_YLC--lf8zT5ajgwCPESijMSR6i0QGaw59wQvQWrbB0pfUBN8e1wvDvbqGz3lmGkUAHTKfAYOuXXfJt0Ymys3T5TF50=w2400"
     	];
 
     	let swiperEl;
@@ -12542,7 +12542,7 @@ var app = (function () {
 
     /* src/guestbook/writing.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$2 } = globals;
+    const { console: console_1$3 } = globals;
     const file$7 = "src/guestbook/writing.svelte";
 
     function create_fragment$7(ctx) {
@@ -12858,22 +12858,22 @@ var app = (function () {
 
     	$$self.$$.on_mount.push(function () {
     		if (change_display === undefined && !('change_display' in $$props || $$self.$$.bound[$$self.$$.props['change_display']])) {
-    			console_1$2.warn("<Writing> was created without expected prop 'change_display'");
+    			console_1$3.warn("<Writing> was created without expected prop 'change_display'");
     		}
 
     		if (backend_url === undefined && !('backend_url' in $$props || $$self.$$.bound[$$self.$$.props['backend_url']])) {
-    			console_1$2.warn("<Writing> was created without expected prop 'backend_url'");
+    			console_1$3.warn("<Writing> was created without expected prop 'backend_url'");
     		}
 
     		if (swap_to_comment_display === undefined && !('swap_to_comment_display' in $$props || $$self.$$.bound[$$self.$$.props['swap_to_comment_display']])) {
-    			console_1$2.warn("<Writing> was created without expected prop 'swap_to_comment_display'");
+    			console_1$3.warn("<Writing> was created without expected prop 'swap_to_comment_display'");
     		}
     	});
 
     	const writable_props = ['display', 'change_display', 'backend_url', 'swap_to_comment_display'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$2.warn(`<Writing> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$3.warn(`<Writing> was created with unknown prop '${key}'`);
     	});
 
     	function input0_input_handler() {
@@ -12994,7 +12994,7 @@ var app = (function () {
 
     /* src/guestbook/comment.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1 } = globals;
+    const { console: console_1$2 } = globals;
     const file$6 = "src/guestbook/comment.svelte";
 
     function get_each_context(ctx, list, i) {
@@ -13474,18 +13474,18 @@ var app = (function () {
 
     	$$self.$$.on_mount.push(function () {
     		if (change_display === undefined && !('change_display' in $$props || $$self.$$.bound[$$self.$$.props['change_display']])) {
-    			console_1$1.warn("<Comment> was created without expected prop 'change_display'");
+    			console_1$2.warn("<Comment> was created without expected prop 'change_display'");
     		}
 
     		if (backend_url === undefined && !('backend_url' in $$props || $$self.$$.bound[$$self.$$.props['backend_url']])) {
-    			console_1$1.warn("<Comment> was created without expected prop 'backend_url'");
+    			console_1$2.warn("<Comment> was created without expected prop 'backend_url'");
     		}
     	});
 
     	const writable_props = ['display', 'change_display', 'backend_url'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<Comment> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$2.warn(`<Comment> was created with unknown prop '${key}'`);
     	});
 
     	const click_handler = comment => delete_comment(comment.id);
@@ -13825,6 +13825,7 @@ var app = (function () {
 
     /* src/contact/account.svelte generated by Svelte v3.55.1 */
 
+    const { console: console_1$1 } = globals;
     const file$4 = "src/contact/account.svelte";
 
     function create_fragment$4(ctx) {
@@ -13845,6 +13846,7 @@ var app = (function () {
     	let t8;
     	let div2;
     	let button0;
+    	let t9;
     	let t10;
     	let button1;
     	let mounted;
@@ -13869,28 +13871,29 @@ var app = (function () {
     			t8 = space();
     			div2 = element("div");
     			button0 = element("button");
-    			button0.textContent = "복사하기";
+    			t9 = text("복사하기");
     			t10 = space();
     			button1 = element("button");
     			button1.textContent = "닫기";
     			set_style(div0, "border-bottom", "1px solid #333");
     			set_style(div0, "padding-bottom", "5px");
-    			add_location(div0, file$4, 12, 8, 337);
-    			add_location(br0, file$4, 15, 12, 480);
-    			add_location(br1, file$4, 17, 12, 526);
+    			add_location(div0, file$4, 17, 8, 455);
+    			add_location(br0, file$4, 20, 12, 598);
+    			add_location(br1, file$4, 22, 12, 644);
     			attr_dev(div1, "class", "account-info svelte-po7f9");
-    			add_location(div1, file$4, 13, 8, 417);
+    			add_location(div1, file$4, 18, 8, 535);
     			attr_dev(button0, "class", "copy-btn svelte-po7f9");
-    			add_location(button0, file$4, 21, 12, 613);
+    			attr_dev(button0, "data-clipboard-text", /*account_number*/ ctx[1]);
+    			add_location(button0, file$4, 26, 12, 731);
     			attr_dev(button1, "class", "close-btn svelte-po7f9");
-    			add_location(button1, file$4, 24, 12, 725);
+    			add_location(button1, file$4, 29, 12, 849);
     			attr_dev(div2, "class", "account-btn");
-    			add_location(div2, file$4, 20, 8, 575);
+    			add_location(div2, file$4, 25, 8, 693);
     			attr_dev(div3, "class", "account-box svelte-po7f9");
-    			add_location(div3, file$4, 11, 4, 303);
+    			add_location(div3, file$4, 16, 4, 421);
     			attr_dev(div4, "class", "account-outline svelte-po7f9");
     			set_style(div4, "display", /*display*/ ctx[3]);
-    			add_location(div4, file$4, 10, 0, 242);
+    			add_location(div4, file$4, 15, 0, 360);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13913,23 +13916,21 @@ var app = (function () {
     			append_dev(div3, t8);
     			append_dev(div3, div2);
     			append_dev(div2, button0);
+    			append_dev(button0, t9);
     			append_dev(div2, t10);
     			append_dev(div2, button1);
 
     			if (!mounted) {
-    				dispose = [
-    					listen_dev(button0, "click", /*copy_account_number*/ ctx[5], false, false, false),
-    					listen_dev(
-    						button1,
-    						"click",
-    						function () {
-    							if (is_function(/*hide*/ ctx[4])) /*hide*/ ctx[4].apply(this, arguments);
-    						},
-    						false,
-    						false,
-    						false
-    					)
-    				];
+    				dispose = listen_dev(
+    					button1,
+    					"click",
+    					function () {
+    						if (is_function(/*hide*/ ctx[4])) /*hide*/ ctx[4].apply(this, arguments);
+    					},
+    					false,
+    					false,
+    					false
+    				);
 
     				mounted = true;
     			}
@@ -13940,6 +13941,10 @@ var app = (function () {
     			if (dirty & /*account_number*/ 2) set_data_dev(t4, /*account_number*/ ctx[1]);
     			if (dirty & /*holder*/ 4) set_data_dev(t7, /*holder*/ ctx[2]);
 
+    			if (dirty & /*account_number*/ 2) {
+    				attr_dev(button0, "data-clipboard-text", /*account_number*/ ctx[1]);
+    			}
+
     			if (dirty & /*display*/ 8) {
     				set_style(div4, "display", /*display*/ ctx[3]);
     			}
@@ -13949,7 +13954,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div4);
     			mounted = false;
-    			run_all(dispose);
+    			dispose();
     		}
     	};
 
@@ -13969,38 +13974,43 @@ var app = (function () {
     	validate_slots('Account', slots, []);
     	let { bank_name, account_number, holder, display } = $$props;
     	let { hide } = $$props;
+    	const clipboard = new ClipboardJS(".copy-btn");
 
-    	async function copy_account_number() {
-    		await navigator.clipboard.writeText(account_number);
+    	clipboard.on('success', function (e) {
     		alert("복사가 완료되었습니다.");
-    	}
+    	});
+
+    	clipboard.on('error', function (e) {
+    		console.log(e);
+    		alert("복사가 실패했습니다. 다시 시도해주세요.");
+    	});
 
     	$$self.$$.on_mount.push(function () {
     		if (bank_name === undefined && !('bank_name' in $$props || $$self.$$.bound[$$self.$$.props['bank_name']])) {
-    			console.warn("<Account> was created without expected prop 'bank_name'");
+    			console_1$1.warn("<Account> was created without expected prop 'bank_name'");
     		}
 
     		if (account_number === undefined && !('account_number' in $$props || $$self.$$.bound[$$self.$$.props['account_number']])) {
-    			console.warn("<Account> was created without expected prop 'account_number'");
+    			console_1$1.warn("<Account> was created without expected prop 'account_number'");
     		}
 
     		if (holder === undefined && !('holder' in $$props || $$self.$$.bound[$$self.$$.props['holder']])) {
-    			console.warn("<Account> was created without expected prop 'holder'");
+    			console_1$1.warn("<Account> was created without expected prop 'holder'");
     		}
 
     		if (display === undefined && !('display' in $$props || $$self.$$.bound[$$self.$$.props['display']])) {
-    			console.warn("<Account> was created without expected prop 'display'");
+    			console_1$1.warn("<Account> was created without expected prop 'display'");
     		}
 
     		if (hide === undefined && !('hide' in $$props || $$self.$$.bound[$$self.$$.props['hide']])) {
-    			console.warn("<Account> was created without expected prop 'hide'");
+    			console_1$1.warn("<Account> was created without expected prop 'hide'");
     		}
     	});
 
     	const writable_props = ['bank_name', 'account_number', 'holder', 'display', 'hide'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Account> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<Account> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -14017,7 +14027,7 @@ var app = (function () {
     		holder,
     		display,
     		hide,
-    		copy_account_number
+    		clipboard
     	});
 
     	$$self.$inject_state = $$props => {
@@ -14032,7 +14042,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [bank_name, account_number, holder, display, hide, copy_account_number];
+    	return [bank_name, account_number, holder, display, hide];
     }
 
     class Account extends SvelteComponentDev {
