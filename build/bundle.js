@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -1724,9 +1724,9 @@ var app = (function () {
     			t3 = space();
     			p = element("p");
     			p.textContent = "현태룡, 이초현 결혼합니다.";
-    			attr_dev(span, "class", "wedding svelte-fxk55n");
+    			attr_dev(span, "class", "wedding svelte-aslcm6");
     			add_location(span, file$d, 3, 3, 65);
-    			attr_dev(h3, "class", "date svelte-fxk55n");
+    			attr_dev(h3, "class", "date svelte-aslcm6");
     			add_location(h3, file$d, 4, 3, 110);
     			set_style(p, "margin-bottom", "0px");
     			add_location(p, file$d, 5, 3, 141);
@@ -1734,7 +1734,7 @@ var app = (function () {
     			add_location(div0, file$d, 2, 2, 44);
     			attr_dev(div1, "class", "layer");
     			add_location(div1, file$d, 1, 1, 22);
-    			attr_dev(div2, "class", "header svelte-fxk55n");
+    			attr_dev(div2, "class", "header svelte-aslcm6");
     			add_location(div2, file$d, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1806,6 +1806,9 @@ var app = (function () {
     	let img_src_value;
     	let t0;
     	let div1;
+    	let t1;
+    	let br;
+    	let t2;
 
     	const block = {
     		c: function create() {
@@ -1814,14 +1817,17 @@ var app = (function () {
     			img = element("img");
     			t0 = space();
     			div1 = element("div");
-    			div1.textContent = "2023. 04. 22. Saturday 6:00 PM";
+    			t1 = text("2023. 04. 22. (토) 저녁 6시\n        ");
+    			br = element("br");
+    			t2 = text("\n        제주");
     			if (!src_url_equal(img.src, img_src_value = "https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "main");
     			attr_dev(img, "width", "425px");
     			add_location(img, file$c, 6, 8, 90);
-    			attr_dev(div0, "class", "mainImg svelte-1fwxtgz");
+    			attr_dev(div0, "class", "mainImg svelte-lr9w7");
     			add_location(div0, file$c, 5, 4, 60);
-    			attr_dev(div1, "class", "bottom svelte-1fwxtgz");
+    			add_location(br, file$c, 10, 8, 383);
+    			attr_dev(div1, "class", "bottom svelte-lr9w7");
     			add_location(div1, file$c, 8, 4, 322);
     			attr_dev(div2, "class", "main-img-outline");
     			add_location(div2, file$c, 4, 0, 25);
@@ -1835,6 +1841,9 @@ var app = (function () {
     			append_dev(div0, img);
     			append_dev(div2, t0);
     			append_dev(div2, div1);
+    			append_dev(div1, t1);
+    			append_dev(div1, br);
+    			append_dev(div1, t2);
     		},
     		p: noop,
     		i: noop,
@@ -1890,7 +1899,6 @@ var app = (function () {
     	let t1;
     	let div2;
     	let div0;
-    	let fa;
     	let t2;
     	let div1;
     	let p;
@@ -1909,12 +1917,6 @@ var app = (function () {
     	let t8;
     	let br7;
     	let t9;
-    	let current;
-
-    	fa = new Fa({
-    			props: { icon: faHeart, style: "color: tomato" },
-    			$$inline: true
-    		});
 
     	const block = {
     		c: function create() {
@@ -1924,7 +1926,6 @@ var app = (function () {
     			t1 = space();
     			div2 = element("div");
     			div0 = element("div");
-    			create_component(fa.$$.fragment);
     			t2 = space();
     			div1 = element("div");
     			p = element("p");
@@ -1947,18 +1948,18 @@ var app = (function () {
     			add_location(span, file$b, 6, 4, 142);
     			attr_dev(div0, "class", "mainImg svelte-95mdcb");
     			add_location(div0, file$b, 8, 8, 204);
-    			add_location(br0, file$b, 14, 16, 425);
-    			add_location(br1, file$b, 16, 16, 488);
-    			add_location(br2, file$b, 18, 16, 546);
-    			add_location(br3, file$b, 18, 20, 550);
-    			add_location(br4, file$b, 20, 16, 610);
-    			add_location(br5, file$b, 22, 16, 665);
-    			add_location(br6, file$b, 22, 20, 669);
-    			add_location(br7, file$b, 24, 16, 723);
+    			add_location(br0, file$b, 14, 16, 434);
+    			add_location(br1, file$b, 16, 16, 497);
+    			add_location(br2, file$b, 18, 16, 555);
+    			add_location(br3, file$b, 18, 20, 559);
+    			add_location(br4, file$b, 20, 16, 619);
+    			add_location(br5, file$b, 22, 16, 674);
+    			add_location(br6, file$b, 22, 20, 678);
+    			add_location(br7, file$b, 24, 16, 732);
     			set_style(p, "margin-bottom", "0px");
-    			add_location(p, file$b, 12, 12, 340);
+    			add_location(p, file$b, 12, 12, 349);
     			attr_dev(div1, "class", "mainText svelte-95mdcb");
-    			add_location(div1, file$b, 11, 8, 305);
+    			add_location(div1, file$b, 11, 8, 314);
     			attr_dev(div2, "class", "main svelte-95mdcb");
     			add_location(div2, file$b, 7, 4, 177);
     			attr_dev(div3, "class", "greeting svelte-95mdcb");
@@ -1973,7 +1974,6 @@ var app = (function () {
     			append_dev(div3, t1);
     			append_dev(div3, div2);
     			append_dev(div2, div0);
-    			mount_component(fa, div0, null);
     			append_dev(div2, t2);
     			append_dev(div2, div1);
     			append_dev(div1, p);
@@ -1992,21 +1992,12 @@ var app = (function () {
     			append_dev(p, t8);
     			append_dev(p, br7);
     			append_dev(p, t9);
-    			current = true;
     		},
     		p: noop,
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(fa.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(fa.$$.fragment, local);
-    			current = false;
-    		},
+    		i: noop,
+    		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
-    			destroy_component(fa);
     		}
     	};
 
@@ -11984,10 +11975,10 @@ var app = (function () {
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
     			attr_dev(img, "class", "svelte-c6u2c3");
-    			add_location(img, file$9, 61, 16, 4833);
+    			add_location(img, file$9, 61, 16, 4840);
     			set_custom_element_data(swiper_slide, "lazy", "true");
     			set_custom_element_data(swiper_slide, "class", "svelte-c6u2c3");
-    			add_location(swiper_slide, file$9, 60, 12, 4789);
+    			add_location(swiper_slide, file$9, 60, 12, 4796);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, swiper_slide, anchor);
@@ -12035,10 +12026,10 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 77, 20, 5418);
+    			add_location(img, file$9, 77, 20, 5425);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
     			set_style(div, "margin-right", "5px");
-    			add_location(div, file$9, 76, 16, 5347);
+    			add_location(div, file$9, 76, 16, 5354);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12098,9 +12089,9 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "loading", "lazy");
-    			add_location(img, file$9, 73, 20, 5154);
+    			add_location(img, file$9, 73, 20, 5161);
     			attr_dev(div, "class", "snap-image svelte-c6u2c3");
-    			add_location(div, file$9, 72, 16, 5109);
+    			add_location(div, file$9, 72, 16, 5116);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12155,7 +12146,7 @@ var app = (function () {
     			if_block.c();
     			t = space();
     			attr_dev(button, "class", "snap-bnt svelte-c6u2c3");
-    			add_location(button, file$9, 70, 12, 5048);
+    			add_location(button, file$9, 70, 12, 5055);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -12185,21 +12176,12 @@ var app = (function () {
     function create_fragment$9(ctx) {
     	let div4;
     	let div0;
-    	let fa;
-    	let t0;
     	let t1;
     	let div1;
     	let swiper_container;
     	let t2;
     	let div3;
     	let div2;
-    	let current;
-
-    	fa = new Fa({
-    			props: { icon: faCameraRetro },
-    			$$inline: true
-    		});
-
     	let each_value_1 = /*imgs*/ ctx[1];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
@@ -12220,8 +12202,7 @@ var app = (function () {
     		c: function create() {
     			div4 = element("div");
     			div0 = element("div");
-    			create_component(fa.$$.fragment);
-    			t0 = text("\n        Snap");
+    			div0.textContent = "스냅";
     			t1 = space();
     			div1 = element("div");
     			swiper_container = element("swiper-container");
@@ -12242,13 +12223,13 @@ var app = (function () {
     			add_location(div0, file$9, 52, 4, 4567);
     			set_custom_element_data(swiper_container, "init", "false");
     			set_custom_element_data(swiper_container, "navigation", "true");
-    			add_location(swiper_container, file$9, 58, 8, 4685);
+    			add_location(swiper_container, file$9, 58, 8, 4692);
     			attr_dev(div1, "class", "swiper svelte-c6u2c3");
-    			add_location(div1, file$9, 57, 4, 4656);
+    			add_location(div1, file$9, 57, 4, 4663);
     			attr_dev(div2, "class", "snap-grid svelte-c6u2c3");
-    			add_location(div2, file$9, 68, 8, 4989);
+    			add_location(div2, file$9, 68, 8, 4996);
     			attr_dev(div3, "class", "snap-main svelte-c6u2c3");
-    			add_location(div3, file$9, 67, 4, 4957);
+    			add_location(div3, file$9, 67, 4, 4964);
     			attr_dev(div4, "class", "snap-outline svelte-c6u2c3");
     			add_location(div4, file$9, 51, 0, 4536);
     		},
@@ -12258,8 +12239,6 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
     			append_dev(div4, div0);
-    			mount_component(fa, div0, null);
-    			append_dev(div0, t0);
     			append_dev(div4, t1);
     			append_dev(div4, div1);
     			append_dev(div1, swiper_container);
@@ -12276,8 +12255,6 @@ var app = (function () {
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div2, null);
     			}
-
-    			current = true;
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*imgs*/ 2) {
@@ -12328,18 +12305,10 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
     		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(fa.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(fa.$$.fragment, local);
-    			current = false;
-    		},
+    		i: noop,
+    		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div4);
-    			destroy_component(fa);
     			destroy_each(each_blocks_1, detaching);
     			/*swiper_container_binding*/ ctx[2](null);
     			destroy_each(each_blocks, detaching);
@@ -12363,12 +12332,12 @@ var app = (function () {
     	register();
 
     	let imgs = [
-    		"https://lh3.googleusercontent.com/kQ5zIA0tG750WPsUmQ20vkoy8jbPrfPmdpULarln2yae3iecOaTuDUf2yu76KFfLI4jInKCDB-GOB57jnzbhFhSUJeV0jzWOhi8k2lcsq6AUS_m9l--RGB8qZ_OZ1_2uMjMpFSfNpAk=w2400",
-    		"https://lh3.googleusercontent.com/TnYdZxIyFZcWS6CkFPlhWyMzSSBQWAmMQePVPfYeLTc5F7mRGP0SsCVFbY26tichCpAlsYHMgxE67Q6DjhTUBCyDlSNYYPomahLhw5AhMcr3oRUoykL2iLE8vakm-qM3_j_2bA0kVwk=w2400",
+    		"https://lh3.googleusercontent.com/_ADVdjONR1UjlrJ5x00S4nMfc_erpDkpgoWjEAFIYVGGMxid_YLC--lf8zT5ajgwCPESijMSR6i0QGaw59wQvQWrbB0pfUBN8e1wvDvbqGz3lmGkUAHTKfAYOuXXfJt0Ymys3T5TF50=w2400",
+    		"https://lh3.googleusercontent.com/hye_gtyvUpzbp7ij3kkLgZIHK8lzAgAgbzFEH1Qc1KCuz8oK8kVsLrb0WspHHuiQjzGYsttrs8V-QHD90EkOrZCi3XzAX9a1fWbMcS28-PPea_CF9ZIzVlYHNlWqLQEhHeEcvHxOBFw=w2400",
     		"https://lh3.googleusercontent.com/dR4TSznWaS8eA2aBAItROu18RGAT_J0wppueqpnYpQQKaxo9zXWMEatCqSw11jx7brgRDYPtC_HMjs-MHPq4KX4CZzzC_3Gzu0J3FThmGGHAZNf_q9yd2yqXxjACNHznldD2B2-0Ldk=w2400",
     		"https://lh3.googleusercontent.com/VuKJ3AOrGqQHqMpS2YJ_XA6mIcg4VbMbDE627RNT_nvlwCcfdqfpK1RfQY0s9M2q9MsekRc9HbfRjsVAPcewXvZq7KmQByeo2EXnPduicQa_xNbZTJj13SY5-ZMyEFOd_XbDtpr0NVA=w2400",
-    		"https://lh3.googleusercontent.com/hye_gtyvUpzbp7ij3kkLgZIHK8lzAgAgbzFEH1Qc1KCuz8oK8kVsLrb0WspHHuiQjzGYsttrs8V-QHD90EkOrZCi3XzAX9a1fWbMcS28-PPea_CF9ZIzVlYHNlWqLQEhHeEcvHxOBFw=w2400",
-    		"https://lh3.googleusercontent.com/_ADVdjONR1UjlrJ5x00S4nMfc_erpDkpgoWjEAFIYVGGMxid_YLC--lf8zT5ajgwCPESijMSR6i0QGaw59wQvQWrbB0pfUBN8e1wvDvbqGz3lmGkUAHTKfAYOuXXfJt0Ymys3T5TF50=w2400",
+    		"https://lh3.googleusercontent.com/kQ5zIA0tG750WPsUmQ20vkoy8jbPrfPmdpULarln2yae3iecOaTuDUf2yu76KFfLI4jInKCDB-GOB57jnzbhFhSUJeV0jzWOhi8k2lcsq6AUS_m9l--RGB8qZ_OZ1_2uMjMpFSfNpAk=w2400",
+    		"https://lh3.googleusercontent.com/TnYdZxIyFZcWS6CkFPlhWyMzSSBQWAmMQePVPfYeLTc5F7mRGP0SsCVFbY26tichCpAlsYHMgxE67Q6DjhTUBCyDlSNYYPomahLhw5AhMcr3oRUoykL2iLE8vakm-qM3_j_2bA0kVwk=w2400",
     		"https://lh3.googleusercontent.com/9Z9eqQt0bYdRMWVG-cK6DIqtuU0vNxbPyjYWlAKVJwWsZl4PlgWOtkgu4PHF1HkHkVFPoZ74uchPareywoG3RxPEHyGOQ1Q7I2jqUeE2xLX62w6fEO5CUZcR5AFS3r0M88RKpn6scAM=w2400",
     		"https://lh3.googleusercontent.com/-eb42-aLT-ZsfhOD6eHmdMb8Oq0fbxL5qgFfZAvijv-gm7ILhq-UTjkiWIxjLjDANvV3xrStzzXwE6XItIWepeuMo0IuR4lnSZFUI5Wp7gebzPUiSCIYAmVsIGWKbeRNmJNZ-JCZK78=w2400",
     		"https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400",
@@ -12472,25 +12441,16 @@ var app = (function () {
     function create_fragment$8(ctx) {
     	let div2;
     	let div0;
-    	let fa;
-    	let t0;
     	let t1;
     	let div1;
     	let iframe;
     	let iframe_src_value;
-    	let current;
-
-    	fa = new Fa({
-    			props: { icon: faCirclePlay },
-    			$$inline: true
-    		});
 
     	const block = {
     		c: function create() {
     			div2 = element("div");
     			div0 = element("div");
-    			create_component(fa.$$.fragment);
-    			t0 = text("\n        Video");
+    			div0.textContent = "우리의 기록";
     			t1 = space();
     			div1 = element("div");
     			iframe = element("iframe");
@@ -12503,9 +12463,9 @@ var app = (function () {
     			attr_dev(iframe, "frameborder", "0");
     			attr_dev(iframe, "allow", "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;");
     			iframe.allowFullscreen = true;
-    			add_location(iframe, file$8, 11, 8, 274);
+    			add_location(iframe, file$8, 11, 8, 284);
     			attr_dev(div1, "class", "video-main");
-    			add_location(div1, file$8, 10, 4, 241);
+    			add_location(div1, file$8, 10, 4, 251);
     			attr_dev(div2, "class", "video-outline svelte-76dvrn");
     			add_location(div2, file$8, 5, 0, 120);
     		},
@@ -12515,26 +12475,15 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div0);
-    			mount_component(fa, div0, null);
-    			append_dev(div0, t0);
     			append_dev(div2, t1);
     			append_dev(div2, div1);
     			append_dev(div1, iframe);
-    			current = true;
     		},
     		p: noop,
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(fa.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(fa.$$.fragment, local);
-    			current = false;
-    		},
+    		i: noop,
+    		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
-    			destroy_component(fa);
     		}
     	};
 
@@ -12590,16 +12539,21 @@ var app = (function () {
     	let br0;
     	let t3;
     	let br1;
-    	let t4;
     	let br2;
+    	let t4;
     	let br3;
     	let t5;
     	let br4;
-    	let t6;
     	let br5;
-    	let t7;
+    	let t6;
     	let br6;
+    	let t7;
+    	let br7;
+    	let br8;
     	let t8;
+    	let br9;
+    	let br10;
+    	let t9;
 
     	const block = {
     		c: function create() {
@@ -12609,29 +12563,38 @@ var app = (function () {
     			div0.textContent = "드리고 싶은 말씀";
     			t1 = space();
     			div1 = element("div");
-    			t2 = text("코로나19가 장기화되면서\n            ");
+    			t2 = text("저희 두 사람이 제주에서 만나\n            ");
     			br0 = element("br");
-    			t3 = text("\n            종식을 예측할 수 없어 많은 고민 끝에\n            ");
+    			t3 = text("\n            작은 결혼식을 올리게 되었습니다.\n            ");
     			br1 = element("br");
-    			t4 = text("\n            결혼식을 예정대로 진행하게 되었습니다.\n            ");
     			br2 = element("br");
+    			t4 = text("\n            많은 분들을 초대해드리지 못해\n            ");
     			br3 = element("br");
-    			t5 = text("\n            혹여나 청첩장 전달이 누가 되지 않을지\n            ");
+    			t5 = text("\n            아쉬운 마음이 가득합니다.\n            ");
     			br4 = element("br");
-    			t6 = text("\n            걱정이 많지만 참석이 어려우시더라도\n            ");
     			br5 = element("br");
-    			t7 = text("\n            멀리서 축하해주시는 마음\n            ");
+    			t6 = text("\n            멀리서 축하해주시는 마음 받아\n            ");
     			br6 = element("br");
-    			t8 = text("\n            감사히 받겠습니다.");
+    			t7 = text("\n            행복하게 잘 살겠습니다.\n            ");
+    			br7 = element("br");
+    			br8 = element("br");
+    			t8 = text("\n            감사합니다.\n            ");
+    			br9 = element("br");
+    			br10 = element("br");
+    			t9 = text("\n            - 이초현태룡 드림");
     			attr_dev(div0, "class", "title svelte-qkxpcc");
     			add_location(div0, file$7, 5, 8, 86);
-    			add_location(br0, file$7, 8, 12, 191);
+    			add_location(br0, file$7, 8, 12, 194);
     			add_location(br1, file$7, 10, 12, 242);
-    			add_location(br2, file$7, 12, 12, 293);
-    			add_location(br3, file$7, 12, 16, 297);
-    			add_location(br4, file$7, 14, 12, 348);
-    			add_location(br5, file$7, 16, 12, 397);
-    			add_location(br6, file$7, 18, 12, 440);
+    			add_location(br2, file$7, 10, 16, 246);
+    			add_location(br3, file$7, 12, 12, 292);
+    			add_location(br4, file$7, 14, 12, 336);
+    			add_location(br5, file$7, 14, 16, 340);
+    			add_location(br6, file$7, 16, 12, 386);
+    			add_location(br7, file$7, 18, 12, 429);
+    			add_location(br8, file$7, 18, 16, 433);
+    			add_location(br9, file$7, 20, 12, 469);
+    			add_location(br10, file$7, 20, 16, 473);
     			attr_dev(div1, "class", "main-text svelte-qkxpcc");
     			add_location(div1, file$7, 6, 8, 129);
     			attr_dev(div2, "class", "noti-box svelte-qkxpcc");
@@ -12652,16 +12615,21 @@ var app = (function () {
     			append_dev(div1, br0);
     			append_dev(div1, t3);
     			append_dev(div1, br1);
-    			append_dev(div1, t4);
     			append_dev(div1, br2);
+    			append_dev(div1, t4);
     			append_dev(div1, br3);
     			append_dev(div1, t5);
     			append_dev(div1, br4);
-    			append_dev(div1, t6);
     			append_dev(div1, br5);
-    			append_dev(div1, t7);
+    			append_dev(div1, t6);
     			append_dev(div1, br6);
+    			append_dev(div1, t7);
+    			append_dev(div1, br7);
+    			append_dev(div1, br8);
     			append_dev(div1, t8);
+    			append_dev(div1, br9);
+    			append_dev(div1, br10);
+    			append_dev(div1, t9);
     		},
     		p: noop,
     		i: noop,
@@ -13757,16 +13725,13 @@ var app = (function () {
     	let t3;
     	let div3;
     	let div1;
-    	let fa;
     	let t4;
-    	let br0;
+    	let br;
     	let t5;
-    	let br1;
     	let t6;
-    	let t7;
     	let div2;
     	let button0;
-    	let t9;
+    	let t8;
     	let button1;
     	let current;
     	let mounted;
@@ -13791,15 +13756,6 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	fa = new Fa({
-    			props: {
-    				icon: faPencil,
-    				color: "#f79e9e",
-    				style: "margin-bottom: 10px;"
-    			},
-    			$$inline: true
-    		});
-
     	const block = {
     		c: function create() {
     			create_component(writing.$$.fragment);
@@ -13812,30 +13768,27 @@ var app = (function () {
     			t3 = space();
     			div3 = element("div");
     			div1 = element("div");
-    			create_component(fa.$$.fragment);
-    			t4 = space();
-    			br0 = element("br");
-    			t5 = text("\n            신랑, 신부에게\n            ");
-    			br1 = element("br");
-    			t6 = text("\n            축하하는 글을 남겨보세요.");
-    			t7 = space();
+    			t4 = text("저희 두 사람에게\n            ");
+    			br = element("br");
+    			t5 = text("\n            따뜻한 한 마디를 남겨주세요.");
+    			t6 = space();
     			div2 = element("div");
     			button0 = element("button");
     			button0.textContent = "축하글 작성하기";
-    			t9 = space();
+    			t8 = space();
     			button1 = element("button");
     			button1.textContent = "방명록 전체보기";
     			attr_dev(div0, "class", "title svelte-1hyvqfg");
     			add_location(div0, file$4, 39, 4, 1407);
-    			add_location(br0, file$4, 43, 12, 1605);
-    			add_location(br1, file$4, 45, 12, 1643);
+    			add_location(br, file$4, 44, 12, 1651);
+    			set_style(div1, "line-height", "2");
     			set_style(div1, "padding-bottom", "25px");
     			add_location(div1, file$4, 41, 8, 1477);
     			attr_dev(button0, "class", "writing-guestbook svelte-1hyvqfg");
-    			add_location(button0, file$4, 49, 12, 1716);
+    			add_location(button0, file$4, 48, 12, 1726);
     			attr_dev(button1, "class", "comment-guestbook svelte-1hyvqfg");
-    			add_location(button1, file$4, 52, 12, 1867);
-    			add_location(div2, file$4, 48, 8, 1698);
+    			add_location(button1, file$4, 51, 12, 1877);
+    			add_location(div2, file$4, 47, 8, 1708);
     			attr_dev(div3, "class", "guestbook-main svelte-1hyvqfg");
     			add_location(div3, file$4, 40, 4, 1440);
     			attr_dev(div4, "class", "guestbook-outline svelte-1hyvqfg");
@@ -13854,16 +13807,13 @@ var app = (function () {
     			append_dev(div4, t3);
     			append_dev(div4, div3);
     			append_dev(div3, div1);
-    			mount_component(fa, div1, null);
     			append_dev(div1, t4);
-    			append_dev(div1, br0);
+    			append_dev(div1, br);
     			append_dev(div1, t5);
-    			append_dev(div1, br1);
-    			append_dev(div1, t6);
-    			append_dev(div3, t7);
+    			append_dev(div3, t6);
     			append_dev(div3, div2);
     			append_dev(div2, button0);
-    			append_dev(div2, t9);
+    			append_dev(div2, t8);
     			append_dev(div2, button1);
     			current = true;
 
@@ -13888,13 +13838,11 @@ var app = (function () {
     			if (current) return;
     			transition_in(writing.$$.fragment, local);
     			transition_in(comment.$$.fragment, local);
-    			transition_in(fa.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(writing.$$.fragment, local);
     			transition_out(comment.$$.fragment, local);
-    			transition_out(fa.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -13903,7 +13851,6 @@ var app = (function () {
     			destroy_component(comment, detaching);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div4);
-    			destroy_component(fa);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -14204,7 +14151,7 @@ var app = (function () {
     		c: function create() {
     			div3 = element("div");
     			div0 = element("div");
-    			div0.textContent = "마음 전하실 곳";
+    			div0.textContent = "신랑 신부 연락처";
     			t1 = space();
     			div2 = element("div");
     			ul0 = element("ul");
@@ -14231,7 +14178,7 @@ var app = (function () {
     			create_component(fa3.$$.fragment);
     			t9 = space();
     			div1 = element("div");
-    			div1.textContent = "혼주에게 연락하기";
+    			div1.textContent = "혼주 연락처";
     			t11 = space();
     			ul1 = element("ul");
     			li2 = element("li");
@@ -14284,81 +14231,81 @@ var app = (function () {
     			attr_dev(div0, "class", "title svelte-15s9n7q");
     			add_location(div0, file$3, 6, 4, 164);
     			attr_dev(span0, "class", "contact-block f17 svelte-15s9n7q");
-    			add_location(span0, file$3, 12, 16, 329);
+    			add_location(span0, file$3, 12, 16, 330);
     			attr_dev(a0, "href", "tel:010-4193-2615");
     			attr_dev(a0, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a0, file$3, 14, 20, 421);
+    			add_location(a0, file$3, 14, 20, 422);
     			attr_dev(a1, "href", "sms:010-4193-2615");
     			attr_dev(a1, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a1, file$3, 17, 20, 592);
-    			add_location(span1, file$3, 13, 16, 394);
+    			add_location(a1, file$3, 17, 20, 593);
+    			add_location(span1, file$3, 13, 16, 395);
     			attr_dev(li0, "class", "contact-list svelte-15s9n7q");
-    			add_location(li0, file$3, 11, 12, 287);
+    			add_location(li0, file$3, 11, 12, 288);
     			attr_dev(span2, "class", "contact-block f17 svelte-15s9n7q");
-    			add_location(span2, file$3, 23, 16, 833);
+    			add_location(span2, file$3, 23, 16, 834);
     			attr_dev(a2, "href", "tel:010-5067-3805");
     			attr_dev(a2, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a2, file$3, 25, 20, 925);
+    			add_location(a2, file$3, 25, 20, 926);
     			attr_dev(a3, "href", "sms:010-5067-3805");
     			attr_dev(a3, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a3, file$3, 28, 20, 1112);
-    			add_location(span3, file$3, 24, 16, 898);
+    			add_location(a3, file$3, 28, 20, 1113);
+    			add_location(span3, file$3, 24, 16, 899);
     			attr_dev(li1, "class", "contact-list svelte-15s9n7q");
-    			add_location(li1, file$3, 22, 12, 791);
+    			add_location(li1, file$3, 22, 12, 792);
     			attr_dev(ul0, "class", "contact-us svelte-15s9n7q");
-    			add_location(ul0, file$3, 10, 8, 251);
+    			add_location(ul0, file$3, 10, 8, 252);
     			attr_dev(div1, "class", "contact-honju f16 svelte-15s9n7q");
-    			add_location(div1, file$3, 34, 8, 1322);
+    			add_location(div1, file$3, 34, 8, 1323);
     			attr_dev(span4, "class", "honju svelte-15s9n7q");
     			set_style(span4, "color", "#78c0e9");
-    			add_location(span4, file$3, 39, 16, 1477);
+    			add_location(span4, file$3, 39, 16, 1475);
     			attr_dev(span5, "class", "contact-block svelte-15s9n7q");
-    			add_location(span5, file$3, 40, 16, 1550);
+    			add_location(span5, file$3, 40, 16, 1548);
     			attr_dev(a4, "href", "tel:010-4675-2615");
     			attr_dev(a4, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a4, file$3, 42, 20, 1636);
+    			add_location(a4, file$3, 42, 20, 1634);
     			attr_dev(a5, "href", "sms:010-4675-2615");
     			attr_dev(a5, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a5, file$3, 45, 20, 1823);
-    			add_location(span6, file$3, 41, 16, 1609);
+    			add_location(a5, file$3, 45, 20, 1821);
+    			add_location(span6, file$3, 41, 16, 1607);
     			attr_dev(span7, "class", "contact-block svelte-15s9n7q");
-    			add_location(span7, file$3, 49, 16, 2009);
+    			add_location(span7, file$3, 49, 16, 2007);
     			attr_dev(a6, "href", "tel:010-7538-2605");
     			attr_dev(a6, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a6, file$3, 51, 20, 2095);
+    			add_location(a6, file$3, 51, 20, 2093);
     			attr_dev(a7, "href", "sms:010-7538-2605");
     			attr_dev(a7, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a7, file$3, 54, 20, 2282);
-    			add_location(span8, file$3, 50, 16, 2068);
+    			add_location(a7, file$3, 54, 20, 2280);
+    			add_location(span8, file$3, 50, 16, 2066);
     			attr_dev(li2, "class", "contact-list svelte-15s9n7q");
-    			add_location(li2, file$3, 38, 12, 1435);
+    			add_location(li2, file$3, 38, 12, 1433);
     			attr_dev(span9, "class", "honju svelte-15s9n7q");
     			set_style(span9, "color", "#f79e9e");
-    			add_location(span9, file$3, 60, 16, 2524);
+    			add_location(span9, file$3, 60, 16, 2522);
     			attr_dev(span10, "class", "contact-block svelte-15s9n7q");
-    			add_location(span10, file$3, 61, 16, 2597);
+    			add_location(span10, file$3, 61, 16, 2595);
     			attr_dev(a8, "href", "tel:010-4020-3804");
     			attr_dev(a8, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a8, file$3, 63, 20, 2683);
+    			add_location(a8, file$3, 63, 20, 2681);
     			attr_dev(a9, "href", "sms:010-4020-3804");
     			attr_dev(a9, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a9, file$3, 66, 20, 2870);
-    			add_location(span11, file$3, 62, 16, 2656);
+    			add_location(a9, file$3, 66, 20, 2868);
+    			add_location(span11, file$3, 62, 16, 2654);
     			attr_dev(span12, "class", "contact-block svelte-15s9n7q");
-    			add_location(span12, file$3, 70, 16, 3056);
+    			add_location(span12, file$3, 70, 16, 3054);
     			attr_dev(a10, "href", "tel:010-4468-3805");
     			attr_dev(a10, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a10, file$3, 72, 20, 3142);
+    			add_location(a10, file$3, 72, 20, 3140);
     			attr_dev(a11, "href", "sms:010-4468-3805");
     			attr_dev(a11, "class", "fa-icon svelte-15s9n7q");
-    			add_location(a11, file$3, 75, 20, 3329);
-    			add_location(span13, file$3, 71, 16, 3115);
+    			add_location(a11, file$3, 75, 20, 3327);
+    			add_location(span13, file$3, 71, 16, 3113);
     			attr_dev(li3, "class", "contact-list svelte-15s9n7q");
-    			add_location(li3, file$3, 59, 12, 2482);
+    			add_location(li3, file$3, 59, 12, 2480);
     			attr_dev(ul1, "class", "contact-us svelte-15s9n7q");
-    			add_location(ul1, file$3, 37, 8, 1399);
+    			add_location(ul1, file$3, 37, 8, 1397);
     			attr_dev(div2, "class", "contact-main");
-    			add_location(div2, file$3, 9, 4, 216);
+    			add_location(div2, file$3, 9, 4, 217);
     			attr_dev(div3, "class", "contact-outline svelte-15s9n7q");
     			add_location(div3, file$3, 5, 0, 130);
     		},
@@ -14538,6 +14485,8 @@ var app = (function () {
     	let t1;
     	let br1;
     	let t2;
+    	let br2;
+    	let t3;
 
     	const block = {
     		c: function create() {
@@ -14545,18 +14494,21 @@ var app = (function () {
     			div2 = element("div");
     			div1 = element("div");
     			div0 = element("div");
-    			t0 = text("예쁜 예감이 들었다.\n                ");
+    			t0 = text("캄캄한 밤 길을 잃고 헤매도\n                ");
     			br0 = element("br");
-    			t1 = text("\n                우리는 언제나 손을 잡고 있게 될 것이다.\n                ");
+    			t1 = text("\n                우리 두 사람\n                ");
     			br1 = element("br");
-    			t2 = text("\n                이이체, 인연");
-    			add_location(br0, file$2, 8, 16, 195);
-    			add_location(br1, file$2, 10, 16, 256);
-    			attr_dev(div0, "class", "bottom-content svelte-1ccxwmz");
+    			t2 = text("\n                서로의 등불이 되어주리\n                ");
+    			br2 = element("br");
+    			t3 = text("\n                - 성시경, 두 사람");
+    			add_location(br0, file$2, 8, 16, 199);
+    			add_location(br1, file$2, 10, 16, 244);
+    			add_location(br2, file$2, 12, 16, 294);
+    			attr_dev(div0, "class", "bottom-content svelte-1sm1pyl");
     			add_location(div0, file$2, 6, 12, 122);
-    			attr_dev(div1, "class", "cover svelte-1ccxwmz");
+    			attr_dev(div1, "class", "cover svelte-1sm1pyl");
     			add_location(div1, file$2, 5, 8, 90);
-    			attr_dev(div2, "class", "bottom-img svelte-1ccxwmz");
+    			attr_dev(div2, "class", "bottom-img svelte-1sm1pyl");
     			add_location(div2, file$2, 4, 4, 57);
     			attr_dev(div3, "class", "bottom-img-outline");
     			add_location(div3, file$2, 3, 0, 20);
@@ -14574,6 +14526,8 @@ var app = (function () {
     			append_dev(div0, t1);
     			append_dev(div0, br1);
     			append_dev(div0, t2);
+    			append_dev(div0, br2);
+    			append_dev(div0, t3);
     		},
     		p: noop,
     		i: noop,
