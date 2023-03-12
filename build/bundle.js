@@ -1,2 +1,15020 @@
-var app=function(){"use strict";function e(){}function t(e){return e()}function s(){return Object.create(null)}function i(e){e.forEach(t)}function a(e){return"function"==typeof e}function r(e,t){return e!=e?t==t:e!==t||e&&"object"==typeof e||"function"==typeof e}let n,l;function o(e,t){return n||(n=document.createElement("a")),n.href=t,e===n.href}function c(e,t){e.appendChild(t)}function d(e,t,s){e.insertBefore(t,s||null)}function p(e){e.parentNode&&e.parentNode.removeChild(e)}function u(e,t){for(let s=0;s<e.length;s+=1)e[s]&&e[s].d(t)}function m(e){return document.createElement(e)}function f(e){return document.createElementNS("http://www.w3.org/2000/svg",e)}function h(e){return document.createTextNode(e)}function g(){return h(" ")}function v(){return h("")}function w(e,t,s,i){return e.addEventListener(t,s,i),()=>e.removeEventListener(t,s,i)}function b(e,t,s){null==s?e.removeAttribute(t):e.getAttribute(t)!==s&&e.setAttribute(t,s)}function y(e,t,s){t in e?e[t]="boolean"==typeof e[t]&&""===s||s:b(e,t,s)}function x(e,t){t=""+t,e.wholeText!==t&&(e.data=t)}function E(e,t){e.value=null==t?"":t}function S(e,t,s,i){null===s?e.style.removeProperty(t):e.style.setProperty(t,s,i?"important":"")}function A(e,t,s){e.classList[s?"add":"remove"](t)}function T(e){l=e}function M(){if(!l)throw new Error("Function called outside component initialization");return l}const C=[],$=[],k=[],z=[],P=Promise.resolve();let L=!1;function O(e){k.push(e)}const I=new Set;let D=0;function B(){if(0!==D)return;const e=l;do{try{for(;D<C.length;){const e=C[D];D++,T(e),_(e.$$)}}catch(e){throw C.length=0,D=0,e}for(T(null),C.length=0,D=0;$.length;)$.pop()();for(let e=0;e<k.length;e+=1){const t=k[e];I.has(t)||(I.add(t),t())}k.length=0}while(C.length);for(;z.length;)z.pop()();L=!1,I.clear(),T(e)}function _(e){if(null!==e.fragment){e.update(),i(e.before_update);const t=e.dirty;e.dirty=[-1],e.fragment&&e.fragment.p(e.ctx,t),e.after_update.forEach(O)}}const Y=new Set;let G;function H(){G={r:0,c:[],p:G}}function N(){G.r||i(G.c),G=G.p}function j(e,t){e&&e.i&&(Y.delete(e),e.i(t))}function X(e,t,s,i){if(e&&e.o){if(Y.has(e))return;Y.add(e),G.c.push((()=>{Y.delete(e),i&&(s&&e.d(1),i())})),e.o(t)}else i&&i()}function R(e,t){const s=t.token={};function i(e,i,a,r){if(t.token!==s)return;t.resolved=r;let n=t.ctx;void 0!==a&&(n=n.slice(),n[a]=r);const l=e&&(t.current=e)(n);let o=!1;t.block&&(t.blocks?t.blocks.forEach(((e,s)=>{s!==i&&e&&(H(),X(e,1,1,(()=>{t.blocks[s]===e&&(t.blocks[s]=null)})),N())})):t.block.d(1),l.c(),j(l,1),l.m(t.mount(),t.anchor),o=!0),t.block=l,t.blocks&&(t.blocks[i]=l),o&&B()}if(!(a=e)||"object"!=typeof a&&"function"!=typeof a||"function"!=typeof a.then){if(t.current!==t.then)return i(t.then,1,t.value,e),!0;t.resolved=e}else{const s=M();if(e.then((e=>{T(s),i(t.then,1,t.value,e),T(null)}),(e=>{if(T(s),i(t.catch,2,t.error,e),T(null),!t.hasCatch)throw e})),t.current!==t.pending)return i(t.pending,0),!0}var a}function V(e){e&&e.c()}function F(e,s,r,n){const{fragment:l,after_update:o}=e.$$;l&&l.m(s,r),n||O((()=>{const s=e.$$.on_mount.map(t).filter(a);e.$$.on_destroy?e.$$.on_destroy.push(...s):i(s),e.$$.on_mount=[]})),o.forEach(O)}function W(e,t){const s=e.$$;null!==s.fragment&&(i(s.on_destroy),s.fragment&&s.fragment.d(t),s.on_destroy=s.fragment=null,s.ctx=[])}function q(e,t){-1===e.$$.dirty[0]&&(C.push(e),L||(L=!0,P.then(B)),e.$$.dirty.fill(0)),e.$$.dirty[t/31|0]|=1<<t%31}function U(t,a,r,n,o,c,d,u=[-1]){const m=l;T(t);const f=t.$$={fragment:null,ctx:[],props:c,update:e,not_equal:o,bound:s(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(a.context||(m?m.$$.context:[])),callbacks:s(),dirty:u,skip_bound:!1,root:a.target||m.$$.root};d&&d(f.root);let h=!1;if(f.ctx=r?r(t,a.props||{},((e,s,...i)=>{const a=i.length?i[0]:s;return f.ctx&&o(f.ctx[e],f.ctx[e]=a)&&(!f.skip_bound&&f.bound[e]&&f.bound[e](a),h&&q(t,e)),s})):[],f.update(),h=!0,i(f.before_update),f.fragment=!!n&&n(f.ctx),a.target){if(a.hydrate){const e=function(e){return Array.from(e.childNodes)}(a.target);f.fragment&&f.fragment.l(e),e.forEach(p)}else f.fragment&&f.fragment.c();a.intro&&j(t.$$.fragment),F(t,a.target,a.anchor,a.customElement),B()}T(m)}class Q{$destroy(){W(this,1),this.$destroy=e}$on(t,s){if(!a(s))return e;const i=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return i.push(s),()=>{const e=i.indexOf(s);-1!==e&&i.splice(e,1)}}$set(e){var t;this.$$set&&(t=e,0!==Object.keys(t).length)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}const Z=parseFloat;function K(e,t=";"){let s;if(Array.isArray(e))s=e.filter((e=>e));else{s=[];for(const t in e)e[t]&&s.push(`${t}:${e[t]}`)}return s.join(t)}function J(e){let t,s,i,a,r,n,l,o;function u(e,t){return"string"==typeof e[10][4]?te:ee}let m=u(e),h=m(e);return{c(){t=f("svg"),s=f("g"),i=f("g"),h.c(),b(i,"transform",e[12]),b(s,"transform",a="translate("+e[10][0]/2+" "+e[10][1]/2+")"),b(s,"transform-origin",r=e[10][0]/4+" 0"),b(t,"id",n=e[1]||void 0),b(t,"class",l="svelte-fa "+e[0]+" svelte-1cj2gr0"),b(t,"style",e[11]),b(t,"viewBox",o="0 0 "+e[10][0]+" "+e[10][1]),b(t,"aria-hidden","true"),b(t,"role","img"),b(t,"xmlns","http://www.w3.org/2000/svg"),A(t,"pulse",e[4]),A(t,"spin",e[3])},m(e,a){d(e,t,a),c(t,s),c(s,i),h.m(i,null)},p(e,c){m===(m=u(e))&&h?h.p(e,c):(h.d(1),h=m(e),h&&(h.c(),h.m(i,null))),4096&c&&b(i,"transform",e[12]),1024&c&&a!==(a="translate("+e[10][0]/2+" "+e[10][1]/2+")")&&b(s,"transform",a),1024&c&&r!==(r=e[10][0]/4+" 0")&&b(s,"transform-origin",r),2&c&&n!==(n=e[1]||void 0)&&b(t,"id",n),1&c&&l!==(l="svelte-fa "+e[0]+" svelte-1cj2gr0")&&b(t,"class",l),2048&c&&b(t,"style",e[11]),1024&c&&o!==(o="0 0 "+e[10][0]+" "+e[10][1])&&b(t,"viewBox",o),17&c&&A(t,"pulse",e[4]),9&c&&A(t,"spin",e[3])},d(e){e&&p(t),h.d()}}}function ee(e){let t,s,i,a,r,n,l,o,c,u;return{c(){t=f("path"),n=f("path"),b(t,"d",s=e[10][4][0]),b(t,"fill",i=e[6]||e[2]||"currentColor"),b(t,"fill-opacity",a=0!=e[9]?e[7]:e[8]),b(t,"transform",r="translate("+e[10][0]/-2+" "+e[10][1]/-2+")"),b(n,"d",l=e[10][4][1]),b(n,"fill",o=e[5]||e[2]||"currentColor"),b(n,"fill-opacity",c=0!=e[9]?e[8]:e[7]),b(n,"transform",u="translate("+e[10][0]/-2+" "+e[10][1]/-2+")")},m(e,s){d(e,t,s),d(e,n,s)},p(e,d){1024&d&&s!==(s=e[10][4][0])&&b(t,"d",s),68&d&&i!==(i=e[6]||e[2]||"currentColor")&&b(t,"fill",i),896&d&&a!==(a=0!=e[9]?e[7]:e[8])&&b(t,"fill-opacity",a),1024&d&&r!==(r="translate("+e[10][0]/-2+" "+e[10][1]/-2+")")&&b(t,"transform",r),1024&d&&l!==(l=e[10][4][1])&&b(n,"d",l),36&d&&o!==(o=e[5]||e[2]||"currentColor")&&b(n,"fill",o),896&d&&c!==(c=0!=e[9]?e[8]:e[7])&&b(n,"fill-opacity",c),1024&d&&u!==(u="translate("+e[10][0]/-2+" "+e[10][1]/-2+")")&&b(n,"transform",u)},d(e){e&&p(t),e&&p(n)}}}function te(e){let t,s,i,a;return{c(){t=f("path"),b(t,"d",s=e[10][4]),b(t,"fill",i=e[2]||e[5]||"currentColor"),b(t,"transform",a="translate("+e[10][0]/-2+" "+e[10][1]/-2+")")},m(e,s){d(e,t,s)},p(e,r){1024&r&&s!==(s=e[10][4])&&b(t,"d",s),36&r&&i!==(i=e[2]||e[5]||"currentColor")&&b(t,"fill",i),1024&r&&a!==(a="translate("+e[10][0]/-2+" "+e[10][1]/-2+")")&&b(t,"transform",a)},d(e){e&&p(t)}}}function se(t){let s,i=t[10][4]&&J(t);return{c(){i&&i.c(),s=v()},m(e,t){i&&i.m(e,t),d(e,s,t)},p(e,[t]){e[10][4]?i?i.p(e,t):(i=J(e),i.c(),i.m(s.parentNode,s)):i&&(i.d(1),i=null)},i:e,o:e,d(e){i&&i.d(e),e&&p(s)}}}function ie(e,t,s){let i,a,r,{class:n=""}=t,{id:l=""}=t,{style:o=""}=t,{icon:c}=t,{size:d=""}=t,{color:p=""}=t,{fw:u=!1}=t,{pull:m=""}=t,{scale:f=1}=t,{translateX:h=0}=t,{translateY:g=0}=t,{rotate:v=""}=t,{flip:w=!1}=t,{spin:b=!1}=t,{pulse:y=!1}=t,{primaryColor:x=""}=t,{secondaryColor:E=""}=t,{primaryOpacity:S=1}=t,{secondaryOpacity:A=.4}=t,{swapOpacity:T=!1}=t;return e.$$set=e=>{"class"in e&&s(0,n=e.class),"id"in e&&s(1,l=e.id),"style"in e&&s(13,o=e.style),"icon"in e&&s(14,c=e.icon),"size"in e&&s(15,d=e.size),"color"in e&&s(2,p=e.color),"fw"in e&&s(16,u=e.fw),"pull"in e&&s(17,m=e.pull),"scale"in e&&s(18,f=e.scale),"translateX"in e&&s(19,h=e.translateX),"translateY"in e&&s(20,g=e.translateY),"rotate"in e&&s(21,v=e.rotate),"flip"in e&&s(22,w=e.flip),"spin"in e&&s(3,b=e.spin),"pulse"in e&&s(4,y=e.pulse),"primaryColor"in e&&s(5,x=e.primaryColor),"secondaryColor"in e&&s(6,E=e.secondaryColor),"primaryOpacity"in e&&s(7,S=e.primaryOpacity),"secondaryOpacity"in e&&s(8,A=e.secondaryOpacity),"swapOpacity"in e&&s(9,T=e.swapOpacity)},e.$$.update=()=>{16384&e.$$.dirty&&s(10,i=c&&c.icon||[0,0,"",[],""]),237568&e.$$.dirty&&s(11,a=function(e,t,s,i){let a,r,n,l,o,c="-.125em";return i&&(o="center",r="1.25em"),s&&(a=s),t&&("lg"==t?(l="1.33333em",n=".75em",c="-.225em"):l="xs"==t?".75em":"sm"==t?".875em":t.replace("x","em")),K([K({float:a,width:r,height:"1em","line-height":n,"font-size":l,"text-align":o,"vertical-align":c,"transform-origin":"center",overflow:"visible"}),e])}(o,d,m,u)),8126464&e.$$.dirty&&s(12,r=function(e,t,s,i,a,r=1,n="",l=""){let o=1,c=1;return a&&("horizontal"==a?o=-1:"vertical"==a?c=-1:o=c=-1),K([`translate(${Z(t)*r}${n},${Z(s)*r}${n})`,`scale(${o*Z(e)},${c*Z(e)})`,i&&`rotate(${i}${l})`]," ")}(f,h,g,v,w,512))},[n,l,p,b,y,x,E,S,A,T,i,a,r,o,c,d,u,m,f,h,g,v,w]}class ae extends Q{constructor(e){super(),U(this,e,ie,se,r,{class:0,id:1,style:13,icon:14,size:15,color:2,fw:16,pull:17,scale:18,translateX:19,translateY:20,rotate:21,flip:22,spin:3,pulse:4,primaryColor:5,secondaryColor:6,primaryOpacity:7,secondaryOpacity:8,swapOpacity:9})}}var re={prefix:"fas",iconName:"pencil",icon:[512,512,[9999,61504,"pencil-alt"],"f303","M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"]},ne={prefix:"fas",iconName:"square-minus",icon:[448,512,[61767,"minus-square"],"f146","M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm88 200H296c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z"]},le={prefix:"fas",iconName:"circle-play",icon:[512,512,[61469,"play-circle"],"f144","M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"]},oe={prefix:"fas",iconName:"camera-retro",icon:[512,512,[128247],"f083","M220.6 121.2L271.1 96 448 96v96H333.2c-21.9-15.1-48.5-24-77.2-24s-55.2 8.9-77.2 24H64V128H192c9.9 0 19.7-2.3 28.6-6.8zM0 128V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H271.1c-9.9 0-19.7 2.3-28.6 6.8L192 64H160V48c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16l0 16C28.7 64 0 92.7 0 128zM168 304a88 88 0 1 1 176 0 88 88 0 1 1 -176 0z"]},ce={prefix:"fas",iconName:"heart",icon:[512,512,[128153,128154,128155,128156,128420,129293,129294,129505,9829,10084,61578],"f004","M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"]},de={prefix:"fas",iconName:"volume-high",icon:[640,512,[128266,"volume-up"],"f028","M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"]},pe={prefix:"fas",iconName:"phone-flip",icon:[512,512,[128381,"phone-alt"],"f879","M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"]},ue={prefix:"fas",iconName:"envelope",icon:[512,512,[128386,9993,61443],"f0e0","M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"]},me={prefix:"fas",iconName:"volume-off",icon:[320,512,[],"f026","M320 64c0-12.6-7.4-24-18.9-29.2s-25-3.1-34.4 5.3L131.8 160H64c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h67.8L266.7 471.9c9.4 8.4 22.9 10.4 34.4 5.3S320 460.6 320 448V64z"]},fe={prefix:"fas",iconName:"xmark",icon:[320,512,[128473,10005,10006,10060,215,"close","multiply","remove","times"],"f00d","M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"]};function he(t){let s,i;return s=new ae({props:{icon:me}}),{c(){V(s.$$.fragment)},m(e,t){F(s,e,t),i=!0},p:e,i(e){i||(j(s.$$.fragment,e),i=!0)},o(e){X(s.$$.fragment,e),i=!1},d(e){W(s,e)}}}function ge(t){let s,i;return s=new ae({props:{icon:de}}),{c(){V(s.$$.fragment)},m(e,t){F(s,e,t),i=!0},p:e,i(e){i||(j(s.$$.fragment,e),i=!0)},o(e){X(s.$$.fragment,e),i=!1},d(e){W(s,e)}}}function ve(e){let t,s,i,a,r,n,l,o,u;const f=[ge,he],h=[];function v(e,t){return e[1]?0:1}return i=v(e),a=h[i]=f[i](e),{c(){t=m("div"),s=m("button"),a.c(),r=g(),n=m("audio"),n.innerHTML='<source src="https://docs.google.com/uc?export=download&amp;id=1uDQhYAFMPthY9w7o_zYbLIOn13tAfDv8" type="audio/mp3"/>',b(s,"class","sound svelte-2fyvmu"),b(t,"class","bgmbar svelte-2fyvmu"),b(n,"id","bgm"),n.autoplay=!0,n.loop=!0},m(a,p){d(a,t,p),c(t,s),h[i].m(s,null),d(a,r,p),d(a,n,p),e[3](n),l=!0,o||(u=w(s,"click",e[2]),o=!0)},p(e,[t]){let r=i;i=v(e),i===r?h[i].p(e,t):(H(),X(h[r],1,1,(()=>{h[r]=null})),N(),a=h[i],a?a.p(e,t):(a=h[i]=f[i](e),a.c()),j(a,1),a.m(s,null))},i(e){l||(j(a),l=!0)},o(e){X(a),l=!1},d(s){s&&p(t),h[i].d(),s&&p(r),s&&p(n),e[3](null),o=!1,u()}}}function we(e,t,s){let i,a;return a=!!mobileCheck(),[i,a,function(){i.paused?(i.play(),s(1,a=!0)):(i.pause(),s(1,a=!1))},function(e){$[e?"unshift":"push"]((()=>{i=e,s(0,i)}))}]}class be extends Q{constructor(e){super(),U(this,e,we,ve,r,{})}}function ye(t){let s;return{c(){s=m("div"),s.innerHTML='<div class="layer"><div class="top"><span class="wedding svelte-fxk55n">THE MARRIAGE</span> \n\t\t\t<h3 class="date svelte-fxk55n">04.22</h3> \n\t\t\t<p>현태룡, 이초현 결혼합니다.</p></div></div>',b(s,"class","header svelte-fxk55n")},m(e,t){d(e,s,t)},p:e,i:e,o:e,d(e){e&&p(s)}}}class xe extends Q{constructor(e){super(),U(this,e,null,ye,r,{})}}function Ee(t){let s,i,a;return{c(){s=m("div"),s.innerHTML='<img src="https://lh3.googleusercontent.com/msAUQLSQgq7YE7rMaD22pXn_mM-I4cF9J5Gl5NlPlMxePwdW3yjjgYTdtlOCKtG1nxN6KAh76meT7gkVTQecViB3N2tPmKumSBNsNU0jFJkO0XKwj4J1PSdZLmXEXJXsvYZMPrEkPNI=w2400" alt="main" width="425px"/>',i=g(),a=m("div"),a.textContent="2023. 04. 22. Saturday 6:00 PM",b(s,"class","mainImg svelte-2x22la"),b(a,"class","bottom svelte-2x22la")},m(e,t){d(e,s,t),d(e,i,t),d(e,a,t)},p:e,i:e,o:e,d(e){e&&p(s),e&&p(i),e&&p(a)}}}class Se extends Q{constructor(e){super(),U(this,e,null,Ee,r,{})}}function Ae(t){let s,i,a,r,n,l,o,u,f;return l=new ae({props:{icon:ce,style:"color: tomato"}}),{c(){s=m("div"),i=m("span"),i.textContent="인사말",a=g(),r=m("div"),n=m("div"),V(l.$$.fragment),o=g(),u=m("div"),u.innerHTML="<p>함께 있을 때 가장 나다운 모습이 되고\n                <br/>\n                함께 있을 때 미래를 꿈꾸게 하는 사람을 만나\n                <br/>\n                함께 맞는 두 번째 봄, 결혼합니다.\n                <br/><br/>\n                지금처럼 서로에게 가장 친한 친구가 되어\n                <br/>\n                예쁘고 행복하게 잘 살겠습니다.\n                <br/><br/>\n                저희 두 사람의 새로운 시작을\n                <br/>\n                함께하시어 축복해 주시면 감사하겠습니다.</p>",b(i,"class","title svelte-daiza7"),b(n,"class","mainImg svelte-daiza7"),b(u,"class","mainText svelte-daiza7"),b(r,"class","main svelte-daiza7"),b(s,"class","greeting svelte-daiza7")},m(e,t){d(e,s,t),c(s,i),c(s,a),c(s,r),c(r,n),F(l,n,null),c(r,o),c(r,u),f=!0},p:e,i(e){f||(j(l.$$.fragment,e),f=!0)},o(e){X(l.$$.fragment,e),f=!1},d(e){e&&p(s),W(l)}}}class Te extends Q{constructor(e){super(),U(this,e,null,Ae,r,{})}}function Me(e,t,s){const i=e.slice();return i[1]=t[s],i}function Ce(e,t,s){const i=e.slice();return i[4]=t[s],i[6]=s,i}function $e(t){let s,i,a=t[4]+"";return{c(){s=m("td"),i=h(a)},m(e,t){d(e,s,t),c(s,i)},p:e,d(e){e&&p(s)}}}function ke(t){let s,i,a=t[4]+"";return{c(){s=m("td"),i=h(a),b(s,"class","saturday svelte-s41r7u")},m(e,t){d(e,s,t),c(s,i)},p:e,d(e){e&&p(s)}}}function ze(t){let s,i,a=t[4]+"";return{c(){s=m("td"),i=h(a),b(s,"class","sunday svelte-s41r7u")},m(e,t){d(e,s,t),c(s,i)},p:e,d(e){e&&p(s)}}}function Pe(t){let s,i,a=t[4]+"";return{c(){s=m("td"),i=h(a),b(s,"id","d_day"),b(s,"class","svelte-s41r7u")},m(e,t){d(e,s,t),c(s,i)},p:e,d(e){e&&p(s)}}}function Le(e){let t;let s=function(e,t){return 22==e[4]?Pe:e[6]%7==0?ze:e[6]%7==6?ke:$e}(e),i=s(e);return{c(){i.c(),t=v()},m(e,s){i.m(e,s),d(e,t,s)},p(e,t){i.p(e,t)},d(e){i.d(e),e&&p(t)}}}function Oe(e){let t,s,i=e[1],a=[];for(let t=0;t<i.length;t+=1)a[t]=Le(Ce(e,i,t));return{c(){t=m("tr");for(let e=0;e<a.length;e+=1)a[e].c();s=g()},m(e,i){d(e,t,i);for(let e=0;e<a.length;e+=1)a[e].m(t,null);c(t,s)},p(e,r){if(1&r){let n;for(i=e[1],n=0;n<i.length;n+=1){const l=Ce(e,i,n);a[n]?a[n].p(l,r):(a[n]=Le(l),a[n].c(),a[n].m(t,s))}for(;n<a.length;n+=1)a[n].d(1);a.length=i.length}},d(e){e&&p(t),u(a,e)}}}function Ie(t){let s,i,a,r,n,l,o,f,h=t[0],v=[];for(let e=0;e<h.length;e+=1)v[e]=Oe(Me(t,h,e));return{c(){s=m("div"),i=m("div"),a=m("div"),a.textContent="4월",r=g(),n=m("table"),l=m("thead"),l.innerHTML="<tr><th>SUN</th> \n                    <th>MON</th> \n                    <th>TUE</th> \n                    <th>WED</th> \n                    <th>THU</th> \n                    <th>FRI</th> \n                    <th>SAT</th></tr>",o=g(),f=m("tbody");for(let e=0;e<v.length;e+=1)v[e].c();b(a,"class","month svelte-s41r7u"),b(n,"class","weeks svelte-s41r7u"),b(i,"class","calander svelte-s41r7u"),b(s,"class","calanderOutline svelte-s41r7u")},m(e,t){d(e,s,t),c(s,i),c(i,a),c(i,r),c(i,n),c(n,l),c(n,o),c(n,f);for(let e=0;e<v.length;e+=1)v[e].m(f,null)},p(e,[t]){if(1&t){let s;for(h=e[0],s=0;s<h.length;s+=1){const i=Me(e,h,s);v[s]?v[s].p(i,t):(v[s]=Oe(i),v[s].c(),v[s].m(f,null))}for(;s<v.length;s+=1)v[s].d(1);v.length=h.length}},i:e,o:e,d(e){e&&p(s),u(v,e)}}}function De(e,t){let s=[];for(let i=e;i<t;++i)s.push(i);return s}function Be(e){return[[["","","","","","",1],De(2,9),De(9,16),De(16,23),De(23,30),[30]]]}class _e extends Q{constructor(e){super(),U(this,e,Be,Ie,r,{})}}function Ye(e){return null!==e&&"object"==typeof e&&"constructor"in e&&e.constructor===Object}function Ge(e={},t={}){Object.keys(t).forEach((s=>{void 0===e[s]?e[s]=t[s]:Ye(t[s])&&Ye(e[s])&&Object.keys(t[s]).length>0&&Ge(e[s],t[s])}))}const He={body:{},addEventListener(){},removeEventListener(){},activeElement:{blur(){},nodeName:""},querySelector:()=>null,querySelectorAll:()=>[],getElementById:()=>null,createEvent:()=>({initEvent(){}}),createElement:()=>({children:[],childNodes:[],style:{},setAttribute(){},getElementsByTagName:()=>[]}),createElementNS:()=>({}),importNode:()=>null,location:{hash:"",host:"",hostname:"",href:"",origin:"",pathname:"",protocol:"",search:""}};function Ne(){const e="undefined"!=typeof document?document:{};return Ge(e,He),e}const je={document:He,navigator:{userAgent:""},location:{hash:"",host:"",hostname:"",href:"",origin:"",pathname:"",protocol:"",search:""},history:{replaceState(){},pushState(){},go(){},back(){}},CustomEvent:function(){return this},addEventListener(){},removeEventListener(){},getComputedStyle:()=>({getPropertyValue:()=>""}),Image(){},Date(){},screen:{},setTimeout(){},clearTimeout(){},matchMedia:()=>({}),requestAnimationFrame:e=>"undefined"==typeof setTimeout?(e(),null):setTimeout(e,0),cancelAnimationFrame(e){"undefined"!=typeof setTimeout&&clearTimeout(e)}};function Xe(){const e="undefined"!=typeof window?window:{};return Ge(e,je),e}function Re(e,t=0){return setTimeout(e,t)}function Ve(){return Date.now()}function Fe(e,t="x"){const s=Xe();let i,a,r;const n=function(e){const t=Xe();let s;return t.getComputedStyle&&(s=t.getComputedStyle(e,null)),!s&&e.currentStyle&&(s=e.currentStyle),s||(s=e.style),s}(e);return s.WebKitCSSMatrix?(a=n.transform||n.webkitTransform,a.split(",").length>6&&(a=a.split(", ").map((e=>e.replace(",","."))).join(", ")),r=new s.WebKitCSSMatrix("none"===a?"":a)):(r=n.MozTransform||n.OTransform||n.MsTransform||n.msTransform||n.transform||n.getPropertyValue("transform").replace("translate(","matrix(1, 0, 0, 1,"),i=r.toString().split(",")),"x"===t&&(a=s.WebKitCSSMatrix?r.m41:16===i.length?parseFloat(i[12]):parseFloat(i[4])),"y"===t&&(a=s.WebKitCSSMatrix?r.m42:16===i.length?parseFloat(i[13]):parseFloat(i[5])),a||0}function We(e){return"object"==typeof e&&null!==e&&e.constructor&&"Object"===Object.prototype.toString.call(e).slice(8,-1)}function qe(...e){const t=Object(e[0]),s=["__proto__","constructor","prototype"];for(let a=1;a<e.length;a+=1){const r=e[a];if(null!=r&&(i=r,!("undefined"!=typeof window&&void 0!==window.HTMLElement?i instanceof HTMLElement:i&&(1===i.nodeType||11===i.nodeType)))){const e=Object.keys(Object(r)).filter((e=>s.indexOf(e)<0));for(let s=0,i=e.length;s<i;s+=1){const i=e[s],a=Object.getOwnPropertyDescriptor(r,i);void 0!==a&&a.enumerable&&(We(t[i])&&We(r[i])?r[i].__swiper__?t[i]=r[i]:qe(t[i],r[i]):!We(t[i])&&We(r[i])?(t[i]={},r[i].__swiper__?t[i]=r[i]:qe(t[i],r[i])):t[i]=r[i])}}}var i;return t}function Ue(e,t,s){e.style.setProperty(t,s)}function Qe({swiper:e,targetPosition:t,side:s}){const i=Xe(),a=-e.translate;let r,n=null;const l=e.params.speed;e.wrapperEl.style.scrollSnapType="none",i.cancelAnimationFrame(e.cssModeFrameID);const o=t>a?"next":"prev",c=(e,t)=>"next"===o&&e>=t||"prev"===o&&e<=t,d=()=>{r=(new Date).getTime(),null===n&&(n=r);const o=Math.max(Math.min((r-n)/l,1),0),p=.5-Math.cos(o*Math.PI)/2;let u=a+p*(t-a);if(c(u,t)&&(u=t),e.wrapperEl.scrollTo({[s]:u}),c(u,t))return e.wrapperEl.style.overflow="hidden",e.wrapperEl.style.scrollSnapType="",setTimeout((()=>{e.wrapperEl.style.overflow="",e.wrapperEl.scrollTo({[s]:u})})),void i.cancelAnimationFrame(e.cssModeFrameID);e.cssModeFrameID=i.requestAnimationFrame(d)};d()}function Ze(e){return e.querySelector(".swiper-slide-transform")||e.shadowEl&&e.shadowEl.querySelector(".swiper-slide-transform")||e}function Ke(e,t=""){return[...e.children].filter((e=>e.matches(t)))}function Je(e,t=[]){const s=document.createElement(e);return s.classList.add(...Array.isArray(t)?t:[t]),s}function et(e){const t=Xe(),s=Ne(),i=e.getBoundingClientRect(),a=s.body,r=e.clientTop||a.clientTop||0,n=e.clientLeft||a.clientLeft||0,l=e===t?t.scrollY:e.scrollTop,o=e===t?t.scrollX:e.scrollLeft;return{top:i.top+l-r,left:i.left+o-n}}function tt(e,t){return Xe().getComputedStyle(e,null).getPropertyValue(t)}function st(e){let t,s=e;if(s){for(t=0;null!==(s=s.previousSibling);)1===s.nodeType&&(t+=1);return t}}function it(e,t){const s=[];let i=e.parentElement;for(;i;)t?i.matches(t)&&s.push(i):s.push(i),i=i.parentElement;return s}function at(e,t){t&&e.addEventListener("transitionend",(function s(i){i.target===e&&(t.call(e,i),e.removeEventListener("transitionend",s))}))}function rt(e,t,s){const i=Xe();return s?e["width"===t?"offsetWidth":"offsetHeight"]+parseFloat(i.getComputedStyle(e,null).getPropertyValue("width"===t?"margin-right":"margin-top"))+parseFloat(i.getComputedStyle(e,null).getPropertyValue("width"===t?"margin-left":"margin-bottom")):e.offsetWidth}let nt,lt,ot;function ct(){return nt||(nt=function(){const e=Xe(),t=Ne();return{smoothScroll:t.documentElement&&"scrollBehavior"in t.documentElement.style,touch:!!("ontouchstart"in e||e.DocumentTouch&&t instanceof e.DocumentTouch)}}()),nt}function dt(e={}){return lt||(lt=function({userAgent:e}={}){const t=ct(),s=Xe(),i=s.navigator.platform,a=e||s.navigator.userAgent,r={ios:!1,android:!1},n=s.screen.width,l=s.screen.height,o=a.match(/(Android);?[\s\/]+([\d.]+)?/);let c=a.match(/(iPad).*OS\s([\d_]+)/);const d=a.match(/(iPod)(.*OS\s([\d_]+))?/),p=!c&&a.match(/(iPhone\sOS|iOS)\s([\d_]+)/),u="Win32"===i;let m="MacIntel"===i;return!c&&m&&t.touch&&["1024x1366","1366x1024","834x1194","1194x834","834x1112","1112x834","768x1024","1024x768","820x1180","1180x820","810x1080","1080x810"].indexOf(`${n}x${l}`)>=0&&(c=a.match(/(Version)\/([\d.]+)/),c||(c=[0,1,"13_0_0"]),m=!1),o&&!u&&(r.os="android",r.android=!0),(c||p||d)&&(r.os="ios",r.ios=!0),r}(e)),lt}function pt(){return ot||(ot=function(){const e=Xe();let t=!1;function s(){const t=e.navigator.userAgent.toLowerCase();return t.indexOf("safari")>=0&&t.indexOf("chrome")<0&&t.indexOf("android")<0}if(s()){const s=String(e.navigator.userAgent);if(s.includes("Version/")){const[e,i]=s.split("Version/")[1].split(" ")[0].split(".").map((e=>Number(e)));t=e<16||16===e&&i<2}}return{isSafari:t||s(),needPerspectiveFix:t,isWebView:/(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(e.navigator.userAgent)}}()),ot}var ut={on(e,t,s){const i=this;if(!i.eventsListeners||i.destroyed)return i;if("function"!=typeof t)return i;const a=s?"unshift":"push";return e.split(" ").forEach((e=>{i.eventsListeners[e]||(i.eventsListeners[e]=[]),i.eventsListeners[e][a](t)})),i},once(e,t,s){const i=this;if(!i.eventsListeners||i.destroyed)return i;if("function"!=typeof t)return i;function a(...s){i.off(e,a),a.__emitterProxy&&delete a.__emitterProxy,t.apply(i,s)}return a.__emitterProxy=t,i.on(e,a,s)},onAny(e,t){const s=this;if(!s.eventsListeners||s.destroyed)return s;if("function"!=typeof e)return s;const i=t?"unshift":"push";return s.eventsAnyListeners.indexOf(e)<0&&s.eventsAnyListeners[i](e),s},offAny(e){const t=this;if(!t.eventsListeners||t.destroyed)return t;if(!t.eventsAnyListeners)return t;const s=t.eventsAnyListeners.indexOf(e);return s>=0&&t.eventsAnyListeners.splice(s,1),t},off(e,t){const s=this;return!s.eventsListeners||s.destroyed?s:s.eventsListeners?(e.split(" ").forEach((e=>{void 0===t?s.eventsListeners[e]=[]:s.eventsListeners[e]&&s.eventsListeners[e].forEach(((i,a)=>{(i===t||i.__emitterProxy&&i.__emitterProxy===t)&&s.eventsListeners[e].splice(a,1)}))})),s):s},emit(...e){const t=this;if(!t.eventsListeners||t.destroyed)return t;if(!t.eventsListeners)return t;let s,i,a;"string"==typeof e[0]||Array.isArray(e[0])?(s=e[0],i=e.slice(1,e.length),a=t):(s=e[0].events,i=e[0].data,a=e[0].context||t),i.unshift(a);return(Array.isArray(s)?s:s.split(" ")).forEach((e=>{t.eventsAnyListeners&&t.eventsAnyListeners.length&&t.eventsAnyListeners.forEach((t=>{t.apply(a,[e,...i])})),t.eventsListeners&&t.eventsListeners[e]&&t.eventsListeners[e].forEach((e=>{e.apply(a,i)}))})),t}};var mt={updateSize:function(){const e=this;let t,s;const i=e.el;t=void 0!==e.params.width&&null!==e.params.width?e.params.width:i.clientWidth,s=void 0!==e.params.height&&null!==e.params.height?e.params.height:i.clientHeight,0===t&&e.isHorizontal()||0===s&&e.isVertical()||(t=t-parseInt(tt(i,"padding-left")||0,10)-parseInt(tt(i,"padding-right")||0,10),s=s-parseInt(tt(i,"padding-top")||0,10)-parseInt(tt(i,"padding-bottom")||0,10),Number.isNaN(t)&&(t=0),Number.isNaN(s)&&(s=0),Object.assign(e,{width:t,height:s,size:e.isHorizontal()?t:s}))},updateSlides:function(){const e=this;function t(t){return e.isHorizontal()?t:{width:"height","margin-top":"margin-left","margin-bottom ":"margin-right","margin-left":"margin-top","margin-right":"margin-bottom","padding-left":"padding-top","padding-right":"padding-bottom",marginRight:"marginBottom"}[t]}function s(e,s){return parseFloat(e.getPropertyValue(t(s))||0)}const i=e.params,{wrapperEl:a,slidesEl:r,size:n,rtlTranslate:l,wrongRTL:o}=e,c=e.virtual&&i.virtual.enabled,d=c?e.virtual.slides.length:e.slides.length,p=Ke(r,`.${e.params.slideClass}, swiper-slide`),u=c?e.virtual.slides.length:p.length;let m=[];const f=[],h=[];let g=i.slidesOffsetBefore;"function"==typeof g&&(g=i.slidesOffsetBefore.call(e));let v=i.slidesOffsetAfter;"function"==typeof v&&(v=i.slidesOffsetAfter.call(e));const w=e.snapGrid.length,b=e.slidesGrid.length;let y=i.spaceBetween,x=-g,E=0,S=0;if(void 0===n)return;"string"==typeof y&&y.indexOf("%")>=0&&(y=parseFloat(y.replace("%",""))/100*n),e.virtualSize=-y,p.forEach((e=>{l?e.style.marginLeft="":e.style.marginRight="",e.style.marginBottom="",e.style.marginTop=""})),i.centeredSlides&&i.cssMode&&(Ue(a,"--swiper-centered-offset-before",""),Ue(a,"--swiper-centered-offset-after",""));const A=i.grid&&i.grid.rows>1&&e.grid;let T;A&&e.grid.initSlides(u);const M="auto"===i.slidesPerView&&i.breakpoints&&Object.keys(i.breakpoints).filter((e=>void 0!==i.breakpoints[e].slidesPerView)).length>0;for(let a=0;a<u;a+=1){let r;if(T=0,p[a]&&(r=p[a]),A&&e.grid.updateSlide(a,r,u,t),!p[a]||"none"!==tt(r,"display")){if("auto"===i.slidesPerView){M&&(p[a].style[t("width")]="");const n=getComputedStyle(r),l=r.style.transform,o=r.style.webkitTransform;if(l&&(r.style.transform="none"),o&&(r.style.webkitTransform="none"),i.roundLengths)T=e.isHorizontal()?rt(r,"width",!0):rt(r,"height",!0);else{const e=s(n,"width"),t=s(n,"padding-left"),i=s(n,"padding-right"),a=s(n,"margin-left"),l=s(n,"margin-right"),o=n.getPropertyValue("box-sizing");if(o&&"border-box"===o)T=e+a+l;else{const{clientWidth:s,offsetWidth:n}=r;T=e+t+i+a+l+(n-s)}}l&&(r.style.transform=l),o&&(r.style.webkitTransform=o),i.roundLengths&&(T=Math.floor(T))}else T=(n-(i.slidesPerView-1)*y)/i.slidesPerView,i.roundLengths&&(T=Math.floor(T)),p[a]&&(p[a].style[t("width")]=`${T}px`);p[a]&&(p[a].swiperSlideSize=T),h.push(T),i.centeredSlides?(x=x+T/2+E/2+y,0===E&&0!==a&&(x=x-n/2-y),0===a&&(x=x-n/2-y),Math.abs(x)<.001&&(x=0),i.roundLengths&&(x=Math.floor(x)),S%i.slidesPerGroup==0&&m.push(x),f.push(x)):(i.roundLengths&&(x=Math.floor(x)),(S-Math.min(e.params.slidesPerGroupSkip,S))%e.params.slidesPerGroup==0&&m.push(x),f.push(x),x=x+T+y),e.virtualSize+=T+y,E=T,S+=1}}if(e.virtualSize=Math.max(e.virtualSize,n)+v,l&&o&&("slide"===i.effect||"coverflow"===i.effect)&&(a.style.width=`${e.virtualSize+i.spaceBetween}px`),i.setWrapperSize&&(a.style[t("width")]=`${e.virtualSize+i.spaceBetween}px`),A&&e.grid.updateWrapperSize(T,m,t),!i.centeredSlides){const t=[];for(let s=0;s<m.length;s+=1){let a=m[s];i.roundLengths&&(a=Math.floor(a)),m[s]<=e.virtualSize-n&&t.push(a)}m=t,Math.floor(e.virtualSize-n)-Math.floor(m[m.length-1])>1&&m.push(e.virtualSize-n)}if(c&&i.loop){const t=h[0]+y;if(i.slidesPerGroup>1){const s=Math.ceil((e.virtual.slidesBefore+e.virtual.slidesAfter)/i.slidesPerGroup),a=t*i.slidesPerGroup;for(let e=0;e<s;e+=1)m.push(m[m.length-1]+a)}for(let s=0;s<e.virtual.slidesBefore+e.virtual.slidesAfter;s+=1)1===i.slidesPerGroup&&m.push(m[m.length-1]+t),f.push(f[f.length-1]+t),e.virtualSize+=t}if(0===m.length&&(m=[0]),0!==i.spaceBetween){const s=e.isHorizontal()&&l?"marginLeft":t("marginRight");p.filter(((e,t)=>!(i.cssMode&&!i.loop)||t!==p.length-1)).forEach((e=>{e.style[s]=`${y}px`}))}if(i.centeredSlides&&i.centeredSlidesBounds){let e=0;h.forEach((t=>{e+=t+(i.spaceBetween?i.spaceBetween:0)})),e-=i.spaceBetween;const t=e-n;m=m.map((e=>e<0?-g:e>t?t+v:e))}if(i.centerInsufficientSlides){let e=0;if(h.forEach((t=>{e+=t+(i.spaceBetween?i.spaceBetween:0)})),e-=i.spaceBetween,e<n){const t=(n-e)/2;m.forEach(((e,s)=>{m[s]=e-t})),f.forEach(((e,s)=>{f[s]=e+t}))}}if(Object.assign(e,{slides:p,snapGrid:m,slidesGrid:f,slidesSizesGrid:h}),i.centeredSlides&&i.cssMode&&!i.centeredSlidesBounds){Ue(a,"--swiper-centered-offset-before",-m[0]+"px"),Ue(a,"--swiper-centered-offset-after",e.size/2-h[h.length-1]/2+"px");const t=-e.snapGrid[0],s=-e.slidesGrid[0];e.snapGrid=e.snapGrid.map((e=>e+t)),e.slidesGrid=e.slidesGrid.map((e=>e+s))}if(u!==d&&e.emit("slidesLengthChange"),m.length!==w&&(e.params.watchOverflow&&e.checkOverflow(),e.emit("snapGridLengthChange")),f.length!==b&&e.emit("slidesGridLengthChange"),i.watchSlidesProgress&&e.updateSlidesOffset(),!(c||i.cssMode||"slide"!==i.effect&&"fade"!==i.effect)){const t=`${i.containerModifierClass}backface-hidden`,s=e.el.classList.contains(t);u<=i.maxBackfaceHiddenSlides?s||e.el.classList.add(t):s&&e.el.classList.remove(t)}},updateAutoHeight:function(e){const t=this,s=[],i=t.virtual&&t.params.virtual.enabled;let a,r=0;"number"==typeof e?t.setTransition(e):!0===e&&t.setTransition(t.params.speed);const n=e=>i?t.slides.filter((t=>parseInt(t.getAttribute("data-swiper-slide-index"),10)===e))[0]:t.slides[e];if("auto"!==t.params.slidesPerView&&t.params.slidesPerView>1)if(t.params.centeredSlides)(t.visibleSlides||[]).forEach((e=>{s.push(e)}));else for(a=0;a<Math.ceil(t.params.slidesPerView);a+=1){const e=t.activeIndex+a;if(e>t.slides.length&&!i)break;s.push(n(e))}else s.push(n(t.activeIndex));for(a=0;a<s.length;a+=1)if(void 0!==s[a]){const e=s[a].offsetHeight;r=e>r?e:r}(r||0===r)&&(t.wrapperEl.style.height=`${r}px`)},updateSlidesOffset:function(){const e=this,t=e.slides,s=e.isElement?e.isHorizontal()?e.wrapperEl.offsetLeft:e.wrapperEl.offsetTop:0;for(let i=0;i<t.length;i+=1)t[i].swiperSlideOffset=(e.isHorizontal()?t[i].offsetLeft:t[i].offsetTop)-s},updateSlidesProgress:function(e=this&&this.translate||0){const t=this,s=t.params,{slides:i,rtlTranslate:a,snapGrid:r}=t;if(0===i.length)return;void 0===i[0].swiperSlideOffset&&t.updateSlidesOffset();let n=-e;a&&(n=e),i.forEach((e=>{e.classList.remove(s.slideVisibleClass)})),t.visibleSlidesIndexes=[],t.visibleSlides=[];for(let e=0;e<i.length;e+=1){const l=i[e];let o=l.swiperSlideOffset;s.cssMode&&s.centeredSlides&&(o-=i[0].swiperSlideOffset);const c=(n+(s.centeredSlides?t.minTranslate():0)-o)/(l.swiperSlideSize+s.spaceBetween),d=(n-r[0]+(s.centeredSlides?t.minTranslate():0)-o)/(l.swiperSlideSize+s.spaceBetween),p=-(n-o),u=p+t.slidesSizesGrid[e];(p>=0&&p<t.size-1||u>1&&u<=t.size||p<=0&&u>=t.size)&&(t.visibleSlides.push(l),t.visibleSlidesIndexes.push(e),i[e].classList.add(s.slideVisibleClass)),l.progress=a?-c:c,l.originalProgress=a?-d:d}},updateProgress:function(e){const t=this;if(void 0===e){const s=t.rtlTranslate?-1:1;e=t&&t.translate&&t.translate*s||0}const s=t.params,i=t.maxTranslate()-t.minTranslate();let{progress:a,isBeginning:r,isEnd:n,progressLoop:l}=t;const o=r,c=n;if(0===i)a=0,r=!0,n=!0;else{a=(e-t.minTranslate())/i;const s=Math.abs(e-t.minTranslate())<1,l=Math.abs(e-t.maxTranslate())<1;r=s||a<=0,n=l||a>=1,s&&(a=0),l&&(a=1)}if(s.loop){const s=t.getSlideIndex(t.slides.filter((e=>"0"===e.getAttribute("data-swiper-slide-index")))[0]),i=t.getSlideIndex(t.slides.filter((e=>1*e.getAttribute("data-swiper-slide-index")==t.slides.length-1))[0]),a=t.slidesGrid[s],r=t.slidesGrid[i],n=t.slidesGrid[t.slidesGrid.length-1],o=Math.abs(e);l=o>=a?(o-a)/n:(o+n-r)/n,l>1&&(l-=1)}Object.assign(t,{progress:a,progressLoop:l,isBeginning:r,isEnd:n}),(s.watchSlidesProgress||s.centeredSlides&&s.autoHeight)&&t.updateSlidesProgress(e),r&&!o&&t.emit("reachBeginning toEdge"),n&&!c&&t.emit("reachEnd toEdge"),(o&&!r||c&&!n)&&t.emit("fromEdge"),t.emit("progress",a)},updateSlidesClasses:function(){const e=this,{slides:t,params:s,slidesEl:i,activeIndex:a}=e,r=e.virtual&&s.virtual.enabled,n=e=>Ke(i,`.${s.slideClass}${e}, swiper-slide${e}`)[0];let l;if(t.forEach((e=>{e.classList.remove(s.slideActiveClass,s.slideNextClass,s.slidePrevClass)})),r)if(s.loop){let t=a-e.virtual.slidesBefore;t<0&&(t=e.virtual.slides.length+t),t>=e.virtual.slides.length&&(t-=e.virtual.slides.length),l=n(`[data-swiper-slide-index="${t}"]`)}else l=n(`[data-swiper-slide-index="${a}"]`);else l=t[a];if(l){l.classList.add(s.slideActiveClass);let e=function(e,t){const s=[];for(;e.nextElementSibling;){const i=e.nextElementSibling;t?i.matches(t)&&s.push(i):s.push(i),e=i}return s}(l,`.${s.slideClass}, swiper-slide`)[0];s.loop&&!e&&(e=t[0]),e&&e.classList.add(s.slideNextClass);let i=function(e,t){const s=[];for(;e.previousElementSibling;){const i=e.previousElementSibling;t?i.matches(t)&&s.push(i):s.push(i),e=i}return s}(l,`.${s.slideClass}, swiper-slide`)[0];s.loop&&0===!i&&(i=t[t.length-1]),i&&i.classList.add(s.slidePrevClass)}e.emitSlidesClasses()},updateActiveIndex:function(e){const t=this,s=t.rtlTranslate?t.translate:-t.translate,{snapGrid:i,params:a,activeIndex:r,realIndex:n,snapIndex:l}=t;let o,c=e;const d=e=>{let s=e-t.virtual.slidesBefore;return s<0&&(s=t.virtual.slides.length+s),s>=t.virtual.slides.length&&(s-=t.virtual.slides.length),s};if(void 0===c&&(c=function(e){const{slidesGrid:t,params:s}=e,i=e.rtlTranslate?e.translate:-e.translate;let a;for(let e=0;e<t.length;e+=1)void 0!==t[e+1]?i>=t[e]&&i<t[e+1]-(t[e+1]-t[e])/2?a=e:i>=t[e]&&i<t[e+1]&&(a=e+1):i>=t[e]&&(a=e);return s.normalizeSlideIndex&&(a<0||void 0===a)&&(a=0),a}(t)),i.indexOf(s)>=0)o=i.indexOf(s);else{const e=Math.min(a.slidesPerGroupSkip,c);o=e+Math.floor((c-e)/a.slidesPerGroup)}if(o>=i.length&&(o=i.length-1),c===r)return o!==l&&(t.snapIndex=o,t.emit("snapIndexChange")),void(t.params.loop&&t.virtual&&t.params.virtual.enabled&&(t.realIndex=d(c)));let p;p=t.virtual&&a.virtual.enabled&&a.loop?d(c):t.slides[c]?parseInt(t.slides[c].getAttribute("data-swiper-slide-index")||c,10):c,Object.assign(t,{snapIndex:o,realIndex:p,previousIndex:r,activeIndex:c}),t.emit("activeIndexChange"),t.emit("snapIndexChange"),n!==p&&t.emit("realIndexChange"),(t.initialized||t.params.runCallbacksOnInit)&&t.emit("slideChange")},updateClickedSlide:function(e){const t=this,s=t.params,i=e.closest(`.${s.slideClass}, swiper-slide`);let a,r=!1;if(i)for(let e=0;e<t.slides.length;e+=1)if(t.slides[e]===i){r=!0,a=e;break}if(!i||!r)return t.clickedSlide=void 0,void(t.clickedIndex=void 0);t.clickedSlide=i,t.virtual&&t.params.virtual.enabled?t.clickedIndex=parseInt(i.getAttribute("data-swiper-slide-index"),10):t.clickedIndex=a,s.slideToClickedSlide&&void 0!==t.clickedIndex&&t.clickedIndex!==t.activeIndex&&t.slideToClickedSlide()}};var ft={getTranslate:function(e=(this.isHorizontal()?"x":"y")){const{params:t,rtlTranslate:s,translate:i,wrapperEl:a}=this;if(t.virtualTranslate)return s?-i:i;if(t.cssMode)return i;let r=Fe(a,e);return s&&(r=-r),r||0},setTranslate:function(e,t){const s=this,{rtlTranslate:i,params:a,wrapperEl:r,progress:n}=s;let l,o=0,c=0;s.isHorizontal()?o=i?-e:e:c=e,a.roundLengths&&(o=Math.floor(o),c=Math.floor(c)),a.cssMode?r[s.isHorizontal()?"scrollLeft":"scrollTop"]=s.isHorizontal()?-o:-c:a.virtualTranslate||(r.style.transform=`translate3d(${o}px, ${c}px, 0px)`),s.previousTranslate=s.translate,s.translate=s.isHorizontal()?o:c;const d=s.maxTranslate()-s.minTranslate();l=0===d?0:(e-s.minTranslate())/d,l!==n&&s.updateProgress(e),s.emit("setTranslate",s.translate,t)},minTranslate:function(){return-this.snapGrid[0]},maxTranslate:function(){return-this.snapGrid[this.snapGrid.length-1]},translateTo:function(e=0,t=this.params.speed,s=!0,i=!0,a){const r=this,{params:n,wrapperEl:l}=r;if(r.animating&&n.preventInteractionOnTransition)return!1;const o=r.minTranslate(),c=r.maxTranslate();let d;if(d=i&&e>o?o:i&&e<c?c:e,r.updateProgress(d),n.cssMode){const e=r.isHorizontal();if(0===t)l[e?"scrollLeft":"scrollTop"]=-d;else{if(!r.support.smoothScroll)return Qe({swiper:r,targetPosition:-d,side:e?"left":"top"}),!0;l.scrollTo({[e?"left":"top"]:-d,behavior:"smooth"})}return!0}return 0===t?(r.setTransition(0),r.setTranslate(d),s&&(r.emit("beforeTransitionStart",t,a),r.emit("transitionEnd"))):(r.setTransition(t),r.setTranslate(d),s&&(r.emit("beforeTransitionStart",t,a),r.emit("transitionStart")),r.animating||(r.animating=!0,r.onTranslateToWrapperTransitionEnd||(r.onTranslateToWrapperTransitionEnd=function(e){r&&!r.destroyed&&e.target===this&&(r.wrapperEl.removeEventListener("transitionend",r.onTranslateToWrapperTransitionEnd),r.onTranslateToWrapperTransitionEnd=null,delete r.onTranslateToWrapperTransitionEnd,s&&r.emit("transitionEnd"))}),r.wrapperEl.addEventListener("transitionend",r.onTranslateToWrapperTransitionEnd))),!0}};function ht({swiper:e,runCallbacks:t,direction:s,step:i}){const{activeIndex:a,previousIndex:r}=e;let n=s;if(n||(n=a>r?"next":a<r?"prev":"reset"),e.emit(`transition${i}`),t&&a!==r){if("reset"===n)return void e.emit(`slideResetTransition${i}`);e.emit(`slideChangeTransition${i}`),"next"===n?e.emit(`slideNextTransition${i}`):e.emit(`slidePrevTransition${i}`)}}var gt={slideTo:function(e=0,t=this.params.speed,s=!0,i,a){"string"==typeof e&&(e=parseInt(e,10));const r=this;let n=e;n<0&&(n=0);const{params:l,snapGrid:o,slidesGrid:c,previousIndex:d,activeIndex:p,rtlTranslate:u,wrapperEl:m,enabled:f}=r;if(r.animating&&l.preventInteractionOnTransition||!f&&!i&&!a)return!1;const h=Math.min(r.params.slidesPerGroupSkip,n);let g=h+Math.floor((n-h)/r.params.slidesPerGroup);g>=o.length&&(g=o.length-1);const v=-o[g];if(l.normalizeSlideIndex)for(let e=0;e<c.length;e+=1){const t=-Math.floor(100*v),s=Math.floor(100*c[e]),i=Math.floor(100*c[e+1]);void 0!==c[e+1]?t>=s&&t<i-(i-s)/2?n=e:t>=s&&t<i&&(n=e+1):t>=s&&(n=e)}if(r.initialized&&n!==p){if(!r.allowSlideNext&&v<r.translate&&v<r.minTranslate())return!1;if(!r.allowSlidePrev&&v>r.translate&&v>r.maxTranslate()&&(p||0)!==n)return!1}let w;if(n!==(d||0)&&s&&r.emit("beforeSlideChangeStart"),r.updateProgress(v),w=n>p?"next":n<p?"prev":"reset",u&&-v===r.translate||!u&&v===r.translate)return r.updateActiveIndex(n),l.autoHeight&&r.updateAutoHeight(),r.updateSlidesClasses(),"slide"!==l.effect&&r.setTranslate(v),"reset"!==w&&(r.transitionStart(s,w),r.transitionEnd(s,w)),!1;if(l.cssMode){const e=r.isHorizontal(),s=u?v:-v;if(0===t){const t=r.virtual&&r.params.virtual.enabled;t&&(r.wrapperEl.style.scrollSnapType="none",r._immediateVirtual=!0),t&&!r._cssModeVirtualInitialSet&&r.params.initialSlide>0?(r._cssModeVirtualInitialSet=!0,requestAnimationFrame((()=>{m[e?"scrollLeft":"scrollTop"]=s}))):m[e?"scrollLeft":"scrollTop"]=s,t&&requestAnimationFrame((()=>{r.wrapperEl.style.scrollSnapType="",r._immediateVirtual=!1}))}else{if(!r.support.smoothScroll)return Qe({swiper:r,targetPosition:s,side:e?"left":"top"}),!0;m.scrollTo({[e?"left":"top"]:s,behavior:"smooth"})}return!0}return r.setTransition(t),r.setTranslate(v),r.updateActiveIndex(n),r.updateSlidesClasses(),r.emit("beforeTransitionStart",t,i),r.transitionStart(s,w),0===t?r.transitionEnd(s,w):r.animating||(r.animating=!0,r.onSlideToWrapperTransitionEnd||(r.onSlideToWrapperTransitionEnd=function(e){r&&!r.destroyed&&e.target===this&&(r.wrapperEl.removeEventListener("transitionend",r.onSlideToWrapperTransitionEnd),r.onSlideToWrapperTransitionEnd=null,delete r.onSlideToWrapperTransitionEnd,r.transitionEnd(s,w))}),r.wrapperEl.addEventListener("transitionend",r.onSlideToWrapperTransitionEnd)),!0},slideToLoop:function(e=0,t=this.params.speed,s=!0,i){if("string"==typeof e){e=parseInt(e,10)}const a=this;let r=e;return a.params.loop&&(a.virtual&&a.params.virtual.enabled?r+=a.virtual.slidesBefore:r=a.getSlideIndex(a.slides.filter((e=>1*e.getAttribute("data-swiper-slide-index")===r))[0])),a.slideTo(r,t,s,i)},slideNext:function(e=this.params.speed,t=!0,s){const i=this,{enabled:a,params:r,animating:n}=i;if(!a)return i;let l=r.slidesPerGroup;"auto"===r.slidesPerView&&1===r.slidesPerGroup&&r.slidesPerGroupAuto&&(l=Math.max(i.slidesPerViewDynamic("current",!0),1));const o=i.activeIndex<r.slidesPerGroupSkip?1:l,c=i.virtual&&r.virtual.enabled;if(r.loop){if(n&&!c&&r.loopPreventsSliding)return!1;i.loopFix({direction:"next"}),i._clientLeft=i.wrapperEl.clientLeft}return r.rewind&&i.isEnd?i.slideTo(0,e,t,s):i.slideTo(i.activeIndex+o,e,t,s)},slidePrev:function(e=this.params.speed,t=!0,s){const i=this,{params:a,snapGrid:r,slidesGrid:n,rtlTranslate:l,enabled:o,animating:c}=i;if(!o)return i;const d=i.virtual&&a.virtual.enabled;if(a.loop){if(c&&!d&&a.loopPreventsSliding)return!1;i.loopFix({direction:"prev"}),i._clientLeft=i.wrapperEl.clientLeft}function p(e){return e<0?-Math.floor(Math.abs(e)):Math.floor(e)}const u=p(l?i.translate:-i.translate),m=r.map((e=>p(e)));let f=r[m.indexOf(u)-1];if(void 0===f&&a.cssMode){let e;r.forEach(((t,s)=>{u>=t&&(e=s)})),void 0!==e&&(f=r[e>0?e-1:e])}let h=0;if(void 0!==f&&(h=n.indexOf(f),h<0&&(h=i.activeIndex-1),"auto"===a.slidesPerView&&1===a.slidesPerGroup&&a.slidesPerGroupAuto&&(h=h-i.slidesPerViewDynamic("previous",!0)+1,h=Math.max(h,0))),a.rewind&&i.isBeginning){const a=i.params.virtual&&i.params.virtual.enabled&&i.virtual?i.virtual.slides.length-1:i.slides.length-1;return i.slideTo(a,e,t,s)}return i.slideTo(h,e,t,s)},slideReset:function(e=this.params.speed,t=!0,s){return this.slideTo(this.activeIndex,e,t,s)},slideToClosest:function(e=this.params.speed,t=!0,s,i=.5){const a=this;let r=a.activeIndex;const n=Math.min(a.params.slidesPerGroupSkip,r),l=n+Math.floor((r-n)/a.params.slidesPerGroup),o=a.rtlTranslate?a.translate:-a.translate;if(o>=a.snapGrid[l]){const e=a.snapGrid[l];o-e>(a.snapGrid[l+1]-e)*i&&(r+=a.params.slidesPerGroup)}else{const e=a.snapGrid[l-1];o-e<=(a.snapGrid[l]-e)*i&&(r-=a.params.slidesPerGroup)}return r=Math.max(r,0),r=Math.min(r,a.slidesGrid.length-1),a.slideTo(r,e,t,s)},slideToClickedSlide:function(){const e=this,{params:t,slidesEl:s}=e,i="auto"===t.slidesPerView?e.slidesPerViewDynamic():t.slidesPerView;let a,r=e.clickedIndex;const n=e.isElement?"swiper-slide":`.${t.slideClass}`;if(t.loop){if(e.animating)return;a=parseInt(e.clickedSlide.getAttribute("data-swiper-slide-index"),10),t.centeredSlides?r<e.loopedSlides-i/2||r>e.slides.length-e.loopedSlides+i/2?(e.loopFix(),r=e.getSlideIndex(Ke(s,`${n}[data-swiper-slide-index="${a}"]`)[0]),Re((()=>{e.slideTo(r)}))):e.slideTo(r):r>e.slides.length-i?(e.loopFix(),r=e.getSlideIndex(Ke(s,`${n}[data-swiper-slide-index="${a}"]`)[0]),Re((()=>{e.slideTo(r)}))):e.slideTo(r)}else e.slideTo(r)}};var vt={loopCreate:function(e){const t=this,{params:s,slidesEl:i}=t;if(!s.loop||t.virtual&&t.params.virtual.enabled)return;Ke(i,`.${s.slideClass}, swiper-slide`).forEach(((e,t)=>{e.setAttribute("data-swiper-slide-index",t)})),t.loopFix({slideRealIndex:e,direction:s.centeredSlides?void 0:"next"})},loopFix:function({slideRealIndex:e,slideTo:t=!0,direction:s,setTranslate:i,activeSlideIndex:a,byController:r,byMousewheel:n}={}){const l=this;if(!l.params.loop)return;l.emit("beforeLoopFix");const{slides:o,allowSlidePrev:c,allowSlideNext:d,slidesEl:p,params:u}=l;if(l.allowSlidePrev=!0,l.allowSlideNext=!0,l.virtual&&u.virtual.enabled)return t&&(u.centeredSlides||0!==l.snapIndex?u.centeredSlides&&l.snapIndex<u.slidesPerView?l.slideTo(l.virtual.slides.length+l.snapIndex,0,!1,!0):l.snapIndex===l.snapGrid.length-1&&l.slideTo(l.virtual.slidesBefore,0,!1,!0):l.slideTo(l.virtual.slides.length,0,!1,!0)),l.allowSlidePrev=c,l.allowSlideNext=d,void l.emit("loopFix");const m="auto"===u.slidesPerView?l.slidesPerViewDynamic():Math.ceil(parseFloat(u.slidesPerView,10));let f=u.loopedSlides||m;f%u.slidesPerGroup!=0&&(f+=u.slidesPerGroup-f%u.slidesPerGroup),l.loopedSlides=f;const h=[],g=[];let v=l.activeIndex;void 0===a?a=l.getSlideIndex(l.slides.filter((e=>e.classList.contains("swiper-slide-active")))[0]):v=a;const w="next"===s||!s,b="prev"===s||!s;let y=0,x=0;if(a<f){y=Math.max(f-a,u.slidesPerGroup);for(let e=0;e<f-a;e+=1){const t=e-Math.floor(e/o.length)*o.length;h.push(o.length-t-1)}}else if(a>l.slides.length-2*f){x=Math.max(a-(l.slides.length-2*f),u.slidesPerGroup);for(let e=0;e<x;e+=1){const t=e-Math.floor(e/o.length)*o.length;g.push(t)}}if(b&&h.forEach((e=>{p.prepend(l.slides[e])})),w&&g.forEach((e=>{p.append(l.slides[e])})),l.recalcSlides(),u.watchSlidesProgress&&l.updateSlidesOffset(),t)if(h.length>0&&b)if(void 0===e){const e=l.slidesGrid[v],t=l.slidesGrid[v+y]-e;n?l.setTranslate(l.translate-t):(l.slideTo(v+y,0,!1,!0),i&&(l.touches[l.isHorizontal()?"startX":"startY"]+=t))}else i&&l.slideToLoop(e,0,!1,!0);else if(g.length>0&&w)if(void 0===e){const e=l.slidesGrid[v],t=l.slidesGrid[v-x]-e;n?l.setTranslate(l.translate-t):(l.slideTo(v-x,0,!1,!0),i&&(l.touches[l.isHorizontal()?"startX":"startY"]+=t))}else l.slideToLoop(e,0,!1,!0);if(l.allowSlidePrev=c,l.allowSlideNext=d,l.controller&&l.controller.control&&!r){const t={slideRealIndex:e,slideTo:!1,direction:s,setTranslate:i,activeSlideIndex:a,byController:!0};Array.isArray(l.controller.control)?l.controller.control.forEach((e=>{e.params.loop&&e.loopFix(t)})):l.controller.control instanceof l.constructor&&l.controller.control.params.loop&&l.controller.control.loopFix(t)}l.emit("loopFix")},loopDestroy:function(){const e=this,{slides:t,params:s,slidesEl:i}=e;if(!s.loop||e.virtual&&e.params.virtual.enabled)return;e.recalcSlides();const a=[];t.forEach((e=>{const t=void 0===e.swiperSlideIndex?1*e.getAttribute("data-swiper-slide-index"):e.swiperSlideIndex;a[t]=e})),t.forEach((e=>{e.removeAttribute("data-swiper-slide-index")})),a.forEach((e=>{i.append(e)})),e.recalcSlides(),e.slideTo(e.realIndex,0)}};function wt(e){const t=this,s=Ne(),i=Xe(),a=t.touchEventsData;a.evCache.push(e);const{params:r,touches:n,enabled:l}=t;if(!l)return;if(!r.simulateTouch&&"mouse"===e.pointerType)return;if(t.animating&&r.preventInteractionOnTransition)return;!t.animating&&r.cssMode&&r.loop&&t.loopFix();let o=e;o.originalEvent&&(o=o.originalEvent);let c=o.target;if("wrapper"===r.touchEventsTarget&&!t.wrapperEl.contains(c))return;if("which"in o&&3===o.which)return;if("button"in o&&o.button>0)return;if(a.isTouched&&a.isMoved)return;const d=!!r.noSwipingClass&&""!==r.noSwipingClass,p=e.composedPath?e.composedPath():e.path;d&&o.target&&o.target.shadowRoot&&p&&(c=p[0]);const u=r.noSwipingSelector?r.noSwipingSelector:`.${r.noSwipingClass}`,m=!(!o.target||!o.target.shadowRoot);if(r.noSwiping&&(m?function(e,t=this){return function t(s){if(!s||s===Ne()||s===Xe())return null;s.assignedSlot&&(s=s.assignedSlot);const i=s.closest(e);return i||s.getRootNode?i||t(s.getRootNode().host):null}(t)}(u,c):c.closest(u)))return void(t.allowClick=!0);if(r.swipeHandler&&!c.closest(r.swipeHandler))return;n.currentX=o.pageX,n.currentY=o.pageY;const f=n.currentX,h=n.currentY,g=r.edgeSwipeDetection||r.iOSEdgeSwipeDetection,v=r.edgeSwipeThreshold||r.iOSEdgeSwipeThreshold;if(g&&(f<=v||f>=i.innerWidth-v)){if("prevent"!==g)return;e.preventDefault()}Object.assign(a,{isTouched:!0,isMoved:!1,allowTouchCallbacks:!0,isScrolling:void 0,startMoving:void 0}),n.startX=f,n.startY=h,a.touchStartTime=Ve(),t.allowClick=!0,t.updateSize(),t.swipeDirection=void 0,r.threshold>0&&(a.allowThresholdMove=!1);let w=!0;c.matches(a.focusableElements)&&(w=!1,"SELECT"===c.nodeName&&(a.isTouched=!1)),s.activeElement&&s.activeElement.matches(a.focusableElements)&&s.activeElement!==c&&s.activeElement.blur();const b=w&&t.allowTouchMove&&r.touchStartPreventDefault;!r.touchStartForcePreventDefault&&!b||c.isContentEditable||o.preventDefault(),t.params.freeMode&&t.params.freeMode.enabled&&t.freeMode&&t.animating&&!r.cssMode&&t.freeMode.onTouchStart(),t.emit("touchStart",o)}function bt(e){const t=Ne(),s=this,i=s.touchEventsData,{params:a,touches:r,rtlTranslate:n,enabled:l}=s;if(!l)return;if(!a.simulateTouch&&"mouse"===e.pointerType)return;let o=e;if(o.originalEvent&&(o=o.originalEvent),!i.isTouched)return void(i.startMoving&&i.isScrolling&&s.emit("touchMoveOpposite",o));const c=i.evCache.findIndex((e=>e.pointerId===o.pointerId));c>=0&&(i.evCache[c]=o);const d=i.evCache.length>1?i.evCache[0]:o,p=d.pageX,u=d.pageY;if(o.preventedByNestedSwiper)return r.startX=p,void(r.startY=u);if(!s.allowTouchMove)return o.target.matches(i.focusableElements)||(s.allowClick=!1),void(i.isTouched&&(Object.assign(r,{startX:p,startY:u,prevX:s.touches.currentX,prevY:s.touches.currentY,currentX:p,currentY:u}),i.touchStartTime=Ve()));if(a.touchReleaseOnEdges&&!a.loop)if(s.isVertical()){if(u<r.startY&&s.translate<=s.maxTranslate()||u>r.startY&&s.translate>=s.minTranslate())return i.isTouched=!1,void(i.isMoved=!1)}else if(p<r.startX&&s.translate<=s.maxTranslate()||p>r.startX&&s.translate>=s.minTranslate())return;if(t.activeElement&&o.target===t.activeElement&&o.target.matches(i.focusableElements))return i.isMoved=!0,void(s.allowClick=!1);if(i.allowTouchCallbacks&&s.emit("touchMove",o),o.targetTouches&&o.targetTouches.length>1)return;r.currentX=p,r.currentY=u;const m=r.currentX-r.startX,f=r.currentY-r.startY;if(s.params.threshold&&Math.sqrt(m**2+f**2)<s.params.threshold)return;if(void 0===i.isScrolling){let e;s.isHorizontal()&&r.currentY===r.startY||s.isVertical()&&r.currentX===r.startX?i.isScrolling=!1:m*m+f*f>=25&&(e=180*Math.atan2(Math.abs(f),Math.abs(m))/Math.PI,i.isScrolling=s.isHorizontal()?e>a.touchAngle:90-e>a.touchAngle)}if(i.isScrolling&&s.emit("touchMoveOpposite",o),void 0===i.startMoving&&(r.currentX===r.startX&&r.currentY===r.startY||(i.startMoving=!0)),i.isScrolling||s.zoom&&s.params.zoom&&s.params.zoom.enabled&&i.evCache.length>1)return void(i.isTouched=!1);if(!i.startMoving)return;s.allowClick=!1,!a.cssMode&&o.cancelable&&o.preventDefault(),a.touchMoveStopPropagation&&!a.nested&&o.stopPropagation();let h=s.isHorizontal()?m:f,g=s.isHorizontal()?r.currentX-r.previousX:r.currentY-r.previousY;a.oneWayMovement&&(h=Math.abs(h)*(n?1:-1),g=Math.abs(g)*(n?1:-1)),r.diff=h,h*=a.touchRatio,n&&(h=-h,g=-g);const v=s.touchesDirection;s.swipeDirection=h>0?"prev":"next",s.touchesDirection=g>0?"prev":"next";const w=s.params.loop&&!a.cssMode;if(!i.isMoved){if(w&&s.loopFix({direction:s.swipeDirection}),i.startTranslate=s.getTranslate(),s.setTransition(0),s.animating){const e=new window.CustomEvent("transitionend",{bubbles:!0,cancelable:!0});s.wrapperEl.dispatchEvent(e)}i.allowMomentumBounce=!1,!a.grabCursor||!0!==s.allowSlideNext&&!0!==s.allowSlidePrev||s.setGrabCursor(!0),s.emit("sliderFirstMove",o)}let b;i.isMoved&&v!==s.touchesDirection&&w&&Math.abs(h)>=1&&(s.loopFix({direction:s.swipeDirection,setTranslate:!0}),b=!0),s.emit("sliderMove",o),i.isMoved=!0,i.currentTranslate=h+i.startTranslate;let y=!0,x=a.resistanceRatio;if(a.touchReleaseOnEdges&&(x=0),h>0?(w&&!b&&i.currentTranslate>(a.centeredSlides?s.minTranslate()-s.size/2:s.minTranslate())&&s.loopFix({direction:"prev",setTranslate:!0,activeSlideIndex:0}),i.currentTranslate>s.minTranslate()&&(y=!1,a.resistance&&(i.currentTranslate=s.minTranslate()-1+(-s.minTranslate()+i.startTranslate+h)**x))):h<0&&(w&&!b&&i.currentTranslate<(a.centeredSlides?s.maxTranslate()+s.size/2:s.maxTranslate())&&s.loopFix({direction:"next",setTranslate:!0,activeSlideIndex:s.slides.length-("auto"===a.slidesPerView?s.slidesPerViewDynamic():Math.ceil(parseFloat(a.slidesPerView,10)))}),i.currentTranslate<s.maxTranslate()&&(y=!1,a.resistance&&(i.currentTranslate=s.maxTranslate()+1-(s.maxTranslate()-i.startTranslate-h)**x))),y&&(o.preventedByNestedSwiper=!0),!s.allowSlideNext&&"next"===s.swipeDirection&&i.currentTranslate<i.startTranslate&&(i.currentTranslate=i.startTranslate),!s.allowSlidePrev&&"prev"===s.swipeDirection&&i.currentTranslate>i.startTranslate&&(i.currentTranslate=i.startTranslate),s.allowSlidePrev||s.allowSlideNext||(i.currentTranslate=i.startTranslate),a.threshold>0){if(!(Math.abs(h)>a.threshold||i.allowThresholdMove))return void(i.currentTranslate=i.startTranslate);if(!i.allowThresholdMove)return i.allowThresholdMove=!0,r.startX=r.currentX,r.startY=r.currentY,i.currentTranslate=i.startTranslate,void(r.diff=s.isHorizontal()?r.currentX-r.startX:r.currentY-r.startY)}a.followFinger&&!a.cssMode&&((a.freeMode&&a.freeMode.enabled&&s.freeMode||a.watchSlidesProgress)&&(s.updateActiveIndex(),s.updateSlidesClasses()),s.params.freeMode&&a.freeMode.enabled&&s.freeMode&&s.freeMode.onTouchMove(),s.updateProgress(i.currentTranslate),s.setTranslate(i.currentTranslate))}function yt(e){const t=this,s=t.touchEventsData,i=s.evCache.findIndex((t=>t.pointerId===e.pointerId));if(i>=0&&s.evCache.splice(i,1),["pointercancel","pointerout","pointerleave"].includes(e.type)){if(!("pointercancel"===e.type&&(t.browser.isSafari||t.browser.isWebView)))return}const{params:a,touches:r,rtlTranslate:n,slidesGrid:l,enabled:o}=t;if(!o)return;if(!a.simulateTouch&&"mouse"===e.pointerType)return;let c=e;if(c.originalEvent&&(c=c.originalEvent),s.allowTouchCallbacks&&t.emit("touchEnd",c),s.allowTouchCallbacks=!1,!s.isTouched)return s.isMoved&&a.grabCursor&&t.setGrabCursor(!1),s.isMoved=!1,void(s.startMoving=!1);a.grabCursor&&s.isMoved&&s.isTouched&&(!0===t.allowSlideNext||!0===t.allowSlidePrev)&&t.setGrabCursor(!1);const d=Ve(),p=d-s.touchStartTime;if(t.allowClick){const e=c.path||c.composedPath&&c.composedPath();t.updateClickedSlide(e&&e[0]||c.target),t.emit("tap click",c),p<300&&d-s.lastClickTime<300&&t.emit("doubleTap doubleClick",c)}if(s.lastClickTime=Ve(),Re((()=>{t.destroyed||(t.allowClick=!0)})),!s.isTouched||!s.isMoved||!t.swipeDirection||0===r.diff||s.currentTranslate===s.startTranslate)return s.isTouched=!1,s.isMoved=!1,void(s.startMoving=!1);let u;if(s.isTouched=!1,s.isMoved=!1,s.startMoving=!1,u=a.followFinger?n?t.translate:-t.translate:-s.currentTranslate,a.cssMode)return;if(t.params.freeMode&&a.freeMode.enabled)return void t.freeMode.onTouchEnd({currentPos:u});let m=0,f=t.slidesSizesGrid[0];for(let e=0;e<l.length;e+=e<a.slidesPerGroupSkip?1:a.slidesPerGroup){const t=e<a.slidesPerGroupSkip-1?1:a.slidesPerGroup;void 0!==l[e+t]?u>=l[e]&&u<l[e+t]&&(m=e,f=l[e+t]-l[e]):u>=l[e]&&(m=e,f=l[l.length-1]-l[l.length-2])}let h=null,g=null;a.rewind&&(t.isBeginning?g=t.params.virtual&&t.params.virtual.enabled&&t.virtual?t.virtual.slides.length-1:t.slides.length-1:t.isEnd&&(h=0));const v=(u-l[m])/f,w=m<a.slidesPerGroupSkip-1?1:a.slidesPerGroup;if(p>a.longSwipesMs){if(!a.longSwipes)return void t.slideTo(t.activeIndex);"next"===t.swipeDirection&&(v>=a.longSwipesRatio?t.slideTo(a.rewind&&t.isEnd?h:m+w):t.slideTo(m)),"prev"===t.swipeDirection&&(v>1-a.longSwipesRatio?t.slideTo(m+w):null!==g&&v<0&&Math.abs(v)>a.longSwipesRatio?t.slideTo(g):t.slideTo(m))}else{if(!a.shortSwipes)return void t.slideTo(t.activeIndex);t.navigation&&(c.target===t.navigation.nextEl||c.target===t.navigation.prevEl)?c.target===t.navigation.nextEl?t.slideTo(m+w):t.slideTo(m):("next"===t.swipeDirection&&t.slideTo(null!==h?h:m+w),"prev"===t.swipeDirection&&t.slideTo(null!==g?g:m))}}let xt;function Et(){const e=this,{params:t,el:s}=e;if(s&&0===s.offsetWidth)return;t.breakpoints&&e.setBreakpoint();const{allowSlideNext:i,allowSlidePrev:a,snapGrid:r}=e,n=e.virtual&&e.params.virtual.enabled;e.allowSlideNext=!0,e.allowSlidePrev=!0,e.updateSize(),e.updateSlides(),e.updateSlidesClasses();const l=n&&t.loop;!("auto"===t.slidesPerView||t.slidesPerView>1)||!e.isEnd||e.isBeginning||e.params.centeredSlides||l?e.params.loop&&!n?e.slideToLoop(e.realIndex,0,!1,!0):e.slideTo(e.activeIndex,0,!1,!0):e.slideTo(e.slides.length-1,0,!1,!0),e.autoplay&&e.autoplay.running&&e.autoplay.paused&&(clearTimeout(xt),xt=setTimeout((()=>{e.autoplay&&e.autoplay.running&&e.autoplay.paused&&e.autoplay.resume()}),500)),e.allowSlidePrev=a,e.allowSlideNext=i,e.params.watchOverflow&&r!==e.snapGrid&&e.checkOverflow()}function St(e){const t=this;t.enabled&&(t.allowClick||(t.params.preventClicks&&e.preventDefault(),t.params.preventClicksPropagation&&t.animating&&(e.stopPropagation(),e.stopImmediatePropagation())))}function At(){const e=this,{wrapperEl:t,rtlTranslate:s,enabled:i}=e;if(!i)return;let a;e.previousTranslate=e.translate,e.isHorizontal()?e.translate=-t.scrollLeft:e.translate=-t.scrollTop,0===e.translate&&(e.translate=0),e.updateActiveIndex(),e.updateSlidesClasses();const r=e.maxTranslate()-e.minTranslate();a=0===r?0:(e.translate-e.minTranslate())/r,a!==e.progress&&e.updateProgress(s?-e.translate:e.translate),e.emit("setTranslate",e.translate,!1)}const Tt=(e,t)=>{if(!e||e.destroyed||!e.params)return;const s=t.closest(e.isElement?"swiper-slide":`.${e.params.slideClass}`);if(s){const t=s.querySelector(`.${e.params.lazyPreloaderClass}`);t&&t.remove()}};function Mt(e){Tt(this,e.target),this.update()}let Ct=!1;function $t(){}const kt=(e,t)=>{const s=Ne(),{params:i,el:a,wrapperEl:r,device:n}=e,l=!!i.nested,o="on"===t?"addEventListener":"removeEventListener",c=t;a[o]("pointerdown",e.onTouchStart,{passive:!1}),s[o]("pointermove",e.onTouchMove,{passive:!1,capture:l}),s[o]("pointerup",e.onTouchEnd,{passive:!0}),s[o]("pointercancel",e.onTouchEnd,{passive:!0}),s[o]("pointerout",e.onTouchEnd,{passive:!0}),s[o]("pointerleave",e.onTouchEnd,{passive:!0}),(i.preventClicks||i.preventClicksPropagation)&&a[o]("click",e.onClick,!0),i.cssMode&&r[o]("scroll",e.onScroll),i.updateOnWindowResize?e[c](n.ios||n.android?"resize orientationchange observerUpdate":"resize observerUpdate",Et,!0):e[c]("observerUpdate",Et,!0),a[o]("load",e.onLoad,{capture:!0})};const zt=(e,t)=>e.grid&&t.grid&&t.grid.rows>1;var Pt={init:!0,direction:"horizontal",oneWayMovement:!1,touchEventsTarget:"wrapper",initialSlide:0,speed:300,cssMode:!1,updateOnWindowResize:!0,resizeObserver:!0,nested:!1,createElements:!1,enabled:!0,focusableElements:"input, select, option, textarea, button, video, label",width:null,height:null,preventInteractionOnTransition:!1,userAgent:null,url:null,edgeSwipeDetection:!1,edgeSwipeThreshold:20,autoHeight:!1,setWrapperSize:!1,virtualTranslate:!1,effect:"slide",breakpoints:void 0,breakpointsBase:"window",spaceBetween:0,slidesPerView:1,slidesPerGroup:1,slidesPerGroupSkip:0,slidesPerGroupAuto:!1,centeredSlides:!1,centeredSlidesBounds:!1,slidesOffsetBefore:0,slidesOffsetAfter:0,normalizeSlideIndex:!0,centerInsufficientSlides:!1,watchOverflow:!0,roundLengths:!1,touchRatio:1,touchAngle:45,simulateTouch:!0,shortSwipes:!0,longSwipes:!0,longSwipesRatio:.5,longSwipesMs:300,followFinger:!0,allowTouchMove:!0,threshold:5,touchMoveStopPropagation:!1,touchStartPreventDefault:!0,touchStartForcePreventDefault:!1,touchReleaseOnEdges:!1,uniqueNavElements:!0,resistance:!0,resistanceRatio:.85,watchSlidesProgress:!1,grabCursor:!1,preventClicks:!0,preventClicksPropagation:!0,slideToClickedSlide:!1,loop:!1,loopedSlides:null,loopPreventsSliding:!0,rewind:!1,allowSlidePrev:!0,allowSlideNext:!0,swipeHandler:null,noSwiping:!0,noSwipingClass:"swiper-no-swiping",noSwipingSelector:null,passiveListeners:!0,maxBackfaceHiddenSlides:10,containerModifierClass:"swiper-",slideClass:"swiper-slide",slideActiveClass:"swiper-slide-active",slideVisibleClass:"swiper-slide-visible",slideNextClass:"swiper-slide-next",slidePrevClass:"swiper-slide-prev",wrapperClass:"swiper-wrapper",lazyPreloaderClass:"swiper-lazy-preloader",runCallbacksOnInit:!0,_emitClasses:!1};function Lt(e,t){return function(s={}){const i=Object.keys(s)[0],a=s[i];"object"==typeof a&&null!==a?(["navigation","pagination","scrollbar"].indexOf(i)>=0&&!0===e[i]&&(e[i]={auto:!0}),i in e&&"enabled"in a?(!0===e[i]&&(e[i]={enabled:!0}),"object"!=typeof e[i]||"enabled"in e[i]||(e[i].enabled=!0),e[i]||(e[i]={enabled:!1}),qe(t,s)):qe(t,s)):qe(t,s)}}const Ot={eventsEmitter:ut,update:mt,translate:ft,transition:{setTransition:function(e,t){const s=this;s.params.cssMode||(s.wrapperEl.style.transitionDuration=`${e}ms`),s.emit("setTransition",e,t)},transitionStart:function(e=!0,t){const s=this,{params:i}=s;i.cssMode||(i.autoHeight&&s.updateAutoHeight(),ht({swiper:s,runCallbacks:e,direction:t,step:"Start"}))},transitionEnd:function(e=!0,t){const s=this,{params:i}=s;s.animating=!1,i.cssMode||(s.setTransition(0),ht({swiper:s,runCallbacks:e,direction:t,step:"End"}))}},slide:gt,loop:vt,grabCursor:{setGrabCursor:function(e){const t=this;if(!t.params.simulateTouch||t.params.watchOverflow&&t.isLocked||t.params.cssMode)return;const s="container"===t.params.touchEventsTarget?t.el:t.wrapperEl;t.isElement&&(t.__preventObserver__=!0),s.style.cursor="move",s.style.cursor=e?"grabbing":"grab",t.isElement&&requestAnimationFrame((()=>{t.__preventObserver__=!1}))},unsetGrabCursor:function(){const e=this;e.params.watchOverflow&&e.isLocked||e.params.cssMode||(e.isElement&&(e.__preventObserver__=!0),e["container"===e.params.touchEventsTarget?"el":"wrapperEl"].style.cursor="",e.isElement&&requestAnimationFrame((()=>{e.__preventObserver__=!1})))}},events:{attachEvents:function(){const e=this,t=Ne(),{params:s}=e;e.onTouchStart=wt.bind(e),e.onTouchMove=bt.bind(e),e.onTouchEnd=yt.bind(e),s.cssMode&&(e.onScroll=At.bind(e)),e.onClick=St.bind(e),e.onLoad=Mt.bind(e),Ct||(t.addEventListener("touchstart",$t),Ct=!0),kt(e,"on")},detachEvents:function(){kt(this,"off")}},breakpoints:{setBreakpoint:function(){const e=this,{realIndex:t,initialized:s,params:i,el:a}=e,r=i.breakpoints;if(!r||r&&0===Object.keys(r).length)return;const n=e.getBreakpoint(r,e.params.breakpointsBase,e.el);if(!n||e.currentBreakpoint===n)return;const l=(n in r?r[n]:void 0)||e.originalParams,o=zt(e,i),c=zt(e,l),d=i.enabled;o&&!c?(a.classList.remove(`${i.containerModifierClass}grid`,`${i.containerModifierClass}grid-column`),e.emitContainerClasses()):!o&&c&&(a.classList.add(`${i.containerModifierClass}grid`),(l.grid.fill&&"column"===l.grid.fill||!l.grid.fill&&"column"===i.grid.fill)&&a.classList.add(`${i.containerModifierClass}grid-column`),e.emitContainerClasses()),["navigation","pagination","scrollbar"].forEach((t=>{const s=i[t]&&i[t].enabled,a=l[t]&&l[t].enabled;s&&!a&&e[t].disable(),!s&&a&&e[t].enable()}));const p=l.direction&&l.direction!==i.direction,u=i.loop&&(l.slidesPerView!==i.slidesPerView||p);p&&s&&e.changeDirection(),qe(e.params,l);const m=e.params.enabled;Object.assign(e,{allowTouchMove:e.params.allowTouchMove,allowSlideNext:e.params.allowSlideNext,allowSlidePrev:e.params.allowSlidePrev}),d&&!m?e.disable():!d&&m&&e.enable(),e.currentBreakpoint=n,e.emit("_beforeBreakpoint",l),u&&s&&(e.loopDestroy(),e.loopCreate(t),e.updateSlides()),e.emit("breakpoint",l)},getBreakpoint:function(e,t="window",s){if(!e||"container"===t&&!s)return;let i=!1;const a=Xe(),r="window"===t?a.innerHeight:s.clientHeight,n=Object.keys(e).map((e=>{if("string"==typeof e&&0===e.indexOf("@")){const t=parseFloat(e.substr(1));return{value:r*t,point:e}}return{value:e,point:e}}));n.sort(((e,t)=>parseInt(e.value,10)-parseInt(t.value,10)));for(let e=0;e<n.length;e+=1){const{point:r,value:l}=n[e];"window"===t?a.matchMedia(`(min-width: ${l}px)`).matches&&(i=r):l<=s.clientWidth&&(i=r)}return i||"max"}},checkOverflow:{checkOverflow:function(){const e=this,{isLocked:t,params:s}=e,{slidesOffsetBefore:i}=s;if(i){const t=e.slides.length-1,s=e.slidesGrid[t]+e.slidesSizesGrid[t]+2*i;e.isLocked=e.size>s}else e.isLocked=1===e.snapGrid.length;!0===s.allowSlideNext&&(e.allowSlideNext=!e.isLocked),!0===s.allowSlidePrev&&(e.allowSlidePrev=!e.isLocked),t&&t!==e.isLocked&&(e.isEnd=!1),t!==e.isLocked&&e.emit(e.isLocked?"lock":"unlock")}},classes:{addClasses:function(){const e=this,{classNames:t,params:s,rtl:i,el:a,device:r}=e,n=function(e,t){const s=[];return e.forEach((e=>{"object"==typeof e?Object.keys(e).forEach((i=>{e[i]&&s.push(t+i)})):"string"==typeof e&&s.push(t+e)})),s}(["initialized",s.direction,{"free-mode":e.params.freeMode&&s.freeMode.enabled},{autoheight:s.autoHeight},{rtl:i},{grid:s.grid&&s.grid.rows>1},{"grid-column":s.grid&&s.grid.rows>1&&"column"===s.grid.fill},{android:r.android},{ios:r.ios},{"css-mode":s.cssMode},{centered:s.cssMode&&s.centeredSlides},{"watch-progress":s.watchSlidesProgress}],s.containerModifierClass);t.push(...n),a.classList.add(...t),e.emitContainerClasses()},removeClasses:function(){const{el:e,classNames:t}=this;e.classList.remove(...t),this.emitContainerClasses()}}},It={};class Dt{constructor(...e){let t,s;1===e.length&&e[0].constructor&&"Object"===Object.prototype.toString.call(e[0]).slice(8,-1)?s=e[0]:[t,s]=e,s||(s={}),s=qe({},s),t&&!s.el&&(s.el=t);const i=Ne();if(s.el&&"string"==typeof s.el&&i.querySelectorAll(s.el).length>1){const e=[];return i.querySelectorAll(s.el).forEach((t=>{const i=qe({},s,{el:t});e.push(new Dt(i))})),e}const a=this;a.__swiper__=!0,a.support=ct(),a.device=dt({userAgent:s.userAgent}),a.browser=pt(),a.eventsListeners={},a.eventsAnyListeners=[],a.modules=[...a.__modules__],s.modules&&Array.isArray(s.modules)&&a.modules.push(...s.modules);const r={};a.modules.forEach((e=>{e({params:s,swiper:a,extendParams:Lt(s,r),on:a.on.bind(a),once:a.once.bind(a),off:a.off.bind(a),emit:a.emit.bind(a)})}));const n=qe({},Pt,r);return a.params=qe({},n,It,s),a.originalParams=qe({},a.params),a.passedParams=qe({},s),a.params&&a.params.on&&Object.keys(a.params.on).forEach((e=>{a.on(e,a.params.on[e])})),a.params&&a.params.onAny&&a.onAny(a.params.onAny),Object.assign(a,{enabled:a.params.enabled,el:t,classNames:[],slides:[],slidesGrid:[],snapGrid:[],slidesSizesGrid:[],isHorizontal:()=>"horizontal"===a.params.direction,isVertical:()=>"vertical"===a.params.direction,activeIndex:0,realIndex:0,isBeginning:!0,isEnd:!1,translate:0,previousTranslate:0,progress:0,velocity:0,animating:!1,allowSlideNext:a.params.allowSlideNext,allowSlidePrev:a.params.allowSlidePrev,touchEventsData:{isTouched:void 0,isMoved:void 0,allowTouchCallbacks:void 0,touchStartTime:void 0,isScrolling:void 0,currentTranslate:void 0,startTranslate:void 0,allowThresholdMove:void 0,focusableElements:a.params.focusableElements,lastClickTime:Ve(),clickTimeout:void 0,velocities:[],allowMomentumBounce:void 0,startMoving:void 0,evCache:[]},allowClick:!0,allowTouchMove:a.params.allowTouchMove,touches:{startX:0,startY:0,currentX:0,currentY:0,diff:0},imagesToLoad:[],imagesLoaded:0}),a.emit("_swiper"),a.params.init&&a.init(),a}getSlideIndex(e){const{slidesEl:t,params:s}=this,i=st(Ke(t,`.${s.slideClass}, swiper-slide`)[0]);return st(e)-i}recalcSlides(){const{slidesEl:e,params:t}=this;this.slides=Ke(e,`.${t.slideClass}, swiper-slide`)}enable(){const e=this;e.enabled||(e.enabled=!0,e.params.grabCursor&&e.setGrabCursor(),e.emit("enable"))}disable(){const e=this;e.enabled&&(e.enabled=!1,e.params.grabCursor&&e.unsetGrabCursor(),e.emit("disable"))}setProgress(e,t){const s=this;e=Math.min(Math.max(e,0),1);const i=s.minTranslate(),a=(s.maxTranslate()-i)*e+i;s.translateTo(a,void 0===t?0:t),s.updateActiveIndex(),s.updateSlidesClasses()}emitContainerClasses(){const e=this;if(!e.params._emitClasses||!e.el)return;const t=e.el.className.split(" ").filter((t=>0===t.indexOf("swiper")||0===t.indexOf(e.params.containerModifierClass)));e.emit("_containerClasses",t.join(" "))}getSlideClasses(e){const t=this;return t.destroyed?"":e.className.split(" ").filter((e=>0===e.indexOf("swiper-slide")||0===e.indexOf(t.params.slideClass))).join(" ")}emitSlidesClasses(){const e=this;if(!e.params._emitClasses||!e.el)return;const t=[];e.slides.forEach((s=>{const i=e.getSlideClasses(s);t.push({slideEl:s,classNames:i}),e.emit("_slideClass",s,i)})),e.emit("_slideClasses",t)}slidesPerViewDynamic(e="current",t=!1){const{params:s,slides:i,slidesGrid:a,slidesSizesGrid:r,size:n,activeIndex:l}=this;let o=1;if(s.centeredSlides){let e,t=i[l].swiperSlideSize;for(let s=l+1;s<i.length;s+=1)i[s]&&!e&&(t+=i[s].swiperSlideSize,o+=1,t>n&&(e=!0));for(let s=l-1;s>=0;s-=1)i[s]&&!e&&(t+=i[s].swiperSlideSize,o+=1,t>n&&(e=!0))}else if("current"===e)for(let e=l+1;e<i.length;e+=1){(t?a[e]+r[e]-a[l]<n:a[e]-a[l]<n)&&(o+=1)}else for(let e=l-1;e>=0;e-=1){a[l]-a[e]<n&&(o+=1)}return o}update(){const e=this;if(!e||e.destroyed)return;const{snapGrid:t,params:s}=e;function i(){const t=e.rtlTranslate?-1*e.translate:e.translate,s=Math.min(Math.max(t,e.maxTranslate()),e.minTranslate());e.setTranslate(s),e.updateActiveIndex(),e.updateSlidesClasses()}let a;s.breakpoints&&e.setBreakpoint(),[...e.el.querySelectorAll('[loading="lazy"]')].forEach((t=>{t.complete&&Tt(e,t)})),e.updateSize(),e.updateSlides(),e.updateProgress(),e.updateSlidesClasses(),e.params.freeMode&&e.params.freeMode.enabled?(i(),e.params.autoHeight&&e.updateAutoHeight()):(a=("auto"===e.params.slidesPerView||e.params.slidesPerView>1)&&e.isEnd&&!e.params.centeredSlides?e.slideTo(e.slides.length-1,0,!1,!0):e.slideTo(e.activeIndex,0,!1,!0),a||i()),s.watchOverflow&&t!==e.snapGrid&&e.checkOverflow(),e.emit("update")}changeDirection(e,t=!0){const s=this,i=s.params.direction;return e||(e="horizontal"===i?"vertical":"horizontal"),e===i||"horizontal"!==e&&"vertical"!==e||(s.el.classList.remove(`${s.params.containerModifierClass}${i}`),s.el.classList.add(`${s.params.containerModifierClass}${e}`),s.emitContainerClasses(),s.params.direction=e,s.slides.forEach((t=>{"vertical"===e?t.style.width="":t.style.height=""})),s.emit("changeDirection"),t&&s.update()),s}changeLanguageDirection(e){const t=this;t.rtl&&"rtl"===e||!t.rtl&&"ltr"===e||(t.rtl="rtl"===e,t.rtlTranslate="horizontal"===t.params.direction&&t.rtl,t.rtl?(t.el.classList.add(`${t.params.containerModifierClass}rtl`),t.el.dir="rtl"):(t.el.classList.remove(`${t.params.containerModifierClass}rtl`),t.el.dir="ltr"),t.update())}mount(e){const t=this;if(t.mounted)return!0;let s=e||t.params.el;if("string"==typeof s&&(s=document.querySelector(s)),!s)return!1;s.swiper=t,s.shadowEl&&(t.isElement=!0);const i=()=>`.${(t.params.wrapperClass||"").trim().split(" ").join(".")}`;let a=(()=>{if(s&&s.shadowRoot&&s.shadowRoot.querySelector){return s.shadowRoot.querySelector(i())}return Ke(s,i())[0]})();return!a&&t.params.createElements&&(a=Je("div",t.params.wrapperClass),s.append(a),Ke(s,`.${t.params.slideClass}`).forEach((e=>{a.append(e)}))),Object.assign(t,{el:s,wrapperEl:a,slidesEl:t.isElement?s:a,mounted:!0,rtl:"rtl"===s.dir.toLowerCase()||"rtl"===tt(s,"direction"),rtlTranslate:"horizontal"===t.params.direction&&("rtl"===s.dir.toLowerCase()||"rtl"===tt(s,"direction")),wrongRTL:"-webkit-box"===tt(a,"display")}),!0}init(e){const t=this;if(t.initialized)return t;return!1===t.mount(e)||(t.emit("beforeInit"),t.params.breakpoints&&t.setBreakpoint(),t.addClasses(),t.updateSize(),t.updateSlides(),t.params.watchOverflow&&t.checkOverflow(),t.params.grabCursor&&t.enabled&&t.setGrabCursor(),t.params.loop&&t.virtual&&t.params.virtual.enabled?t.slideTo(t.params.initialSlide+t.virtual.slidesBefore,0,t.params.runCallbacksOnInit,!1,!0):t.slideTo(t.params.initialSlide,0,t.params.runCallbacksOnInit,!1,!0),t.params.loop&&t.loopCreate(),t.attachEvents(),[...t.el.querySelectorAll('[loading="lazy"]')].forEach((e=>{e.complete?Tt(t,e):e.addEventListener("load",(e=>{Tt(t,e.target)}))})),t.initialized=!0,t.emit("init"),t.emit("afterInit")),t}destroy(e=!0,t=!0){const s=this,{params:i,el:a,wrapperEl:r,slides:n}=s;return void 0===s.params||s.destroyed||(s.emit("beforeDestroy"),s.initialized=!1,s.detachEvents(),i.loop&&s.loopDestroy(),t&&(s.removeClasses(),a.removeAttribute("style"),r.removeAttribute("style"),n&&n.length&&n.forEach((e=>{e.classList.remove(i.slideVisibleClass,i.slideActiveClass,i.slideNextClass,i.slidePrevClass),e.removeAttribute("style"),e.removeAttribute("data-swiper-slide-index")}))),s.emit("destroy"),Object.keys(s.eventsListeners).forEach((e=>{s.off(e)})),!1!==e&&(s.el.swiper=null,function(e){const t=e;Object.keys(t).forEach((e=>{try{t[e]=null}catch(e){}try{delete t[e]}catch(e){}}))}(s)),s.destroyed=!0),null}static extendDefaults(e){qe(It,e)}static get extendedDefaults(){return It}static get defaults(){return Pt}static installModule(e){Dt.prototype.__modules__||(Dt.prototype.__modules__=[]);const t=Dt.prototype.__modules__;"function"==typeof e&&t.indexOf(e)<0&&t.push(e)}static use(e){return Array.isArray(e)?(e.forEach((e=>Dt.installModule(e))),Dt):(Dt.installModule(e),Dt)}}function Bt(e,t,s,i){return e.params.createElements&&Object.keys(i).forEach((a=>{if(!s[a]&&!0===s.auto){let r=Ke(e.el,`.${i[a]}`)[0];r||(r=Je("div",i[a]),r.className=i[a],e.el.append(r)),s[a]=r,t[a]=r}})),s}function _t(e=""){return`.${e.trim().replace(/([\.:!\/])/g,"\\$1").replace(/ /g,".")}`}function Yt(e){const t=this,{params:s,slidesEl:i}=t;s.loop&&t.loopDestroy();const a=e=>{if("string"==typeof e){const t=document.createElement("div");t.innerHTML=e,i.append(t.children[0]),t.innerHTML=""}else i.append(e)};if("object"==typeof e&&"length"in e)for(let t=0;t<e.length;t+=1)e[t]&&a(e[t]);else a(e);t.recalcSlides(),s.loop&&t.loopCreate(),s.observer&&!t.isElement||t.update()}function Gt(e){const t=this,{params:s,activeIndex:i,slidesEl:a}=t;s.loop&&t.loopDestroy();let r=i+1;const n=e=>{if("string"==typeof e){const t=document.createElement("div");t.innerHTML=e,a.prepend(t.children[0]),t.innerHTML=""}else a.prepend(e)};if("object"==typeof e&&"length"in e){for(let t=0;t<e.length;t+=1)e[t]&&n(e[t]);r=i+e.length}else n(e);t.recalcSlides(),s.loop&&t.loopCreate(),s.observer&&!t.isElement||t.update(),t.slideTo(r,0,!1)}function Ht(e,t){const s=this,{params:i,activeIndex:a,slidesEl:r}=s;let n=a;i.loop&&(n-=s.loopedSlides,s.loopDestroy(),s.recalcSlides());const l=s.slides.length;if(e<=0)return void s.prependSlide(t);if(e>=l)return void s.appendSlide(t);let o=n>e?n+1:n;const c=[];for(let t=l-1;t>=e;t-=1){const e=s.slides[t];e.remove(),c.unshift(e)}if("object"==typeof t&&"length"in t){for(let e=0;e<t.length;e+=1)t[e]&&r.append(t[e]);o=n>e?n+t.length:n}else r.append(t);for(let e=0;e<c.length;e+=1)r.append(c[e]);s.recalcSlides(),i.loop&&s.loopCreate(),i.observer&&!s.isElement||s.update(),i.loop?s.slideTo(o+s.loopedSlides,0,!1):s.slideTo(o,0,!1)}function Nt(e){const t=this,{params:s,activeIndex:i}=t;let a=i;s.loop&&(a-=t.loopedSlides,t.loopDestroy());let r,n=a;if("object"==typeof e&&"length"in e){for(let s=0;s<e.length;s+=1)r=e[s],t.slides[r]&&t.slides[r].remove(),r<n&&(n-=1);n=Math.max(n,0)}else r=e,t.slides[r]&&t.slides[r].remove(),r<n&&(n-=1),n=Math.max(n,0);t.recalcSlides(),s.loop&&t.loopCreate(),s.observer&&!t.isElement||t.update(),s.loop?t.slideTo(n+t.loopedSlides,0,!1):t.slideTo(n,0,!1)}function jt(){const e=this,t=[];for(let s=0;s<e.slides.length;s+=1)t.push(s);e.removeSlide(t)}function Xt(e){const{effect:t,swiper:s,on:i,setTranslate:a,setTransition:r,overwriteParams:n,perspective:l,recreateShadows:o,getEffectParams:c}=e;let d;i("beforeInit",(()=>{if(s.params.effect!==t)return;s.classNames.push(`${s.params.containerModifierClass}${t}`),l&&l()&&s.classNames.push(`${s.params.containerModifierClass}3d`);const e=n?n():{};Object.assign(s.params,e),Object.assign(s.originalParams,e)})),i("setTranslate",(()=>{s.params.effect===t&&a()})),i("setTransition",((e,i)=>{s.params.effect===t&&r(i)})),i("transitionEnd",(()=>{if(s.params.effect===t&&o){if(!c||!c().slideShadows)return;s.slides.forEach((e=>{e.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((e=>e.remove()))})),o()}})),i("virtualUpdate",(()=>{s.params.effect===t&&(s.slides.length||(d=!0),requestAnimationFrame((()=>{d&&s.slides&&s.slides.length&&(a(),d=!1)})))}))}function Rt(e,t){const s=Ze(t);return s!==t&&(s.style.backfaceVisibility="hidden",s.style["-webkit-backface-visibility"]="hidden"),s}function Vt({swiper:e,duration:t,transformElements:s,allSlides:i}){const{activeIndex:a}=e;if(e.params.virtualTranslate&&0!==t){let t,r=!1;t=i?s:s.filter((t=>{const s=t.classList.contains("swiper-slide-transform")?(t=>{if(!t.parentElement)return e.slides.filter((e=>e.shadowEl&&e.shadowEl===t.parentNode))[0];return t.parentElement})(t):t;return e.getSlideIndex(s)===a})),t.forEach((t=>{at(t,(()=>{if(r)return;if(!e||e.destroyed)return;r=!0,e.animating=!1;const t=new window.CustomEvent("transitionend",{bubbles:!0,cancelable:!0});e.wrapperEl.dispatchEvent(t)}))}))}}function Ft(e,t,s){const i="swiper-slide-shadow"+(s?`-${s}`:""),a=Ze(t);let r=a.querySelector(`.${i}`);return r||(r=Je("div","swiper-slide-shadow"+(s?`-${s}`:"")),a.append(r)),r}Object.keys(Ot).forEach((e=>{Object.keys(Ot[e]).forEach((t=>{Dt.prototype[t]=Ot[e][t]}))})),Dt.use([function({swiper:e,on:t,emit:s}){const i=Xe();let a=null,r=null;const n=()=>{e&&!e.destroyed&&e.initialized&&(s("beforeResize"),s("resize"))},l=()=>{e&&!e.destroyed&&e.initialized&&s("orientationchange")};t("init",(()=>{e.params.resizeObserver&&void 0!==i.ResizeObserver?e&&!e.destroyed&&e.initialized&&(a=new ResizeObserver((t=>{r=i.requestAnimationFrame((()=>{const{width:s,height:i}=e;let a=s,r=i;t.forEach((({contentBoxSize:t,contentRect:s,target:i})=>{i&&i!==e.el||(a=s?s.width:(t[0]||t).inlineSize,r=s?s.height:(t[0]||t).blockSize)})),a===s&&r===i||n()}))})),a.observe(e.el)):(i.addEventListener("resize",n),i.addEventListener("orientationchange",l))})),t("destroy",(()=>{r&&i.cancelAnimationFrame(r),a&&a.unobserve&&e.el&&(a.unobserve(e.el),a=null),i.removeEventListener("resize",n),i.removeEventListener("orientationchange",l)}))},function({swiper:e,extendParams:t,on:s,emit:i}){const a=[],r=Xe(),n=(t,s={})=>{const n=new(r.MutationObserver||r.WebkitMutationObserver)((t=>{if(e.__preventObserver__)return;if(1===t.length)return void i("observerUpdate",t[0]);const s=function(){i("observerUpdate",t[0])};r.requestAnimationFrame?r.requestAnimationFrame(s):r.setTimeout(s,0)}));n.observe(t,{attributes:void 0===s.attributes||s.attributes,childList:void 0===s.childList||s.childList,characterData:void 0===s.characterData||s.characterData}),a.push(n)};t({observer:!1,observeParents:!1,observeSlideChildren:!1}),s("init",(()=>{if(e.params.observer){if(e.params.observeParents){const t=it(e.el);for(let e=0;e<t.length;e+=1)n(t[e])}n(e.el,{childList:e.params.observeSlideChildren}),n(e.wrapperEl,{attributes:!1})}})),s("destroy",(()=>{a.forEach((e=>{e.disconnect()})),a.splice(0,a.length)}))}]);const Wt=[function({swiper:e,extendParams:t,on:s,emit:i}){let a;t({virtual:{enabled:!1,slides:[],cache:!0,renderSlide:null,renderExternal:null,renderExternalUpdate:!0,addSlidesBefore:0,addSlidesAfter:0}});const r=Ne();e.virtual={cache:{},from:void 0,to:void 0,slides:[],offset:0,slidesGrid:[]};const n=r.createElement("div");function l(t,s){const i=e.params.virtual;if(i.cache&&e.virtual.cache[s])return e.virtual.cache[s];let a;return i.renderSlide?(a=i.renderSlide.call(e,t,s),"string"==typeof a&&(n.innerHTML=a,a=n.children[0])):a=e.isElement?Je("swiper-slide"):Je("div",e.params.slideClass),a.setAttribute("data-swiper-slide-index",s),i.renderSlide||(a.innerHTML=t),i.cache&&(e.virtual.cache[s]=a),a}function o(t){const{slidesPerView:s,slidesPerGroup:a,centeredSlides:r,loop:n}=e.params,{addSlidesBefore:o,addSlidesAfter:c}=e.params.virtual,{from:d,to:p,slides:u,slidesGrid:m,offset:f}=e.virtual;e.params.cssMode||e.updateActiveIndex();const h=e.activeIndex||0;let g,v,w;g=e.rtlTranslate?"right":e.isHorizontal()?"left":"top",r?(v=Math.floor(s/2)+a+c,w=Math.floor(s/2)+a+o):(v=s+(a-1)+c,w=(n?s:a)+o);let b=h-w,y=h+v;n||(b=Math.max(b,0),y=Math.min(y,u.length-1));let x=(e.slidesGrid[b]||0)-(e.slidesGrid[0]||0);function E(){e.updateSlides(),e.updateProgress(),e.updateSlidesClasses(),i("virtualUpdate")}if(n&&h>=w?(b-=w,r||(x+=e.slidesGrid[0])):n&&h<w&&(b=-w,r&&(x+=e.slidesGrid[0])),Object.assign(e.virtual,{from:b,to:y,offset:x,slidesGrid:e.slidesGrid,slidesBefore:w,slidesAfter:v}),d===b&&p===y&&!t)return e.slidesGrid!==m&&x!==f&&e.slides.forEach((e=>{e.style[g]=`${x}px`})),e.updateProgress(),void i("virtualUpdate");if(e.params.virtual.renderExternal)return e.params.virtual.renderExternal.call(e,{offset:x,from:b,to:y,slides:function(){const e=[];for(let t=b;t<=y;t+=1)e.push(u[t]);return e}()}),void(e.params.virtual.renderExternalUpdate?E():i("virtualUpdate"));const S=[],A=[],T=e=>{let t=e;return e<0?t=u.length+e:t>=u.length&&(t-=u.length),t};if(t)e.slidesEl.querySelectorAll(`.${e.params.slideClass}, swiper-slide`).forEach((e=>{e.remove()}));else for(let t=d;t<=p;t+=1)if(t<b||t>y){const s=T(t);e.slidesEl.querySelectorAll(`.${e.params.slideClass}[data-swiper-slide-index="${s}"], swiper-slide[data-swiper-slide-index="${s}"]`).forEach((e=>{e.remove()}))}const M=n?-u.length:0,C=n?2*u.length:u.length;for(let e=M;e<C;e+=1)if(e>=b&&e<=y){const s=T(e);void 0===p||t?A.push(s):(e>p&&A.push(s),e<d&&S.push(s))}if(A.forEach((t=>{e.slidesEl.append(l(u[t],t))})),n)for(let t=S.length-1;t>=0;t-=1){const s=S[t];e.slidesEl.prepend(l(u[s],s))}else S.sort(((e,t)=>t-e)),S.forEach((t=>{e.slidesEl.prepend(l(u[t],t))}));Ke(e.slidesEl,".swiper-slide, swiper-slide").forEach((e=>{e.style[g]=`${x}px`})),E()}s("beforeInit",(()=>{if(!e.params.virtual.enabled)return;let t;if(void 0===e.passedParams.virtual.slides){const s=[...e.slidesEl.children].filter((t=>t.matches(`.${e.params.slideClass}, swiper-slide`)));s&&s.length&&(e.virtual.slides=[...s],t=!0,s.forEach(((t,s)=>{t.setAttribute("data-swiper-slide-index",s),e.virtual.cache[s]=t,t.remove()})))}t||(e.virtual.slides=e.params.virtual.slides),e.classNames.push(`${e.params.containerModifierClass}virtual`),e.params.watchSlidesProgress=!0,e.originalParams.watchSlidesProgress=!0,e.params.initialSlide||o()})),s("setTranslate",(()=>{e.params.virtual.enabled&&(e.params.cssMode&&!e._immediateVirtual?(clearTimeout(a),a=setTimeout((()=>{o()}),100)):o())})),s("init update resize",(()=>{e.params.virtual.enabled&&e.params.cssMode&&Ue(e.wrapperEl,"--swiper-virtual-size",`${e.virtualSize}px`)})),Object.assign(e.virtual,{appendSlide:function(t){if("object"==typeof t&&"length"in t)for(let s=0;s<t.length;s+=1)t[s]&&e.virtual.slides.push(t[s]);else e.virtual.slides.push(t);o(!0)},prependSlide:function(t){const s=e.activeIndex;let i=s+1,a=1;if(Array.isArray(t)){for(let s=0;s<t.length;s+=1)t[s]&&e.virtual.slides.unshift(t[s]);i=s+t.length,a=t.length}else e.virtual.slides.unshift(t);if(e.params.virtual.cache){const t=e.virtual.cache,s={};Object.keys(t).forEach((e=>{const i=t[e],r=i.getAttribute("data-swiper-slide-index");r&&i.setAttribute("data-swiper-slide-index",parseInt(r,10)+a),s[parseInt(e,10)+a]=i})),e.virtual.cache=s}o(!0),e.slideTo(i,0)},removeSlide:function(t){if(null==t)return;let s=e.activeIndex;if(Array.isArray(t))for(let i=t.length-1;i>=0;i-=1)e.virtual.slides.splice(t[i],1),e.params.virtual.cache&&delete e.virtual.cache[t[i]],t[i]<s&&(s-=1),s=Math.max(s,0);else e.virtual.slides.splice(t,1),e.params.virtual.cache&&delete e.virtual.cache[t],t<s&&(s-=1),s=Math.max(s,0);o(!0),e.slideTo(s,0)},removeAllSlides:function(){e.virtual.slides=[],e.params.virtual.cache&&(e.virtual.cache={}),o(!0),e.slideTo(0,0)},update:o})},function({swiper:e,extendParams:t,on:s,emit:i}){const a=Ne(),r=Xe();function n(t){if(!e.enabled)return;const{rtlTranslate:s}=e;let n=t;n.originalEvent&&(n=n.originalEvent);const l=n.keyCode||n.charCode,o=e.params.keyboard.pageUpDown,c=o&&33===l,d=o&&34===l,p=37===l,u=39===l,m=38===l,f=40===l;if(!e.allowSlideNext&&(e.isHorizontal()&&u||e.isVertical()&&f||d))return!1;if(!e.allowSlidePrev&&(e.isHorizontal()&&p||e.isVertical()&&m||c))return!1;if(!(n.shiftKey||n.altKey||n.ctrlKey||n.metaKey||a.activeElement&&a.activeElement.nodeName&&("input"===a.activeElement.nodeName.toLowerCase()||"textarea"===a.activeElement.nodeName.toLowerCase()))){if(e.params.keyboard.onlyInViewport&&(c||d||p||u||m||f)){let t=!1;if(it(e.el,`.${e.params.slideClass}, swiper-slide`).length>0&&0===it(e.el,`.${e.params.slideActiveClass}`).length)return;const i=e.el,a=i.clientWidth,n=i.clientHeight,l=r.innerWidth,o=r.innerHeight,c=et(i);s&&(c.left-=i.scrollLeft);const d=[[c.left,c.top],[c.left+a,c.top],[c.left,c.top+n],[c.left+a,c.top+n]];for(let e=0;e<d.length;e+=1){const s=d[e];if(s[0]>=0&&s[0]<=l&&s[1]>=0&&s[1]<=o){if(0===s[0]&&0===s[1])continue;t=!0}}if(!t)return}e.isHorizontal()?((c||d||p||u)&&(n.preventDefault?n.preventDefault():n.returnValue=!1),((d||u)&&!s||(c||p)&&s)&&e.slideNext(),((c||p)&&!s||(d||u)&&s)&&e.slidePrev()):((c||d||m||f)&&(n.preventDefault?n.preventDefault():n.returnValue=!1),(d||f)&&e.slideNext(),(c||m)&&e.slidePrev()),i("keyPress",l)}}function l(){e.keyboard.enabled||(a.addEventListener("keydown",n),e.keyboard.enabled=!0)}function o(){e.keyboard.enabled&&(a.removeEventListener("keydown",n),e.keyboard.enabled=!1)}e.keyboard={enabled:!1},t({keyboard:{enabled:!1,onlyInViewport:!0,pageUpDown:!0}}),s("init",(()=>{e.params.keyboard.enabled&&l()})),s("destroy",(()=>{e.keyboard.enabled&&o()})),Object.assign(e.keyboard,{enable:l,disable:o})},function({swiper:e,extendParams:t,on:s,emit:i}){const a=Xe();let r;t({mousewheel:{enabled:!1,releaseOnEdges:!1,invert:!1,forceToAxis:!1,sensitivity:1,eventsTarget:"container",thresholdDelta:null,thresholdTime:null}}),e.mousewheel={enabled:!1};let n,l=Ve();const o=[];function c(){e.enabled&&(e.mouseEntered=!0)}function d(){e.enabled&&(e.mouseEntered=!1)}function p(t){return!(e.params.mousewheel.thresholdDelta&&t.delta<e.params.mousewheel.thresholdDelta)&&(!(e.params.mousewheel.thresholdTime&&Ve()-l<e.params.mousewheel.thresholdTime)&&(t.delta>=6&&Ve()-l<60||(t.direction<0?e.isEnd&&!e.params.loop||e.animating||(e.slideNext(),i("scroll",t.raw)):e.isBeginning&&!e.params.loop||e.animating||(e.slidePrev(),i("scroll",t.raw)),l=(new a.Date).getTime(),!1)))}function u(t){let s=t,a=!0;if(!e.enabled)return;const l=e.params.mousewheel;e.params.cssMode&&s.preventDefault();let c=e.el;"container"!==e.params.mousewheel.eventsTarget&&(c=document.querySelector(e.params.mousewheel.eventsTarget));const d=c&&c.contains(s.target);if(!e.mouseEntered&&!d&&!l.releaseOnEdges)return!0;s.originalEvent&&(s=s.originalEvent);let u=0;const m=e.rtlTranslate?-1:1,f=function(e){let t=0,s=0,i=0,a=0;return"detail"in e&&(s=e.detail),"wheelDelta"in e&&(s=-e.wheelDelta/120),"wheelDeltaY"in e&&(s=-e.wheelDeltaY/120),"wheelDeltaX"in e&&(t=-e.wheelDeltaX/120),"axis"in e&&e.axis===e.HORIZONTAL_AXIS&&(t=s,s=0),i=10*t,a=10*s,"deltaY"in e&&(a=e.deltaY),"deltaX"in e&&(i=e.deltaX),e.shiftKey&&!i&&(i=a,a=0),(i||a)&&e.deltaMode&&(1===e.deltaMode?(i*=40,a*=40):(i*=800,a*=800)),i&&!t&&(t=i<1?-1:1),a&&!s&&(s=a<1?-1:1),{spinX:t,spinY:s,pixelX:i,pixelY:a}}(s);if(l.forceToAxis)if(e.isHorizontal()){if(!(Math.abs(f.pixelX)>Math.abs(f.pixelY)))return!0;u=-f.pixelX*m}else{if(!(Math.abs(f.pixelY)>Math.abs(f.pixelX)))return!0;u=-f.pixelY}else u=Math.abs(f.pixelX)>Math.abs(f.pixelY)?-f.pixelX*m:-f.pixelY;if(0===u)return!0;l.invert&&(u=-u);let h=e.getTranslate()+u*l.sensitivity;if(h>=e.minTranslate()&&(h=e.minTranslate()),h<=e.maxTranslate()&&(h=e.maxTranslate()),a=!!e.params.loop||!(h===e.minTranslate()||h===e.maxTranslate()),a&&e.params.nested&&s.stopPropagation(),e.params.freeMode&&e.params.freeMode.enabled){const t={time:Ve(),delta:Math.abs(u),direction:Math.sign(u)},a=n&&t.time<n.time+500&&t.delta<=n.delta&&t.direction===n.direction;if(!a){n=void 0;let c=e.getTranslate()+u*l.sensitivity;const d=e.isBeginning,p=e.isEnd;if(c>=e.minTranslate()&&(c=e.minTranslate()),c<=e.maxTranslate()&&(c=e.maxTranslate()),e.setTransition(0),e.setTranslate(c),e.updateProgress(),e.updateActiveIndex(),e.updateSlidesClasses(),(!d&&e.isBeginning||!p&&e.isEnd)&&e.updateSlidesClasses(),e.params.loop&&e.loopFix({direction:t.direction<0?"next":"prev",byMousewheel:!0}),e.params.freeMode.sticky){clearTimeout(r),r=void 0,o.length>=15&&o.shift();const s=o.length?o[o.length-1]:void 0,i=o[0];if(o.push(t),s&&(t.delta>s.delta||t.direction!==s.direction))o.splice(0);else if(o.length>=15&&t.time-i.time<500&&i.delta-t.delta>=1&&t.delta<=6){const s=u>0?.8:.2;n=t,o.splice(0),r=Re((()=>{e.slideToClosest(e.params.speed,!0,void 0,s)}),0)}r||(r=Re((()=>{n=t,o.splice(0),e.slideToClosest(e.params.speed,!0,void 0,.5)}),500))}if(a||i("scroll",s),e.params.autoplay&&e.params.autoplayDisableOnInteraction&&e.autoplay.stop(),c===e.minTranslate()||c===e.maxTranslate())return!0}}else{const s={time:Ve(),delta:Math.abs(u),direction:Math.sign(u),raw:t};o.length>=2&&o.shift();const i=o.length?o[o.length-1]:void 0;if(o.push(s),i?(s.direction!==i.direction||s.delta>i.delta||s.time>i.time+150)&&p(s):p(s),function(t){const s=e.params.mousewheel;if(t.direction<0){if(e.isEnd&&!e.params.loop&&s.releaseOnEdges)return!0}else if(e.isBeginning&&!e.params.loop&&s.releaseOnEdges)return!0;return!1}(s))return!0}return s.preventDefault?s.preventDefault():s.returnValue=!1,!1}function m(t){let s=e.el;"container"!==e.params.mousewheel.eventsTarget&&(s=document.querySelector(e.params.mousewheel.eventsTarget)),s[t]("mouseenter",c),s[t]("mouseleave",d),s[t]("wheel",u)}function f(){return e.params.cssMode?(e.wrapperEl.removeEventListener("wheel",u),!0):!e.mousewheel.enabled&&(m("addEventListener"),e.mousewheel.enabled=!0,!0)}function h(){return e.params.cssMode?(e.wrapperEl.addEventListener(event,u),!0):!!e.mousewheel.enabled&&(m("removeEventListener"),e.mousewheel.enabled=!1,!0)}s("init",(()=>{!e.params.mousewheel.enabled&&e.params.cssMode&&h(),e.params.mousewheel.enabled&&f()})),s("destroy",(()=>{e.params.cssMode&&f(),e.mousewheel.enabled&&h()})),Object.assign(e.mousewheel,{enable:f,disable:h})},function({swiper:e,extendParams:t,on:s,emit:i}){t({navigation:{nextEl:null,prevEl:null,hideOnClick:!1,disabledClass:"swiper-button-disabled",hiddenClass:"swiper-button-hidden",lockClass:"swiper-button-lock",navigationDisabledClass:"swiper-navigation-disabled"}}),e.navigation={nextEl:null,prevEl:null};const a=e=>(Array.isArray(e)||(e=[e].filter((e=>!!e))),e);function r(t){let s;return t&&"string"==typeof t&&e.isElement&&(s=e.el.shadowRoot.querySelector(t),s)?s:(t&&("string"==typeof t&&(s=[...document.querySelectorAll(t)]),e.params.uniqueNavElements&&"string"==typeof t&&s.length>1&&1===e.el.querySelectorAll(t).length&&(s=e.el.querySelector(t))),t&&!s?t:s)}function n(t,s){const i=e.params.navigation;(t=a(t)).forEach((t=>{t&&(t.classList[s?"add":"remove"](...i.disabledClass.split(" ")),"BUTTON"===t.tagName&&(t.disabled=s),e.params.watchOverflow&&e.enabled&&t.classList[e.isLocked?"add":"remove"](i.lockClass))}))}function l(){const{nextEl:t,prevEl:s}=e.navigation;if(e.params.loop)return n(s,!1),void n(t,!1);n(s,e.isBeginning&&!e.params.rewind),n(t,e.isEnd&&!e.params.rewind)}function o(t){t.preventDefault(),(!e.isBeginning||e.params.loop||e.params.rewind)&&(e.slidePrev(),i("navigationPrev"))}function c(t){t.preventDefault(),(!e.isEnd||e.params.loop||e.params.rewind)&&(e.slideNext(),i("navigationNext"))}function d(){const t=e.params.navigation;if(e.params.navigation=Bt(e,e.originalParams.navigation,e.params.navigation,{nextEl:"swiper-button-next",prevEl:"swiper-button-prev"}),!t.nextEl&&!t.prevEl)return;let s=r(t.nextEl),i=r(t.prevEl);Object.assign(e.navigation,{nextEl:s,prevEl:i}),s=a(s),i=a(i);const n=(s,i)=>{s&&s.addEventListener("click","next"===i?c:o),!e.enabled&&s&&s.classList.add(...t.lockClass.split(" "))};s.forEach((e=>n(e,"next"))),i.forEach((e=>n(e,"prev")))}function p(){let{nextEl:t,prevEl:s}=e.navigation;t=a(t),s=a(s);const i=(t,s)=>{t.removeEventListener("click","next"===s?c:o),t.classList.remove(...e.params.navigation.disabledClass.split(" "))};t.forEach((e=>i(e,"next"))),s.forEach((e=>i(e,"prev")))}s("init",(()=>{!1===e.params.navigation.enabled?u():(d(),l())})),s("toEdge fromEdge lock unlock",(()=>{l()})),s("destroy",(()=>{p()})),s("enable disable",(()=>{let{nextEl:t,prevEl:s}=e.navigation;t=a(t),s=a(s),[...t,...s].filter((e=>!!e)).forEach((t=>t.classList[e.enabled?"remove":"add"](e.params.navigation.lockClass)))})),s("click",((t,s)=>{let{nextEl:r,prevEl:n}=e.navigation;r=a(r),n=a(n);const l=s.target;if(e.params.navigation.hideOnClick&&!n.includes(l)&&!r.includes(l)){if(e.pagination&&e.params.pagination&&e.params.pagination.clickable&&(e.pagination.el===l||e.pagination.el.contains(l)))return;let t;r.length?t=r[0].classList.contains(e.params.navigation.hiddenClass):n.length&&(t=n[0].classList.contains(e.params.navigation.hiddenClass)),i(!0===t?"navigationShow":"navigationHide"),[...r,...n].filter((e=>!!e)).forEach((t=>t.classList.toggle(e.params.navigation.hiddenClass)))}}));const u=()=>{e.el.classList.add(...e.params.navigation.navigationDisabledClass.split(" ")),p()};Object.assign(e.navigation,{enable:()=>{e.el.classList.remove(...e.params.navigation.navigationDisabledClass.split(" ")),d(),l()},disable:u,update:l,init:d,destroy:p})},function({swiper:e,extendParams:t,on:s,emit:i}){const a="swiper-pagination";let r;t({pagination:{el:null,bulletElement:"span",clickable:!1,hideOnClick:!1,renderBullet:null,renderProgressbar:null,renderFraction:null,renderCustom:null,progressbarOpposite:!1,type:"bullets",dynamicBullets:!1,dynamicMainBullets:1,formatFractionCurrent:e=>e,formatFractionTotal:e=>e,bulletClass:`${a}-bullet`,bulletActiveClass:`${a}-bullet-active`,modifierClass:`${a}-`,currentClass:`${a}-current`,totalClass:`${a}-total`,hiddenClass:`${a}-hidden`,progressbarFillClass:`${a}-progressbar-fill`,progressbarOppositeClass:`${a}-progressbar-opposite`,clickableClass:`${a}-clickable`,lockClass:`${a}-lock`,horizontalClass:`${a}-horizontal`,verticalClass:`${a}-vertical`,paginationDisabledClass:`${a}-disabled`}}),e.pagination={el:null,bullets:[]};let n=0;const l=e=>(Array.isArray(e)||(e=[e].filter((e=>!!e))),e);function o(){return!e.params.pagination.el||!e.pagination.el||Array.isArray(e.pagination.el)&&0===e.pagination.el.length}function c(t,s){const{bulletActiveClass:i}=e.params.pagination;t&&(t=t[("prev"===s?"previous":"next")+"ElementSibling"])&&(t.classList.add(`${i}-${s}`),(t=t[("prev"===s?"previous":"next")+"ElementSibling"])&&t.classList.add(`${i}-${s}-${s}`))}function d(t){const s=t.target.closest(_t(e.params.pagination.bulletClass));if(!s)return;t.preventDefault();const i=st(s)*e.params.slidesPerGroup;if(e.params.loop){if(e.realIndex===i)return;(i<e.loopedSlides||i>e.slides.length-e.loopedSlides)&&e.loopFix({direction:i<e.loopedSlides?"prev":"next",activeSlideIndex:i,slideTo:!1}),e.slideToLoop(i)}else e.slideTo(i)}function p(){const t=e.rtl,s=e.params.pagination;if(o())return;let a,d=e.pagination.el;d=l(d);const p=e.virtual&&e.params.virtual.enabled?e.virtual.slides.length:e.slides.length,u=e.params.loop?Math.ceil(p/e.params.slidesPerGroup):e.snapGrid.length;if(a=e.params.loop?e.params.slidesPerGroup>1?Math.floor(e.realIndex/e.params.slidesPerGroup):e.realIndex:void 0!==e.snapIndex?e.snapIndex:e.activeIndex||0,"bullets"===s.type&&e.pagination.bullets&&e.pagination.bullets.length>0){const i=e.pagination.bullets;let l,o,p;if(s.dynamicBullets&&(r=rt(i[0],e.isHorizontal()?"width":"height",!0),d.forEach((t=>{t.style[e.isHorizontal()?"width":"height"]=r*(s.dynamicMainBullets+4)+"px"})),s.dynamicMainBullets>1&&void 0!==e.previousIndex&&(n+=a-(e.previousIndex||0),n>s.dynamicMainBullets-1?n=s.dynamicMainBullets-1:n<0&&(n=0)),l=Math.max(a-n,0),o=l+(Math.min(i.length,s.dynamicMainBullets)-1),p=(o+l)/2),i.forEach((e=>{e.classList.remove(...["","-next","-next-next","-prev","-prev-prev","-main"].map((e=>`${s.bulletActiveClass}${e}`)))})),d.length>1)i.forEach((e=>{const t=st(e);t===a&&e.classList.add(s.bulletActiveClass),s.dynamicBullets&&(t>=l&&t<=o&&e.classList.add(`${s.bulletActiveClass}-main`),t===l&&c(e,"prev"),t===o&&c(e,"next"))}));else{const e=i[a];if(e&&e.classList.add(s.bulletActiveClass),s.dynamicBullets){const e=i[l],t=i[o];for(let e=l;e<=o;e+=1)i[e]&&i[e].classList.add(`${s.bulletActiveClass}-main`);c(e,"prev"),c(t,"next")}}if(s.dynamicBullets){const a=Math.min(i.length,s.dynamicMainBullets+4),n=(r*a-r)/2-p*r,l=t?"right":"left";i.forEach((t=>{t.style[e.isHorizontal()?l:"top"]=`${n}px`}))}}d.forEach(((t,r)=>{if("fraction"===s.type&&(t.querySelectorAll(_t(s.currentClass)).forEach((e=>{e.textContent=s.formatFractionCurrent(a+1)})),t.querySelectorAll(_t(s.totalClass)).forEach((e=>{e.textContent=s.formatFractionTotal(u)}))),"progressbar"===s.type){let i;i=s.progressbarOpposite?e.isHorizontal()?"vertical":"horizontal":e.isHorizontal()?"horizontal":"vertical";const r=(a+1)/u;let n=1,l=1;"horizontal"===i?n=r:l=r,t.querySelectorAll(_t(s.progressbarFillClass)).forEach((t=>{t.style.transform=`translate3d(0,0,0) scaleX(${n}) scaleY(${l})`,t.style.transitionDuration=`${e.params.speed}ms`}))}"custom"===s.type&&s.renderCustom?(t.innerHTML=s.renderCustom(e,a+1,u),0===r&&i("paginationRender",t)):(0===r&&i("paginationRender",t),i("paginationUpdate",t)),e.params.watchOverflow&&e.enabled&&t.classList[e.isLocked?"add":"remove"](s.lockClass)}))}function u(){const t=e.params.pagination;if(o())return;const s=e.virtual&&e.params.virtual.enabled?e.virtual.slides.length:e.slides.length;let a=e.pagination.el;a=l(a);let r="";if("bullets"===t.type){let i=e.params.loop?Math.ceil(s/e.params.slidesPerGroup):e.snapGrid.length;e.params.freeMode&&e.params.freeMode.enabled&&i>s&&(i=s);for(let s=0;s<i;s+=1)t.renderBullet?r+=t.renderBullet.call(e,s,t.bulletClass):r+=`<${t.bulletElement} class="${t.bulletClass}"></${t.bulletElement}>`}"fraction"===t.type&&(r=t.renderFraction?t.renderFraction.call(e,t.currentClass,t.totalClass):`<span class="${t.currentClass}"></span> / <span class="${t.totalClass}"></span>`),"progressbar"===t.type&&(r=t.renderProgressbar?t.renderProgressbar.call(e,t.progressbarFillClass):`<span class="${t.progressbarFillClass}"></span>`),a.forEach((s=>{"custom"!==t.type&&(s.innerHTML=r||""),"bullets"===t.type&&(e.pagination.bullets=[...s.querySelectorAll(_t(t.bulletClass))])})),"custom"!==t.type&&i("paginationRender",a[0])}function m(){e.params.pagination=Bt(e,e.originalParams.pagination,e.params.pagination,{el:"swiper-pagination"});const t=e.params.pagination;if(!t.el)return;let s;"string"==typeof t.el&&e.isElement&&(s=e.el.shadowRoot.querySelector(t.el)),s||"string"!=typeof t.el||(s=[...document.querySelectorAll(t.el)]),s||(s=t.el),s&&0!==s.length&&(e.params.uniqueNavElements&&"string"==typeof t.el&&Array.isArray(s)&&s.length>1&&(s=[...e.el.querySelectorAll(t.el)],s.length>1&&(s=s.filter((t=>it(t,".swiper")[0]===e.el))[0])),Array.isArray(s)&&1===s.length&&(s=s[0]),Object.assign(e.pagination,{el:s}),s=l(s),s.forEach((s=>{"bullets"===t.type&&t.clickable&&s.classList.add(t.clickableClass),s.classList.add(t.modifierClass+t.type),s.classList.add(e.isHorizontal()?t.horizontalClass:t.verticalClass),"bullets"===t.type&&t.dynamicBullets&&(s.classList.add(`${t.modifierClass}${t.type}-dynamic`),n=0,t.dynamicMainBullets<1&&(t.dynamicMainBullets=1)),"progressbar"===t.type&&t.progressbarOpposite&&s.classList.add(t.progressbarOppositeClass),t.clickable&&s.addEventListener("click",d),e.enabled||s.classList.add(t.lockClass)})))}function f(){const t=e.params.pagination;if(o())return;let s=e.pagination.el;s&&(s=l(s),s.forEach((s=>{s.classList.remove(t.hiddenClass),s.classList.remove(t.modifierClass+t.type),s.classList.remove(e.isHorizontal()?t.horizontalClass:t.verticalClass),t.clickable&&s.removeEventListener("click",d)}))),e.pagination.bullets&&e.pagination.bullets.forEach((e=>e.classList.remove(t.bulletActiveClass)))}s("init",(()=>{!1===e.params.pagination.enabled?h():(m(),u(),p())})),s("activeIndexChange",(()=>{void 0===e.snapIndex&&p()})),s("snapIndexChange",(()=>{p()})),s("snapGridLengthChange",(()=>{u(),p()})),s("destroy",(()=>{f()})),s("enable disable",(()=>{let{el:t}=e.pagination;t&&(t=l(t),t.forEach((t=>t.classList[e.enabled?"remove":"add"](e.params.pagination.lockClass))))})),s("lock unlock",(()=>{p()})),s("click",((t,s)=>{const a=s.target;let{el:r}=e.pagination;if(Array.isArray(r)||(r=[r].filter((e=>!!e))),e.params.pagination.el&&e.params.pagination.hideOnClick&&r&&r.length>0&&!a.classList.contains(e.params.pagination.bulletClass)){if(e.navigation&&(e.navigation.nextEl&&a===e.navigation.nextEl||e.navigation.prevEl&&a===e.navigation.prevEl))return;const t=r[0].classList.contains(e.params.pagination.hiddenClass);i(!0===t?"paginationShow":"paginationHide"),r.forEach((t=>t.classList.toggle(e.params.pagination.hiddenClass)))}}));const h=()=>{e.el.classList.add(e.params.pagination.paginationDisabledClass);let{el:t}=e.pagination;t&&(t=l(t),t.forEach((t=>t.classList.add(e.params.pagination.paginationDisabledClass)))),f()};Object.assign(e.pagination,{enable:()=>{e.el.classList.remove(e.params.pagination.paginationDisabledClass);let{el:t}=e.pagination;t&&(t=l(t),t.forEach((t=>t.classList.remove(e.params.pagination.paginationDisabledClass)))),m(),u(),p()},disable:h,render:u,update:p,init:m,destroy:f})},function({swiper:e,extendParams:t,on:s,emit:i}){const a=Ne();let r,n,l,o,c=!1,d=null,p=null;function u(){if(!e.params.scrollbar.el||!e.scrollbar.el)return;const{scrollbar:t,rtlTranslate:s}=e,{dragEl:i,el:a}=t,r=e.params.scrollbar,o=e.params.loop?e.progressLoop:e.progress;let c=n,p=(l-n)*o;s?(p=-p,p>0?(c=n-p,p=0):-p+n>l&&(c=l+p)):p<0?(c=n+p,p=0):p+n>l&&(c=l-p),e.isHorizontal()?(i.style.transform=`translate3d(${p}px, 0, 0)`,i.style.width=`${c}px`):(i.style.transform=`translate3d(0px, ${p}px, 0)`,i.style.height=`${c}px`),r.hide&&(clearTimeout(d),a.style.opacity=1,d=setTimeout((()=>{a.style.opacity=0,a.style.transitionDuration="400ms"}),1e3))}function m(){if(!e.params.scrollbar.el||!e.scrollbar.el)return;const{scrollbar:t}=e,{dragEl:s,el:i}=t;s.style.width="",s.style.height="",l=e.isHorizontal()?i.offsetWidth:i.offsetHeight,o=e.size/(e.virtualSize+e.params.slidesOffsetBefore-(e.params.centeredSlides?e.snapGrid[0]:0)),n="auto"===e.params.scrollbar.dragSize?l*o:parseInt(e.params.scrollbar.dragSize,10),e.isHorizontal()?s.style.width=`${n}px`:s.style.height=`${n}px`,i.style.display=o>=1?"none":"",e.params.scrollbar.hide&&(i.style.opacity=0),e.params.watchOverflow&&e.enabled&&t.el.classList[e.isLocked?"add":"remove"](e.params.scrollbar.lockClass)}function f(t){return e.isHorizontal()?t.clientX:t.clientY}function h(t){const{scrollbar:s,rtlTranslate:i}=e,{el:a}=s;let o;o=(f(t)-et(a)[e.isHorizontal()?"left":"top"]-(null!==r?r:n/2))/(l-n),o=Math.max(Math.min(o,1),0),i&&(o=1-o);const c=e.minTranslate()+(e.maxTranslate()-e.minTranslate())*o;e.updateProgress(c),e.setTranslate(c),e.updateActiveIndex(),e.updateSlidesClasses()}function g(t){const s=e.params.scrollbar,{scrollbar:a,wrapperEl:n}=e,{el:l,dragEl:o}=a;c=!0,r=t.target===o?f(t)-t.target.getBoundingClientRect()[e.isHorizontal()?"left":"top"]:null,t.preventDefault(),t.stopPropagation(),n.style.transitionDuration="100ms",o.style.transitionDuration="100ms",h(t),clearTimeout(p),l.style.transitionDuration="0ms",s.hide&&(l.style.opacity=1),e.params.cssMode&&(e.wrapperEl.style["scroll-snap-type"]="none"),i("scrollbarDragStart",t)}function v(t){const{scrollbar:s,wrapperEl:a}=e,{el:r,dragEl:n}=s;c&&(t.preventDefault?t.preventDefault():t.returnValue=!1,h(t),a.style.transitionDuration="0ms",r.style.transitionDuration="0ms",n.style.transitionDuration="0ms",i("scrollbarDragMove",t))}function w(t){const s=e.params.scrollbar,{scrollbar:a,wrapperEl:r}=e,{el:n}=a;c&&(c=!1,e.params.cssMode&&(e.wrapperEl.style["scroll-snap-type"]="",r.style.transitionDuration=""),s.hide&&(clearTimeout(p),p=Re((()=>{n.style.opacity=0,n.style.transitionDuration="400ms"}),1e3)),i("scrollbarDragEnd",t),s.snapOnRelease&&e.slideToClosest())}function b(t){const{scrollbar:s,params:i}=e,r=s.el;if(!r)return;const n=r,l=!!i.passiveListeners&&{passive:!1,capture:!1},o=!!i.passiveListeners&&{passive:!0,capture:!1};if(!n)return;const c="on"===t?"addEventListener":"removeEventListener";n[c]("pointerdown",g,l),a[c]("pointermove",v,l),a[c]("pointerup",w,o)}function y(){const{scrollbar:t,el:s}=e;e.params.scrollbar=Bt(e,e.originalParams.scrollbar,e.params.scrollbar,{el:"swiper-scrollbar"});const i=e.params.scrollbar;if(!i.el)return;let r,n;"string"==typeof i.el&&e.isElement&&(r=e.el.shadowRoot.querySelector(i.el)),r||"string"!=typeof i.el?r||(r=i.el):r=a.querySelectorAll(i.el),e.params.uniqueNavElements&&"string"==typeof i.el&&r.length>1&&1===s.querySelectorAll(i.el).length&&(r=s.querySelector(i.el)),r.length>0&&(r=r[0]),r.classList.add(e.isHorizontal()?i.horizontalClass:i.verticalClass),r&&(n=r.querySelector(`.${e.params.scrollbar.dragClass}`),n||(n=Je("div",e.params.scrollbar.dragClass),r.append(n))),Object.assign(t,{el:r,dragEl:n}),i.draggable&&e.params.scrollbar.el&&e.scrollbar.el&&b("on"),r&&r.classList[e.enabled?"remove":"add"](e.params.scrollbar.lockClass)}function x(){const t=e.params.scrollbar,s=e.scrollbar.el;s&&s.classList.remove(e.isHorizontal()?t.horizontalClass:t.verticalClass),e.params.scrollbar.el&&e.scrollbar.el&&b("off")}t({scrollbar:{el:null,dragSize:"auto",hide:!1,draggable:!1,snapOnRelease:!0,lockClass:"swiper-scrollbar-lock",dragClass:"swiper-scrollbar-drag",scrollbarDisabledClass:"swiper-scrollbar-disabled",horizontalClass:"swiper-scrollbar-horizontal",verticalClass:"swiper-scrollbar-vertical"}}),e.scrollbar={el:null,dragEl:null},s("init",(()=>{!1===e.params.scrollbar.enabled?E():(y(),m(),u())})),s("update resize observerUpdate lock unlock",(()=>{m()})),s("setTranslate",(()=>{u()})),s("setTransition",((t,s)=>{!function(t){e.params.scrollbar.el&&e.scrollbar.el&&(e.scrollbar.dragEl.style.transitionDuration=`${t}ms`)}(s)})),s("enable disable",(()=>{const{el:t}=e.scrollbar;t&&t.classList[e.enabled?"remove":"add"](e.params.scrollbar.lockClass)})),s("destroy",(()=>{x()}));const E=()=>{e.el.classList.add(e.params.scrollbar.scrollbarDisabledClass),e.scrollbar.el&&e.scrollbar.el.classList.add(e.params.scrollbar.scrollbarDisabledClass),x()};Object.assign(e.scrollbar,{enable:()=>{e.el.classList.remove(e.params.scrollbar.scrollbarDisabledClass),e.scrollbar.el&&e.scrollbar.el.classList.remove(e.params.scrollbar.scrollbarDisabledClass),y(),m(),u()},disable:E,updateSize:m,setTranslate:u,init:y,destroy:x})},function({swiper:e,extendParams:t,on:s}){t({parallax:{enabled:!1}});const i=(t,s)=>{const{rtl:i}=e,a=i?-1:1,r=t.getAttribute("data-swiper-parallax")||"0";let n=t.getAttribute("data-swiper-parallax-x"),l=t.getAttribute("data-swiper-parallax-y");const o=t.getAttribute("data-swiper-parallax-scale"),c=t.getAttribute("data-swiper-parallax-opacity"),d=t.getAttribute("data-swiper-parallax-rotate");if(n||l?(n=n||"0",l=l||"0"):e.isHorizontal()?(n=r,l="0"):(l=r,n="0"),n=n.indexOf("%")>=0?parseInt(n,10)*s*a+"%":n*s*a+"px",l=l.indexOf("%")>=0?parseInt(l,10)*s+"%":l*s+"px",null!=c){const e=c-(c-1)*(1-Math.abs(s));t.style.opacity=e}let p=`translate3d(${n}, ${l}, 0px)`;if(null!=o){p+=` scale(${o-(o-1)*(1-Math.abs(s))})`}if(d&&null!=d){p+=` rotate(${d*s*-1}deg)`}t.style.transform=p},a=()=>{const{el:t,slides:s,progress:a,snapGrid:r}=e;Ke(t,"[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").forEach((e=>{i(e,a)})),s.forEach(((t,s)=>{let n=t.progress;e.params.slidesPerGroup>1&&"auto"!==e.params.slidesPerView&&(n+=Math.ceil(s/2)-a*(r.length-1)),n=Math.min(Math.max(n,-1),1),t.querySelectorAll("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale], [data-swiper-parallax-rotate]").forEach((e=>{i(e,n)}))}))};s("beforeInit",(()=>{e.params.parallax.enabled&&(e.params.watchSlidesProgress=!0,e.originalParams.watchSlidesProgress=!0)})),s("init",(()=>{e.params.parallax.enabled&&a()})),s("setTranslate",(()=>{e.params.parallax.enabled&&a()})),s("setTransition",((t,s)=>{e.params.parallax.enabled&&((t=e.params.speed)=>{const{el:s}=e;s.querySelectorAll("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").forEach((e=>{let s=parseInt(e.getAttribute("data-swiper-parallax-duration"),10)||t;0===t&&(s=0),e.style.transitionDuration=`${s}ms`}))})(s)}))},function({swiper:e,extendParams:t,on:s,emit:i}){const a=Xe();t({zoom:{enabled:!1,maxRatio:3,minRatio:1,toggle:!0,containerClass:"swiper-zoom-container",zoomedSlideClass:"swiper-slide-zoomed"}}),e.zoom={enabled:!1};let r,n,l=1,o=!1;const c=[],d={slideEl:void 0,slideWidth:void 0,slideHeight:void 0,imageEl:void 0,imageWrapEl:void 0,maxRatio:3},p={isTouched:void 0,isMoved:void 0,currentX:void 0,currentY:void 0,minX:void 0,minY:void 0,maxX:void 0,maxY:void 0,width:void 0,height:void 0,startX:void 0,startY:void 0,touchesStart:{},touchesCurrent:{}},u={x:void 0,y:void 0,prevPositionX:void 0,prevPositionY:void 0,prevTime:void 0};let m=1;function f(){if(c.length<2)return 1;const e=c[0].pageX,t=c[0].pageY,s=c[1].pageX,i=c[1].pageY;return Math.sqrt((s-e)**2+(i-t)**2)}function h(t){const s=e.isElement?"swiper-slide":`.${e.params.slideClass}`;return!!t.target.matches(s)||e.slides.filter((e=>e.contains(t.target))).length>0}function g(t){if("mouse"===t.pointerType&&c.splice(0,c.length),!h(t))return;const s=e.params.zoom;if(r=!1,n=!1,c.push(t),!(c.length<2)){if(r=!0,d.scaleStart=f(),!d.slideEl){d.slideEl=t.target.closest(`.${e.params.slideClass}, swiper-slide`),d.slideEl||(d.slideEl=e.slides[e.activeIndex]);let i=d.slideEl.querySelector(`.${s.containerClass}`);if(i&&(i=i.querySelectorAll("picture, img, svg, canvas, .swiper-zoom-target")[0]),d.imageEl=i,d.imageWrapEl=i?it(d.imageEl,`.${s.containerClass}`)[0]:void 0,!d.imageWrapEl)return void(d.imageEl=void 0);d.maxRatio=d.imageWrapEl.getAttribute("data-swiper-zoom")||s.maxRatio}if(d.imageEl){const[e,t]=function(){if(c.length<2)return{x:null,y:null};const e=d.imageEl.getBoundingClientRect();return[(c[0].pageX+(c[1].pageX-c[0].pageX)/2-e.x)/l,(c[0].pageY+(c[1].pageY-c[0].pageY)/2-e.y)/l]}();d.imageEl.style.transformOrigin=`${e}px ${t}px`,d.imageEl.style.transitionDuration="0ms"}o=!0}}function v(t){if(!h(t))return;const s=e.params.zoom,i=e.zoom,a=c.findIndex((e=>e.pointerId===t.pointerId));a>=0&&(c[a]=t),c.length<2||(n=!0,d.scaleMove=f(),d.imageEl&&(i.scale=d.scaleMove/d.scaleStart*l,i.scale>d.maxRatio&&(i.scale=d.maxRatio-1+(i.scale-d.maxRatio+1)**.5),i.scale<s.minRatio&&(i.scale=s.minRatio+1-(s.minRatio-i.scale+1)**.5),d.imageEl.style.transform=`translate3d(0,0,0) scale(${i.scale})`))}function w(t){if(!h(t))return;if("mouse"===t.pointerType&&"pointerout"===t.type)return;const s=e.params.zoom,i=e.zoom,a=c.findIndex((e=>e.pointerId===t.pointerId));a>=0&&c.splice(a,1),r&&n&&(r=!1,n=!1,d.imageEl&&(i.scale=Math.max(Math.min(i.scale,d.maxRatio),s.minRatio),d.imageEl.style.transitionDuration=`${e.params.speed}ms`,d.imageEl.style.transform=`translate3d(0,0,0) scale(${i.scale})`,l=i.scale,o=!1,1===i.scale&&(d.slideEl=void 0)))}function b(t){if(!h(t)||!function(t){const s=`.${e.params.zoom.containerClass}`;return!!t.target.matches(s)||[...e.el.querySelectorAll(s)].filter((e=>e.contains(t.target))).length>0}(t))return;const s=e.zoom;if(!d.imageEl)return;if(e.allowClick=!1,!p.isTouched||!d.slideEl)return;p.isMoved||(p.width=d.imageEl.offsetWidth,p.height=d.imageEl.offsetHeight,p.startX=Fe(d.imageWrapEl,"x")||0,p.startY=Fe(d.imageWrapEl,"y")||0,d.slideWidth=d.slideEl.offsetWidth,d.slideHeight=d.slideEl.offsetHeight,d.imageWrapEl.style.transitionDuration="0ms");const i=p.width*s.scale,a=p.height*s.scale;if(!(i<d.slideWidth&&a<d.slideHeight)){if(p.minX=Math.min(d.slideWidth/2-i/2,0),p.maxX=-p.minX,p.minY=Math.min(d.slideHeight/2-a/2,0),p.maxY=-p.minY,p.touchesCurrent.x=c.length>0?c[0].pageX:t.pageX,p.touchesCurrent.y=c.length>0?c[0].pageY:t.pageY,!p.isMoved&&!o){if(e.isHorizontal()&&(Math.floor(p.minX)===Math.floor(p.startX)&&p.touchesCurrent.x<p.touchesStart.x||Math.floor(p.maxX)===Math.floor(p.startX)&&p.touchesCurrent.x>p.touchesStart.x))return void(p.isTouched=!1);if(!e.isHorizontal()&&(Math.floor(p.minY)===Math.floor(p.startY)&&p.touchesCurrent.y<p.touchesStart.y||Math.floor(p.maxY)===Math.floor(p.startY)&&p.touchesCurrent.y>p.touchesStart.y))return void(p.isTouched=!1)}t.cancelable&&t.preventDefault(),t.stopPropagation(),p.isMoved=!0,p.currentX=p.touchesCurrent.x-p.touchesStart.x+p.startX,p.currentY=p.touchesCurrent.y-p.touchesStart.y+p.startY,p.currentX<p.minX&&(p.currentX=p.minX+1-(p.minX-p.currentX+1)**.8),p.currentX>p.maxX&&(p.currentX=p.maxX-1+(p.currentX-p.maxX+1)**.8),p.currentY<p.minY&&(p.currentY=p.minY+1-(p.minY-p.currentY+1)**.8),p.currentY>p.maxY&&(p.currentY=p.maxY-1+(p.currentY-p.maxY+1)**.8),u.prevPositionX||(u.prevPositionX=p.touchesCurrent.x),u.prevPositionY||(u.prevPositionY=p.touchesCurrent.y),u.prevTime||(u.prevTime=Date.now()),u.x=(p.touchesCurrent.x-u.prevPositionX)/(Date.now()-u.prevTime)/2,u.y=(p.touchesCurrent.y-u.prevPositionY)/(Date.now()-u.prevTime)/2,Math.abs(p.touchesCurrent.x-u.prevPositionX)<2&&(u.x=0),Math.abs(p.touchesCurrent.y-u.prevPositionY)<2&&(u.y=0),u.prevPositionX=p.touchesCurrent.x,u.prevPositionY=p.touchesCurrent.y,u.prevTime=Date.now(),d.imageWrapEl.style.transform=`translate3d(${p.currentX}px, ${p.currentY}px,0)`}}function y(){const t=e.zoom;d.slideEl&&e.previousIndex!==e.activeIndex&&(d.imageEl&&(d.imageEl.style.transform="translate3d(0,0,0) scale(1)"),d.imageWrapEl&&(d.imageWrapEl.style.transform="translate3d(0,0,0)"),t.scale=1,l=1,d.slideEl=void 0,d.imageEl=void 0,d.imageWrapEl=void 0)}function x(t){const s=e.zoom,i=e.params.zoom;if(!d.slideEl){t&&t.target&&(d.slideEl=t.target.closest(`.${e.params.slideClass}, swiper-slide`)),d.slideEl||(e.params.virtual&&e.params.virtual.enabled&&e.virtual?d.slideEl=Ke(e.slidesEl,`.${e.params.slideActiveClass}`)[0]:d.slideEl=e.slides[e.activeIndex]);let s=d.slideEl.querySelector(`.${i.containerClass}`);s&&(s=s.querySelectorAll("picture, img, svg, canvas, .swiper-zoom-target")[0]),d.imageEl=s,d.imageWrapEl=s?it(d.imageEl,`.${i.containerClass}`)[0]:void 0}if(!d.imageEl||!d.imageWrapEl)return;let r,n,o,c,u,m,f,h,g,v,w,b,y,x,E,S,A,T;e.params.cssMode&&(e.wrapperEl.style.overflow="hidden",e.wrapperEl.style.touchAction="none"),d.slideEl.classList.add(`${i.zoomedSlideClass}`),void 0===p.touchesStart.x&&t?(r=t.pageX,n=t.pageY):(r=p.touchesStart.x,n=p.touchesStart.y);const M="number"==typeof t?t:null;1===l&&M&&(r=void 0,n=void 0),s.scale=M||d.imageWrapEl.getAttribute("data-swiper-zoom")||i.maxRatio,l=M||d.imageWrapEl.getAttribute("data-swiper-zoom")||i.maxRatio,!t||1===l&&M?(f=0,h=0):(A=d.slideEl.offsetWidth,T=d.slideEl.offsetHeight,o=et(d.slideEl).left+a.scrollX,c=et(d.slideEl).top+a.scrollY,u=o+A/2-r,m=c+T/2-n,g=d.imageEl.offsetWidth,v=d.imageEl.offsetHeight,w=g*s.scale,b=v*s.scale,y=Math.min(A/2-w/2,0),x=Math.min(T/2-b/2,0),E=-y,S=-x,f=u*s.scale,h=m*s.scale,f<y&&(f=y),f>E&&(f=E),h<x&&(h=x),h>S&&(h=S)),d.imageWrapEl.style.transitionDuration="300ms",d.imageWrapEl.style.transform=`translate3d(${f}px, ${h}px,0)`,d.imageEl.style.transitionDuration="300ms",d.imageEl.style.transform=`translate3d(0,0,0) scale(${s.scale})`}function E(){const t=e.zoom,s=e.params.zoom;if(!d.slideEl){e.params.virtual&&e.params.virtual.enabled&&e.virtual?d.slideEl=Ke(e.slidesEl,`.${e.params.slideActiveClass}`)[0]:d.slideEl=e.slides[e.activeIndex];let t=d.slideEl.querySelector(`.${s.containerClass}`);t&&(t=t.querySelectorAll("picture, img, svg, canvas, .swiper-zoom-target")[0]),d.imageEl=t,d.imageWrapEl=t?it(d.imageEl,`.${s.containerClass}`)[0]:void 0}d.imageEl&&d.imageWrapEl&&(e.params.cssMode&&(e.wrapperEl.style.overflow="",e.wrapperEl.style.touchAction=""),t.scale=1,l=1,d.imageWrapEl.style.transitionDuration="300ms",d.imageWrapEl.style.transform="translate3d(0,0,0)",d.imageEl.style.transitionDuration="300ms",d.imageEl.style.transform="translate3d(0,0,0) scale(1)",d.slideEl.classList.remove(`${s.zoomedSlideClass}`),d.slideEl=void 0)}function S(t){const s=e.zoom;s.scale&&1!==s.scale?E():x(t)}function A(){return{passiveListener:!!e.params.passiveListeners&&{passive:!0,capture:!1},activeListenerWithCapture:!e.params.passiveListeners||{passive:!1,capture:!0}}}function T(){const t=e.zoom;if(t.enabled)return;t.enabled=!0;const{passiveListener:s,activeListenerWithCapture:i}=A();e.wrapperEl.addEventListener("pointerdown",g,s),e.wrapperEl.addEventListener("pointermove",v,i),["pointerup","pointercancel","pointerout"].forEach((t=>{e.wrapperEl.addEventListener(t,w,s)})),e.wrapperEl.addEventListener("pointermove",b,i)}function M(){const t=e.zoom;if(!t.enabled)return;t.enabled=!1;const{passiveListener:s,activeListenerWithCapture:i}=A();e.wrapperEl.removeEventListener("pointerdown",g,s),e.wrapperEl.removeEventListener("pointermove",v,i),["pointerup","pointercancel","pointerout"].forEach((t=>{e.wrapperEl.removeEventListener(t,w,s)})),e.wrapperEl.removeEventListener("pointermove",b,i)}Object.defineProperty(e.zoom,"scale",{get:()=>m,set(e){if(m!==e){const t=d.imageEl,s=d.slideEl;i("zoomChange",e,t,s)}m=e}}),s("init",(()=>{e.params.zoom.enabled&&T()})),s("destroy",(()=>{M()})),s("touchStart",((t,s)=>{e.zoom.enabled&&function(t){const s=e.device;d.imageEl&&(p.isTouched||(s.android&&t.cancelable&&t.preventDefault(),p.isTouched=!0,p.touchesStart.x=t.pageX,p.touchesStart.y=t.pageY))}(s)})),s("touchEnd",((t,s)=>{e.zoom.enabled&&function(){const t=e.zoom;if(!d.imageEl)return;if(!p.isTouched||!p.isMoved)return p.isTouched=!1,void(p.isMoved=!1);p.isTouched=!1,p.isMoved=!1;let s=300,i=300;const a=u.x*s,r=p.currentX+a,n=u.y*i,l=p.currentY+n;0!==u.x&&(s=Math.abs((r-p.currentX)/u.x)),0!==u.y&&(i=Math.abs((l-p.currentY)/u.y));const o=Math.max(s,i);p.currentX=r,p.currentY=l;const c=p.width*t.scale,m=p.height*t.scale;p.minX=Math.min(d.slideWidth/2-c/2,0),p.maxX=-p.minX,p.minY=Math.min(d.slideHeight/2-m/2,0),p.maxY=-p.minY,p.currentX=Math.max(Math.min(p.currentX,p.maxX),p.minX),p.currentY=Math.max(Math.min(p.currentY,p.maxY),p.minY),d.imageWrapEl.style.transitionDuration=`${o}ms`,d.imageWrapEl.style.transform=`translate3d(${p.currentX}px, ${p.currentY}px,0)`}()})),s("doubleTap",((t,s)=>{!e.animating&&e.params.zoom.enabled&&e.zoom.enabled&&e.params.zoom.toggle&&S(s)})),s("transitionEnd",(()=>{e.zoom.enabled&&e.params.zoom.enabled&&y()})),s("slideChange",(()=>{e.zoom.enabled&&e.params.zoom.enabled&&e.params.cssMode&&y()})),Object.assign(e.zoom,{enable:T,disable:M,in:x,out:E,toggle:S})},function({swiper:e,extendParams:t,on:s}){function i(e,t){const s=function(){let e,t,s;return(i,a)=>{for(t=-1,e=i.length;e-t>1;)s=e+t>>1,i[s]<=a?t=s:e=s;return e}}();let i,a;return this.x=e,this.y=t,this.lastIndex=e.length-1,this.interpolate=function(e){return e?(a=s(this.x,e),i=a-1,(e-this.x[i])*(this.y[a]-this.y[i])/(this.x[a]-this.x[i])+this.y[i]):0},this}function a(){e.controller.control&&e.controller.spline&&(e.controller.spline=void 0,delete e.controller.spline)}t({controller:{control:void 0,inverse:!1,by:"slide"}}),e.controller={control:void 0},s("beforeInit",(()=>{if("undefined"!=typeof window&&("string"==typeof e.params.controller.control||e.params.controller.control instanceof HTMLElement)){const t=document.querySelector(e.params.controller.control);if(t&&t.swiper)e.controller.control=t.swiper;else if(t){const s=i=>{e.controller.control=i.detail[0],e.update(),t.removeEventListener("init",s)};t.addEventListener("init",s)}}else e.controller.control=e.params.controller.control})),s("update",(()=>{a()})),s("resize",(()=>{a()})),s("observerUpdate",(()=>{a()})),s("setTranslate",((t,s,i)=>{e.controller.control&&e.controller.setTranslate(s,i)})),s("setTransition",((t,s,i)=>{e.controller.control&&e.controller.setTransition(s,i)})),Object.assign(e.controller,{setTranslate:function(t,s){const a=e.controller.control;let r,n;const l=e.constructor;function o(t){const s=e.rtlTranslate?-e.translate:e.translate;"slide"===e.params.controller.by&&(!function(t){e.controller.spline||(e.controller.spline=e.params.loop?new i(e.slidesGrid,t.slidesGrid):new i(e.snapGrid,t.snapGrid))}(t),n=-e.controller.spline.interpolate(-s)),n&&"container"!==e.params.controller.by||(r=(t.maxTranslate()-t.minTranslate())/(e.maxTranslate()-e.minTranslate()),n=(s-e.minTranslate())*r+t.minTranslate()),e.params.controller.inverse&&(n=t.maxTranslate()-n),t.updateProgress(n),t.setTranslate(n,e),t.updateActiveIndex(),t.updateSlidesClasses()}if(Array.isArray(a))for(let e=0;e<a.length;e+=1)a[e]!==s&&a[e]instanceof l&&o(a[e]);else a instanceof l&&s!==a&&o(a)},setTransition:function(t,s){const i=e.constructor,a=e.controller.control;let r;function n(s){s.setTransition(t,e),0!==t&&(s.transitionStart(),s.params.autoHeight&&Re((()=>{s.updateAutoHeight()})),at(s.wrapperEl,(()=>{a&&s.transitionEnd()})))}if(Array.isArray(a))for(r=0;r<a.length;r+=1)a[r]!==s&&a[r]instanceof i&&n(a[r]);else a instanceof i&&s!==a&&n(a)}})},function({swiper:e,extendParams:t,on:s}){t({a11y:{enabled:!0,notificationClass:"swiper-notification",prevSlideMessage:"Previous slide",nextSlideMessage:"Next slide",firstSlideMessage:"This is the first slide",lastSlideMessage:"This is the last slide",paginationBulletMessage:"Go to slide {{index}}",slideLabelMessage:"{{index}} / {{slidesLength}}",containerMessage:null,containerRoleDescriptionMessage:null,itemRoleDescriptionMessage:null,slideRole:"group",id:null}}),e.a11y={clicked:!1};let i=null;function a(e){const t=i;0!==t.length&&(t.innerHTML="",t.innerHTML=e)}const r=e=>(Array.isArray(e)||(e=[e].filter((e=>!!e))),e);function n(e){(e=r(e)).forEach((e=>{e.setAttribute("tabIndex","0")}))}function l(e){(e=r(e)).forEach((e=>{e.setAttribute("tabIndex","-1")}))}function o(e,t){(e=r(e)).forEach((e=>{e.setAttribute("role",t)}))}function c(e,t){(e=r(e)).forEach((e=>{e.setAttribute("aria-roledescription",t)}))}function d(e,t){(e=r(e)).forEach((e=>{e.setAttribute("aria-label",t)}))}function p(e){(e=r(e)).forEach((e=>{e.setAttribute("aria-disabled",!0)}))}function u(e){(e=r(e)).forEach((e=>{e.setAttribute("aria-disabled",!1)}))}function m(t){if(13!==t.keyCode&&32!==t.keyCode)return;const s=e.params.a11y,i=t.target;e.pagination&&e.pagination.el&&(i===e.pagination.el||e.pagination.el.contains(t.target))&&!t.target.matches(_t(e.params.pagination.bulletClass))||(e.navigation&&e.navigation.nextEl&&i===e.navigation.nextEl&&(e.isEnd&&!e.params.loop||e.slideNext(),e.isEnd?a(s.lastSlideMessage):a(s.nextSlideMessage)),e.navigation&&e.navigation.prevEl&&i===e.navigation.prevEl&&(e.isBeginning&&!e.params.loop||e.slidePrev(),e.isBeginning?a(s.firstSlideMessage):a(s.prevSlideMessage)),e.pagination&&i.matches(_t(e.params.pagination.bulletClass))&&i.click())}function f(){return e.pagination&&e.pagination.bullets&&e.pagination.bullets.length}function h(){return f()&&e.params.pagination.clickable}const g=(e,t,s)=>{n(e),"BUTTON"!==e.tagName&&(o(e,"button"),e.addEventListener("keydown",m)),d(e,s),function(e,t){(e=r(e)).forEach((e=>{e.setAttribute("aria-controls",t)}))}(e,t)},v=()=>{e.a11y.clicked=!0},w=()=>{requestAnimationFrame((()=>{requestAnimationFrame((()=>{e.destroyed||(e.a11y.clicked=!1)}))}))},b=t=>{if(e.a11y.clicked)return;const s=t.target.closest(`.${e.params.slideClass}, swiper-slide`);if(!s||!e.slides.includes(s))return;const i=e.slides.indexOf(s)===e.activeIndex,a=e.params.watchSlidesProgress&&e.visibleSlides&&e.visibleSlides.includes(s);i||a||t.sourceCapabilities&&t.sourceCapabilities.firesTouchEvents||(e.isHorizontal()?e.el.scrollLeft=0:e.el.scrollTop=0,e.slideTo(e.slides.indexOf(s),0))},y=()=>{const t=e.params.a11y;t.itemRoleDescriptionMessage&&c(e.slides,t.itemRoleDescriptionMessage),t.slideRole&&o(e.slides,t.slideRole);const s=e.slides.length;t.slideLabelMessage&&e.slides.forEach(((i,a)=>{const r=e.params.loop?parseInt(i.getAttribute("data-swiper-slide-index"),10):a;d(i,t.slideLabelMessage.replace(/\{\{index\}\}/,r+1).replace(/\{\{slidesLength\}\}/,s))}))},x=()=>{const t=e.params.a11y;e.el.append(i);const s=e.el;t.containerRoleDescriptionMessage&&c(s,t.containerRoleDescriptionMessage),t.containerMessage&&d(s,t.containerMessage);const a=e.wrapperEl,n=t.id||a.getAttribute("id")||`swiper-wrapper-${function(e=16){return"x".repeat(e).replace(/x/g,(()=>Math.round(16*Math.random()).toString(16)))}(16)}`,l=e.params.autoplay&&e.params.autoplay.enabled?"off":"polite";var o;o=n,r(a).forEach((e=>{e.setAttribute("id",o)})),function(e,t){(e=r(e)).forEach((e=>{e.setAttribute("aria-live",t)}))}(a,l),y();let{nextEl:p,prevEl:u}=e.navigation?e.navigation:{};if(p=r(p),u=r(u),p&&p.forEach((e=>g(e,n,t.nextSlideMessage))),u&&u.forEach((e=>g(e,n,t.prevSlideMessage))),h()){(Array.isArray(e.pagination.el)?e.pagination.el:[e.pagination.el]).forEach((e=>{e.addEventListener("keydown",m)}))}e.el.addEventListener("focus",b,!0),e.el.addEventListener("pointerdown",v,!0),e.el.addEventListener("pointerup",w,!0)};s("beforeInit",(()=>{i=Je("span",e.params.a11y.notificationClass),i.setAttribute("aria-live","assertive"),i.setAttribute("aria-atomic","true"),e.isElement&&i.setAttribute("slot","container-end")})),s("afterInit",(()=>{e.params.a11y.enabled&&x()})),s("slidesLengthChange snapGridLengthChange slidesGridLengthChange",(()=>{e.params.a11y.enabled&&y()})),s("fromEdge toEdge afterInit lock unlock",(()=>{e.params.a11y.enabled&&function(){if(e.params.loop||e.params.rewind||!e.navigation)return;const{nextEl:t,prevEl:s}=e.navigation;s&&(e.isBeginning?(p(s),l(s)):(u(s),n(s))),t&&(e.isEnd?(p(t),l(t)):(u(t),n(t)))}()})),s("paginationUpdate",(()=>{e.params.a11y.enabled&&function(){const t=e.params.a11y;f()&&e.pagination.bullets.forEach((s=>{e.params.pagination.clickable&&(n(s),e.params.pagination.renderBullet||(o(s,"button"),d(s,t.paginationBulletMessage.replace(/\{\{index\}\}/,st(s)+1)))),s.matches(`.${e.params.pagination.bulletActiveClass}`)?s.setAttribute("aria-current","true"):s.removeAttribute("aria-current")}))}()})),s("destroy",(()=>{e.params.a11y.enabled&&function(){i&&i.length>0&&i.remove();let{nextEl:t,prevEl:s}=e.navigation?e.navigation:{};t=r(t),s=r(s),t&&t.forEach((e=>e.removeEventListener("keydown",m))),s&&s.forEach((e=>e.removeEventListener("keydown",m))),h()&&(Array.isArray(e.pagination.el)?e.pagination.el:[e.pagination.el]).forEach((e=>{e.removeEventListener("keydown",m)}));e.el.removeEventListener("focus",b,!0),e.el.removeEventListener("pointerdown",v,!0),e.el.removeEventListener("pointerup",w,!0)}()}))},function({swiper:e,extendParams:t,on:s}){t({history:{enabled:!1,root:"",replaceState:!1,key:"slides",keepQuery:!1}});let i=!1,a={};const r=e=>e.toString().replace(/\s+/g,"-").replace(/[^\w-]+/g,"").replace(/--+/g,"-").replace(/^-+/,"").replace(/-+$/,""),n=e=>{const t=Xe();let s;s=e?new URL(e):t.location;const i=s.pathname.slice(1).split("/").filter((e=>""!==e)),a=i.length;return{key:i[a-2],value:i[a-1]}},l=(t,s)=>{const a=Xe();if(!i||!e.params.history.enabled)return;let n;n=e.params.url?new URL(e.params.url):a.location;const l=e.slides[s];let o=r(l.getAttribute("data-history"));if(e.params.history.root.length>0){let s=e.params.history.root;"/"===s[s.length-1]&&(s=s.slice(0,s.length-1)),o=`${s}/${t?`${t}/`:""}${o}`}else n.pathname.includes(t)||(o=`${t?`${t}/`:""}${o}`);e.params.history.keepQuery&&(o+=n.search);const c=a.history.state;c&&c.value===o||(e.params.history.replaceState?a.history.replaceState({value:o},null,o):a.history.pushState({value:o},null,o))},o=(t,s,i)=>{if(s)for(let a=0,n=e.slides.length;a<n;a+=1){const n=e.slides[a];if(r(n.getAttribute("data-history"))===s){const s=e.getSlideIndex(n);e.slideTo(s,t,i)}}else e.slideTo(0,t,i)},c=()=>{a=n(e.params.url),o(e.params.speed,a.value,!1)};s("init",(()=>{e.params.history.enabled&&(()=>{const t=Xe();if(e.params.history){if(!t.history||!t.history.pushState)return e.params.history.enabled=!1,void(e.params.hashNavigation.enabled=!0);i=!0,a=n(e.params.url),a.key||a.value?(o(0,a.value,e.params.runCallbacksOnInit),e.params.history.replaceState||t.addEventListener("popstate",c)):e.params.history.replaceState||t.addEventListener("popstate",c)}})()})),s("destroy",(()=>{e.params.history.enabled&&(()=>{const t=Xe();e.params.history.replaceState||t.removeEventListener("popstate",c)})()})),s("transitionEnd _freeModeNoMomentumRelease",(()=>{i&&l(e.params.history.key,e.activeIndex)})),s("slideChange",(()=>{i&&e.params.cssMode&&l(e.params.history.key,e.activeIndex)}))},function({swiper:e,extendParams:t,emit:s,on:i}){let a=!1;const r=Ne(),n=Xe();t({hashNavigation:{enabled:!1,replaceState:!1,watchState:!1}});const l=()=>{s("hashChange");const t=r.location.hash.replace("#","");if(t!==e.slides[e.activeIndex].getAttribute("data-hash")){const s=e.getSlideIndex(Ke(e.slidesEl,`.${e.params.slideClass}[data-hash="${t}"], swiper-slide[data-hash="${t}"]`)[0]);if(void 0===s)return;e.slideTo(s)}},o=()=>{if(a&&e.params.hashNavigation.enabled)if(e.params.hashNavigation.replaceState&&n.history&&n.history.replaceState)n.history.replaceState(null,null,`#${e.slides[e.activeIndex].getAttribute("data-hash")}`||""),s("hashSet");else{const t=e.slides[e.activeIndex],i=t.getAttribute("data-hash")||t.getAttribute("data-history");r.location.hash=i||"",s("hashSet")}};i("init",(()=>{e.params.hashNavigation.enabled&&(()=>{if(!e.params.hashNavigation.enabled||e.params.history&&e.params.history.enabled)return;a=!0;const t=r.location.hash.replace("#","");if(t){const s=0;for(let i=0,a=e.slides.length;i<a;i+=1){const a=e.slides[i];if((a.getAttribute("data-hash")||a.getAttribute("data-history"))===t){const t=e.getSlideIndex(a);e.slideTo(t,s,e.params.runCallbacksOnInit,!0)}}}e.params.hashNavigation.watchState&&n.addEventListener("hashchange",l)})()})),i("destroy",(()=>{e.params.hashNavigation.enabled&&e.params.hashNavigation.watchState&&n.removeEventListener("hashchange",l)})),i("transitionEnd _freeModeNoMomentumRelease",(()=>{a&&o()})),i("slideChange",(()=>{a&&e.params.cssMode&&o()}))},function({swiper:e,extendParams:t,on:s,emit:i,params:a}){let r,n;e.autoplay={running:!1,paused:!1,timeLeft:0},t({autoplay:{enabled:!1,delay:3e3,waitForTransition:!0,disableOnInteraction:!0,stopOnLastSlide:!1,reverseDirection:!1,pauseOnMouseEnter:!1}});let l,o,c,d,p,u,m,f=a&&a.autoplay?a.autoplay.delay:3e3,h=a&&a.autoplay?a.autoplay.delay:3e3,g=(new Date).getTime;function v(t){e&&!e.destroyed&&e.wrapperEl&&t.target===e.wrapperEl&&(e.wrapperEl.removeEventListener("transitionend",v),S())}const w=()=>{if(e.destroyed||!e.autoplay.running)return;e.autoplay.paused?o=!0:o&&(h=l,o=!1);const t=e.autoplay.paused?l:g+h-(new Date).getTime();e.autoplay.timeLeft=t,i("autoplayTimeLeft",t,t/f),n=requestAnimationFrame((()=>{w()}))},b=t=>{if(e.destroyed||!e.autoplay.running)return;cancelAnimationFrame(n),w();let s=void 0===t?e.params.autoplay.delay:t;f=e.params.autoplay.delay,h=e.params.autoplay.delay;const a=(()=>{let t;if(t=e.virtual&&e.params.virtual.enabled?e.slides.filter((e=>e.classList.contains("swiper-slide-active")))[0]:e.slides[e.activeIndex],!t)return;return parseInt(t.getAttribute("data-swiper-autoplay"),10)})();!Number.isNaN(a)&&a>0&&void 0===t&&(s=a,f=a,h=a),l=s;const o=e.params.speed,c=()=>{e&&!e.destroyed&&(e.params.autoplay.reverseDirection?!e.isBeginning||e.params.loop||e.params.rewind?(e.slidePrev(o,!0,!0),i("autoplay")):e.params.autoplay.stopOnLastSlide||(e.slideTo(e.slides.length-1,o,!0,!0),i("autoplay")):!e.isEnd||e.params.loop||e.params.rewind?(e.slideNext(o,!0,!0),i("autoplay")):e.params.autoplay.stopOnLastSlide||(e.slideTo(0,o,!0,!0),i("autoplay")),e.params.cssMode&&(g=(new Date).getTime(),requestAnimationFrame((()=>{b()}))))};return s>0?(clearTimeout(r),r=setTimeout((()=>{c()}),s)):requestAnimationFrame((()=>{c()})),s},y=()=>{e.autoplay.running=!0,b(),i("autoplayStart")},x=()=>{e.autoplay.running=!1,clearTimeout(r),cancelAnimationFrame(n),i("autoplayStop")},E=(t,s)=>{if(e.destroyed||!e.autoplay.running)return;clearTimeout(r),t||(m=!0);const a=()=>{i("autoplayPause"),e.params.autoplay.waitForTransition?e.wrapperEl.addEventListener("transitionend",v):S()};if(e.autoplay.paused=!0,s)return u&&(l=e.params.autoplay.delay),u=!1,void a();const n=l||e.params.autoplay.delay;l=n-((new Date).getTime()-g),e.isEnd&&l<0&&!e.params.loop||(l<0&&(l=0),a())},S=()=>{e.isEnd&&l<0&&!e.params.loop||e.destroyed||!e.autoplay.running||(g=(new Date).getTime(),m?(m=!1,b(l)):b(),e.autoplay.paused=!1,i("autoplayResume"))},A=()=>{if(e.destroyed||!e.autoplay.running)return;const t=Ne();"hidden"===t.visibilityState&&(m=!0,E(!0)),"visible"===t.visibilityState&&S()},T=e=>{"mouse"===e.pointerType&&(m=!0,E(!0))},M=t=>{"mouse"===t.pointerType&&e.autoplay.paused&&S()};s("init",(()=>{e.params.autoplay.enabled&&(e.params.autoplay.pauseOnMouseEnter&&(e.el.addEventListener("pointerenter",T),e.el.addEventListener("pointerleave",M)),Ne().addEventListener("visibilitychange",A),g=(new Date).getTime(),y())})),s("destroy",(()=>{e.el.removeEventListener("pointerenter",T),e.el.removeEventListener("pointerleave",M),Ne().removeEventListener("visibilitychange",A),e.autoplay.running&&x()})),s("beforeTransitionStart",((t,s,i)=>{!e.destroyed&&e.autoplay.running&&(i||!e.params.autoplay.disableOnInteraction?E(!0,!0):x())})),s("sliderFirstMove",(()=>{!e.destroyed&&e.autoplay.running&&(e.params.autoplay.disableOnInteraction?x():(c=!0,d=!1,m=!1,p=setTimeout((()=>{m=!0,d=!0,E(!0)}),200)))})),s("touchEnd",(()=>{if(!e.destroyed&&e.autoplay.running&&c){if(clearTimeout(p),clearTimeout(r),e.params.autoplay.disableOnInteraction)return d=!1,void(c=!1);d&&e.params.cssMode&&S(),d=!1,c=!1}})),s("slideChange",(()=>{!e.destroyed&&e.autoplay.running&&(u=!0)})),Object.assign(e.autoplay,{start:y,stop:x,pause:E,resume:S})},function({swiper:e,extendParams:t,on:s}){t({thumbs:{swiper:null,multipleActiveThumbs:!0,autoScrollOffset:0,slideThumbActiveClass:"swiper-slide-thumb-active",thumbsContainerClass:"swiper-thumbs"}});let i=!1,a=!1;function r(){const t=e.thumbs.swiper;if(!t||t.destroyed)return;const s=t.clickedIndex,i=t.clickedSlide;if(i&&i.classList.contains(e.params.thumbs.slideThumbActiveClass))return;if(null==s)return;let a;a=t.params.loop?parseInt(t.clickedSlide.getAttribute("data-swiper-slide-index"),10):s,e.params.loop?e.slideToLoop(a):e.slideTo(a)}function n(){const{thumbs:t}=e.params;if(i)return!1;i=!0;const s=e.constructor;if(t.swiper instanceof s)e.thumbs.swiper=t.swiper,Object.assign(e.thumbs.swiper.originalParams,{watchSlidesProgress:!0,slideToClickedSlide:!1}),Object.assign(e.thumbs.swiper.params,{watchSlidesProgress:!0,slideToClickedSlide:!1}),e.thumbs.swiper.update();else if(We(t.swiper)){const i=Object.assign({},t.swiper);Object.assign(i,{watchSlidesProgress:!0,slideToClickedSlide:!1}),e.thumbs.swiper=new s(i),a=!0}return e.thumbs.swiper.el.classList.add(e.params.thumbs.thumbsContainerClass),e.thumbs.swiper.on("tap",r),!0}function l(t){const s=e.thumbs.swiper;if(!s||s.destroyed)return;const i="auto"===s.params.slidesPerView?s.slidesPerViewDynamic():s.params.slidesPerView;let a=1;const r=e.params.thumbs.slideThumbActiveClass;if(e.params.slidesPerView>1&&!e.params.centeredSlides&&(a=e.params.slidesPerView),e.params.thumbs.multipleActiveThumbs||(a=1),a=Math.floor(a),s.slides.forEach((e=>e.classList.remove(r))),s.params.loop||s.params.virtual&&s.params.virtual.enabled)for(let t=0;t<a;t+=1)Ke(s.slidesEl,`[data-swiper-slide-index="${e.realIndex+t}"]`).forEach((e=>{e.classList.add(r)}));else for(let t=0;t<a;t+=1)s.slides[e.realIndex+t]&&s.slides[e.realIndex+t].classList.add(r);const n=e.params.thumbs.autoScrollOffset,l=n&&!s.params.loop;if(e.realIndex!==s.realIndex||l){const a=s.activeIndex;let r,o;if(s.params.loop){const t=s.slides.filter((t=>t.getAttribute("data-swiper-slide-index")===`${e.realIndex}`))[0];r=s.slides.indexOf(t),o=e.activeIndex>e.previousIndex?"next":"prev"}else r=e.realIndex,o=r>e.previousIndex?"next":"prev";l&&(r+="next"===o?n:-1*n),s.visibleSlidesIndexes&&s.visibleSlidesIndexes.indexOf(r)<0&&(s.params.centeredSlides?r=r>a?r-Math.floor(i/2)+1:r+Math.floor(i/2)-1:r>a&&s.params.slidesPerGroup,s.slideTo(r,t?0:void 0))}}e.thumbs={swiper:null},s("beforeInit",(()=>{const{thumbs:t}=e.params;if(t&&t.swiper)if("string"==typeof t.swiper||t.swiper instanceof HTMLElement){const s=Ne(),i=()=>{const i="string"==typeof t.swiper?s.querySelector(t.swiper):t.swiper;if(i&&i.swiper)t.swiper=i.swiper,n(),l(!0);else if(i){const s=a=>{t.swiper=a.detail[0],i.removeEventListener("init",s),n(),l(!0),t.swiper.update(),e.update()};i.addEventListener("init",s)}return i},a=()=>{if(e.destroyed)return;i()||requestAnimationFrame(a)};requestAnimationFrame(a)}else n(),l(!0)})),s("slideChange update resize observerUpdate",(()=>{l()})),s("setTransition",((t,s)=>{const i=e.thumbs.swiper;i&&!i.destroyed&&i.setTransition(s)})),s("beforeDestroy",(()=>{const t=e.thumbs.swiper;t&&!t.destroyed&&a&&t.destroy()})),Object.assign(e.thumbs,{init:n,update:l})},function({swiper:e,extendParams:t,emit:s,once:i}){t({freeMode:{enabled:!1,momentum:!0,momentumRatio:1,momentumBounce:!0,momentumBounceRatio:1,momentumVelocityRatio:1,sticky:!1,minimumVelocity:.02}}),Object.assign(e,{freeMode:{onTouchStart:function(){const t=e.getTranslate();e.setTranslate(t),e.setTransition(0),e.touchEventsData.velocities.length=0,e.freeMode.onTouchEnd({currentPos:e.rtl?e.translate:-e.translate})},onTouchMove:function(){const{touchEventsData:t,touches:s}=e;0===t.velocities.length&&t.velocities.push({position:s[e.isHorizontal()?"startX":"startY"],time:t.touchStartTime}),t.velocities.push({position:s[e.isHorizontal()?"currentX":"currentY"],time:Ve()})},onTouchEnd:function({currentPos:t}){const{params:a,wrapperEl:r,rtlTranslate:n,snapGrid:l,touchEventsData:o}=e,c=Ve()-o.touchStartTime;if(t<-e.minTranslate())e.slideTo(e.activeIndex);else if(t>-e.maxTranslate())e.slides.length<l.length?e.slideTo(l.length-1):e.slideTo(e.slides.length-1);else{if(a.freeMode.momentum){if(o.velocities.length>1){const t=o.velocities.pop(),s=o.velocities.pop(),i=t.position-s.position,r=t.time-s.time;e.velocity=i/r,e.velocity/=2,Math.abs(e.velocity)<a.freeMode.minimumVelocity&&(e.velocity=0),(r>150||Ve()-t.time>300)&&(e.velocity=0)}else e.velocity=0;e.velocity*=a.freeMode.momentumVelocityRatio,o.velocities.length=0;let t=1e3*a.freeMode.momentumRatio;const c=e.velocity*t;let d=e.translate+c;n&&(d=-d);let p,u=!1;const m=20*Math.abs(e.velocity)*a.freeMode.momentumBounceRatio;let f;if(d<e.maxTranslate())a.freeMode.momentumBounce?(d+e.maxTranslate()<-m&&(d=e.maxTranslate()-m),p=e.maxTranslate(),u=!0,o.allowMomentumBounce=!0):d=e.maxTranslate(),a.loop&&a.centeredSlides&&(f=!0);else if(d>e.minTranslate())a.freeMode.momentumBounce?(d-e.minTranslate()>m&&(d=e.minTranslate()+m),p=e.minTranslate(),u=!0,o.allowMomentumBounce=!0):d=e.minTranslate(),a.loop&&a.centeredSlides&&(f=!0);else if(a.freeMode.sticky){let t;for(let e=0;e<l.length;e+=1)if(l[e]>-d){t=e;break}d=Math.abs(l[t]-d)<Math.abs(l[t-1]-d)||"next"===e.swipeDirection?l[t]:l[t-1],d=-d}if(f&&i("transitionEnd",(()=>{e.loopFix()})),0!==e.velocity){if(t=n?Math.abs((-d-e.translate)/e.velocity):Math.abs((d-e.translate)/e.velocity),a.freeMode.sticky){const s=Math.abs((n?-d:d)-e.translate),i=e.slidesSizesGrid[e.activeIndex];t=s<i?a.speed:s<2*i?1.5*a.speed:2.5*a.speed}}else if(a.freeMode.sticky)return void e.slideToClosest();a.freeMode.momentumBounce&&u?(e.updateProgress(p),e.setTransition(t),e.setTranslate(d),e.transitionStart(!0,e.swipeDirection),e.animating=!0,at(r,(()=>{e&&!e.destroyed&&o.allowMomentumBounce&&(s("momentumBounce"),e.setTransition(a.speed),setTimeout((()=>{e.setTranslate(p),at(r,(()=>{e&&!e.destroyed&&e.transitionEnd()}))}),0))}))):e.velocity?(s("_freeModeNoMomentumRelease"),e.updateProgress(d),e.setTransition(t),e.setTranslate(d),e.transitionStart(!0,e.swipeDirection),e.animating||(e.animating=!0,at(r,(()=>{e&&!e.destroyed&&e.transitionEnd()})))):e.updateProgress(d),e.updateActiveIndex(),e.updateSlidesClasses()}else{if(a.freeMode.sticky)return void e.slideToClosest();a.freeMode&&s("_freeModeNoMomentumRelease")}(!a.freeMode.momentum||c>=a.longSwipesMs)&&(e.updateProgress(),e.updateActiveIndex(),e.updateSlidesClasses())}}}})},function({swiper:e,extendParams:t}){let s,i,a;t({grid:{rows:1,fill:"column"}}),e.grid={initSlides:t=>{const{slidesPerView:r}=e.params,{rows:n,fill:l}=e.params.grid;i=s/n,a=Math.floor(t/n),s=Math.floor(t/n)===t/n?t:Math.ceil(t/n)*n,"auto"!==r&&"row"===l&&(s=Math.max(s,r*n))},updateSlide:(t,r,n,l)=>{const{slidesPerGroup:o,spaceBetween:c}=e.params,{rows:d,fill:p}=e.params.grid;let u,m,f;if("row"===p&&o>1){const e=Math.floor(t/(o*d)),i=t-d*o*e,a=0===e?o:Math.min(Math.ceil((n-e*d*o)/d),o);f=Math.floor(i/a),m=i-f*a+e*o,u=m+f*s/d,r.style.order=u}else"column"===p?(m=Math.floor(t/d),f=t-m*d,(m>a||m===a&&f===d-1)&&(f+=1,f>=d&&(f=0,m+=1))):(f=Math.floor(t/i),m=t-f*i);r.style[l("margin-top")]=0!==f?c&&`${c}px`:""},updateWrapperSize:(t,i,a)=>{const{spaceBetween:r,centeredSlides:n,roundLengths:l}=e.params,{rows:o}=e.params.grid;if(e.virtualSize=(t+r)*s,e.virtualSize=Math.ceil(e.virtualSize/o)-r,e.wrapperEl.style[a("width")]=`${e.virtualSize+r}px`,n){const t=[];for(let s=0;s<i.length;s+=1){let a=i[s];l&&(a=Math.floor(a)),i[s]<e.virtualSize+i[0]&&t.push(a)}i.splice(0,i.length),i.push(...t)}}}},function({swiper:e}){Object.assign(e,{appendSlide:Yt.bind(e),prependSlide:Gt.bind(e),addSlide:Ht.bind(e),removeSlide:Nt.bind(e),removeAllSlides:jt.bind(e)})},function({swiper:e,extendParams:t,on:s}){t({fadeEffect:{crossFade:!1}}),Xt({effect:"fade",swiper:e,on:s,setTranslate:()=>{const{slides:t}=e;e.params.fadeEffect;for(let s=0;s<t.length;s+=1){const t=e.slides[s];let i=-t.swiperSlideOffset;e.params.virtualTranslate||(i-=e.translate);let a=0;e.isHorizontal()||(a=i,i=0);const r=e.params.fadeEffect.crossFade?Math.max(1-Math.abs(t.progress),0):1+Math.min(Math.max(t.progress,-1),0),n=Rt(0,t);n.style.opacity=r,n.style.transform=`translate3d(${i}px, ${a}px, 0px)`}},setTransition:t=>{const s=e.slides.map((e=>Ze(e)));s.forEach((e=>{e.style.transitionDuration=`${t}ms`})),Vt({swiper:e,duration:t,transformElements:s,allSlides:!0})},overwriteParams:()=>({slidesPerView:1,slidesPerGroup:1,watchSlidesProgress:!0,spaceBetween:0,virtualTranslate:!e.params.cssMode})})},function({swiper:e,extendParams:t,on:s}){t({cubeEffect:{slideShadows:!0,shadow:!0,shadowOffset:20,shadowScale:.94}});const i=(e,t,s)=>{let i=s?e.querySelector(".swiper-slide-shadow-left"):e.querySelector(".swiper-slide-shadow-top"),a=s?e.querySelector(".swiper-slide-shadow-right"):e.querySelector(".swiper-slide-shadow-bottom");i||(i=Je("div","swiper-slide-shadow-"+(s?"left":"top")),e.append(i)),a||(a=Je("div","swiper-slide-shadow-"+(s?"right":"bottom")),e.append(a)),i&&(i.style.opacity=Math.max(-t,0)),a&&(a.style.opacity=Math.max(t,0))};Xt({effect:"cube",swiper:e,on:s,setTranslate:()=>{const{el:t,wrapperEl:s,slides:a,width:r,height:n,rtlTranslate:l,size:o,browser:c}=e,d=e.params.cubeEffect,p=e.isHorizontal(),u=e.virtual&&e.params.virtual.enabled;let m,f=0;d.shadow&&(p?(m=e.slidesEl.querySelector(".swiper-cube-shadow"),m||(m=Je("div","swiper-cube-shadow"),e.slidesEl.append(m)),m.style.height=`${r}px`):(m=t.querySelector(".swiper-cube-shadow"),m||(m=Je("div","swiper-cube-shadow"),t.append(m))));for(let e=0;e<a.length;e+=1){const t=a[e];let s=e;u&&(s=parseInt(t.getAttribute("data-swiper-slide-index"),10));let r=90*s,n=Math.floor(r/360);l&&(r=-r,n=Math.floor(-r/360));const c=Math.max(Math.min(t.progress,1),-1);let m=0,h=0,g=0;s%4==0?(m=4*-n*o,g=0):(s-1)%4==0?(m=0,g=4*-n*o):(s-2)%4==0?(m=o+4*n*o,g=o):(s-3)%4==0&&(m=-o,g=3*o+4*o*n),l&&(m=-m),p||(h=m,m=0);const v=`rotateX(${p?0:-r}deg) rotateY(${p?r:0}deg) translate3d(${m}px, ${h}px, ${g}px)`;c<=1&&c>-1&&(f=90*s+90*c,l&&(f=90*-s-90*c)),t.style.transform=v,d.slideShadows&&i(t,c,p)}if(s.style.transformOrigin=`50% 50% -${o/2}px`,s.style["-webkit-transform-origin"]=`50% 50% -${o/2}px`,d.shadow)if(p)m.style.transform=`translate3d(0px, ${r/2+d.shadowOffset}px, ${-r/2}px) rotateX(90deg) rotateZ(0deg) scale(${d.shadowScale})`;else{const e=Math.abs(f)-90*Math.floor(Math.abs(f)/90),t=1.5-(Math.sin(2*e*Math.PI/360)/2+Math.cos(2*e*Math.PI/360)/2),s=d.shadowScale,i=d.shadowScale/t,a=d.shadowOffset;m.style.transform=`scale3d(${s}, 1, ${i}) translate3d(0px, ${n/2+a}px, ${-n/2/i}px) rotateX(-90deg)`}const h=(c.isSafari||c.isWebView)&&c.needPerspectiveFix?-o/2:0;s.style.transform=`translate3d(0px,0,${h}px) rotateX(${e.isHorizontal()?0:f}deg) rotateY(${e.isHorizontal()?-f:0}deg)`,s.style.setProperty("--swiper-cube-translate-z",`${h}px`)},setTransition:t=>{const{el:s,slides:i}=e;if(i.forEach((e=>{e.style.transitionDuration=`${t}ms`,e.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((e=>{e.style.transitionDuration=`${t}ms`}))})),e.params.cubeEffect.shadow&&!e.isHorizontal()){const e=s.querySelector(".swiper-cube-shadow");e&&(e.style.transitionDuration=`${t}ms`)}},recreateShadows:()=>{const t=e.isHorizontal();e.slides.forEach((e=>{const s=Math.max(Math.min(e.progress,1),-1);i(e,s,t)}))},getEffectParams:()=>e.params.cubeEffect,perspective:()=>!0,overwriteParams:()=>({slidesPerView:1,slidesPerGroup:1,watchSlidesProgress:!0,resistanceRatio:0,spaceBetween:0,centeredSlides:!1,virtualTranslate:!0})})},function({swiper:e,extendParams:t,on:s}){t({flipEffect:{slideShadows:!0,limitRotation:!0}});const i=(t,s,i)=>{let a=e.isHorizontal()?t.querySelector(".swiper-slide-shadow-left"):t.querySelector(".swiper-slide-shadow-top"),r=e.isHorizontal()?t.querySelector(".swiper-slide-shadow-right"):t.querySelector(".swiper-slide-shadow-bottom");a||(a=Ft(0,t,e.isHorizontal()?"left":"top")),r||(r=Ft(0,t,e.isHorizontal()?"right":"bottom")),a&&(a.style.opacity=Math.max(-s,0)),r&&(r.style.opacity=Math.max(s,0))};Xt({effect:"flip",swiper:e,on:s,setTranslate:()=>{const{slides:t,rtlTranslate:s}=e,a=e.params.flipEffect;for(let r=0;r<t.length;r+=1){const n=t[r];let l=n.progress;e.params.flipEffect.limitRotation&&(l=Math.max(Math.min(n.progress,1),-1));const o=n.swiperSlideOffset;let c=-180*l,d=0,p=e.params.cssMode?-o-e.translate:-o,u=0;e.isHorizontal()?s&&(c=-c):(u=p,p=0,d=-c,c=0),n.style.zIndex=-Math.abs(Math.round(l))+t.length,a.slideShadows&&i(n,l);const m=`translate3d(${p}px, ${u}px, 0px) rotateX(${d}deg) rotateY(${c}deg)`;Rt(0,n).style.transform=m}},setTransition:t=>{const s=e.slides.map((e=>Ze(e)));s.forEach((e=>{e.style.transitionDuration=`${t}ms`,e.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((e=>{e.style.transitionDuration=`${t}ms`}))})),Vt({swiper:e,duration:t,transformElements:s})},recreateShadows:()=>{e.params.flipEffect;e.slides.forEach((t=>{let s=t.progress;e.params.flipEffect.limitRotation&&(s=Math.max(Math.min(t.progress,1),-1)),i(t,s)}))},getEffectParams:()=>e.params.flipEffect,perspective:()=>!0,overwriteParams:()=>({slidesPerView:1,slidesPerGroup:1,watchSlidesProgress:!0,spaceBetween:0,virtualTranslate:!e.params.cssMode})})},function({swiper:e,extendParams:t,on:s}){t({coverflowEffect:{rotate:50,stretch:0,depth:100,scale:1,modifier:1,slideShadows:!0}}),Xt({effect:"coverflow",swiper:e,on:s,setTranslate:()=>{const{width:t,height:s,slides:i,slidesSizesGrid:a}=e,r=e.params.coverflowEffect,n=e.isHorizontal(),l=e.translate,o=n?t/2-l:s/2-l,c=n?r.rotate:-r.rotate,d=r.depth;for(let e=0,t=i.length;e<t;e+=1){const t=i[e],s=a[e],l=(o-t.swiperSlideOffset-s/2)/s,p="function"==typeof r.modifier?r.modifier(l):l*r.modifier;let u=n?c*p:0,m=n?0:c*p,f=-d*Math.abs(p),h=r.stretch;"string"==typeof h&&-1!==h.indexOf("%")&&(h=parseFloat(r.stretch)/100*s);let g=n?0:h*p,v=n?h*p:0,w=1-(1-r.scale)*Math.abs(p);Math.abs(v)<.001&&(v=0),Math.abs(g)<.001&&(g=0),Math.abs(f)<.001&&(f=0),Math.abs(u)<.001&&(u=0),Math.abs(m)<.001&&(m=0),Math.abs(w)<.001&&(w=0);const b=`translate3d(${v}px,${g}px,${f}px)  rotateX(${m}deg) rotateY(${u}deg) scale(${w})`;if(Rt(0,t).style.transform=b,t.style.zIndex=1-Math.abs(Math.round(p)),r.slideShadows){let e=n?t.querySelector(".swiper-slide-shadow-left"):t.querySelector(".swiper-slide-shadow-top"),s=n?t.querySelector(".swiper-slide-shadow-right"):t.querySelector(".swiper-slide-shadow-bottom");e||(e=Ft(0,t,n?"left":"top")),s||(s=Ft(0,t,n?"right":"bottom")),e&&(e.style.opacity=p>0?p:0),s&&(s.style.opacity=-p>0?-p:0)}}},setTransition:t=>{e.slides.map((e=>Ze(e))).forEach((e=>{e.style.transitionDuration=`${t}ms`,e.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((e=>{e.style.transitionDuration=`${t}ms`}))}))},perspective:()=>!0,overwriteParams:()=>({watchSlidesProgress:!0})})},function({swiper:e,extendParams:t,on:s}){t({creativeEffect:{limitProgress:1,shadowPerProgress:!1,progressMultiplier:1,perspective:!0,prev:{translate:[0,0,0],rotate:[0,0,0],opacity:1,scale:1},next:{translate:[0,0,0],rotate:[0,0,0],opacity:1,scale:1}}});const i=e=>"string"==typeof e?e:`${e}px`;Xt({effect:"creative",swiper:e,on:s,setTranslate:()=>{const{slides:t,wrapperEl:s,slidesSizesGrid:a}=e,r=e.params.creativeEffect,{progressMultiplier:n}=r,l=e.params.centeredSlides;if(l){const t=a[0]/2-e.params.slidesOffsetBefore||0;s.style.transform=`translateX(calc(50% - ${t}px))`}for(let s=0;s<t.length;s+=1){const a=t[s],o=a.progress,c=Math.min(Math.max(a.progress,-r.limitProgress),r.limitProgress);let d=c;l||(d=Math.min(Math.max(a.originalProgress,-r.limitProgress),r.limitProgress));const p=a.swiperSlideOffset,u=[e.params.cssMode?-p-e.translate:-p,0,0],m=[0,0,0];let f=!1;e.isHorizontal()||(u[1]=u[0],u[0]=0);let h={translate:[0,0,0],rotate:[0,0,0],scale:1,opacity:1};c<0?(h=r.next,f=!0):c>0&&(h=r.prev,f=!0),u.forEach(((e,t)=>{u[t]=`calc(${e}px + (${i(h.translate[t])} * ${Math.abs(c*n)}))`})),m.forEach(((e,t)=>{m[t]=h.rotate[t]*Math.abs(c*n)})),a.style.zIndex=-Math.abs(Math.round(o))+t.length;const g=u.join(", "),v=`rotateX(${m[0]}deg) rotateY(${m[1]}deg) rotateZ(${m[2]}deg)`,w=d<0?`scale(${1+(1-h.scale)*d*n})`:`scale(${1-(1-h.scale)*d*n})`,b=d<0?1+(1-h.opacity)*d*n:1-(1-h.opacity)*d*n,y=`translate3d(${g}) ${v} ${w}`;if(f&&h.shadow||!f){let e=a.querySelector(".swiper-slide-shadow");if(!e&&h.shadow&&(e=Ft(0,a)),e){const t=r.shadowPerProgress?c*(1/r.limitProgress):c;e.style.opacity=Math.min(Math.max(Math.abs(t),0),1)}}const x=Rt(0,a);x.style.transform=y,x.style.opacity=b,h.origin&&(x.style.transformOrigin=h.origin)}},setTransition:t=>{const s=e.slides.map((e=>Ze(e)));s.forEach((e=>{e.style.transitionDuration=`${t}ms`,e.querySelectorAll(".swiper-slide-shadow").forEach((e=>{e.style.transitionDuration=`${t}ms`}))})),Vt({swiper:e,duration:t,transformElements:s,allSlides:!0})},perspective:()=>e.params.creativeEffect.perspective,overwriteParams:()=>({watchSlidesProgress:!0,virtualTranslate:!e.params.cssMode})})},function({swiper:e,extendParams:t,on:s}){t({cardsEffect:{slideShadows:!0,rotate:!0,perSlideRotate:2,perSlideOffset:8}}),Xt({effect:"cards",swiper:e,on:s,setTranslate:()=>{const{slides:t,activeIndex:s}=e,i=e.params.cardsEffect,{startTranslate:a,isTouched:r}=e.touchEventsData,n=e.translate;for(let l=0;l<t.length;l+=1){const o=t[l],c=o.progress,d=Math.min(Math.max(c,-4),4);let p=o.swiperSlideOffset;e.params.centeredSlides&&!e.params.cssMode&&(e.wrapperEl.style.transform=`translateX(${e.minTranslate()}px)`),e.params.centeredSlides&&e.params.cssMode&&(p-=t[0].swiperSlideOffset);let u=e.params.cssMode?-p-e.translate:-p,m=0;const f=-100*Math.abs(d);let h=1,g=-i.perSlideRotate*d,v=i.perSlideOffset-.75*Math.abs(d);const w=e.virtual&&e.params.virtual.enabled?e.virtual.from+l:l,b=(w===s||w===s-1)&&d>0&&d<1&&(r||e.params.cssMode)&&n<a,y=(w===s||w===s+1)&&d<0&&d>-1&&(r||e.params.cssMode)&&n>a;if(b||y){const e=(1-Math.abs((Math.abs(d)-.5)/.5))**.5;g+=-28*d*e,h+=-.5*e,v+=96*e,m=-25*e*Math.abs(d)+"%"}if(u=d<0?`calc(${u}px + (${v*Math.abs(d)}%))`:d>0?`calc(${u}px + (-${v*Math.abs(d)}%))`:`${u}px`,!e.isHorizontal()){const e=m;m=u,u=e}const x=d<0?""+(1+(1-h)*d):""+(1-(1-h)*d),E=`\n        translate3d(${u}, ${m}, ${f}px)\n        rotateZ(${i.rotate?g:0}deg)\n        scale(${x})\n      `;if(i.slideShadows){let e=o.querySelector(".swiper-slide-shadow");e||(e=Ft(0,o)),e&&(e.style.opacity=Math.min(Math.max((Math.abs(d)-.5)/.5,0),1))}o.style.zIndex=-Math.abs(Math.round(c))+t.length;Rt(0,o).style.transform=E}},setTransition:t=>{const s=e.slides.map((e=>Ze(e)));s.forEach((e=>{e.style.transitionDuration=`${t}ms`,e.querySelectorAll(".swiper-slide-shadow").forEach((e=>{e.style.transitionDuration=`${t}ms`}))})),Vt({swiper:e,duration:t,transformElements:s})},perspective:()=>!0,overwriteParams:()=>({watchSlidesProgress:!0,virtualTranslate:!e.params.cssMode})})}];Dt.use(Wt);const qt=["modules","init","_direction","oneWayMovement","touchEventsTarget","initialSlide","_speed","cssMode","updateOnWindowResize","resizeObserver","nested","focusableElements","_enabled","_width","_height","preventInteractionOnTransition","userAgent","url","_edgeSwipeDetection","_edgeSwipeThreshold","_freeMode","_autoHeight","setWrapperSize","virtualTranslate","_effect","breakpoints","_spaceBetween","_slidesPerView","maxBackfaceHiddenSlides","_grid","_slidesPerGroup","_slidesPerGroupSkip","_slidesPerGroupAuto","_centeredSlides","_centeredSlidesBounds","_slidesOffsetBefore","_slidesOffsetAfter","normalizeSlideIndex","_centerInsufficientSlides","_watchOverflow","roundLengths","touchRatio","touchAngle","simulateTouch","_shortSwipes","_longSwipes","longSwipesRatio","longSwipesMs","_followFinger","allowTouchMove","_threshold","touchMoveStopPropagation","touchStartPreventDefault","touchStartForcePreventDefault","touchReleaseOnEdges","uniqueNavElements","_resistance","_resistanceRatio","_watchSlidesProgress","_grabCursor","preventClicks","preventClicksPropagation","_slideToClickedSlide","_loop","loopedSlides","loopPreventsSliding","_rewind","_allowSlidePrev","_allowSlideNext","_swipeHandler","_noSwiping","noSwipingClass","noSwipingSelector","passiveListeners","containerModifierClass","slideClass","slideActiveClass","slideVisibleClass","slideNextClass","slidePrevClass","wrapperClass","lazyPreloaderClass","runCallbacksOnInit","observer","observeParents","observeSlideChildren","a11y","_autoplay","_controller","coverflowEffect","cubeEffect","fadeEffect","flipEffect","creativeEffect","cardsEffect","hashNavigation","history","keyboard","mousewheel","_navigation","_pagination","parallax","_scrollbar","_thumbs","virtual","zoom","control","injectStyles","injectStylesUrls"];function Ut(e){return"object"==typeof e&&null!==e&&e.constructor&&"Object"===Object.prototype.toString.call(e).slice(8,-1)}function Qt(e,t){const s=["__proto__","constructor","prototype"];Object.keys(t).filter((e=>s.indexOf(e)<0)).forEach((s=>{void 0===e[s]?e[s]=t[s]:Ut(t[s])&&Ut(e[s])&&Object.keys(t[s]).length>0?t[s].__swiper__?e[s]=t[s]:Qt(e[s],t[s]):e[s]=t[s]}))}function Zt(e=""){return e.replace(/-[a-z]/g,(e=>e.toUpperCase().replace("-","")))}const Kt=e=>parseFloat(e)===Number(e)?Number(e):"true"===e||(""===e||"false"!==e&&("null"===e?null:"undefined"!==e?e:void 0)),Jt=["a11y","autoplay","controller","cards-effect","coverflow-effect","creative-effect","cube-effect","fade-effect","flip-effect","free-mode","grid","hash-navigation","history","keyboard","mousewheel","navigation","pagination","parallax","scrollbar","thumbs","virtual","zoom"];function es(e){const t={},s={};Qt(t,Pt);const i=[...qt,"on"],a=i.map((e=>e.replace(/_/,"")));return i.forEach((t=>{t=t.replace("_",""),void 0!==e[t]&&(s[t]=e[t])})),[...e.attributes].forEach((e=>{const t=Jt.filter((t=>0===e.name.indexOf(`${t}-`)))[0];if(t){const i=Zt(t),a=Zt(e.name.split(`${t}-`)[1]);s[i]||(s[i]={}),!0===s[i]&&(s[i]={enabled:!0}),s[i][a]=Kt(e.value)}else{const t=Zt(e.name);if(!a.includes(t))return;const i=Kt(e.value);s[t]&&Jt.includes(e.name)?(s[t].constructor!==Object&&(s[t]={}),s[t].enabled=i):s[t]=i}})),Qt(t,s),t.navigation?t.navigation={prevEl:".swiper-button-prev",nextEl:".swiper-button-next",...!0!==t.navigation?t.navigation:{}}:!1===t.navigation&&delete t.navigation,t.scrollbar?t.scrollbar={el:".swiper-scrollbar",...!0!==t.scrollbar?t.scrollbar:{}}:!1===t.scrollbar&&delete t.scrollbar,t.pagination?t.pagination={el:".swiper-pagination",...!0!==t.pagination?t.pagination:{}}:!1===t.pagination&&delete t.pagination,{params:t,passedParams:s}}function ts({swiper:e,slides:t,passedParams:s,changedParams:i,nextEl:a,prevEl:r,scrollbarEl:n,paginationEl:l}){const o=i.filter((e=>"children"!==e&&"direction"!==e&&"wrapperClass"!==e)),{params:c,pagination:d,navigation:p,scrollbar:u,virtual:m,thumbs:f}=e;let h,g,v,w,b,y,x,E;i.includes("thumbs")&&s.thumbs&&s.thumbs.swiper&&c.thumbs&&!c.thumbs.swiper&&(h=!0),i.includes("controller")&&s.controller&&s.controller.control&&c.controller&&!c.controller.control&&(g=!0),i.includes("pagination")&&s.pagination&&(s.pagination.el||l)&&(c.pagination||!1===c.pagination)&&d&&!d.el&&(v=!0),i.includes("scrollbar")&&s.scrollbar&&(s.scrollbar.el||n)&&(c.scrollbar||!1===c.scrollbar)&&u&&!u.el&&(w=!0),i.includes("navigation")&&s.navigation&&(s.navigation.prevEl||r)&&(s.navigation.nextEl||a)&&(c.navigation||!1===c.navigation)&&p&&!p.prevEl&&!p.nextEl&&(b=!0);if(i.includes("loop")&&e.isElement&&(c.loop&&!s.loop?y=!0:!c.loop&&s.loop?x=!0:E=!0),o.forEach((t=>{if(Ut(c[t])&&Ut(s[t]))Qt(c[t],s[t]);else{const a=s[t];!0!==a&&!1!==a||"navigation"!==t&&"pagination"!==t&&"scrollbar"!==t?c[t]=s[t]:!1===a&&e[i=t]&&(e[i].destroy(),"navigation"===i?(e.isElement&&(e[i].prevEl.remove(),e[i].nextEl.remove()),c[i].prevEl=void 0,c[i].nextEl=void 0,e[i].prevEl=void 0,e[i].nextEl=void 0):(e.isElement&&e[i].el.remove(),c[i].el=void 0,e[i].el=void 0))}var i})),o.includes("controller")&&!g&&e.controller&&e.controller.control&&c.controller&&c.controller.control&&(e.controller.control=c.controller.control),i.includes("children")&&t&&m&&c.virtual.enabled&&(m.slides=t,m.update(!0)),i.includes("children")&&t&&c.loop&&(E=!0),h){f.init()&&f.update(!0)}g&&(e.controller.control=c.controller.control),v&&(!e.isElement||l&&"string"!=typeof l||((l=document.createElement("div")).classList.add("swiper-pagination"),e.el.shadowEl.appendChild(l)),l&&(c.pagination.el=l),d.init(),d.render(),d.update()),w&&(!e.isElement||n&&"string"!=typeof n||((n=document.createElement("div")).classList.add("swiper-scrollbar"),e.el.shadowEl.appendChild(n)),n&&(c.scrollbar.el=n),u.init(),u.updateSize(),u.setTranslate()),b&&(e.isElement&&(a&&"string"!=typeof a||((a=document.createElement("div")).classList.add("swiper-button-next"),e.el.shadowEl.appendChild(a)),r&&"string"!=typeof r||((r=document.createElement("div")).classList.add("swiper-button-prev"),e.el.shadowEl.appendChild(r))),a&&(c.navigation.nextEl=a),r&&(c.navigation.prevEl=r),p.init(),p.update()),i.includes("allowSlideNext")&&(e.allowSlideNext=s.allowSlideNext),i.includes("allowSlidePrev")&&(e.allowSlidePrev=s.allowSlidePrev),i.includes("direction")&&e.changeDirection(s.direction,!1),(y||E)&&e.loopDestroy(),(x||E)&&e.loopCreate(),e.update()}const ss="@font-face{font-family:swiper-icons;src:url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');font-weight:400;font-style:normal}";let is=!0;const as=(e,t)=>{let s=document.querySelector("style#swiper-element-styles");const i=s&&s.preInit&&!e;!e&&t&&t.cssLinks().forEach((e=>{const t=document.createElement("link");t.rel="stylesheet",t.href=e,document.head.prepend(t)})),s&&!i||(s=s||document.createElement("style"),s.textContent=[ss,t?t.cssStyles():""].join("\n"),s.id="swiper-element-styles",s.preInit=e,document.head.prepend(s))};const rs="undefined"==typeof window||"undefined"==typeof HTMLElement?class{}:HTMLElement;class ns extends rs{constructor(){super(),this.tempDiv=document.createElement("div"),this.shadowEl=this.attachShadow({mode:"open"})}cssStyles(){return[is?":root{--swiper-theme-color:#007aff}.swiper,swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;display:block}:host(.swiper-vertical)>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);box-sizing:content-box}.swiper-android swiper-slide,.swiper-wrapper{transform:translate3d(0px,0,0)}.swiper-horizontal{touch-action:pan-y}.swiper-vertical{touch-action:pan-x}swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;display:block}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight swiper-slide{height:auto}:host(.swiper-autoheight) .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden swiper-slide{transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}:host(.swiper-3d.swiper-css-mode) .swiper-wrapper{perspective:1200px}:host(.swiper-3d) .swiper-wrapper{transform-style:preserve-3d}.swiper-3d{perspective:1200px}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top,.swiper-3d swiper-slide{transform-style:preserve-3d}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}:host(.swiper-css-mode)>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}:host(.swiper-css-mode)>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-css-mode>swiper-slide{scroll-snap-align:start start}:host(.swiper-horizontal.swiper-css-mode)>.swiper-wrapper{scroll-snap-type:x mandatory}:host(.swiper-vertical.swiper-css-mode)>.swiper-wrapper{scroll-snap-type:y mandatory}:host(.swiper-centered)>.swiper-wrapper::before{content:'';flex-shrink:0;order:9999}.swiper-centered>swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}.swiper-centered.swiper-horizontal>swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}:host(.swiper-centered.swiper-horizontal)>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.swiper-centered.swiper-vertical>swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}:host(.swiper-centered.swiper-vertical)>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;box-sizing:border-box;border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top-color:transparent}.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader{animation:swiper-preloader-spin 1s infinite linear}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.swiper-virtual swiper-slide{-webkit-backface-visibility:hidden;transform:translateZ(0)}:host(.swiper-virtual.swiper-css-mode) .swiper-wrapper::after{content:'';position:absolute;left:0;top:0;pointer-events:none}:host(.swiper-virtual.swiper-css-mode.swiper-horizontal) .swiper-wrapper::after{height:1px;width:var(--swiper-virtual-size)}:host(.swiper-virtual.swiper-css-mode.swiper-vertical) .swiper-wrapper::after{width:1px;height:var(--swiper-virtual-size)}:root{--swiper-navigation-size:44px}.swiper-button-next,.swiper-button-prev{position:absolute;top:var(--swiper-navigation-top-offset,50%);width:calc(var(--swiper-navigation-size)/ 44 * 27);height:var(--swiper-navigation-size);margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));z-index:10;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--swiper-navigation-color,var(--swiper-theme-color))}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-next.swiper-button-hidden,.swiper-button-prev.swiper-button-hidden{opacity:0;cursor:auto;pointer-events:none}.swiper-navigation-disabled .swiper-button-next,.swiper-navigation-disabled .swiper-button-prev{display:none!important}.swiper-button-next:after,.swiper-button-prev:after{font-family:swiper-icons;font-size:var(--swiper-navigation-size);text-transform:none!important;letter-spacing:0;font-variant:initial;line-height:1}.swiper-button-prev,:host(.swiper-rtl) .swiper-button-next{left:var(--swiper-navigation-sides-offset,10px);right:auto}.swiper-button-prev:after,:host(.swiper-rtl) .swiper-button-next:after{content:'prev'}.swiper-button-next,:host(.swiper-rtl) .swiper-button-prev{right:var(--swiper-navigation-sides-offset,10px);left:auto}.swiper-button-next:after,:host(.swiper-rtl) .swiper-button-prev:after{content:'next'}.swiper-button-lock{display:none}.swiper-pagination{position:absolute;text-align:center;transition:.3s opacity;transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-disabled>.swiper-pagination,.swiper-pagination.swiper-pagination-disabled{display:none!important}.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:var(--swiper-pagination-bottom,8px);top:var(--swiper-pagination-top,auto);left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{transform:scale(.33)}.swiper-pagination-bullet{width:var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));height:var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));display:inline-block;border-radius:50%;background:var(--swiper-pagination-bullet-inactive-color,#000);opacity:var(--swiper-pagination-bullet-inactive-opacity, .2)}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet:only-child{display:none!important}.swiper-pagination-bullet-active{opacity:var(--swiper-pagination-bullet-opacity, 1);background:var(--swiper-pagination-color,var(--swiper-theme-color))}.swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets{right:var(--swiper-pagination-right,8px);left:var(--swiper-pagination-left,auto);top:50%;transform:translate3d(0px,-50%,0)}.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:var(--swiper-pagination-bullet-vertical-gap,6px) 0;display:block}.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px}.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:.2s transform,.2s top}.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,4px)}.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s left}.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,:host(.swiper-horizontal.swiper-rtl) .swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s right}.swiper-pagination-fraction{color:var(--swiper-pagination-fraction-color,inherit)}.swiper-pagination-progressbar{background:var(--swiper-pagination-progressbar-bg-color,rgba(0,0,0,.25));position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:var(--swiper-pagination-color,var(--swiper-theme-color));position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}:host(.swiper-rtl) .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}.swiper-horizontal>.swiper-pagination-progressbar,.swiper-pagination-progressbar.swiper-pagination-horizontal,.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:var(--swiper-pagination-progressbar-size,4px);left:0;top:0}.swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-vertical,.swiper-vertical>.swiper-pagination-progressbar{width:var(--swiper-pagination-progressbar-size,4px);height:100%;left:0;top:0}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:var(--swiper-scrollbar-border-radius,10px);position:relative;-ms-touch-action:none;background:var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))}.swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled{display:none!important}.swiper-horizontal>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-horizontal{position:absolute;left:var(--swiper-scrollbar-sides-offset,1%);bottom:var(--swiper-scrollbar-bottom,4px);top:var(--swiper-scrollbar-top,auto);z-index:50;height:var(--swiper-scrollbar-size,4px);width:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.swiper-scrollbar.swiper-scrollbar-vertical,.swiper-vertical>.swiper-scrollbar{position:absolute;left:var(--swiper-scrollbar-left,auto);right:var(--swiper-scrollbar-right,4px);top:var(--swiper-scrollbar-sides-offset,1%);z-index:50;width:var(--swiper-scrollbar-size,4px);height:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:var(--swiper-scrollbar-drag-bg-color,rgba(0,0,0,.5));border-radius:var(--swiper-scrollbar-border-radius,10px);left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;object-fit:contain}.swiper-slide-zoomed{cursor:move;touch-action:none}.swiper .swiper-notification,swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}:host(.swiper-free-mode)>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}:host(.swiper-grid)>.swiper-wrapper{flex-wrap:wrap}:host(.swiper-grid-column)>.swiper-wrapper{flex-wrap:wrap;flex-direction:column}.swiper-fade.swiper-free-mode swiper-slide{transition-timing-function:ease-out}.swiper-fade swiper-slide{pointer-events:none;transition-property:opacity}.swiper-fade swiper-slide swiper-slide{pointer-events:none}.swiper-fade .swiper-slide-active,.swiper-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-cube{overflow:visible}.swiper-cube swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}.swiper-cube swiper-slide swiper-slide{pointer-events:none}.swiper-cube.swiper-rtl swiper-slide{transform-origin:100% 0}.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-next,.swiper-cube .swiper-slide-prev,.swiper-cube swiper-slide-next+swiper-slide{pointer-events:auto;visibility:visible}.swiper-cube .swiper-slide-shadow-bottom,.swiper-cube .swiper-slide-shadow-left,.swiper-cube .swiper-slide-shadow-right,.swiper-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0px;width:100%;height:100%;opacity:.6;z-index:0}.swiper-cube .swiper-cube-shadow:before{content:'';background:#000;position:absolute;left:0;top:0;bottom:0;right:0;filter:blur(50px)}.swiper-flip{overflow:visible}.swiper-flip swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-flip swiper-slide swiper-slide{pointer-events:none}.swiper-flip .swiper-slide-active,.swiper-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-flip .swiper-slide-shadow-bottom,.swiper-flip .swiper-slide-shadow-left,.swiper-flip .swiper-slide-shadow-right,.swiper-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-creative swiper-slide{-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;transition-property:transform,opacity,height}.swiper-cards{overflow:visible}.swiper-cards swiper-slide{transform-origin:center bottom;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden}":"",...this.injectStyles&&Array.isArray(this.injectStyles)?this.injectStyles:[]].join("\n")}cssLinks(){return this.injectStylesUrls||[]}render(){is&&as(!1,this);const e=this.cssStyles();e.length&&(this.stylesEl=document.createElement("style"),this.stylesEl.textContent=e,this.shadowEl.appendChild(this.stylesEl)),this.cssLinks().forEach((e=>{if(document.querySelector(`link[href="${e}"]`))return;const t=document.createElement("link");t.rel="stylesheet",t.href=e,this.shadowEl.appendChild(t)})),this.tempDiv.innerHTML=`\n      <slot name="container-start"></slot>\n      <div class="swiper-wrapper">\n        <slot></slot>\n      </div>\n      <slot name="container-end"></slot>\n      ${function(e={}){return e.navigation&&void 0===e.navigation.nextEl&&void 0===e.navigation.prevEl}(this.passedParams)?'\n        <div class="swiper-button-prev"></div>\n        <div class="swiper-button-next"></div>\n      ':""}\n      ${function(e={}){return e.pagination&&void 0===e.pagination.el}(this.passedParams)?'\n        <div class="swiper-pagination"></div>\n      ':""}\n      ${function(e={}){return e.scrollbar&&void 0===e.scrollbar.el}(this.passedParams)?'\n        <div class="swiper-scrollbar"></div>\n      ':""}\n    `,[...this.tempDiv.children].forEach((e=>{this.shadowEl.appendChild(e)}))}initialize(){if(this.initialized)return;this.initialized=!0;const{params:e,passedParams:t}=es(this);this.swiperParams=e,this.passedParams=t,delete this.swiperParams.init,this.render(),this.swiper=new Dt(this,{...e,touchEventsTarget:"container",...e.virtual?{}:{observer:!0},onAny:(e,...t)=>{const s=new CustomEvent(e.toLowerCase(),{detail:t,bubbles:!0,cancelable:!0});this.dispatchEvent(s)}})}connectedCallback(){!1!==this.init&&"false"!==this.getAttribute("init")?this.initialize():as(!0,this)}disconnectedCallback(){this.swiper&&this.swiper.destroy&&this.swiper.destroy()}updateSwiperOnPropChange(e){const{params:t,passedParams:s}=es(this);this.passedParams=s,this.swiperParams=t,ts({swiper:this.swiper,passedParams:this.passedParams,changedParams:[Zt(e)],..."navigation"===e&&s[e]?{prevEl:".swiper-button-prev",nextEl:".swiper-button-next"}:{},..."pagination"===e&&s[e]?{paginationEl:".swiper-pagination"}:{},..."scrollbar"===e&&s[e]?{scrollbarEl:".swiper-scrollbar"}:{}})}attributeChangedCallback(e,t,s){this.initialized&&this.updateSwiperOnPropChange(e,s)}static get observedAttributes(){return qt.filter((e=>e.includes("_"))).map((e=>e.replace(/[A-Z]/g,(e=>`-${e}`)).replace("_","").toLowerCase()))}}qt.forEach((e=>{"init"!==e&&(e=e.replace("_",""),Object.defineProperty(ns.prototype,e,{get(){return(this.passedParams||{})[e]},set(t){this.passedParams||(this.passedParams={}),this.passedParams[e]=t,this.initialized&&this.updateSwiperOnPropChange(e,t)}}))}));class ls extends rs{constructor(){super(),this.tempDiv=document.createElement("div"),this.shadowEl=this.attachShadow({mode:"open"})}render(){const e=this.lazy||""===this.getAttribute("lazy")||"true"===this.getAttribute("lazy");if(this.tempDiv.innerHTML="<slot />",[...this.tempDiv.children].forEach((e=>{this.shadowEl.appendChild(e)})),e){const e=document.createElement("div");e.classList.add("swiper-lazy-preloader"),this.appendChild(e)}}initialize(){this.render()}connectedCallback(){this.initialize()}}const os=(e=!0)=>{"undefined"!=typeof window&&(e||(is=!1),is&&as(!0),window.customElements.get("swiper-container")||window.customElements.define("swiper-container",ns),window.customElements.get("swiper-slide")||window.customElements.define("swiper-slide",ls))};function cs(e,t,s){const i=e.slice();return i[7]=t[s],i[9]=s,i}function ds(e,t,s){const i=e.slice();return i[7]=t[s],i[9]=s,i}function ps(t){let s,i,a,r;return{c(){s=m("swiper-slide"),i=m("img"),r=g(),o(i.src,a=t[1][t[9]])||b(i,"src",a),b(i,"alt",""),b(i,"loading","lazy"),b(i,"class","svelte-1ltov50"),y(s,"lazy","true"),y(s,"class","svelte-1ltov50")},m(e,t){d(e,s,t),c(s,i),c(s,r)},p:e,d(e){e&&p(s)}}}function us(e){let t,s,a,r,n;function l(){return e[5](e[9])}function u(){return e[6](e[9])}return{c(){t=m("div"),s=m("img"),b(s,"class","image svelte-1ltov50"),o(s.src,a=e[7])||b(s,"src",a),b(s,"alt",""),b(t,"class","snap-image svelte-1ltov50"),S(t,"margin-right","5px")},m(e,i){d(e,t,i),c(t,s),r||(n=[w(s,"click",l),w(s,"keypress",u)],r=!0)},p(t,s){e=t},d(e){e&&p(t),r=!1,i(n)}}}function ms(e){let t,s,a,r,n;function l(){return e[3](e[9])}function u(){return e[4](e[9])}return{c(){t=m("div"),s=m("img"),b(s,"class","image svelte-1ltov50"),o(s.src,a=e[7])||b(s,"src",a),b(s,"alt",""),b(t,"class","snap-image svelte-1ltov50")},m(e,i){d(e,t,i),c(t,s),r||(n=[w(s,"click",l),w(s,"keypress",u)],r=!0)},p(t,s){e=t},d(e){e&&p(t),r=!1,i(n)}}}function fs(e){let t,s;let i=function(e,t){return e[9]%5==4?ms:us}(e),a=i(e);return{c(){t=m("button"),a.c(),s=g(),b(t,"class","snap-bnt svelte-1ltov50")},m(e,i){d(e,t,i),a.m(t,null),c(t,s)},p(e,t){a.p(e,t)},d(e){e&&p(t),a.d()}}}function hs(e){let t,s,i,a,r,n,l,o,f,v,w;i=new ae({props:{icon:oe}});let x=e[1],E=[];for(let t=0;t<x.length;t+=1)E[t]=ps(ds(e,x,t));let S=e[1],A=[];for(let t=0;t<S.length;t+=1)A[t]=fs(cs(e,S,t));return{c(){t=m("div"),s=m("div"),V(i.$$.fragment),a=h("\n        Snap"),r=g(),n=m("div"),l=m("swiper-container");for(let e=0;e<E.length;e+=1)E[e].c();o=g(),f=m("div"),v=m("div");for(let e=0;e<A.length;e+=1)A[e].c();b(s,"class","snap-head svelte-1ltov50"),y(l,"auto-height","true"),y(l,"navigation","true"),b(n,"class","swiper"),b(v,"class","snap-grid svelte-1ltov50"),b(f,"class","snap-main svelte-1ltov50"),b(t,"class","snap-outline svelte-1ltov50")},m(p,u){d(p,t,u),c(t,s),F(i,s,null),c(s,a),c(t,r),c(t,n),c(n,l);for(let e=0;e<E.length;e+=1)E[e].m(l,null);e[2](l),c(t,o),c(t,f),c(f,v);for(let e=0;e<A.length;e+=1)A[e].m(v,null);w=!0},p(e,[t]){if(2&t){let s;for(x=e[1],s=0;s<x.length;s+=1){const i=ds(e,x,s);E[s]?E[s].p(i,t):(E[s]=ps(i),E[s].c(),E[s].m(l,null))}for(;s<E.length;s+=1)E[s].d(1);E.length=x.length}if(3&t){let s;for(S=e[1],s=0;s<S.length;s+=1){const i=cs(e,S,s);A[s]?A[s].p(i,t):(A[s]=fs(i),A[s].c(),A[s].m(v,null))}for(;s<A.length;s+=1)A[s].d(1);A.length=S.length}},i(e){w||(j(i.$$.fragment,e),w=!0)},o(e){X(i.$$.fragment,e),w=!1},d(s){s&&p(t),W(i),u(E,s),e[2](null),u(A,s)}}}function gs(e,t,s){os();let i;return[i,["https://lh3.googleusercontent.com/b9dC_zyDxpidhSMcxG4MPlg5yGgHrxT2JjQl_jnz3XdEsnvUPoh0ZgpJXGMa61miJw6CRghGECvTiheWWdKjdg0bYk7Yh8WDf5rGTI_wbzV0uvsM_MSn2aLHCtOIoYjZSLKaIOtq1Bs=w2400","https://lh3.googleusercontent.com/wRilQs3DmleP-DjgTjhgZewTWTaifFKS5gAYKu9WCZhseD7Pp83aLOxMkiU5OJLLLcfYdSWB3mNUTQJ34_m44-tgnL1Oz8uu-7MJ_impTZV1jy1P-TZ_O1NHDb9248NPyXuUh8YeC2I=w2400","https://lh3.googleusercontent.com/twfO9WB1e8YybIA74IJ3ZSNUVTPPGzU3IMASYOXHea8xGZ-Qwr1VaFsaRZwZVzEz1-5XPegZ7QEiNLEJrNAM2qEMyzr0rBA-ARP1MZu6HLebAvLcI8fVQOAHe2N5lu2JpMdSsyYxwCE=w2400","https://lh3.googleusercontent.com/4oGJObbkPWVj-HhV8qdit7nfbGhyvVp3ttZ9sMSWHBRoVB7K_ShAG3exNx-dtQ7Er4I4n2c3OADQUKPnhMebDUJdXM-lBrdLYB4idZWR9xN1pAzUA9rtB4UdIFhaeed1WnHTUgZYjLc=w2400","https://lh3.googleusercontent.com/dynQGfMaf7X5umBor9cGjPQ4Sr-x5NsufxmB0WA0h1TVqZ28flLgH1XjX7LYyeTyfQ4m53bARuUrbPv0BlFtzeOt5HCoPyQQqLkjecBpS-f0Qw46LRUb7DrX4ffLXr6enAYgFeYMH8c=w2400","https://lh3.googleusercontent.com/NedVhB4OaksfNdQEOc9Cp-Q_-RgEOY5AR-fssgWPG0C9Xj4a0aNvwTlIHnCVt4EsH2mF_Uk-5Z9-s0idFmwWq1gh02cB4M6GVIUFRw9wu1d1raKJ_vJllt00RMjduWBRH0Mj5IsJprE=w2400","https://lh3.googleusercontent.com/8gUTIZZ6M3rmm9DwfFKIWOYyyHp-DjotfSx85d92GKfyrKEovOKhwIChI2fpukJL6s3QEL7tXlTOT0O4C6En0AY_vrE_40agXVgixJBOriX9mRb8OQRkRJoUpxVY2L5M6n58otNhrpI=w2400","https://lh3.googleusercontent.com/L5bFSXC14yxmVoMOXmiTLYcYjThW7G_zZ3LKHKEAPyl4M8w2YHIhiZCTBmtGOLiNBLODFHdJoEt0sO_Jut652yLnjAQbzHYYw-0QwTiDvzyWA-3ismnH9ojFWYHrRYWareSZPheTmkI=w2400","https://lh3.googleusercontent.com/Wx3sgucTOCvN4Twgbs6HmR5rQ5nJim1J3WuzgChbwIAeDisK5fo1XqVEj4mKWFRFvzV5LtqRD2oLXVR_wKD9HY7-72SgKUCAVH7zL4o46a5eQzmyGGwKlZnrWzM24uKonc95Xy5qigc=w2400","https://lh3.googleusercontent.com/dOBQfCZsCj5-6s3FBROPYY-uyvJCxX0W6OKJrOly7lVTPwjaOWiTS_KYxV_6nYffZFy3feBldgsJo4zQtyIGLCQ_JU9XxkJs1jeKvihyaENVuGnjLC-REhqXLjqBqqFW0TMYumb6nck=w2400"],function(e){$[e?"unshift":"push"]((()=>{i=e,s(0,i)}))},e=>i.swiper.slideTo(e),e=>i.swiper.slideTo(e),e=>i.swiper.slideTo(e),e=>i.swiper.slideTo(e)]}"undefined"!=typeof window&&(window.SwiperElementRegisterParams=e=>{qt.push(...e)});class vs extends Q{constructor(e){super(),U(this,e,gs,hs,r,{})}}function ws(t){let s,i,a,r,n,l,o;return a=new ae({props:{icon:le}}),{c(){s=m("div"),i=m("div"),V(a.$$.fragment),r=h("\n        Video"),n=g(),l=m("div"),l.innerHTML='<iframe title="" width="425px" height="240px" src="https://www.youtube.com/embed/3cCezdU6uk4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen=""></iframe>',b(i,"class","video-head svelte-1craaja"),b(l,"class","video-main"),b(s,"class","video-outline svelte-1craaja")},m(e,t){d(e,s,t),c(s,i),F(a,i,null),c(i,r),c(s,n),c(s,l),o=!0},p:e,i(e){o||(j(a.$$.fragment,e),o=!0)},o(e){X(a.$$.fragment,e),o=!1},d(e){e&&p(s),W(a)}}}class bs extends Q{constructor(e){super(),U(this,e,null,ws,r,{})}}function ys(t){let s;return{c(){s=m("div"),s.innerHTML='<div class="noti-box svelte-scil8c"><div class="title svelte-scil8c">드리고 싶은 말씀</div> \n        <div class="main-text svelte-scil8c">코로나19가 장기화되면서\n            <br/>\n            종식을 예측할 수 없어 많은 고민 끝에\n            <br/>\n            결혼식을 예정대로 진행하게 되었습니다.\n            <br/><br/>\n            혹여나 청첩장 전달이 누가 되지 않을지\n            <br/>\n            걱정이 많지만 참석이 어려우시더라도\n            <br/>\n            멀리서 축하해주시는 마음\n            <br/>\n            감사히 받겠습니다.</div></div>',b(s,"class","noti-box-outline svelte-scil8c")},m(e,t){d(e,s,t)},p:e,i:e,o:e,d(e){e&&p(s)}}}class xs extends Q{constructor(e){super(),U(this,e,null,ys,r,{})}}function Es(e){let t,s,r,n,l,o,u,f,h,v,y,x,A,T,M,C,$,k,z,P,L,O,I,D,B,_,Y;return r=new ae({props:{icon:fe,size:"0.8x",color:"black"}}),{c(){t=m("div"),s=m("button"),V(r.$$.fragment),n=g(),l=m("div"),o=m("div"),o.textContent="방명록 축하글 작성",u=g(),f=m("div"),h=m("span"),h.innerHTML='<span class="column-text svelte-1rntlah">이름<b style="color:red; margin-left:3px;">*</b></span>',v=g(),y=m("input"),x=g(),A=m("div"),T=m("span"),T.innerHTML='<span class="column-text svelte-1rntlah">비밀번호<b style="color:red; margin-left:3px;">*</b></span>',M=g(),C=m("input"),$=g(),k=m("div"),z=m("span"),z.innerHTML='<span class="column-text svelte-1rntlah">내용<b style="color:red; margin-left:3px;">*</b></span>',P=g(),L=m("textarea"),O=g(),I=m("div"),D=m("button"),D.innerHTML="신랑 &amp; 신부에게 <b>축하 글 전달하기</b>",b(s,"class","close-bnt svelte-1rntlah"),b(o,"class","header svelte-1rntlah"),b(h,"class","column-title svelte-1rntlah"),b(y,"type","text"),b(y,"placeholder","이름을 입력해주세요."),b(y,"name","name"),b(y,"maxlength","30"),b(y,"autocomplete","off"),b(y,"class","svelte-1rntlah"),b(f,"class","row svelte-1rntlah"),b(T,"class","column-title svelte-1rntlah"),b(C,"type","password"),b(C,"placeholder","비밀번호를 입력해주세요."),b(C,"name","password"),b(C,"maxlength","30"),b(C,"autocomplete","off"),b(C,"class","svelte-1rntlah"),b(A,"class","row svelte-1rntlah"),b(z,"class","column-title svelte-1rntlah"),b(L,"type","text"),b(L,"placeholder","내용을 입력해주세요. (최대 100자)"),b(L,"name","content"),b(L,"maxlength","100"),b(L,"autocomplete","off"),b(L,"class","svelte-1rntlah"),b(k,"class","row svelte-1rntlah"),b(D,"class","create-writing svelte-1rntlah"),S(I,"margin-top","40px"),b(l,"class","writing-main svelte-1rntlah"),b(t,"class","writing-outline svelte-1rntlah"),S(t,"display",e[0])},m(i,p){d(i,t,p),c(t,s),F(r,s,null),c(t,n),c(t,l),c(l,o),c(l,u),c(l,f),c(f,h),c(f,v),c(f,y),E(y,e[2]),c(l,x),c(l,A),c(A,T),c(A,M),c(A,C),E(C,e[3]),c(l,$),c(l,k),c(k,z),c(k,P),c(k,L),E(L,e[4]),c(l,O),c(l,I),c(I,D),B=!0,_||(Y=[w(s,"click",(function(){a(e[1])&&e[1].apply(this,arguments)})),w(y,"input",e[8]),w(C,"input",e[9]),w(L,"input",e[10]),w(D,"click",e[5])],_=!0)},p(s,[i]){e=s,4&i&&y.value!==e[2]&&E(y,e[2]),8&i&&C.value!==e[3]&&E(C,e[3]),16&i&&E(L,e[4]),(!B||1&i)&&S(t,"display",e[0])},i(e){B||(j(r.$$.fragment,e),B=!0)},o(e){X(r.$$.fragment,e),B=!1},d(e){e&&p(t),W(r),_=!1,i(Y)}}}function Ss(e,t,s){let{display:i="none"}=t,{change_display:a}=t,{backend_url:r}=t,{swap_to_comment_display:n}=t,l="",o="",c="";return e.$$set=e=>{"display"in e&&s(0,i=e.display),"change_display"in e&&s(1,a=e.change_display),"backend_url"in e&&s(6,r=e.backend_url),"swap_to_comment_display"in e&&s(7,n=e.swap_to_comment_display)},[i,a,l,o,c,async function(){""!=l?""!=o?""!=c?await fetch(r,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:l,password:o,content:c})}).then((e=>{if(200==e.status)return e.json();throw e.status})).then((e=>{s(2,l=""),s(3,o=""),s(4,c=""),n(),alert("축하글이 작성되었습니다!")})).catch((e=>{console.log("Unexpected error ("+e+")"),alert("현재 축하글을 작성할 수 없습니다.\n잠시 후 이용해주세요.")})):alert("내용을 입력해주세요."):alert("비밀번호를 입력해주세요."):alert("이름을 입력해주세요.")},r,n,function(){l=this.value,s(2,l)},function(){o=this.value,s(3,o)},function(){c=this.value,s(4,c)}]}class As extends Q{constructor(e){super(),U(this,e,Ss,Es,r,{display:0,change_display:1,backend_url:6,swap_to_comment_display:7})}}function Ts(e,t,s){const i=e.slice();return i[7]=t[s],i}function Ms(t){let s;return{c(){s=m("p"),s.textContent="문제가 발생했습니다. 다시 시도해주세요."},m(e,t){d(e,s,t)},p:e,i:e,o:e,d(e){e&&p(s)}}}function Cs(e){let t,s,i=e[2],a=[];for(let t=0;t<i.length;t+=1)a[t]=$s(Ts(e,i,t));const r=e=>X(a[e],1,1,(()=>{a[e]=null}));return{c(){t=m("ul");for(let e=0;e<a.length;e+=1)a[e].c();b(t,"class","padding-zero svelte-6m3od6")},m(e,i){d(e,t,i);for(let e=0;e<a.length;e+=1)a[e].m(t,null);s=!0},p(e,s){if(12&s){let n;for(i=e[2],n=0;n<i.length;n+=1){const r=Ts(e,i,n);a[n]?(a[n].p(r,s),j(a[n],1)):(a[n]=$s(r),a[n].c(),j(a[n],1),a[n].m(t,null))}for(H(),n=i.length;n<a.length;n+=1)r(n);N()}},i(e){if(!s){for(let e=0;e<i.length;e+=1)j(a[e]);s=!0}},o(e){a=a.filter(Boolean);for(let e=0;e<a.length;e+=1)X(a[e]);s=!1},d(e){e&&p(t),u(a,e)}}}function $s(e){let t,s,i,a,r,n,l,o,u,f,v,y,E,S,A,T,M,C,$=e[7].name+"",k=e[7].created+"",z=e[7].content+"";function P(){return e[5](e[7])}return l=new ae({props:{icon:ne,color:"gray"}}),{c(){t=m("li"),s=m("div"),i=m("span"),a=h($),r=g(),n=m("button"),V(l.$$.fragment),u=g(),f=m("span"),v=h(k),y=g(),E=m("div"),S=h(z),A=g(),b(i,"class","comment-name svelte-6m3od6"),b(n,"id",o=e[7].id),b(n,"class","delete-bnt svelte-6m3od6"),b(f,"class","comment-created svelte-6m3od6"),b(s,"class","comment-title svelte-6m3od6"),b(E,"class","comment-content svelte-6m3od6"),b(t,"class","comment svelte-6m3od6")},m(e,o){d(e,t,o),c(t,s),c(s,i),c(i,a),c(s,r),c(s,n),F(l,n,null),c(s,u),c(s,f),c(f,v),c(t,y),c(t,E),c(E,S),c(t,A),T=!0,M||(C=w(n,"click",P),M=!0)},p(t,s){e=t,(!T||4&s)&&$!==($=e[7].name+"")&&x(a,$),(!T||4&s&&o!==(o=e[7].id))&&b(n,"id",o),(!T||4&s)&&k!==(k=e[7].created+"")&&x(v,k),(!T||4&s)&&z!==(z=e[7].content+"")&&x(S,z)},i(e){T||(j(l.$$.fragment,e),T=!0)},o(e){X(l.$$.fragment,e),T=!1},d(e){e&&p(t),W(l),M=!1,C()}}}function ks(t){let s;return{c(){s=m("p"),s.textContent="...Loading"},m(e,t){d(e,s,t)},p:e,i:e,o:e,d(e){e&&p(s)}}}function zs(e){let t,s,i,r,n,l,o,u,f,h,v;i=new ae({props:{icon:fe,size:".8x",color:"black"}});let y={ctx:e,current:null,token:null,hasCatch:!0,pending:ks,then:Cs,catch:Ms,value:2,error:10,blocks:[,,,]};return R(u=e[2],y),{c(){t=m("div"),s=m("button"),V(i.$$.fragment),r=g(),n=m("div"),l=m("div"),l.textContent="방명록 축하글 전체보기",o=g(),y.block.c(),b(s,"class","close-bnt svelte-6m3od6"),b(l,"class","header svelte-6m3od6"),b(n,"class","comment-list svelte-6m3od6"),b(t,"class","comment-outline svelte-6m3od6"),S(t,"display",e[0])},m(p,u){d(p,t,u),c(t,s),F(i,s,null),c(t,r),c(t,n),c(n,l),c(n,o),y.block.m(n,y.anchor=null),y.mount=()=>n,y.anchor=null,f=!0,h||(v=w(s,"click",(function(){a(e[1])&&e[1].apply(this,arguments)})),h=!0)},p(s,[i]){e=s,y.ctx=e,4&i&&u!==(u=e[2])&&R(u,y)||function(e,t,s){const i=t.slice(),{resolved:a}=e;e.current===e.then&&(i[e.value]=a),e.current===e.catch&&(i[e.error]=a),e.block.p(i,s)}(y,e,i),(!f||1&i)&&S(t,"display",e[0])},i(e){f||(j(i.$$.fragment,e),j(y.block),f=!0)},o(e){X(i.$$.fragment,e);for(let e=0;e<3;e+=1){X(y.blocks[e])}f=!1},d(e){e&&p(t),W(i),y.block.d(),y.token=null,y=null,h=!1,v()}}}function Ps(e,t,s){let i,{display:a="none"}=t,{change_display:r}=t,{backend_url:n}=t;async function l(){return await fetch(n).then((e=>e.json())).then((e=>e.results))}async function o(e){let t=prompt("비밀번호를 입력해주세요.");null!=t&&""!=t&&await fetch(n,{method:"DELETE",headers:{"Content-Type":"application/json"},body:JSON.stringify({id:e,password:t})}).then((e=>{if(200==e.status)return e.json();throw e.status})).then((e=>{alert("삭제되었습니다."),s(2,i=l())})).catch((e=>{"401"==e?alert("비밀번호가 틀렸습니다.\n다시 한 번 확인해주세요."):(console.log("Unexpected error ("+e+")"),alert("현재 축하글을 삭제할 수 없습니다.\n잠시 후 이용해주세요."))}))}return e.$$set=e=>{"display"in e&&s(0,a=e.display),"change_display"in e&&s(1,r=e.change_display),"backend_url"in e&&s(4,n=e.backend_url)},e.$$.update=()=>{1&e.$$.dirty&&"none"!=a&&s(2,i=l())},s(2,i=l()),[a,r,i,o,n,e=>o(e.id)]}class Ls extends Q{constructor(e){super(),U(this,e,Ps,zs,r,{display:0,change_display:1,backend_url:4})}}function Os(e){let t,s,a,r,n,l,o,u,f,v,y,x,E,A,T,M,C,$,k,z,P,L,O;return t=new As({props:{display:e[0],change_display:e[2],backend_url:Is,swap_to_comment_display:e[4]}}),a=new Ls({props:{display:e[1],change_display:e[3],backend_url:Is}}),v=new ae({props:{icon:re,color:"#f79e9e",style:"margin-bottom: 10px;"}}),{c(){V(t.$$.fragment),s=g(),V(a.$$.fragment),r=g(),n=m("div"),l=m("div"),l.textContent="방명록",o=g(),u=m("div"),f=m("div"),V(v.$$.fragment),y=g(),x=m("br"),E=h("\n            신랑, 신부에게\n            "),A=m("br"),T=h("\n            축하하는 글을 남겨보세요."),M=g(),C=m("div"),$=m("button"),$.textContent="축하글 작성하기",k=g(),z=m("button"),z.textContent="방명록 전체보기",b(l,"class","title svelte-13xwa1m"),S(f,"padding-bottom","25px"),b($,"class","writing-guestbook svelte-13xwa1m"),b(z,"class","comment-guestbook svelte-13xwa1m"),b(u,"class","guestbook-main svelte-13xwa1m"),b(n,"class","guestbook-outline svelte-13xwa1m")},m(i,p){F(t,i,p),d(i,s,p),F(a,i,p),d(i,r,p),d(i,n,p),c(n,l),c(n,o),c(n,u),c(u,f),F(v,f,null),c(f,y),c(f,x),c(f,E),c(f,A),c(f,T),c(u,M),c(u,C),c(C,$),c(C,k),c(C,z),P=!0,L||(O=[w($,"click",e[5]),w(z,"click",e[6])],L=!0)},p(e,[s]){const i={};1&s&&(i.display=e[0]),t.$set(i);const r={};2&s&&(r.display=e[1]),a.$set(r)},i(e){P||(j(t.$$.fragment,e),j(a.$$.fragment,e),j(v.$$.fragment,e),P=!0)},o(e){X(t.$$.fragment,e),X(a.$$.fragment,e),X(v.$$.fragment,e),P=!1},d(e){W(t,e),e&&p(s),W(a,e),e&&p(r),e&&p(n),W(v),L=!1,i(O)}}}const Is="https://api.leechohyuntaeryong.com/comments";function Ds(e,t,s){let i="none",a="none";function r(){"none"==i?(s(0,i="block"),document.body.style["overflow-y"]="hidden"):(s(0,i="none"),document.body.style["overflow-y"]="visible")}function n(){"none"==a?(s(1,a="block"),document.body.style["overflow-y"]="hidden"):(s(1,a="none"),document.body.style["overflow-y"]="visible")}return[i,a,r,n,function(){s(0,i="none"),s(1,a="block")},()=>r(),()=>n()]}class Bs extends Q{constructor(e){super(),U(this,e,Ds,Os,r,{})}}function _s(t){let s,i,a,r,n,l,o,u,f,h,v,w,y,x,E,A,T,M,C,$,k,z,P,L,O,I,D,B,_,Y,G,H,N,R,q,U,Q,Z,K,J,ee,te,se,ie,re,ne,le,oe,ce,de,me,fe,he,ge,ve,we,be,ye,xe,Ee,Se,Ae,Te,Me,Ce,$e,ke,ze,Pe,Le;return v=new ae({props:{icon:pe,color:"#78c0e9",flip:"horizontal"}}),x=new ae({props:{class:"fa-icon",icon:ue,color:"#444"}}),k=new ae({props:{class:"fa-icon",icon:pe,color:"#f79e9e",flip:"horizontal"}}),L=new ae({props:{class:"fa-icon",icon:ue,color:"#444"}}),U=new ae({props:{class:"fa-icon",icon:pe,color:"#78c0e9",flip:"horizontal"}}),K=new ae({props:{class:"fa-icon",icon:ue,color:"#444"}}),re=new ae({props:{class:"fa-icon",icon:pe,color:"#78c0e9",flip:"horizontal"}}),oe=new ae({props:{class:"fa-icon",icon:ue,color:"#444"}}),be=new ae({props:{class:"fa-icon",icon:pe,color:"#f79e9e",flip:"horizontal"}}),Ee=new ae({props:{class:"fa-icon",icon:ue,color:"#444"}}),$e=new ae({props:{class:"fa-icon",icon:pe,color:"#f79e9e",flip:"horizontal"}}),Pe=new ae({props:{class:"fa-icon",icon:ue,color:"#444"}}),{c(){s=m("div"),i=m("div"),i.textContent="마음 전하실 곳",a=g(),r=m("div"),n=m("ul"),l=m("li"),o=m("span"),o.textContent="신랑에게 연락하기",u=g(),f=m("span"),h=m("a"),V(v.$$.fragment),w=g(),y=m("a"),V(x.$$.fragment),E=g(),A=m("li"),T=m("span"),T.textContent="신부에게 연락하기",M=g(),C=m("span"),$=m("a"),V(k.$$.fragment),z=g(),P=m("a"),V(L.$$.fragment),O=g(),I=m("div"),I.textContent="혼주에게 연락하기",D=g(),B=m("ul"),_=m("li"),Y=m("span"),Y.textContent="신랑측 혼주",G=g(),H=m("span"),H.textContent="아버지 현상진",N=g(),R=m("span"),q=m("a"),V(U.$$.fragment),Q=g(),Z=m("a"),V(K.$$.fragment),J=g(),ee=m("span"),ee.textContent="어머니 김수현",te=g(),se=m("span"),ie=m("a"),V(re.$$.fragment),ne=g(),le=m("a"),V(oe.$$.fragment),ce=g(),de=m("li"),me=m("span"),me.textContent="신부측 혼주",fe=g(),he=m("span"),he.textContent="아버지 이택승",ge=g(),ve=m("span"),we=m("a"),V(be.$$.fragment),ye=g(),xe=m("a"),V(Ee.$$.fragment),Se=g(),Ae=m("span"),Ae.textContent="어머니 이순란",Te=g(),Me=m("span"),Ce=m("a"),V($e.$$.fragment),ke=g(),ze=m("a"),V(Pe.$$.fragment),b(i,"class","title svelte-k5mc44"),b(o,"class","contact-block f17 svelte-k5mc44"),b(h,"href","tel:010-4193-2615"),b(h,"class","fa-icon svelte-k5mc44"),b(y,"href","sms:010-4193-2615"),b(y,"class","fa-icon svelte-k5mc44"),b(l,"class","contact-list svelte-k5mc44"),b(T,"class","contact-block f17 svelte-k5mc44"),b($,"href","tel:010-5067-3805"),b($,"class","fa-icon svelte-k5mc44"),b(P,"href","sms:010-5067-3805"),b(P,"class","fa-icon svelte-k5mc44"),b(A,"class","contact-list svelte-k5mc44"),b(n,"class","contact-us svelte-k5mc44"),b(I,"class","contact-honju f16 svelte-k5mc44"),b(Y,"class","honju svelte-k5mc44"),S(Y,"color","#78c0e9"),b(H,"class","contact-block svelte-k5mc44"),b(q,"href","tel:010-4675-2615"),b(q,"class","fa-icon svelte-k5mc44"),b(Z,"href","sms:010-4675-2615"),b(Z,"class","fa-icon svelte-k5mc44"),b(ee,"class","contact-block svelte-k5mc44"),b(ie,"href","tel:010-7538-2605"),b(ie,"class","fa-icon svelte-k5mc44"),b(le,"href","sms:010-7538-2605"),b(le,"class","fa-icon svelte-k5mc44"),b(_,"class","contact-list svelte-k5mc44"),b(me,"class","honju svelte-k5mc44"),S(me,"color","#f79e9e"),b(he,"class","contact-block svelte-k5mc44"),b(we,"href","tel:010-4020-3804"),b(we,"class","fa-icon svelte-k5mc44"),b(xe,"href","sms:010-4020-3804"),b(xe,"class","fa-icon svelte-k5mc44"),b(Ae,"class","contact-block svelte-k5mc44"),b(Ce,"href","tel:010-4468-3805"),b(Ce,"class","fa-icon svelte-k5mc44"),b(ze,"href","sms:010-4468-3805"),b(ze,"class","fa-icon svelte-k5mc44"),b(de,"class","contact-list svelte-k5mc44"),b(B,"class","contact-us svelte-k5mc44"),b(r,"class","contact-main"),b(s,"class","contact-outline svelte-k5mc44")},m(e,t){d(e,s,t),c(s,i),c(s,a),c(s,r),c(r,n),c(n,l),c(l,o),c(l,u),c(l,f),c(f,h),F(v,h,null),c(f,w),c(f,y),F(x,y,null),c(n,E),c(n,A),c(A,T),c(A,M),c(A,C),c(C,$),F(k,$,null),c(C,z),c(C,P),F(L,P,null),c(r,O),c(r,I),c(r,D),c(r,B),c(B,_),c(_,Y),c(_,G),c(_,H),c(_,N),c(_,R),c(R,q),F(U,q,null),c(R,Q),c(R,Z),F(K,Z,null),c(_,J),c(_,ee),c(_,te),c(_,se),c(se,ie),F(re,ie,null),c(se,ne),c(se,le),F(oe,le,null),c(B,ce),c(B,de),c(de,me),c(de,fe),c(de,he),c(de,ge),c(de,ve),c(ve,we),F(be,we,null),c(ve,ye),c(ve,xe),F(Ee,xe,null),c(de,Se),c(de,Ae),c(de,Te),c(de,Me),c(Me,Ce),F($e,Ce,null),c(Me,ke),c(Me,ze),F(Pe,ze,null),Le=!0},p:e,i(e){Le||(j(v.$$.fragment,e),j(x.$$.fragment,e),j(k.$$.fragment,e),j(L.$$.fragment,e),j(U.$$.fragment,e),j(K.$$.fragment,e),j(re.$$.fragment,e),j(oe.$$.fragment,e),j(be.$$.fragment,e),j(Ee.$$.fragment,e),j($e.$$.fragment,e),j(Pe.$$.fragment,e),Le=!0)},o(e){X(v.$$.fragment,e),X(x.$$.fragment,e),X(k.$$.fragment,e),X(L.$$.fragment,e),X(U.$$.fragment,e),X(K.$$.fragment,e),X(re.$$.fragment,e),X(oe.$$.fragment,e),X(be.$$.fragment,e),X(Ee.$$.fragment,e),X($e.$$.fragment,e),X(Pe.$$.fragment,e),Le=!1},d(e){e&&p(s),W(v),W(x),W(k),W(L),W(U),W(K),W(re),W(oe),W(be),W(Ee),W($e),W(Pe)}}}class Ys extends Q{constructor(e){super(),U(this,e,null,_s,r,{})}}function Gs(t){let s;return{c(){s=m("div"),s.innerHTML='<div class="bottom-img svelte-1ccxwmz"><div class="cover svelte-1ccxwmz"><div class="bottom-content svelte-1ccxwmz">예쁜 예감이 들었다.\n                <br/>\n                우리는 언제나 손을 잡고 있게 될 것이다.\n                <br/>\n                이이체, 인연</div></div></div>',b(s,"class","bottom-img-outline")},m(e,t){d(e,s,t)},p:e,i:e,o:e,d(e){e&&p(s)}}}class Hs extends Q{constructor(e){super(),U(this,e,null,Gs,r,{})}}function Ns(t){let s,i,a,r;return{c(){s=m("div"),i=m("button"),i.innerHTML='<div class="share-content svelte-1srld98">카카오톡으로 초대장 보내기</div>',b(i,"class","share-kakao svelte-1srld98"),b(s,"class","share-outline")},m(e,t){d(e,s,t),c(s,i),a||(r=w(i,"click",js),a=!0)},p:e,i:e,o:e,d(e){e&&p(s),a=!1,r()}}}function js(){Kakao.Share.sendDefault({objectType:"feed",content:{title:"4월 22일 현태룡 ♥ 이초현 결혼합니다.",imageUrl:"https://lh3.googleusercontent.com/rY9Wii-4nEcPrpI1QITGOP7DqBeYg4fy8_53o7zCVWQERI9lcYog2jfYMGaB2txRB1nNkMng430EjxF789JQUwDSGxafXjZxjnC2O-WoOg9fofWIv5LOvmlqfWg8FNMPerEuMhzTM_U=w2400",link:{mobileWebUrl:"https://bb-worm.github.io/wedding",webUrl:"https://bb-worm.github.io/wedding"}},buttons:[{title:"모바일청첩장",link:{mobileWebUrl:"https://bb-worm.github.io/wedding",webUrl:"https://bb-worm.github.io/wedding"}}]})}function Xs(e){return Kakao.init("528e6b27db4ad1b8217f3c6a70126fed"),[]}class Rs extends Q{constructor(e){super(),U(this,e,Xs,Ns,r,{})}}function Vs(e){let t,s;return t=new Bs({}),{c(){V(t.$$.fragment)},m(e,i){F(t,e,i),s=!0},i(e){s||(j(t.$$.fragment,e),s=!0)},o(e){X(t.$$.fragment,e),s=!1},d(e){W(t,e)}}}function Fs(e){let t,s,i,a,r,n,l,o,u,f,h,v,w,y,x,E,S,A,T,M,C,$,k,z;t=new be({}),a=new xe({}),n=new Se({}),o=new Te({}),f=new _e({}),v=new vs({}),y=new bs({}),E=new xs({});let P=e[0]&&Vs();return T=new Ys({}),C=new Hs({}),k=new Rs({}),{c(){V(t.$$.fragment),s=g(),i=m("div"),V(a.$$.fragment),r=g(),V(n.$$.fragment),l=g(),V(o.$$.fragment),u=g(),V(f.$$.fragment),h=g(),V(v.$$.fragment),w=g(),V(y.$$.fragment),x=g(),V(E.$$.fragment),S=g(),P&&P.c(),A=g(),V(T.$$.fragment),M=g(),V(C.$$.fragment),$=g(),V(k.$$.fragment),b(i,"class","page-cover svelte-1nibao8")},m(e,p){F(t,e,p),d(e,s,p),d(e,i,p),F(a,i,null),c(i,r),F(n,i,null),c(i,l),F(o,i,null),c(i,u),F(f,i,null),c(i,h),F(v,i,null),c(i,w),F(y,i,null),c(i,x),F(E,i,null),c(i,S),P&&P.m(i,null),c(i,A),F(T,i,null),c(i,M),F(C,i,null),c(i,$),F(k,i,null),z=!0},p(e,[t]){e[0]?P?1&t&&j(P,1):(P=Vs(),P.c(),j(P,1),P.m(i,A)):P&&(H(),X(P,1,1,(()=>{P=null})),N())},i(e){z||(j(t.$$.fragment,e),j(a.$$.fragment,e),j(n.$$.fragment,e),j(o.$$.fragment,e),j(f.$$.fragment,e),j(v.$$.fragment,e),j(y.$$.fragment,e),j(E.$$.fragment,e),j(P),j(T.$$.fragment,e),j(C.$$.fragment,e),j(k.$$.fragment,e),z=!0)},o(e){X(t.$$.fragment,e),X(a.$$.fragment,e),X(n.$$.fragment,e),X(o.$$.fragment,e),X(f.$$.fragment,e),X(v.$$.fragment,e),X(y.$$.fragment,e),X(E.$$.fragment,e),X(P),X(T.$$.fragment,e),X(C.$$.fragment,e),X(k.$$.fragment,e),z=!1},d(e){W(t,e),e&&p(s),e&&p(i),W(a),W(n),W(o),W(f),W(v),W(y),W(E),P&&P.d(),W(T),W(C),W(k)}}}async function Ws(){return await fetch("https://api.leechohyuntaeryong.com").then((e=>e.status)).catch((e=>(console.log("Unexpected error ("+e+")"),"500")))}function qs(e,t,s){window.mobileCheck=function(){let e=!1;var t;return t=navigator.userAgent||navigator.vendor||window.opera,(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(t)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(t.substr(0,4)))&&(e=!0),e};let i=!1;const a=e=>new Promise((t=>setTimeout(t,e)));var r;return r=async()=>{for(let e=0;e<3;e++){if("200"==await Ws())return void s(0,i=!0);a(3e3)}},M().$$.on_mount.push(r),[i]}return new class extends Q{constructor(e){super(),U(this,e,qs,Fs,r,{})}}({target:document.body})}();
+
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    // Adapted from https://github.com/then/is-promise/blob/master/index.js
+    // Distributed under MIT License https://github.com/then/is-promise/blob/master/LICENSE
+    function is_promise(value) {
+        return !!value && (typeof value === 'object' || typeof value === 'function') && typeof value.then === 'function';
+    }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    let src_url_equal_anchor;
+    function src_url_equal(element_src, url) {
+        if (!src_url_equal_anchor) {
+            src_url_equal_anchor = document.createElement('a');
+        }
+        src_url_equal_anchor.href = url;
+        return element_src === src_url_equal_anchor.href;
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        if (node.parentNode) {
+            node.parentNode.removeChild(node);
+        }
+    }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function svg_element(name) {
+        return document.createElementNS('http://www.w3.org/2000/svg', name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function empty() {
+        return text('');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else if (node.getAttribute(attribute) !== value)
+            node.setAttribute(attribute, value);
+    }
+    function set_custom_element_data(node, prop, value) {
+        if (prop in node) {
+            node[prop] = typeof node[prop] === 'boolean' && value === '' ? true : value;
+        }
+        else {
+            attr(node, prop, value);
+        }
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function set_input_value(input, value) {
+        input.value = value == null ? '' : value;
+    }
+    function set_style(node, key, value, important) {
+        if (value === null) {
+            node.style.removeProperty(key);
+        }
+        else {
+            node.style.setProperty(key, value, important ? 'important' : '');
+        }
+    }
+    function toggle_class(element, name, toggle) {
+        element.classList[toggle ? 'add' : 'remove'](name);
+    }
+    function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, bubbles, cancelable, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+    function get_current_component() {
+        if (!current_component)
+            throw new Error('Function called outside component initialization');
+        return current_component;
+    }
+    /**
+     * The `onMount` function schedules a callback to run as soon as the component has been mounted to the DOM.
+     * It must be called during the component's initialisation (but doesn't need to live *inside* the component;
+     * it can be called from an external module).
+     *
+     * `onMount` does not run inside a [server-side component](/docs#run-time-server-side-component-api).
+     *
+     * https://svelte.dev/docs#run-time-svelte-onmount
+     */
+    function onMount(fn) {
+        get_current_component().$$.on_mount.push(fn);
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    // flush() calls callbacks in this order:
+    // 1. All beforeUpdate callbacks, in order: parents before children
+    // 2. All bind:this callbacks, in reverse order: children before parents.
+    // 3. All afterUpdate callbacks, in order: parents before children. EXCEPT
+    //    for afterUpdates called during the initial onMount, which are called in
+    //    reverse order: children before parents.
+    // Since callbacks might update component values, which could trigger another
+    // call to flush(), the following steps guard against this:
+    // 1. During beforeUpdate, any updated components will be added to the
+    //    dirty_components array and will cause a reentrant call to flush(). Because
+    //    the flush index is kept outside the function, the reentrant call will pick
+    //    up where the earlier call left off and go through all dirty components. The
+    //    current_component value is saved and restored so that the reentrant call will
+    //    not interfere with the "parent" flush() call.
+    // 2. bind:this callbacks cannot trigger new flush() calls.
+    // 3. During afterUpdate, any updated components will NOT have their afterUpdate
+    //    callback called a second time; the seen_callbacks set, outside the flush()
+    //    function, guarantees this behavior.
+    const seen_callbacks = new Set();
+    let flushidx = 0; // Do *not* move this inside the flush() function
+    function flush() {
+        // Do not reenter flush while dirty components are updated, as this can
+        // result in an infinite loop. Instead, let the inner flush handle it.
+        // Reentrancy is ok afterwards for bindings etc.
+        if (flushidx !== 0) {
+            return;
+        }
+        const saved_component = current_component;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            try {
+                while (flushidx < dirty_components.length) {
+                    const component = dirty_components[flushidx];
+                    flushidx++;
+                    set_current_component(component);
+                    update$1(component.$$);
+                }
+            }
+            catch (e) {
+                // reset dirty state to not end up in a deadlocked state and then rethrow
+                dirty_components.length = 0;
+                flushidx = 0;
+                throw e;
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            flushidx = 0;
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        seen_callbacks.clear();
+        set_current_component(saved_component);
+    }
+    function update$1($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            const dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    const outroing = new Set();
+    let outros;
+    function group_outros() {
+        outros = {
+            r: 0,
+            c: [],
+            p: outros // parent group
+        };
+    }
+    function check_outros() {
+        if (!outros.r) {
+            run_all(outros.c);
+        }
+        outros = outros.p;
+    }
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function transition_out(block, local, detach, callback) {
+        if (block && block.o) {
+            if (outroing.has(block))
+                return;
+            outroing.add(block);
+            outros.c.push(() => {
+                outroing.delete(block);
+                if (callback) {
+                    if (detach)
+                        block.d(1);
+                    callback();
+                }
+            });
+            block.o(local);
+        }
+        else if (callback) {
+            callback();
+        }
+    }
+
+    function handle_promise(promise, info) {
+        const token = info.token = {};
+        function update(type, index, key, value) {
+            if (info.token !== token)
+                return;
+            info.resolved = value;
+            let child_ctx = info.ctx;
+            if (key !== undefined) {
+                child_ctx = child_ctx.slice();
+                child_ctx[key] = value;
+            }
+            const block = type && (info.current = type)(child_ctx);
+            let needs_flush = false;
+            if (info.block) {
+                if (info.blocks) {
+                    info.blocks.forEach((block, i) => {
+                        if (i !== index && block) {
+                            group_outros();
+                            transition_out(block, 1, 1, () => {
+                                if (info.blocks[i] === block) {
+                                    info.blocks[i] = null;
+                                }
+                            });
+                            check_outros();
+                        }
+                    });
+                }
+                else {
+                    info.block.d(1);
+                }
+                block.c();
+                transition_in(block, 1);
+                block.m(info.mount(), info.anchor);
+                needs_flush = true;
+            }
+            info.block = block;
+            if (info.blocks)
+                info.blocks[index] = block;
+            if (needs_flush) {
+                flush();
+            }
+        }
+        if (is_promise(promise)) {
+            const current_component = get_current_component();
+            promise.then(value => {
+                set_current_component(current_component);
+                update(info.then, 1, info.value, value);
+                set_current_component(null);
+            }, error => {
+                set_current_component(current_component);
+                update(info.catch, 2, info.error, error);
+                set_current_component(null);
+                if (!info.hasCatch) {
+                    throw error;
+                }
+            });
+            // if we previously had a then/catch block, destroy it
+            if (info.current !== info.pending) {
+                update(info.pending, 0);
+                return true;
+            }
+        }
+        else {
+            if (info.current !== info.then) {
+                update(info.then, 1, info.value, promise);
+                return true;
+            }
+            info.resolved = promise;
+        }
+    }
+    function update_await_block_branch(info, ctx, dirty) {
+        const child_ctx = ctx.slice();
+        const { resolved } = info;
+        if (info.current === info.then) {
+            child_ctx[info.value] = resolved;
+        }
+        if (info.current === info.catch) {
+            child_ctx[info.error] = resolved;
+        }
+        info.block.p(child_ctx, dirty);
+    }
+
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
+    function create_component(block) {
+        block && block.c();
+    }
+    function mount_component(component, target, anchor, customElement) {
+        const { fragment, after_update } = component.$$;
+        fragment && fragment.m(target, anchor);
+        if (!customElement) {
+            // onMount happens before the initial afterUpdate
+            add_render_callback(() => {
+                const new_on_destroy = component.$$.on_mount.map(run).filter(is_function);
+                // if the component was destroyed immediately
+                // it will update the `$$.on_destroy` reference to `null`.
+                // the destructured on_destroy may still reference to the old array
+                if (component.$$.on_destroy) {
+                    component.$$.on_destroy.push(...new_on_destroy);
+                }
+                else {
+                    // Edge case - component was destroyed immediately,
+                    // most likely as a result of a binding initialising
+                    run_all(new_on_destroy);
+                }
+                component.$$.on_mount = [];
+            });
+        }
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        const $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, append_styles, dirty = [-1]) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: [],
+            // state
+            props,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            on_disconnect: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+            // everything else
+            callbacks: blank_object(),
+            dirty,
+            skip_bound: false,
+            root: options.target || parent_component.$$.root
+        };
+        append_styles && append_styles($$.root);
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, options.props || {}, (i, ret, ...rest) => {
+                const value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        $$.bound[i](value);
+                    if (ready)
+                        make_dirty(component, i);
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                const nodes = children(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor, options.customElement);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    /**
+     * Base class for Svelte components. Used when dev=false.
+     */
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            if (!is_function(callback)) {
+                return noop;
+            }
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set($$props) {
+            if (this.$$set && !is_empty($$props)) {
+                this.$$.skip_bound = true;
+                this.$$set($$props);
+                this.$$.skip_bound = false;
+            }
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, Object.assign({ version: '3.55.1' }, detail), { bubbles: true }));
+    }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev('SvelteDOMInsert', { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev('SvelteDOMRemove', { node });
+        detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
+        else
+            dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
+    }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.wholeText === data)
+            return;
+        dispatch_dev('SvelteDOMSetData', { node: text, data });
+        text.data = data;
+    }
+    function validate_each_argument(arg) {
+        if (typeof arg !== 'string' && !(arg && typeof arg === 'object' && 'length' in arg)) {
+            let msg = '{#each} only iterates over array-like objects.';
+            if (typeof Symbol === 'function' && arg && Symbol.iterator in arg) {
+                msg += ' You can use a spread to convert this iterable into an array.';
+            }
+            throw new Error(msg);
+        }
+    }
+    function validate_slots(name, slot, keys) {
+        for (const slot_key of Object.keys(slot)) {
+            if (!~keys.indexOf(slot_key)) {
+                console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+            }
+        }
+    }
+    /**
+     * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
+     */
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error("'target' is a required option");
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn('Component was already destroyed'); // eslint-disable-line no-console
+            };
+        }
+        $capture_state() { }
+        $inject_state() { }
+    }
+
+    const parseNumber = parseFloat;
+
+    function joinCss(obj, separator = ';') {
+      let texts;
+      if (Array.isArray(obj)) {
+        texts = obj.filter((text) => text);
+      } else {
+        texts = [];
+        for (const prop in obj) {
+          if (obj[prop]) {
+            texts.push(`${prop}:${obj[prop]}`);
+          }
+        }
+      }
+      return texts.join(separator);
+    }
+
+    function getStyles(style, size, pull, fw) {
+      let float;
+      let width;
+      const height = '1em';
+      let lineHeight;
+      let fontSize;
+      let textAlign;
+      let verticalAlign = '-.125em';
+      const overflow = 'visible';
+
+      if (fw) {
+        textAlign = 'center';
+        width = '1.25em';
+      }
+
+      if (pull) {
+        float = pull;
+      }
+
+      if (size) {
+        if (size == 'lg') {
+          fontSize = '1.33333em';
+          lineHeight = '.75em';
+          verticalAlign = '-.225em';
+        } else if (size == 'xs') {
+          fontSize = '.75em';
+        } else if (size == 'sm') {
+          fontSize = '.875em';
+        } else {
+          fontSize = size.replace('x', 'em');
+        }
+      }
+
+      return joinCss([
+        joinCss({
+          float,
+          width,
+          height,
+          'line-height': lineHeight,
+          'font-size': fontSize,
+          'text-align': textAlign,
+          'vertical-align': verticalAlign,
+          'transform-origin': 'center',
+          overflow,
+        }),
+        style,
+      ]);
+    }
+
+    function getTransform(
+      scale,
+      translateX,
+      translateY,
+      rotate,
+      flip,
+      translateTimes = 1,
+      translateUnit = '',
+      rotateUnit = '',
+    ) {
+      let flipX = 1;
+      let flipY = 1;
+
+      if (flip) {
+        if (flip == 'horizontal') {
+          flipX = -1;
+        } else if (flip == 'vertical') {
+          flipY = -1;
+        } else {
+          flipX = flipY = -1;
+        }
+      }
+
+      return joinCss(
+        [
+          `translate(${parseNumber(translateX) * translateTimes}${translateUnit},${parseNumber(translateY) * translateTimes}${translateUnit})`,
+          `scale(${flipX * parseNumber(scale)},${flipY * parseNumber(scale)})`,
+          rotate && `rotate(${rotate}${rotateUnit})`,
+        ],
+        ' ',
+      );
+    }
+
+    /* node_modules/svelte-fa/src/fa.svelte generated by Svelte v3.55.1 */
+    const file$f = "node_modules/svelte-fa/src/fa.svelte";
+
+    // (66:0) {#if i[4]}
+    function create_if_block$4(ctx) {
+    	let svg;
+    	let g1;
+    	let g0;
+    	let g1_transform_value;
+    	let g1_transform_origin_value;
+    	let svg_id_value;
+    	let svg_class_value;
+    	let svg_viewBox_value;
+
+    	function select_block_type(ctx, dirty) {
+    		if (typeof /*i*/ ctx[10][4] == 'string') return create_if_block_1$1;
+    		return create_else_block$3;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
+
+    	const block = {
+    		c: function create() {
+    			svg = svg_element("svg");
+    			g1 = svg_element("g");
+    			g0 = svg_element("g");
+    			if_block.c();
+    			attr_dev(g0, "transform", /*transform*/ ctx[12]);
+    			add_location(g0, file$f, 81, 6, 1397);
+    			attr_dev(g1, "transform", g1_transform_value = "translate(" + /*i*/ ctx[10][0] / 2 + " " + /*i*/ ctx[10][1] / 2 + ")");
+    			attr_dev(g1, "transform-origin", g1_transform_origin_value = "" + (/*i*/ ctx[10][0] / 4 + " 0"));
+    			add_location(g1, file$f, 77, 4, 1293);
+    			attr_dev(svg, "id", svg_id_value = /*id*/ ctx[1] || undefined);
+    			attr_dev(svg, "class", svg_class_value = "svelte-fa " + /*clazz*/ ctx[0] + " svelte-1cj2gr0");
+    			attr_dev(svg, "style", /*s*/ ctx[11]);
+    			attr_dev(svg, "viewBox", svg_viewBox_value = "0 0 " + /*i*/ ctx[10][0] + " " + /*i*/ ctx[10][1]);
+    			attr_dev(svg, "aria-hidden", "true");
+    			attr_dev(svg, "role", "img");
+    			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
+    			toggle_class(svg, "pulse", /*pulse*/ ctx[4]);
+    			toggle_class(svg, "spin", /*spin*/ ctx[3]);
+    			add_location(svg, file$f, 66, 2, 1071);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, svg, anchor);
+    			append_dev(svg, g1);
+    			append_dev(g1, g0);
+    			if_block.m(g0, null);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(g0, null);
+    				}
+    			}
+
+    			if (dirty & /*transform*/ 4096) {
+    				attr_dev(g0, "transform", /*transform*/ ctx[12]);
+    			}
+
+    			if (dirty & /*i*/ 1024 && g1_transform_value !== (g1_transform_value = "translate(" + /*i*/ ctx[10][0] / 2 + " " + /*i*/ ctx[10][1] / 2 + ")")) {
+    				attr_dev(g1, "transform", g1_transform_value);
+    			}
+
+    			if (dirty & /*i*/ 1024 && g1_transform_origin_value !== (g1_transform_origin_value = "" + (/*i*/ ctx[10][0] / 4 + " 0"))) {
+    				attr_dev(g1, "transform-origin", g1_transform_origin_value);
+    			}
+
+    			if (dirty & /*id*/ 2 && svg_id_value !== (svg_id_value = /*id*/ ctx[1] || undefined)) {
+    				attr_dev(svg, "id", svg_id_value);
+    			}
+
+    			if (dirty & /*clazz*/ 1 && svg_class_value !== (svg_class_value = "svelte-fa " + /*clazz*/ ctx[0] + " svelte-1cj2gr0")) {
+    				attr_dev(svg, "class", svg_class_value);
+    			}
+
+    			if (dirty & /*s*/ 2048) {
+    				attr_dev(svg, "style", /*s*/ ctx[11]);
+    			}
+
+    			if (dirty & /*i*/ 1024 && svg_viewBox_value !== (svg_viewBox_value = "0 0 " + /*i*/ ctx[10][0] + " " + /*i*/ ctx[10][1])) {
+    				attr_dev(svg, "viewBox", svg_viewBox_value);
+    			}
+
+    			if (dirty & /*clazz, pulse*/ 17) {
+    				toggle_class(svg, "pulse", /*pulse*/ ctx[4]);
+    			}
+
+    			if (dirty & /*clazz, spin*/ 9) {
+    				toggle_class(svg, "spin", /*spin*/ ctx[3]);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(svg);
+    			if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$4.name,
+    		type: "if",
+    		source: "(66:0) {#if i[4]}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (89:8) {:else}
+    function create_else_block$3(ctx) {
+    	let path0;
+    	let path0_d_value;
+    	let path0_fill_value;
+    	let path0_fill_opacity_value;
+    	let path0_transform_value;
+    	let path1;
+    	let path1_d_value;
+    	let path1_fill_value;
+    	let path1_fill_opacity_value;
+    	let path1_transform_value;
+
+    	const block = {
+    		c: function create() {
+    			path0 = svg_element("path");
+    			path1 = svg_element("path");
+    			attr_dev(path0, "d", path0_d_value = /*i*/ ctx[10][4][0]);
+    			attr_dev(path0, "fill", path0_fill_value = /*secondaryColor*/ ctx[6] || /*color*/ ctx[2] || 'currentColor');
+
+    			attr_dev(path0, "fill-opacity", path0_fill_opacity_value = /*swapOpacity*/ ctx[9] != false
+    			? /*primaryOpacity*/ ctx[7]
+    			: /*secondaryOpacity*/ ctx[8]);
+
+    			attr_dev(path0, "transform", path0_transform_value = "translate(" + /*i*/ ctx[10][0] / -2 + " " + /*i*/ ctx[10][1] / -2 + ")");
+    			add_location(path0, file$f, 90, 10, 1678);
+    			attr_dev(path1, "d", path1_d_value = /*i*/ ctx[10][4][1]);
+    			attr_dev(path1, "fill", path1_fill_value = /*primaryColor*/ ctx[5] || /*color*/ ctx[2] || 'currentColor');
+
+    			attr_dev(path1, "fill-opacity", path1_fill_opacity_value = /*swapOpacity*/ ctx[9] != false
+    			? /*secondaryOpacity*/ ctx[8]
+    			: /*primaryOpacity*/ ctx[7]);
+
+    			attr_dev(path1, "transform", path1_transform_value = "translate(" + /*i*/ ctx[10][0] / -2 + " " + /*i*/ ctx[10][1] / -2 + ")");
+    			add_location(path1, file$f, 96, 10, 1935);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, path0, anchor);
+    			insert_dev(target, path1, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*i*/ 1024 && path0_d_value !== (path0_d_value = /*i*/ ctx[10][4][0])) {
+    				attr_dev(path0, "d", path0_d_value);
+    			}
+
+    			if (dirty & /*secondaryColor, color*/ 68 && path0_fill_value !== (path0_fill_value = /*secondaryColor*/ ctx[6] || /*color*/ ctx[2] || 'currentColor')) {
+    				attr_dev(path0, "fill", path0_fill_value);
+    			}
+
+    			if (dirty & /*swapOpacity, primaryOpacity, secondaryOpacity*/ 896 && path0_fill_opacity_value !== (path0_fill_opacity_value = /*swapOpacity*/ ctx[9] != false
+    			? /*primaryOpacity*/ ctx[7]
+    			: /*secondaryOpacity*/ ctx[8])) {
+    				attr_dev(path0, "fill-opacity", path0_fill_opacity_value);
+    			}
+
+    			if (dirty & /*i*/ 1024 && path0_transform_value !== (path0_transform_value = "translate(" + /*i*/ ctx[10][0] / -2 + " " + /*i*/ ctx[10][1] / -2 + ")")) {
+    				attr_dev(path0, "transform", path0_transform_value);
+    			}
+
+    			if (dirty & /*i*/ 1024 && path1_d_value !== (path1_d_value = /*i*/ ctx[10][4][1])) {
+    				attr_dev(path1, "d", path1_d_value);
+    			}
+
+    			if (dirty & /*primaryColor, color*/ 36 && path1_fill_value !== (path1_fill_value = /*primaryColor*/ ctx[5] || /*color*/ ctx[2] || 'currentColor')) {
+    				attr_dev(path1, "fill", path1_fill_value);
+    			}
+
+    			if (dirty & /*swapOpacity, secondaryOpacity, primaryOpacity*/ 896 && path1_fill_opacity_value !== (path1_fill_opacity_value = /*swapOpacity*/ ctx[9] != false
+    			? /*secondaryOpacity*/ ctx[8]
+    			: /*primaryOpacity*/ ctx[7])) {
+    				attr_dev(path1, "fill-opacity", path1_fill_opacity_value);
+    			}
+
+    			if (dirty & /*i*/ 1024 && path1_transform_value !== (path1_transform_value = "translate(" + /*i*/ ctx[10][0] / -2 + " " + /*i*/ ctx[10][1] / -2 + ")")) {
+    				attr_dev(path1, "transform", path1_transform_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(path0);
+    			if (detaching) detach_dev(path1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block$3.name,
+    		type: "else",
+    		source: "(89:8) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (83:8) {#if typeof i[4] == 'string'}
+    function create_if_block_1$1(ctx) {
+    	let path;
+    	let path_d_value;
+    	let path_fill_value;
+    	let path_transform_value;
+
+    	const block = {
+    		c: function create() {
+    			path = svg_element("path");
+    			attr_dev(path, "d", path_d_value = /*i*/ ctx[10][4]);
+    			attr_dev(path, "fill", path_fill_value = /*color*/ ctx[2] || /*primaryColor*/ ctx[5] || 'currentColor');
+    			attr_dev(path, "transform", path_transform_value = "translate(" + /*i*/ ctx[10][0] / -2 + " " + /*i*/ ctx[10][1] / -2 + ")");
+    			add_location(path, file$f, 83, 10, 1461);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, path, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*i*/ 1024 && path_d_value !== (path_d_value = /*i*/ ctx[10][4])) {
+    				attr_dev(path, "d", path_d_value);
+    			}
+
+    			if (dirty & /*color, primaryColor*/ 36 && path_fill_value !== (path_fill_value = /*color*/ ctx[2] || /*primaryColor*/ ctx[5] || 'currentColor')) {
+    				attr_dev(path, "fill", path_fill_value);
+    			}
+
+    			if (dirty & /*i*/ 1024 && path_transform_value !== (path_transform_value = "translate(" + /*i*/ ctx[10][0] / -2 + " " + /*i*/ ctx[10][1] / -2 + ")")) {
+    				attr_dev(path, "transform", path_transform_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(path);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(83:8) {#if typeof i[4] == 'string'}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$f(ctx) {
+    	let if_block_anchor;
+    	let if_block = /*i*/ ctx[10][4] && create_if_block$4(ctx);
+
+    	const block = {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (/*i*/ ctx[10][4]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block$4(ctx);
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$f.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$f($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Fa', slots, []);
+    	let { class: clazz = '' } = $$props;
+    	let { id = '' } = $$props;
+    	let { style = '' } = $$props;
+    	let { icon } = $$props;
+    	let { size = '' } = $$props;
+    	let { color = '' } = $$props;
+    	let { fw = false } = $$props;
+    	let { pull = '' } = $$props;
+    	let { scale = 1 } = $$props;
+    	let { translateX = 0 } = $$props;
+    	let { translateY = 0 } = $$props;
+    	let { rotate = '' } = $$props;
+    	let { flip = false } = $$props;
+    	let { spin = false } = $$props;
+    	let { pulse = false } = $$props;
+    	let { primaryColor = '' } = $$props;
+    	let { secondaryColor = '' } = $$props;
+    	let { primaryOpacity = 1 } = $$props;
+    	let { secondaryOpacity = 0.4 } = $$props;
+    	let { swapOpacity = false } = $$props;
+    	let i;
+    	let s;
+    	let transform;
+
+    	$$self.$$.on_mount.push(function () {
+    		if (icon === undefined && !('icon' in $$props || $$self.$$.bound[$$self.$$.props['icon']])) {
+    			console.warn("<Fa> was created without expected prop 'icon'");
+    		}
+    	});
+
+    	const writable_props = [
+    		'class',
+    		'id',
+    		'style',
+    		'icon',
+    		'size',
+    		'color',
+    		'fw',
+    		'pull',
+    		'scale',
+    		'translateX',
+    		'translateY',
+    		'rotate',
+    		'flip',
+    		'spin',
+    		'pulse',
+    		'primaryColor',
+    		'secondaryColor',
+    		'primaryOpacity',
+    		'secondaryOpacity',
+    		'swapOpacity'
+    	];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Fa> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$$set = $$props => {
+    		if ('class' in $$props) $$invalidate(0, clazz = $$props.class);
+    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
+    		if ('style' in $$props) $$invalidate(13, style = $$props.style);
+    		if ('icon' in $$props) $$invalidate(14, icon = $$props.icon);
+    		if ('size' in $$props) $$invalidate(15, size = $$props.size);
+    		if ('color' in $$props) $$invalidate(2, color = $$props.color);
+    		if ('fw' in $$props) $$invalidate(16, fw = $$props.fw);
+    		if ('pull' in $$props) $$invalidate(17, pull = $$props.pull);
+    		if ('scale' in $$props) $$invalidate(18, scale = $$props.scale);
+    		if ('translateX' in $$props) $$invalidate(19, translateX = $$props.translateX);
+    		if ('translateY' in $$props) $$invalidate(20, translateY = $$props.translateY);
+    		if ('rotate' in $$props) $$invalidate(21, rotate = $$props.rotate);
+    		if ('flip' in $$props) $$invalidate(22, flip = $$props.flip);
+    		if ('spin' in $$props) $$invalidate(3, spin = $$props.spin);
+    		if ('pulse' in $$props) $$invalidate(4, pulse = $$props.pulse);
+    		if ('primaryColor' in $$props) $$invalidate(5, primaryColor = $$props.primaryColor);
+    		if ('secondaryColor' in $$props) $$invalidate(6, secondaryColor = $$props.secondaryColor);
+    		if ('primaryOpacity' in $$props) $$invalidate(7, primaryOpacity = $$props.primaryOpacity);
+    		if ('secondaryOpacity' in $$props) $$invalidate(8, secondaryOpacity = $$props.secondaryOpacity);
+    		if ('swapOpacity' in $$props) $$invalidate(9, swapOpacity = $$props.swapOpacity);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		getStyles,
+    		getTransform,
+    		clazz,
+    		id,
+    		style,
+    		icon,
+    		size,
+    		color,
+    		fw,
+    		pull,
+    		scale,
+    		translateX,
+    		translateY,
+    		rotate,
+    		flip,
+    		spin,
+    		pulse,
+    		primaryColor,
+    		secondaryColor,
+    		primaryOpacity,
+    		secondaryOpacity,
+    		swapOpacity,
+    		i,
+    		s,
+    		transform
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('clazz' in $$props) $$invalidate(0, clazz = $$props.clazz);
+    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
+    		if ('style' in $$props) $$invalidate(13, style = $$props.style);
+    		if ('icon' in $$props) $$invalidate(14, icon = $$props.icon);
+    		if ('size' in $$props) $$invalidate(15, size = $$props.size);
+    		if ('color' in $$props) $$invalidate(2, color = $$props.color);
+    		if ('fw' in $$props) $$invalidate(16, fw = $$props.fw);
+    		if ('pull' in $$props) $$invalidate(17, pull = $$props.pull);
+    		if ('scale' in $$props) $$invalidate(18, scale = $$props.scale);
+    		if ('translateX' in $$props) $$invalidate(19, translateX = $$props.translateX);
+    		if ('translateY' in $$props) $$invalidate(20, translateY = $$props.translateY);
+    		if ('rotate' in $$props) $$invalidate(21, rotate = $$props.rotate);
+    		if ('flip' in $$props) $$invalidate(22, flip = $$props.flip);
+    		if ('spin' in $$props) $$invalidate(3, spin = $$props.spin);
+    		if ('pulse' in $$props) $$invalidate(4, pulse = $$props.pulse);
+    		if ('primaryColor' in $$props) $$invalidate(5, primaryColor = $$props.primaryColor);
+    		if ('secondaryColor' in $$props) $$invalidate(6, secondaryColor = $$props.secondaryColor);
+    		if ('primaryOpacity' in $$props) $$invalidate(7, primaryOpacity = $$props.primaryOpacity);
+    		if ('secondaryOpacity' in $$props) $$invalidate(8, secondaryOpacity = $$props.secondaryOpacity);
+    		if ('swapOpacity' in $$props) $$invalidate(9, swapOpacity = $$props.swapOpacity);
+    		if ('i' in $$props) $$invalidate(10, i = $$props.i);
+    		if ('s' in $$props) $$invalidate(11, s = $$props.s);
+    		if ('transform' in $$props) $$invalidate(12, transform = $$props.transform);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*icon*/ 16384) {
+    			$$invalidate(10, i = icon && icon.icon || [0, 0, '', [], '']);
+    		}
+
+    		if ($$self.$$.dirty & /*style, size, pull, fw*/ 237568) {
+    			$$invalidate(11, s = getStyles(style, size, pull, fw));
+    		}
+
+    		if ($$self.$$.dirty & /*scale, translateX, translateY, rotate, flip*/ 8126464) {
+    			$$invalidate(12, transform = getTransform(scale, translateX, translateY, rotate, flip, 512));
+    		}
+    	};
+
+    	return [
+    		clazz,
+    		id,
+    		color,
+    		spin,
+    		pulse,
+    		primaryColor,
+    		secondaryColor,
+    		primaryOpacity,
+    		secondaryOpacity,
+    		swapOpacity,
+    		i,
+    		s,
+    		transform,
+    		style,
+    		icon,
+    		size,
+    		fw,
+    		pull,
+    		scale,
+    		translateX,
+    		translateY,
+    		rotate,
+    		flip
+    	];
+    }
+
+    class Fa extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$f, create_fragment$f, safe_not_equal, {
+    			class: 0,
+    			id: 1,
+    			style: 13,
+    			icon: 14,
+    			size: 15,
+    			color: 2,
+    			fw: 16,
+    			pull: 17,
+    			scale: 18,
+    			translateX: 19,
+    			translateY: 20,
+    			rotate: 21,
+    			flip: 22,
+    			spin: 3,
+    			pulse: 4,
+    			primaryColor: 5,
+    			secondaryColor: 6,
+    			primaryOpacity: 7,
+    			secondaryOpacity: 8,
+    			swapOpacity: 9
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Fa",
+    			options,
+    			id: create_fragment$f.name
+    		});
+    	}
+
+    	get class() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set class(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get id() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get style() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set style(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get icon() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set icon(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get size() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set size(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get color() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set color(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get fw() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set fw(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get pull() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set pull(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get scale() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set scale(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get translateX() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set translateX(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get translateY() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set translateY(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get rotate() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set rotate(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get flip() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set flip(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get spin() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set spin(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get pulse() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set pulse(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get primaryColor() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set primaryColor(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get secondaryColor() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set secondaryColor(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get primaryOpacity() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set primaryOpacity(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get secondaryOpacity() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set secondaryOpacity(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get swapOpacity() {
+    		throw new Error("<Fa>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set swapOpacity(value) {
+    		throw new Error("<Fa>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    var faCircleChevronRight = {
+      prefix: 'fas',
+      iconName: 'circle-chevron-right',
+      icon: [512, 512, ["chevron-circle-right"], "f138", "M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"]
+    };
+    var faPencil = {
+      prefix: 'fas',
+      iconName: 'pencil',
+      icon: [512, 512, [9999, 61504, "pencil-alt"], "f303", "M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"]
+    };
+    var faSquareMinus = {
+      prefix: 'fas',
+      iconName: 'square-minus',
+      icon: [448, 512, [61767, "minus-square"], "f146", "M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm88 200H296c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z"]
+    };
+    var faCirclePlay = {
+      prefix: 'fas',
+      iconName: 'circle-play',
+      icon: [512, 512, [61469, "play-circle"], "f144", "M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"]
+    };
+    var faCameraRetro = {
+      prefix: 'fas',
+      iconName: 'camera-retro',
+      icon: [512, 512, [128247], "f083", "M220.6 121.2L271.1 96 448 96v96H333.2c-21.9-15.1-48.5-24-77.2-24s-55.2 8.9-77.2 24H64V128H192c9.9 0 19.7-2.3 28.6-6.8zM0 128V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H271.1c-9.9 0-19.7 2.3-28.6 6.8L192 64H160V48c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16l0 16C28.7 64 0 92.7 0 128zM168 304a88 88 0 1 1 176 0 88 88 0 1 1 -176 0z"]
+    };
+    var faHeart = {
+      prefix: 'fas',
+      iconName: 'heart',
+      icon: [512, 512, [128153, 128154, 128155, 128156, 128420, 129293, 129294, 129505, 9829, 10084, 61578], "f004", "M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"]
+    };
+    var faVolumeHigh = {
+      prefix: 'fas',
+      iconName: 'volume-high',
+      icon: [640, 512, [128266, "volume-up"], "f028", "M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"]
+    };
+    var faVolumeUp = faVolumeHigh;
+    var faPhoneFlip = {
+      prefix: 'fas',
+      iconName: 'phone-flip',
+      icon: [512, 512, [128381, "phone-alt"], "f879", "M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"]
+    };
+    var faPhoneAlt = faPhoneFlip;
+    var faEnvelope = {
+      prefix: 'fas',
+      iconName: 'envelope',
+      icon: [512, 512, [128386, 9993, 61443], "f0e0", "M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"]
+    };
+    var faVolumeOff = {
+      prefix: 'fas',
+      iconName: 'volume-off',
+      icon: [320, 512, [], "f026", "M320 64c0-12.6-7.4-24-18.9-29.2s-25-3.1-34.4 5.3L131.8 160H64c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h67.8L266.7 471.9c9.4 8.4 22.9 10.4 34.4 5.3S320 460.6 320 448V64z"]
+    };
+    var faXmark = {
+      prefix: 'fas',
+      iconName: 'xmark',
+      icon: [320, 512, [128473, 10005, 10006, 10060, 215, "close", "multiply", "remove", "times"], "f00d", "M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"]
+    };
+    var faCircleChevronLeft = {
+      prefix: 'fas',
+      iconName: 'circle-chevron-left',
+      icon: [512, 512, ["chevron-circle-left"], "f137", "M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z"]
+    };
+
+    /* src/audio.svelte generated by Svelte v3.55.1 */
+    const file$e = "src/audio.svelte";
+
+    // (28:0) {:else}
+    function create_else_block$2(ctx) {
+    	let fa;
+    	let current;
+
+    	fa = new Fa({
+    			props: { icon: faVolumeOff },
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(fa.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(fa, target, anchor);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(fa, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block$2.name,
+    		type: "else",
+    		source: "(28:0) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (26:0) {#if soundOn}
+    function create_if_block$3(ctx) {
+    	let fa;
+    	let current;
+
+    	fa = new Fa({
+    			props: { icon: faVolumeUp },
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(fa.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(fa, target, anchor);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(fa, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$3.name,
+    		type: "if",
+    		source: "(26:0) {#if soundOn}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$e(ctx) {
+    	let div;
+    	let button;
+    	let current_block_type_index;
+    	let if_block;
+    	let t;
+    	let audio;
+    	let source;
+    	let source_src_value;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const if_block_creators = [create_if_block$3, create_else_block$2];
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*soundOn*/ ctx[1]) return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			button = element("button");
+    			if_block.c();
+    			t = space();
+    			audio = element("audio");
+    			source = element("source");
+    			attr_dev(button, "class", "sound svelte-2fyvmu");
+    			add_location(button, file$e, 24, 4, 469);
+    			attr_dev(div, "class", "bgmbar svelte-2fyvmu");
+    			add_location(div, file$e, 23, 0, 444);
+    			if (!src_url_equal(source.src, source_src_value = "https://docs.google.com/uc?export=download&id=1uDQhYAFMPthY9w7o_zYbLIOn13tAfDv8")) attr_dev(source, "src", source_src_value);
+    			attr_dev(source, "type", "audio/mp3");
+    			add_location(source, file$e, 33, 4, 682);
+    			attr_dev(audio, "id", "bgm");
+    			audio.autoplay = true;
+    			audio.loop = true;
+    			add_location(audio, file$e, 32, 0, 631);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, button);
+    			if_blocks[current_block_type_index].m(button, null);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, audio, anchor);
+    			append_dev(audio, source);
+    			/*audio_binding*/ ctx[3](audio);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*handleSound*/ ctx[2], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block = if_blocks[current_block_type_index];
+
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				} else {
+    					if_block.p(ctx, dirty);
+    				}
+
+    				transition_in(if_block, 1);
+    				if_block.m(button, null);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if_blocks[current_block_type_index].d();
+    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(audio);
+    			/*audio_binding*/ ctx[3](null);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$e.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$e($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Audio', slots, []);
+    	let bgm;
+    	let soundOn;
+
+    	if (mobileCheck()) {
+    		soundOn = true;
+    	} else {
+    		soundOn = false;
+    	}
+
+    	function handleSound() {
+    		if (bgm.paused) {
+    			bgm.play();
+    			$$invalidate(1, soundOn = true);
+    		} else {
+    			bgm.pause();
+    			$$invalidate(1, soundOn = false);
+    		}
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Audio> was created with unknown prop '${key}'`);
+    	});
+
+    	function audio_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			bgm = $$value;
+    			$$invalidate(0, bgm);
+    		});
+    	}
+
+    	$$self.$capture_state = () => ({
+    		Fa,
+    		faVolumeOff,
+    		faVolumeUp,
+    		bgm,
+    		soundOn,
+    		handleSound
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('bgm' in $$props) $$invalidate(0, bgm = $$props.bgm);
+    		if ('soundOn' in $$props) $$invalidate(1, soundOn = $$props.soundOn);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [bgm, soundOn, handleSound, audio_binding];
+    }
+
+    class Audio extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$e, create_fragment$e, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Audio",
+    			options,
+    			id: create_fragment$e.name
+    		});
+    	}
+    }
+
+    /* src/header.svelte generated by Svelte v3.55.1 */
+
+    const file$d = "src/header.svelte";
+
+    function create_fragment$d(ctx) {
+    	let div2;
+    	let div1;
+    	let div0;
+    	let span;
+    	let t1;
+    	let h3;
+    	let t3;
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			span = element("span");
+    			span.textContent = "THE MARRIAGE";
+    			t1 = space();
+    			h3 = element("h3");
+    			h3.textContent = "04.22";
+    			t3 = space();
+    			p = element("p");
+    			p.textContent = "현태룡, 이초현 결혼합니다.";
+    			attr_dev(span, "class", "wedding svelte-fxk55n");
+    			add_location(span, file$d, 3, 3, 65);
+    			attr_dev(h3, "class", "date svelte-fxk55n");
+    			add_location(h3, file$d, 4, 3, 110);
+    			set_style(p, "margin-bottom", "0px");
+    			add_location(p, file$d, 5, 3, 141);
+    			attr_dev(div0, "class", "top");
+    			add_location(div0, file$d, 2, 2, 44);
+    			attr_dev(div1, "class", "layer");
+    			add_location(div1, file$d, 1, 1, 22);
+    			attr_dev(div2, "class", "header svelte-fxk55n");
+    			add_location(div2, file$d, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div1);
+    			append_dev(div1, div0);
+    			append_dev(div0, span);
+    			append_dev(div0, t1);
+    			append_dev(div0, h3);
+    			append_dev(div0, t3);
+    			append_dev(div0, p);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$d.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$d($$self, $$props) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Header', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Header> was created with unknown prop '${key}'`);
+    	});
+
+    	return [];
+    }
+
+    class Header extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$d, create_fragment$d, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Header",
+    			options,
+    			id: create_fragment$d.name
+    		});
+    	}
+    }
+
+    /* src/mainImg.svelte generated by Svelte v3.55.1 */
+
+    const file$c = "src/mainImg.svelte";
+
+    function create_fragment$c(ctx) {
+    	let div0;
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let div1;
+
+    	const block = {
+    		c: function create() {
+    			div0 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			div1 = element("div");
+    			div1.textContent = "2023. 04. 22. Saturday 6:00 PM";
+    			if (!src_url_equal(img.src, img_src_value = "https://lh3.googleusercontent.com/msAUQLSQgq7YE7rMaD22pXn_mM-I4cF9J5Gl5NlPlMxePwdW3yjjgYTdtlOCKtG1nxN6KAh76meT7gkVTQecViB3N2tPmKumSBNsNU0jFJkO0XKwj4J1PSdZLmXEXJXsvYZMPrEkPNI=w2400")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "main");
+    			attr_dev(img, "width", "425px");
+    			add_location(img, file$c, 5, 4, 51);
+    			attr_dev(div0, "class", "mainImg svelte-1fwxtgz");
+    			add_location(div0, file$c, 4, 0, 25);
+    			attr_dev(div1, "class", "bottom svelte-1fwxtgz");
+    			add_location(div1, file$c, 7, 0, 275);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, img);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div1, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$c.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$c($$self, $$props) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('MainImg', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<MainImg> was created with unknown prop '${key}'`);
+    	});
+
+    	return [];
+    }
+
+    class MainImg extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$c, create_fragment$c, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "MainImg",
+    			options,
+    			id: create_fragment$c.name
+    		});
+    	}
+    }
+
+    /* src/greeting.svelte generated by Svelte v3.55.1 */
+    const file$b = "src/greeting.svelte";
+
+    function create_fragment$b(ctx) {
+    	let div3;
+    	let span;
+    	let t1;
+    	let div2;
+    	let div0;
+    	let fa;
+    	let t2;
+    	let div1;
+    	let p;
+    	let t3;
+    	let br0;
+    	let t4;
+    	let br1;
+    	let t5;
+    	let br2;
+    	let br3;
+    	let t6;
+    	let br4;
+    	let t7;
+    	let br5;
+    	let br6;
+    	let t8;
+    	let br7;
+    	let t9;
+    	let current;
+
+    	fa = new Fa({
+    			props: { icon: faHeart, style: "color: tomato" },
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div3 = element("div");
+    			span = element("span");
+    			span.textContent = "인사말";
+    			t1 = space();
+    			div2 = element("div");
+    			div0 = element("div");
+    			create_component(fa.$$.fragment);
+    			t2 = space();
+    			div1 = element("div");
+    			p = element("p");
+    			t3 = text("함께 있을 때 가장 나다운 모습이 되고\n                ");
+    			br0 = element("br");
+    			t4 = text("\n                함께 있을 때 미래를 꿈꾸게 하는 사람을 만나\n                ");
+    			br1 = element("br");
+    			t5 = text("\n                함께 맞는 두 번째 봄, 결혼합니다.\n                ");
+    			br2 = element("br");
+    			br3 = element("br");
+    			t6 = text("\n                지금처럼 서로에게 가장 친한 친구가 되어\n                ");
+    			br4 = element("br");
+    			t7 = text("\n                예쁘고 행복하게 잘 살겠습니다.\n                ");
+    			br5 = element("br");
+    			br6 = element("br");
+    			t8 = text("\n                저희 두 사람의 새로운 시작을\n                ");
+    			br7 = element("br");
+    			t9 = text("\n                함께하시어 축복해 주시면 감사하겠습니다.");
+    			attr_dev(span, "class", "title svelte-95mdcb");
+    			add_location(span, file$b, 6, 4, 142);
+    			attr_dev(div0, "class", "mainImg svelte-95mdcb");
+    			add_location(div0, file$b, 8, 8, 204);
+    			add_location(br0, file$b, 14, 16, 425);
+    			add_location(br1, file$b, 16, 16, 488);
+    			add_location(br2, file$b, 18, 16, 546);
+    			add_location(br3, file$b, 18, 20, 550);
+    			add_location(br4, file$b, 20, 16, 610);
+    			add_location(br5, file$b, 22, 16, 665);
+    			add_location(br6, file$b, 22, 20, 669);
+    			add_location(br7, file$b, 24, 16, 723);
+    			set_style(p, "margin-bottom", "0px");
+    			add_location(p, file$b, 12, 12, 340);
+    			attr_dev(div1, "class", "mainText svelte-95mdcb");
+    			add_location(div1, file$b, 11, 8, 305);
+    			attr_dev(div2, "class", "main svelte-95mdcb");
+    			add_location(div2, file$b, 7, 4, 177);
+    			attr_dev(div3, "class", "greeting svelte-95mdcb");
+    			add_location(div3, file$b, 5, 0, 115);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, span);
+    			append_dev(div3, t1);
+    			append_dev(div3, div2);
+    			append_dev(div2, div0);
+    			mount_component(fa, div0, null);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
+    			append_dev(div1, p);
+    			append_dev(p, t3);
+    			append_dev(p, br0);
+    			append_dev(p, t4);
+    			append_dev(p, br1);
+    			append_dev(p, t5);
+    			append_dev(p, br2);
+    			append_dev(p, br3);
+    			append_dev(p, t6);
+    			append_dev(p, br4);
+    			append_dev(p, t7);
+    			append_dev(p, br5);
+    			append_dev(p, br6);
+    			append_dev(p, t8);
+    			append_dev(p, br7);
+    			append_dev(p, t9);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div3);
+    			destroy_component(fa);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$b.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$b($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Greeting', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Greeting> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ Fa, faHeart });
+    	return [];
+    }
+
+    class Greeting extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$b, create_fragment$b, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Greeting",
+    			options,
+    			id: create_fragment$b.name
+    		});
+    	}
+    }
+
+    /* src/calander.svelte generated by Svelte v3.55.1 */
+
+    const file$a = "src/calander.svelte";
+
+    function get_each_context$2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[1] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_1$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[4] = list[i];
+    	child_ctx[6] = i;
+    	return child_ctx;
+    }
+
+    // (47:8) {:else}
+    function create_else_block$1(ctx) {
+    	let td;
+    	let t_value = /*date*/ ctx[4] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			td = element("td");
+    			t = text(t_value);
+    			add_location(td, file$a, 47, 20, 1163);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, td, anchor);
+    			append_dev(td, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(td);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block$1.name,
+    		type: "else",
+    		source: "(47:8) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (45:29) 
+    function create_if_block_2(ctx) {
+    	let td;
+    	let t_value = /*date*/ ctx[4] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			td = element("td");
+    			t = text(t_value);
+    			attr_dev(td, "class", "saturday svelte-1iikqpu");
+    			add_location(td, file$a, 45, 20, 1096);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, td, anchor);
+    			append_dev(td, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(td);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(45:29) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (43:29) 
+    function create_if_block_1(ctx) {
+    	let td;
+    	let t_value = /*date*/ ctx[4] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			td = element("td");
+    			t = text(t_value);
+    			attr_dev(td, "class", "sunday svelte-1iikqpu");
+    			add_location(td, file$a, 43, 20, 1017);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, td, anchor);
+    			append_dev(td, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(td);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(43:29) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (41:8) {#if date == 22}
+    function create_if_block$2(ctx) {
+    	let td;
+    	let t_value = /*date*/ ctx[4] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			td = element("td");
+    			t = text(t_value);
+    			attr_dev(td, "id", "d_day");
+    			attr_dev(td, "class", "svelte-1iikqpu");
+    			add_location(td, file$a, 41, 20, 942);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, td, anchor);
+    			append_dev(td, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(td);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$2.name,
+    		type: "if",
+    		source: "(41:8) {#if date == 22}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (40:4) {#each week as date, i}
+    function create_each_block_1$1(ctx) {
+    	let if_block_anchor;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*date*/ ctx[4] == 22) return create_if_block$2;
+    		if (/*i*/ ctx[6] % 7 == 0) return create_if_block_1;
+    		if (/*i*/ ctx[6] % 7 == 6) return create_if_block_2;
+    		return create_else_block$1;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
+
+    	const block = {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if_block.p(ctx, dirty);
+    		},
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1$1.name,
+    		type: "each",
+    		source: "(40:4) {#each week as date, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (38:0) {#each weeks as week}
+    function create_each_block$2(ctx) {
+    	let tr;
+    	let t;
+    	let each_value_1 = /*week*/ ctx[1];
+    	validate_each_argument(each_value_1);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			tr = element("tr");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t = space();
+    			add_location(tr, file$a, 38, 16, 864);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, tr, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tr, null);
+    			}
+
+    			append_dev(tr, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*weeks*/ 1) {
+    				each_value_1 = /*week*/ ctx[1];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_1$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(tr, t);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(tr);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$2.name,
+    		type: "each",
+    		source: "(38:0) {#each weeks as week}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$a(ctx) {
+    	let div2;
+    	let div1;
+    	let div0;
+    	let t1;
+    	let table;
+    	let thead;
+    	let tr;
+    	let th0;
+    	let t3;
+    	let th1;
+    	let t5;
+    	let th2;
+    	let t7;
+    	let th3;
+    	let t9;
+    	let th4;
+    	let t11;
+    	let th5;
+    	let t13;
+    	let th6;
+    	let t15;
+    	let tbody;
+    	let each_value = /*weeks*/ ctx[0];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "4월";
+    			t1 = space();
+    			table = element("table");
+    			thead = element("thead");
+    			tr = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "SUN";
+    			t3 = space();
+    			th1 = element("th");
+    			th1.textContent = "MON";
+    			t5 = space();
+    			th2 = element("th");
+    			th2.textContent = "TUE";
+    			t7 = space();
+    			th3 = element("th");
+    			th3.textContent = "WED";
+    			t9 = space();
+    			th4 = element("th");
+    			th4.textContent = "THU";
+    			t11 = space();
+    			th5 = element("th");
+    			th5.textContent = "FRI";
+    			t13 = space();
+    			th6 = element("th");
+    			th6.textContent = "SAT";
+    			t15 = space();
+    			tbody = element("tbody");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(div0, "class", "month svelte-1iikqpu");
+    			add_location(div0, file$a, 21, 8, 411);
+    			add_location(th0, file$a, 27, 20, 552);
+    			add_location(th1, file$a, 28, 20, 585);
+    			add_location(th2, file$a, 29, 20, 618);
+    			add_location(th3, file$a, 30, 20, 651);
+    			add_location(th4, file$a, 31, 20, 684);
+    			add_location(th5, file$a, 32, 20, 717);
+    			add_location(th6, file$a, 33, 20, 750);
+    			add_location(tr, file$a, 26, 16, 527);
+    			add_location(thead, file$a, 25, 12, 503);
+    			add_location(tbody, file$a, 36, 12, 818);
+    			attr_dev(table, "class", "weeks svelte-1iikqpu");
+    			add_location(table, file$a, 24, 8, 469);
+    			attr_dev(div1, "class", "calander svelte-1iikqpu");
+    			add_location(div1, file$a, 20, 4, 380);
+    			attr_dev(div2, "class", "calanderOutline svelte-1iikqpu");
+    			add_location(div2, file$a, 19, 0, 346);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div1);
+    			append_dev(div1, div0);
+    			append_dev(div1, t1);
+    			append_dev(div1, table);
+    			append_dev(table, thead);
+    			append_dev(thead, tr);
+    			append_dev(tr, th0);
+    			append_dev(tr, t3);
+    			append_dev(tr, th1);
+    			append_dev(tr, t5);
+    			append_dev(tr, th2);
+    			append_dev(tr, t7);
+    			append_dev(tr, th3);
+    			append_dev(tr, t9);
+    			append_dev(tr, th4);
+    			append_dev(tr, t11);
+    			append_dev(tr, th5);
+    			append_dev(tr, t13);
+    			append_dev(tr, th6);
+    			append_dev(table, t15);
+    			append_dev(table, tbody);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*weeks*/ 1) {
+    				each_value = /*weeks*/ ctx[0];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div2);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$a.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function range(start, end) {
+    	let array = [];
+
+    	for (let i = start; i < end; ++i) {
+    		array.push(i);
+    	}
+
+    	return array;
+    }
+
+    function instance$a($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Calander', slots, []);
+
+    	let weeks = [
+    		['', '', '', '', '', '', 1],
+    		range(2, 9),
+    		range(9, 16),
+    		range(16, 23),
+    		range(23, 30),
+    		[30]
+    	];
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Calander> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ range, weeks });
+
+    	$$self.$inject_state = $$props => {
+    		if ('weeks' in $$props) $$invalidate(0, weeks = $$props.weeks);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [weeks];
+    }
+
+    class Calander extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Calander",
+    			options,
+    			id: create_fragment$a.name
+    		});
+    	}
+    }
+
+    /**
+     * SSR Window 4.0.2
+     * Better handling for window object in SSR environment
+     * https://github.com/nolimits4web/ssr-window
+     *
+     * Copyright 2021, Vladimir Kharlampidi
+     *
+     * Licensed under MIT
+     *
+     * Released on: December 13, 2021
+     */
+    /* eslint-disable no-param-reassign */
+    function isObject$2(obj) {
+        return (obj !== null &&
+            typeof obj === 'object' &&
+            'constructor' in obj &&
+            obj.constructor === Object);
+    }
+    function extend$2(target = {}, src = {}) {
+        Object.keys(src).forEach((key) => {
+            if (typeof target[key] === 'undefined')
+                target[key] = src[key];
+            else if (isObject$2(src[key]) &&
+                isObject$2(target[key]) &&
+                Object.keys(src[key]).length > 0) {
+                extend$2(target[key], src[key]);
+            }
+        });
+    }
+
+    const ssrDocument = {
+        body: {},
+        addEventListener() { },
+        removeEventListener() { },
+        activeElement: {
+            blur() { },
+            nodeName: '',
+        },
+        querySelector() {
+            return null;
+        },
+        querySelectorAll() {
+            return [];
+        },
+        getElementById() {
+            return null;
+        },
+        createEvent() {
+            return {
+                initEvent() { },
+            };
+        },
+        createElement() {
+            return {
+                children: [],
+                childNodes: [],
+                style: {},
+                setAttribute() { },
+                getElementsByTagName() {
+                    return [];
+                },
+            };
+        },
+        createElementNS() {
+            return {};
+        },
+        importNode() {
+            return null;
+        },
+        location: {
+            hash: '',
+            host: '',
+            hostname: '',
+            href: '',
+            origin: '',
+            pathname: '',
+            protocol: '',
+            search: '',
+        },
+    };
+    function getDocument() {
+        const doc = typeof document !== 'undefined' ? document : {};
+        extend$2(doc, ssrDocument);
+        return doc;
+    }
+
+    const ssrWindow = {
+        document: ssrDocument,
+        navigator: {
+            userAgent: '',
+        },
+        location: {
+            hash: '',
+            host: '',
+            hostname: '',
+            href: '',
+            origin: '',
+            pathname: '',
+            protocol: '',
+            search: '',
+        },
+        history: {
+            replaceState() { },
+            pushState() { },
+            go() { },
+            back() { },
+        },
+        CustomEvent: function CustomEvent() {
+            return this;
+        },
+        addEventListener() { },
+        removeEventListener() { },
+        getComputedStyle() {
+            return {
+                getPropertyValue() {
+                    return '';
+                },
+            };
+        },
+        Image() { },
+        Date() { },
+        screen: {},
+        setTimeout() { },
+        clearTimeout() { },
+        matchMedia() {
+            return {};
+        },
+        requestAnimationFrame(callback) {
+            if (typeof setTimeout === 'undefined') {
+                callback();
+                return null;
+            }
+            return setTimeout(callback, 0);
+        },
+        cancelAnimationFrame(id) {
+            if (typeof setTimeout === 'undefined') {
+                return;
+            }
+            clearTimeout(id);
+        },
+    };
+    function getWindow() {
+        const win = typeof window !== 'undefined' ? window : {};
+        extend$2(win, ssrWindow);
+        return win;
+    }
+
+    function deleteProps(obj) {
+      const object = obj;
+      Object.keys(object).forEach(key => {
+        try {
+          object[key] = null;
+        } catch (e) {
+          // no getter for object
+        }
+        try {
+          delete object[key];
+        } catch (e) {
+          // something got wrong
+        }
+      });
+    }
+    function nextTick(callback, delay = 0) {
+      return setTimeout(callback, delay);
+    }
+    function now() {
+      return Date.now();
+    }
+    function getComputedStyle$1(el) {
+      const window = getWindow();
+      let style;
+      if (window.getComputedStyle) {
+        style = window.getComputedStyle(el, null);
+      }
+      if (!style && el.currentStyle) {
+        style = el.currentStyle;
+      }
+      if (!style) {
+        style = el.style;
+      }
+      return style;
+    }
+    function getTranslate(el, axis = 'x') {
+      const window = getWindow();
+      let matrix;
+      let curTransform;
+      let transformMatrix;
+      const curStyle = getComputedStyle$1(el);
+      if (window.WebKitCSSMatrix) {
+        curTransform = curStyle.transform || curStyle.webkitTransform;
+        if (curTransform.split(',').length > 6) {
+          curTransform = curTransform.split(', ').map(a => a.replace(',', '.')).join(', ');
+        }
+        // Some old versions of Webkit choke when 'none' is passed; pass
+        // empty string instead in this case
+        transformMatrix = new window.WebKitCSSMatrix(curTransform === 'none' ? '' : curTransform);
+      } else {
+        transformMatrix = curStyle.MozTransform || curStyle.OTransform || curStyle.MsTransform || curStyle.msTransform || curStyle.transform || curStyle.getPropertyValue('transform').replace('translate(', 'matrix(1, 0, 0, 1,');
+        matrix = transformMatrix.toString().split(',');
+      }
+      if (axis === 'x') {
+        // Latest Chrome and webkits Fix
+        if (window.WebKitCSSMatrix) curTransform = transformMatrix.m41;
+        // Crazy IE10 Matrix
+        else if (matrix.length === 16) curTransform = parseFloat(matrix[12]);
+        // Normal Browsers
+        else curTransform = parseFloat(matrix[4]);
+      }
+      if (axis === 'y') {
+        // Latest Chrome and webkits Fix
+        if (window.WebKitCSSMatrix) curTransform = transformMatrix.m42;
+        // Crazy IE10 Matrix
+        else if (matrix.length === 16) curTransform = parseFloat(matrix[13]);
+        // Normal Browsers
+        else curTransform = parseFloat(matrix[5]);
+      }
+      return curTransform || 0;
+    }
+    function isObject$1(o) {
+      return typeof o === 'object' && o !== null && o.constructor && Object.prototype.toString.call(o).slice(8, -1) === 'Object';
+    }
+    function isNode(node) {
+      // eslint-disable-next-line
+      if (typeof window !== 'undefined' && typeof window.HTMLElement !== 'undefined') {
+        return node instanceof HTMLElement;
+      }
+      return node && (node.nodeType === 1 || node.nodeType === 11);
+    }
+    function extend$1(...args) {
+      const to = Object(args[0]);
+      const noExtend = ['__proto__', 'constructor', 'prototype'];
+      for (let i = 1; i < args.length; i += 1) {
+        const nextSource = args[i];
+        if (nextSource !== undefined && nextSource !== null && !isNode(nextSource)) {
+          const keysArray = Object.keys(Object(nextSource)).filter(key => noExtend.indexOf(key) < 0);
+          for (let nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex += 1) {
+            const nextKey = keysArray[nextIndex];
+            const desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) {
+              if (isObject$1(to[nextKey]) && isObject$1(nextSource[nextKey])) {
+                if (nextSource[nextKey].__swiper__) {
+                  to[nextKey] = nextSource[nextKey];
+                } else {
+                  extend$1(to[nextKey], nextSource[nextKey]);
+                }
+              } else if (!isObject$1(to[nextKey]) && isObject$1(nextSource[nextKey])) {
+                to[nextKey] = {};
+                if (nextSource[nextKey].__swiper__) {
+                  to[nextKey] = nextSource[nextKey];
+                } else {
+                  extend$1(to[nextKey], nextSource[nextKey]);
+                }
+              } else {
+                to[nextKey] = nextSource[nextKey];
+              }
+            }
+          }
+        }
+      }
+      return to;
+    }
+    function setCSSProperty(el, varName, varValue) {
+      el.style.setProperty(varName, varValue);
+    }
+    function animateCSSModeScroll({
+      swiper,
+      targetPosition,
+      side
+    }) {
+      const window = getWindow();
+      const startPosition = -swiper.translate;
+      let startTime = null;
+      let time;
+      const duration = swiper.params.speed;
+      swiper.wrapperEl.style.scrollSnapType = 'none';
+      window.cancelAnimationFrame(swiper.cssModeFrameID);
+      const dir = targetPosition > startPosition ? 'next' : 'prev';
+      const isOutOfBound = (current, target) => {
+        return dir === 'next' && current >= target || dir === 'prev' && current <= target;
+      };
+      const animate = () => {
+        time = new Date().getTime();
+        if (startTime === null) {
+          startTime = time;
+        }
+        const progress = Math.max(Math.min((time - startTime) / duration, 1), 0);
+        const easeProgress = 0.5 - Math.cos(progress * Math.PI) / 2;
+        let currentPosition = startPosition + easeProgress * (targetPosition - startPosition);
+        if (isOutOfBound(currentPosition, targetPosition)) {
+          currentPosition = targetPosition;
+        }
+        swiper.wrapperEl.scrollTo({
+          [side]: currentPosition
+        });
+        if (isOutOfBound(currentPosition, targetPosition)) {
+          swiper.wrapperEl.style.overflow = 'hidden';
+          swiper.wrapperEl.style.scrollSnapType = '';
+          setTimeout(() => {
+            swiper.wrapperEl.style.overflow = '';
+            swiper.wrapperEl.scrollTo({
+              [side]: currentPosition
+            });
+          });
+          window.cancelAnimationFrame(swiper.cssModeFrameID);
+          return;
+        }
+        swiper.cssModeFrameID = window.requestAnimationFrame(animate);
+      };
+      animate();
+    }
+    function getSlideTransformEl(slideEl) {
+      return slideEl.querySelector('.swiper-slide-transform') || slideEl.shadowEl && slideEl.shadowEl.querySelector('.swiper-slide-transform') || slideEl;
+    }
+    function elementChildren(element, selector = '') {
+      return [...element.children].filter(el => el.matches(selector));
+    }
+    function createElement(tag, classes = []) {
+      const el = document.createElement(tag);
+      el.classList.add(...(Array.isArray(classes) ? classes : [classes]));
+      return el;
+    }
+    function elementOffset(el) {
+      const window = getWindow();
+      const document = getDocument();
+      const box = el.getBoundingClientRect();
+      const body = document.body;
+      const clientTop = el.clientTop || body.clientTop || 0;
+      const clientLeft = el.clientLeft || body.clientLeft || 0;
+      const scrollTop = el === window ? window.scrollY : el.scrollTop;
+      const scrollLeft = el === window ? window.scrollX : el.scrollLeft;
+      return {
+        top: box.top + scrollTop - clientTop,
+        left: box.left + scrollLeft - clientLeft
+      };
+    }
+    function elementPrevAll(el, selector) {
+      const prevEls = [];
+      while (el.previousElementSibling) {
+        const prev = el.previousElementSibling; // eslint-disable-line
+        if (selector) {
+          if (prev.matches(selector)) prevEls.push(prev);
+        } else prevEls.push(prev);
+        el = prev;
+      }
+      return prevEls;
+    }
+    function elementNextAll(el, selector) {
+      const nextEls = [];
+      while (el.nextElementSibling) {
+        const next = el.nextElementSibling; // eslint-disable-line
+        if (selector) {
+          if (next.matches(selector)) nextEls.push(next);
+        } else nextEls.push(next);
+        el = next;
+      }
+      return nextEls;
+    }
+    function elementStyle(el, prop) {
+      const window = getWindow();
+      return window.getComputedStyle(el, null).getPropertyValue(prop);
+    }
+    function elementIndex(el) {
+      let child = el;
+      let i;
+      if (child) {
+        i = 0;
+        // eslint-disable-next-line
+        while ((child = child.previousSibling) !== null) {
+          if (child.nodeType === 1) i += 1;
+        }
+        return i;
+      }
+      return undefined;
+    }
+    function elementParents(el, selector) {
+      const parents = []; // eslint-disable-line
+      let parent = el.parentElement; // eslint-disable-line
+      while (parent) {
+        if (selector) {
+          if (parent.matches(selector)) parents.push(parent);
+        } else {
+          parents.push(parent);
+        }
+        parent = parent.parentElement;
+      }
+      return parents;
+    }
+    function elementTransitionEnd(el, callback) {
+      function fireCallBack(e) {
+        if (e.target !== el) return;
+        callback.call(el, e);
+        el.removeEventListener('transitionend', fireCallBack);
+      }
+      if (callback) {
+        el.addEventListener('transitionend', fireCallBack);
+      }
+    }
+    function elementOuterSize(el, size, includeMargins) {
+      const window = getWindow();
+      if (includeMargins) {
+        return el[size === 'width' ? 'offsetWidth' : 'offsetHeight'] + parseFloat(window.getComputedStyle(el, null).getPropertyValue(size === 'width' ? 'margin-right' : 'margin-top')) + parseFloat(window.getComputedStyle(el, null).getPropertyValue(size === 'width' ? 'margin-left' : 'margin-bottom'));
+      }
+      return el.offsetWidth;
+    }
+
+    let support;
+    function calcSupport() {
+      const window = getWindow();
+      const document = getDocument();
+      return {
+        smoothScroll: document.documentElement && 'scrollBehavior' in document.documentElement.style,
+        touch: !!('ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch)
+      };
+    }
+    function getSupport() {
+      if (!support) {
+        support = calcSupport();
+      }
+      return support;
+    }
+
+    let deviceCached;
+    function calcDevice({
+      userAgent
+    } = {}) {
+      const support = getSupport();
+      const window = getWindow();
+      const platform = window.navigator.platform;
+      const ua = userAgent || window.navigator.userAgent;
+      const device = {
+        ios: false,
+        android: false
+      };
+      const screenWidth = window.screen.width;
+      const screenHeight = window.screen.height;
+      const android = ua.match(/(Android);?[\s\/]+([\d.]+)?/); // eslint-disable-line
+      let ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
+      const ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/);
+      const iphone = !ipad && ua.match(/(iPhone\sOS|iOS)\s([\d_]+)/);
+      const windows = platform === 'Win32';
+      let macos = platform === 'MacIntel';
+
+      // iPadOs 13 fix
+      const iPadScreens = ['1024x1366', '1366x1024', '834x1194', '1194x834', '834x1112', '1112x834', '768x1024', '1024x768', '820x1180', '1180x820', '810x1080', '1080x810'];
+      if (!ipad && macos && support.touch && iPadScreens.indexOf(`${screenWidth}x${screenHeight}`) >= 0) {
+        ipad = ua.match(/(Version)\/([\d.]+)/);
+        if (!ipad) ipad = [0, 1, '13_0_0'];
+        macos = false;
+      }
+
+      // Android
+      if (android && !windows) {
+        device.os = 'android';
+        device.android = true;
+      }
+      if (ipad || iphone || ipod) {
+        device.os = 'ios';
+        device.ios = true;
+      }
+
+      // Export object
+      return device;
+    }
+    function getDevice(overrides = {}) {
+      if (!deviceCached) {
+        deviceCached = calcDevice(overrides);
+      }
+      return deviceCached;
+    }
+
+    let browser;
+    function calcBrowser() {
+      const window = getWindow();
+      let needPerspectiveFix = false;
+      function isSafari() {
+        const ua = window.navigator.userAgent.toLowerCase();
+        return ua.indexOf('safari') >= 0 && ua.indexOf('chrome') < 0 && ua.indexOf('android') < 0;
+      }
+      if (isSafari()) {
+        const ua = String(window.navigator.userAgent);
+        if (ua.includes('Version/')) {
+          const [major, minor] = ua.split('Version/')[1].split(' ')[0].split('.').map(num => Number(num));
+          needPerspectiveFix = major < 16 || major === 16 && minor < 2;
+        }
+      }
+      return {
+        isSafari: needPerspectiveFix || isSafari(),
+        needPerspectiveFix,
+        isWebView: /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(window.navigator.userAgent)
+      };
+    }
+    function getBrowser() {
+      if (!browser) {
+        browser = calcBrowser();
+      }
+      return browser;
+    }
+
+    function Resize({
+      swiper,
+      on,
+      emit
+    }) {
+      const window = getWindow();
+      let observer = null;
+      let animationFrame = null;
+      const resizeHandler = () => {
+        if (!swiper || swiper.destroyed || !swiper.initialized) return;
+        emit('beforeResize');
+        emit('resize');
+      };
+      const createObserver = () => {
+        if (!swiper || swiper.destroyed || !swiper.initialized) return;
+        observer = new ResizeObserver(entries => {
+          animationFrame = window.requestAnimationFrame(() => {
+            const {
+              width,
+              height
+            } = swiper;
+            let newWidth = width;
+            let newHeight = height;
+            entries.forEach(({
+              contentBoxSize,
+              contentRect,
+              target
+            }) => {
+              if (target && target !== swiper.el) return;
+              newWidth = contentRect ? contentRect.width : (contentBoxSize[0] || contentBoxSize).inlineSize;
+              newHeight = contentRect ? contentRect.height : (contentBoxSize[0] || contentBoxSize).blockSize;
+            });
+            if (newWidth !== width || newHeight !== height) {
+              resizeHandler();
+            }
+          });
+        });
+        observer.observe(swiper.el);
+      };
+      const removeObserver = () => {
+        if (animationFrame) {
+          window.cancelAnimationFrame(animationFrame);
+        }
+        if (observer && observer.unobserve && swiper.el) {
+          observer.unobserve(swiper.el);
+          observer = null;
+        }
+      };
+      const orientationChangeHandler = () => {
+        if (!swiper || swiper.destroyed || !swiper.initialized) return;
+        emit('orientationchange');
+      };
+      on('init', () => {
+        if (swiper.params.resizeObserver && typeof window.ResizeObserver !== 'undefined') {
+          createObserver();
+          return;
+        }
+        window.addEventListener('resize', resizeHandler);
+        window.addEventListener('orientationchange', orientationChangeHandler);
+      });
+      on('destroy', () => {
+        removeObserver();
+        window.removeEventListener('resize', resizeHandler);
+        window.removeEventListener('orientationchange', orientationChangeHandler);
+      });
+    }
+
+    function Observer({
+      swiper,
+      extendParams,
+      on,
+      emit
+    }) {
+      const observers = [];
+      const window = getWindow();
+      const attach = (target, options = {}) => {
+        const ObserverFunc = window.MutationObserver || window.WebkitMutationObserver;
+        const observer = new ObserverFunc(mutations => {
+          // The observerUpdate event should only be triggered
+          // once despite the number of mutations.  Additional
+          // triggers are redundant and are very costly
+          if (swiper.__preventObserver__) return;
+          if (mutations.length === 1) {
+            emit('observerUpdate', mutations[0]);
+            return;
+          }
+          const observerUpdate = function observerUpdate() {
+            emit('observerUpdate', mutations[0]);
+          };
+          if (window.requestAnimationFrame) {
+            window.requestAnimationFrame(observerUpdate);
+          } else {
+            window.setTimeout(observerUpdate, 0);
+          }
+        });
+        observer.observe(target, {
+          attributes: typeof options.attributes === 'undefined' ? true : options.attributes,
+          childList: typeof options.childList === 'undefined' ? true : options.childList,
+          characterData: typeof options.characterData === 'undefined' ? true : options.characterData
+        });
+        observers.push(observer);
+      };
+      const init = () => {
+        if (!swiper.params.observer) return;
+        if (swiper.params.observeParents) {
+          const containerParents = elementParents(swiper.el);
+          for (let i = 0; i < containerParents.length; i += 1) {
+            attach(containerParents[i]);
+          }
+        }
+        // Observe container
+        attach(swiper.el, {
+          childList: swiper.params.observeSlideChildren
+        });
+
+        // Observe wrapper
+        attach(swiper.wrapperEl, {
+          attributes: false
+        });
+      };
+      const destroy = () => {
+        observers.forEach(observer => {
+          observer.disconnect();
+        });
+        observers.splice(0, observers.length);
+      };
+      extendParams({
+        observer: false,
+        observeParents: false,
+        observeSlideChildren: false
+      });
+      on('init', init);
+      on('destroy', destroy);
+    }
+
+    /* eslint-disable no-underscore-dangle */
+
+    var eventsEmitter = {
+      on(events, handler, priority) {
+        const self = this;
+        if (!self.eventsListeners || self.destroyed) return self;
+        if (typeof handler !== 'function') return self;
+        const method = priority ? 'unshift' : 'push';
+        events.split(' ').forEach(event => {
+          if (!self.eventsListeners[event]) self.eventsListeners[event] = [];
+          self.eventsListeners[event][method](handler);
+        });
+        return self;
+      },
+      once(events, handler, priority) {
+        const self = this;
+        if (!self.eventsListeners || self.destroyed) return self;
+        if (typeof handler !== 'function') return self;
+        function onceHandler(...args) {
+          self.off(events, onceHandler);
+          if (onceHandler.__emitterProxy) {
+            delete onceHandler.__emitterProxy;
+          }
+          handler.apply(self, args);
+        }
+        onceHandler.__emitterProxy = handler;
+        return self.on(events, onceHandler, priority);
+      },
+      onAny(handler, priority) {
+        const self = this;
+        if (!self.eventsListeners || self.destroyed) return self;
+        if (typeof handler !== 'function') return self;
+        const method = priority ? 'unshift' : 'push';
+        if (self.eventsAnyListeners.indexOf(handler) < 0) {
+          self.eventsAnyListeners[method](handler);
+        }
+        return self;
+      },
+      offAny(handler) {
+        const self = this;
+        if (!self.eventsListeners || self.destroyed) return self;
+        if (!self.eventsAnyListeners) return self;
+        const index = self.eventsAnyListeners.indexOf(handler);
+        if (index >= 0) {
+          self.eventsAnyListeners.splice(index, 1);
+        }
+        return self;
+      },
+      off(events, handler) {
+        const self = this;
+        if (!self.eventsListeners || self.destroyed) return self;
+        if (!self.eventsListeners) return self;
+        events.split(' ').forEach(event => {
+          if (typeof handler === 'undefined') {
+            self.eventsListeners[event] = [];
+          } else if (self.eventsListeners[event]) {
+            self.eventsListeners[event].forEach((eventHandler, index) => {
+              if (eventHandler === handler || eventHandler.__emitterProxy && eventHandler.__emitterProxy === handler) {
+                self.eventsListeners[event].splice(index, 1);
+              }
+            });
+          }
+        });
+        return self;
+      },
+      emit(...args) {
+        const self = this;
+        if (!self.eventsListeners || self.destroyed) return self;
+        if (!self.eventsListeners) return self;
+        let events;
+        let data;
+        let context;
+        if (typeof args[0] === 'string' || Array.isArray(args[0])) {
+          events = args[0];
+          data = args.slice(1, args.length);
+          context = self;
+        } else {
+          events = args[0].events;
+          data = args[0].data;
+          context = args[0].context || self;
+        }
+        data.unshift(context);
+        const eventsArray = Array.isArray(events) ? events : events.split(' ');
+        eventsArray.forEach(event => {
+          if (self.eventsAnyListeners && self.eventsAnyListeners.length) {
+            self.eventsAnyListeners.forEach(eventHandler => {
+              eventHandler.apply(context, [event, ...data]);
+            });
+          }
+          if (self.eventsListeners && self.eventsListeners[event]) {
+            self.eventsListeners[event].forEach(eventHandler => {
+              eventHandler.apply(context, data);
+            });
+          }
+        });
+        return self;
+      }
+    };
+
+    function updateSize() {
+      const swiper = this;
+      let width;
+      let height;
+      const el = swiper.el;
+      if (typeof swiper.params.width !== 'undefined' && swiper.params.width !== null) {
+        width = swiper.params.width;
+      } else {
+        width = el.clientWidth;
+      }
+      if (typeof swiper.params.height !== 'undefined' && swiper.params.height !== null) {
+        height = swiper.params.height;
+      } else {
+        height = el.clientHeight;
+      }
+      if (width === 0 && swiper.isHorizontal() || height === 0 && swiper.isVertical()) {
+        return;
+      }
+
+      // Subtract paddings
+      width = width - parseInt(elementStyle(el, 'padding-left') || 0, 10) - parseInt(elementStyle(el, 'padding-right') || 0, 10);
+      height = height - parseInt(elementStyle(el, 'padding-top') || 0, 10) - parseInt(elementStyle(el, 'padding-bottom') || 0, 10);
+      if (Number.isNaN(width)) width = 0;
+      if (Number.isNaN(height)) height = 0;
+      Object.assign(swiper, {
+        width,
+        height,
+        size: swiper.isHorizontal() ? width : height
+      });
+    }
+
+    function updateSlides() {
+      const swiper = this;
+      function getDirectionLabel(property) {
+        if (swiper.isHorizontal()) {
+          return property;
+        }
+        // prettier-ignore
+        return {
+          'width': 'height',
+          'margin-top': 'margin-left',
+          'margin-bottom ': 'margin-right',
+          'margin-left': 'margin-top',
+          'margin-right': 'margin-bottom',
+          'padding-left': 'padding-top',
+          'padding-right': 'padding-bottom',
+          'marginRight': 'marginBottom'
+        }[property];
+      }
+      function getDirectionPropertyValue(node, label) {
+        return parseFloat(node.getPropertyValue(getDirectionLabel(label)) || 0);
+      }
+      const params = swiper.params;
+      const {
+        wrapperEl,
+        slidesEl,
+        size: swiperSize,
+        rtlTranslate: rtl,
+        wrongRTL
+      } = swiper;
+      const isVirtual = swiper.virtual && params.virtual.enabled;
+      const previousSlidesLength = isVirtual ? swiper.virtual.slides.length : swiper.slides.length;
+      const slides = elementChildren(slidesEl, `.${swiper.params.slideClass}, swiper-slide`);
+      const slidesLength = isVirtual ? swiper.virtual.slides.length : slides.length;
+      let snapGrid = [];
+      const slidesGrid = [];
+      const slidesSizesGrid = [];
+      let offsetBefore = params.slidesOffsetBefore;
+      if (typeof offsetBefore === 'function') {
+        offsetBefore = params.slidesOffsetBefore.call(swiper);
+      }
+      let offsetAfter = params.slidesOffsetAfter;
+      if (typeof offsetAfter === 'function') {
+        offsetAfter = params.slidesOffsetAfter.call(swiper);
+      }
+      const previousSnapGridLength = swiper.snapGrid.length;
+      const previousSlidesGridLength = swiper.slidesGrid.length;
+      let spaceBetween = params.spaceBetween;
+      let slidePosition = -offsetBefore;
+      let prevSlideSize = 0;
+      let index = 0;
+      if (typeof swiperSize === 'undefined') {
+        return;
+      }
+      if (typeof spaceBetween === 'string' && spaceBetween.indexOf('%') >= 0) {
+        spaceBetween = parseFloat(spaceBetween.replace('%', '')) / 100 * swiperSize;
+      }
+      swiper.virtualSize = -spaceBetween;
+
+      // reset margins
+      slides.forEach(slideEl => {
+        if (rtl) {
+          slideEl.style.marginLeft = '';
+        } else {
+          slideEl.style.marginRight = '';
+        }
+        slideEl.style.marginBottom = '';
+        slideEl.style.marginTop = '';
+      });
+
+      // reset cssMode offsets
+      if (params.centeredSlides && params.cssMode) {
+        setCSSProperty(wrapperEl, '--swiper-centered-offset-before', '');
+        setCSSProperty(wrapperEl, '--swiper-centered-offset-after', '');
+      }
+      const gridEnabled = params.grid && params.grid.rows > 1 && swiper.grid;
+      if (gridEnabled) {
+        swiper.grid.initSlides(slidesLength);
+      }
+
+      // Calc slides
+      let slideSize;
+      const shouldResetSlideSize = params.slidesPerView === 'auto' && params.breakpoints && Object.keys(params.breakpoints).filter(key => {
+        return typeof params.breakpoints[key].slidesPerView !== 'undefined';
+      }).length > 0;
+      for (let i = 0; i < slidesLength; i += 1) {
+        slideSize = 0;
+        let slide;
+        if (slides[i]) slide = slides[i];
+        if (gridEnabled) {
+          swiper.grid.updateSlide(i, slide, slidesLength, getDirectionLabel);
+        }
+        if (slides[i] && elementStyle(slide, 'display') === 'none') continue; // eslint-disable-line
+
+        if (params.slidesPerView === 'auto') {
+          if (shouldResetSlideSize) {
+            slides[i].style[getDirectionLabel('width')] = ``;
+          }
+          const slideStyles = getComputedStyle(slide);
+          const currentTransform = slide.style.transform;
+          const currentWebKitTransform = slide.style.webkitTransform;
+          if (currentTransform) {
+            slide.style.transform = 'none';
+          }
+          if (currentWebKitTransform) {
+            slide.style.webkitTransform = 'none';
+          }
+          if (params.roundLengths) {
+            slideSize = swiper.isHorizontal() ? elementOuterSize(slide, 'width', true) : elementOuterSize(slide, 'height', true);
+          } else {
+            // eslint-disable-next-line
+            const width = getDirectionPropertyValue(slideStyles, 'width');
+            const paddingLeft = getDirectionPropertyValue(slideStyles, 'padding-left');
+            const paddingRight = getDirectionPropertyValue(slideStyles, 'padding-right');
+            const marginLeft = getDirectionPropertyValue(slideStyles, 'margin-left');
+            const marginRight = getDirectionPropertyValue(slideStyles, 'margin-right');
+            const boxSizing = slideStyles.getPropertyValue('box-sizing');
+            if (boxSizing && boxSizing === 'border-box') {
+              slideSize = width + marginLeft + marginRight;
+            } else {
+              const {
+                clientWidth,
+                offsetWidth
+              } = slide;
+              slideSize = width + paddingLeft + paddingRight + marginLeft + marginRight + (offsetWidth - clientWidth);
+            }
+          }
+          if (currentTransform) {
+            slide.style.transform = currentTransform;
+          }
+          if (currentWebKitTransform) {
+            slide.style.webkitTransform = currentWebKitTransform;
+          }
+          if (params.roundLengths) slideSize = Math.floor(slideSize);
+        } else {
+          slideSize = (swiperSize - (params.slidesPerView - 1) * spaceBetween) / params.slidesPerView;
+          if (params.roundLengths) slideSize = Math.floor(slideSize);
+          if (slides[i]) {
+            slides[i].style[getDirectionLabel('width')] = `${slideSize}px`;
+          }
+        }
+        if (slides[i]) {
+          slides[i].swiperSlideSize = slideSize;
+        }
+        slidesSizesGrid.push(slideSize);
+        if (params.centeredSlides) {
+          slidePosition = slidePosition + slideSize / 2 + prevSlideSize / 2 + spaceBetween;
+          if (prevSlideSize === 0 && i !== 0) slidePosition = slidePosition - swiperSize / 2 - spaceBetween;
+          if (i === 0) slidePosition = slidePosition - swiperSize / 2 - spaceBetween;
+          if (Math.abs(slidePosition) < 1 / 1000) slidePosition = 0;
+          if (params.roundLengths) slidePosition = Math.floor(slidePosition);
+          if (index % params.slidesPerGroup === 0) snapGrid.push(slidePosition);
+          slidesGrid.push(slidePosition);
+        } else {
+          if (params.roundLengths) slidePosition = Math.floor(slidePosition);
+          if ((index - Math.min(swiper.params.slidesPerGroupSkip, index)) % swiper.params.slidesPerGroup === 0) snapGrid.push(slidePosition);
+          slidesGrid.push(slidePosition);
+          slidePosition = slidePosition + slideSize + spaceBetween;
+        }
+        swiper.virtualSize += slideSize + spaceBetween;
+        prevSlideSize = slideSize;
+        index += 1;
+      }
+      swiper.virtualSize = Math.max(swiper.virtualSize, swiperSize) + offsetAfter;
+      if (rtl && wrongRTL && (params.effect === 'slide' || params.effect === 'coverflow')) {
+        wrapperEl.style.width = `${swiper.virtualSize + params.spaceBetween}px`;
+      }
+      if (params.setWrapperSize) {
+        wrapperEl.style[getDirectionLabel('width')] = `${swiper.virtualSize + params.spaceBetween}px`;
+      }
+      if (gridEnabled) {
+        swiper.grid.updateWrapperSize(slideSize, snapGrid, getDirectionLabel);
+      }
+
+      // Remove last grid elements depending on width
+      if (!params.centeredSlides) {
+        const newSlidesGrid = [];
+        for (let i = 0; i < snapGrid.length; i += 1) {
+          let slidesGridItem = snapGrid[i];
+          if (params.roundLengths) slidesGridItem = Math.floor(slidesGridItem);
+          if (snapGrid[i] <= swiper.virtualSize - swiperSize) {
+            newSlidesGrid.push(slidesGridItem);
+          }
+        }
+        snapGrid = newSlidesGrid;
+        if (Math.floor(swiper.virtualSize - swiperSize) - Math.floor(snapGrid[snapGrid.length - 1]) > 1) {
+          snapGrid.push(swiper.virtualSize - swiperSize);
+        }
+      }
+      if (isVirtual && params.loop) {
+        const size = slidesSizesGrid[0] + spaceBetween;
+        if (params.slidesPerGroup > 1) {
+          const groups = Math.ceil((swiper.virtual.slidesBefore + swiper.virtual.slidesAfter) / params.slidesPerGroup);
+          const groupSize = size * params.slidesPerGroup;
+          for (let i = 0; i < groups; i += 1) {
+            snapGrid.push(snapGrid[snapGrid.length - 1] + groupSize);
+          }
+        }
+        for (let i = 0; i < swiper.virtual.slidesBefore + swiper.virtual.slidesAfter; i += 1) {
+          if (params.slidesPerGroup === 1) {
+            snapGrid.push(snapGrid[snapGrid.length - 1] + size);
+          }
+          slidesGrid.push(slidesGrid[slidesGrid.length - 1] + size);
+          swiper.virtualSize += size;
+        }
+      }
+      if (snapGrid.length === 0) snapGrid = [0];
+      if (params.spaceBetween !== 0) {
+        const key = swiper.isHorizontal() && rtl ? 'marginLeft' : getDirectionLabel('marginRight');
+        slides.filter((_, slideIndex) => {
+          if (!params.cssMode || params.loop) return true;
+          if (slideIndex === slides.length - 1) {
+            return false;
+          }
+          return true;
+        }).forEach(slideEl => {
+          slideEl.style[key] = `${spaceBetween}px`;
+        });
+      }
+      if (params.centeredSlides && params.centeredSlidesBounds) {
+        let allSlidesSize = 0;
+        slidesSizesGrid.forEach(slideSizeValue => {
+          allSlidesSize += slideSizeValue + (params.spaceBetween ? params.spaceBetween : 0);
+        });
+        allSlidesSize -= params.spaceBetween;
+        const maxSnap = allSlidesSize - swiperSize;
+        snapGrid = snapGrid.map(snap => {
+          if (snap < 0) return -offsetBefore;
+          if (snap > maxSnap) return maxSnap + offsetAfter;
+          return snap;
+        });
+      }
+      if (params.centerInsufficientSlides) {
+        let allSlidesSize = 0;
+        slidesSizesGrid.forEach(slideSizeValue => {
+          allSlidesSize += slideSizeValue + (params.spaceBetween ? params.spaceBetween : 0);
+        });
+        allSlidesSize -= params.spaceBetween;
+        if (allSlidesSize < swiperSize) {
+          const allSlidesOffset = (swiperSize - allSlidesSize) / 2;
+          snapGrid.forEach((snap, snapIndex) => {
+            snapGrid[snapIndex] = snap - allSlidesOffset;
+          });
+          slidesGrid.forEach((snap, snapIndex) => {
+            slidesGrid[snapIndex] = snap + allSlidesOffset;
+          });
+        }
+      }
+      Object.assign(swiper, {
+        slides,
+        snapGrid,
+        slidesGrid,
+        slidesSizesGrid
+      });
+      if (params.centeredSlides && params.cssMode && !params.centeredSlidesBounds) {
+        setCSSProperty(wrapperEl, '--swiper-centered-offset-before', `${-snapGrid[0]}px`);
+        setCSSProperty(wrapperEl, '--swiper-centered-offset-after', `${swiper.size / 2 - slidesSizesGrid[slidesSizesGrid.length - 1] / 2}px`);
+        const addToSnapGrid = -swiper.snapGrid[0];
+        const addToSlidesGrid = -swiper.slidesGrid[0];
+        swiper.snapGrid = swiper.snapGrid.map(v => v + addToSnapGrid);
+        swiper.slidesGrid = swiper.slidesGrid.map(v => v + addToSlidesGrid);
+      }
+      if (slidesLength !== previousSlidesLength) {
+        swiper.emit('slidesLengthChange');
+      }
+      if (snapGrid.length !== previousSnapGridLength) {
+        if (swiper.params.watchOverflow) swiper.checkOverflow();
+        swiper.emit('snapGridLengthChange');
+      }
+      if (slidesGrid.length !== previousSlidesGridLength) {
+        swiper.emit('slidesGridLengthChange');
+      }
+      if (params.watchSlidesProgress) {
+        swiper.updateSlidesOffset();
+      }
+      if (!isVirtual && !params.cssMode && (params.effect === 'slide' || params.effect === 'fade')) {
+        const backFaceHiddenClass = `${params.containerModifierClass}backface-hidden`;
+        const hasClassBackfaceClassAdded = swiper.el.classList.contains(backFaceHiddenClass);
+        if (slidesLength <= params.maxBackfaceHiddenSlides) {
+          if (!hasClassBackfaceClassAdded) swiper.el.classList.add(backFaceHiddenClass);
+        } else if (hasClassBackfaceClassAdded) {
+          swiper.el.classList.remove(backFaceHiddenClass);
+        }
+      }
+    }
+
+    function updateAutoHeight(speed) {
+      const swiper = this;
+      const activeSlides = [];
+      const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+      let newHeight = 0;
+      let i;
+      if (typeof speed === 'number') {
+        swiper.setTransition(speed);
+      } else if (speed === true) {
+        swiper.setTransition(swiper.params.speed);
+      }
+      const getSlideByIndex = index => {
+        if (isVirtual) {
+          return swiper.slides.filter(el => parseInt(el.getAttribute('data-swiper-slide-index'), 10) === index)[0];
+        }
+        return swiper.slides[index];
+      };
+      // Find slides currently in view
+      if (swiper.params.slidesPerView !== 'auto' && swiper.params.slidesPerView > 1) {
+        if (swiper.params.centeredSlides) {
+          (swiper.visibleSlides || []).forEach(slide => {
+            activeSlides.push(slide);
+          });
+        } else {
+          for (i = 0; i < Math.ceil(swiper.params.slidesPerView); i += 1) {
+            const index = swiper.activeIndex + i;
+            if (index > swiper.slides.length && !isVirtual) break;
+            activeSlides.push(getSlideByIndex(index));
+          }
+        }
+      } else {
+        activeSlides.push(getSlideByIndex(swiper.activeIndex));
+      }
+
+      // Find new height from highest slide in view
+      for (i = 0; i < activeSlides.length; i += 1) {
+        if (typeof activeSlides[i] !== 'undefined') {
+          const height = activeSlides[i].offsetHeight;
+          newHeight = height > newHeight ? height : newHeight;
+        }
+      }
+
+      // Update Height
+      if (newHeight || newHeight === 0) swiper.wrapperEl.style.height = `${newHeight}px`;
+    }
+
+    function updateSlidesOffset() {
+      const swiper = this;
+      const slides = swiper.slides;
+      // eslint-disable-next-line
+      const minusOffset = swiper.isElement ? swiper.isHorizontal() ? swiper.wrapperEl.offsetLeft : swiper.wrapperEl.offsetTop : 0;
+      for (let i = 0; i < slides.length; i += 1) {
+        slides[i].swiperSlideOffset = (swiper.isHorizontal() ? slides[i].offsetLeft : slides[i].offsetTop) - minusOffset;
+      }
+    }
+
+    function updateSlidesProgress(translate = this && this.translate || 0) {
+      const swiper = this;
+      const params = swiper.params;
+      const {
+        slides,
+        rtlTranslate: rtl,
+        snapGrid
+      } = swiper;
+      if (slides.length === 0) return;
+      if (typeof slides[0].swiperSlideOffset === 'undefined') swiper.updateSlidesOffset();
+      let offsetCenter = -translate;
+      if (rtl) offsetCenter = translate;
+
+      // Visible Slides
+      slides.forEach(slideEl => {
+        slideEl.classList.remove(params.slideVisibleClass);
+      });
+      swiper.visibleSlidesIndexes = [];
+      swiper.visibleSlides = [];
+      for (let i = 0; i < slides.length; i += 1) {
+        const slide = slides[i];
+        let slideOffset = slide.swiperSlideOffset;
+        if (params.cssMode && params.centeredSlides) {
+          slideOffset -= slides[0].swiperSlideOffset;
+        }
+        const slideProgress = (offsetCenter + (params.centeredSlides ? swiper.minTranslate() : 0) - slideOffset) / (slide.swiperSlideSize + params.spaceBetween);
+        const originalSlideProgress = (offsetCenter - snapGrid[0] + (params.centeredSlides ? swiper.minTranslate() : 0) - slideOffset) / (slide.swiperSlideSize + params.spaceBetween);
+        const slideBefore = -(offsetCenter - slideOffset);
+        const slideAfter = slideBefore + swiper.slidesSizesGrid[i];
+        const isVisible = slideBefore >= 0 && slideBefore < swiper.size - 1 || slideAfter > 1 && slideAfter <= swiper.size || slideBefore <= 0 && slideAfter >= swiper.size;
+        if (isVisible) {
+          swiper.visibleSlides.push(slide);
+          swiper.visibleSlidesIndexes.push(i);
+          slides[i].classList.add(params.slideVisibleClass);
+        }
+        slide.progress = rtl ? -slideProgress : slideProgress;
+        slide.originalProgress = rtl ? -originalSlideProgress : originalSlideProgress;
+      }
+    }
+
+    function updateProgress(translate) {
+      const swiper = this;
+      if (typeof translate === 'undefined') {
+        const multiplier = swiper.rtlTranslate ? -1 : 1;
+        // eslint-disable-next-line
+        translate = swiper && swiper.translate && swiper.translate * multiplier || 0;
+      }
+      const params = swiper.params;
+      const translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
+      let {
+        progress,
+        isBeginning,
+        isEnd,
+        progressLoop
+      } = swiper;
+      const wasBeginning = isBeginning;
+      const wasEnd = isEnd;
+      if (translatesDiff === 0) {
+        progress = 0;
+        isBeginning = true;
+        isEnd = true;
+      } else {
+        progress = (translate - swiper.minTranslate()) / translatesDiff;
+        const isBeginningRounded = Math.abs(translate - swiper.minTranslate()) < 1;
+        const isEndRounded = Math.abs(translate - swiper.maxTranslate()) < 1;
+        isBeginning = isBeginningRounded || progress <= 0;
+        isEnd = isEndRounded || progress >= 1;
+        if (isBeginningRounded) progress = 0;
+        if (isEndRounded) progress = 1;
+      }
+      if (params.loop) {
+        const firstSlideIndex = swiper.getSlideIndex(swiper.slides.filter(el => el.getAttribute('data-swiper-slide-index') === '0')[0]);
+        const lastSlideIndex = swiper.getSlideIndex(swiper.slides.filter(el => el.getAttribute('data-swiper-slide-index') * 1 === swiper.slides.length - 1)[0]);
+        const firstSlideTranslate = swiper.slidesGrid[firstSlideIndex];
+        const lastSlideTranslate = swiper.slidesGrid[lastSlideIndex];
+        const translateMax = swiper.slidesGrid[swiper.slidesGrid.length - 1];
+        const translateAbs = Math.abs(translate);
+        if (translateAbs >= firstSlideTranslate) {
+          progressLoop = (translateAbs - firstSlideTranslate) / translateMax;
+        } else {
+          progressLoop = (translateAbs + translateMax - lastSlideTranslate) / translateMax;
+        }
+        if (progressLoop > 1) progressLoop -= 1;
+      }
+      Object.assign(swiper, {
+        progress,
+        progressLoop,
+        isBeginning,
+        isEnd
+      });
+      if (params.watchSlidesProgress || params.centeredSlides && params.autoHeight) swiper.updateSlidesProgress(translate);
+      if (isBeginning && !wasBeginning) {
+        swiper.emit('reachBeginning toEdge');
+      }
+      if (isEnd && !wasEnd) {
+        swiper.emit('reachEnd toEdge');
+      }
+      if (wasBeginning && !isBeginning || wasEnd && !isEnd) {
+        swiper.emit('fromEdge');
+      }
+      swiper.emit('progress', progress);
+    }
+
+    function updateSlidesClasses() {
+      const swiper = this;
+      const {
+        slides,
+        params,
+        slidesEl,
+        activeIndex
+      } = swiper;
+      const isVirtual = swiper.virtual && params.virtual.enabled;
+      const getFilteredSlide = selector => {
+        return elementChildren(slidesEl, `.${params.slideClass}${selector}, swiper-slide${selector}`)[0];
+      };
+      slides.forEach(slideEl => {
+        slideEl.classList.remove(params.slideActiveClass, params.slideNextClass, params.slidePrevClass);
+      });
+      let activeSlide;
+      if (isVirtual) {
+        if (params.loop) {
+          let slideIndex = activeIndex - swiper.virtual.slidesBefore;
+          if (slideIndex < 0) slideIndex = swiper.virtual.slides.length + slideIndex;
+          if (slideIndex >= swiper.virtual.slides.length) slideIndex -= swiper.virtual.slides.length;
+          activeSlide = getFilteredSlide(`[data-swiper-slide-index="${slideIndex}"]`);
+        } else {
+          activeSlide = getFilteredSlide(`[data-swiper-slide-index="${activeIndex}"]`);
+        }
+      } else {
+        activeSlide = slides[activeIndex];
+      }
+      if (activeSlide) {
+        // Active classes
+        activeSlide.classList.add(params.slideActiveClass);
+
+        // Next Slide
+        let nextSlide = elementNextAll(activeSlide, `.${params.slideClass}, swiper-slide`)[0];
+        if (params.loop && !nextSlide) {
+          nextSlide = slides[0];
+        }
+        if (nextSlide) {
+          nextSlide.classList.add(params.slideNextClass);
+        }
+        // Prev Slide
+        let prevSlide = elementPrevAll(activeSlide, `.${params.slideClass}, swiper-slide`)[0];
+        if (params.loop && !prevSlide === 0) {
+          prevSlide = slides[slides.length - 1];
+        }
+        if (prevSlide) {
+          prevSlide.classList.add(params.slidePrevClass);
+        }
+      }
+      swiper.emitSlidesClasses();
+    }
+
+    function getActiveIndexByTranslate(swiper) {
+      const {
+        slidesGrid,
+        params
+      } = swiper;
+      const translate = swiper.rtlTranslate ? swiper.translate : -swiper.translate;
+      let activeIndex;
+      for (let i = 0; i < slidesGrid.length; i += 1) {
+        if (typeof slidesGrid[i + 1] !== 'undefined') {
+          if (translate >= slidesGrid[i] && translate < slidesGrid[i + 1] - (slidesGrid[i + 1] - slidesGrid[i]) / 2) {
+            activeIndex = i;
+          } else if (translate >= slidesGrid[i] && translate < slidesGrid[i + 1]) {
+            activeIndex = i + 1;
+          }
+        } else if (translate >= slidesGrid[i]) {
+          activeIndex = i;
+        }
+      }
+      // Normalize slideIndex
+      if (params.normalizeSlideIndex) {
+        if (activeIndex < 0 || typeof activeIndex === 'undefined') activeIndex = 0;
+      }
+      return activeIndex;
+    }
+    function updateActiveIndex(newActiveIndex) {
+      const swiper = this;
+      const translate = swiper.rtlTranslate ? swiper.translate : -swiper.translate;
+      const {
+        snapGrid,
+        params,
+        activeIndex: previousIndex,
+        realIndex: previousRealIndex,
+        snapIndex: previousSnapIndex
+      } = swiper;
+      let activeIndex = newActiveIndex;
+      let snapIndex;
+      const getVirtualRealIndex = aIndex => {
+        let realIndex = aIndex - swiper.virtual.slidesBefore;
+        if (realIndex < 0) {
+          realIndex = swiper.virtual.slides.length + realIndex;
+        }
+        if (realIndex >= swiper.virtual.slides.length) {
+          realIndex -= swiper.virtual.slides.length;
+        }
+        return realIndex;
+      };
+      if (typeof activeIndex === 'undefined') {
+        activeIndex = getActiveIndexByTranslate(swiper);
+      }
+      if (snapGrid.indexOf(translate) >= 0) {
+        snapIndex = snapGrid.indexOf(translate);
+      } else {
+        const skip = Math.min(params.slidesPerGroupSkip, activeIndex);
+        snapIndex = skip + Math.floor((activeIndex - skip) / params.slidesPerGroup);
+      }
+      if (snapIndex >= snapGrid.length) snapIndex = snapGrid.length - 1;
+      if (activeIndex === previousIndex) {
+        if (snapIndex !== previousSnapIndex) {
+          swiper.snapIndex = snapIndex;
+          swiper.emit('snapIndexChange');
+        }
+        if (swiper.params.loop && swiper.virtual && swiper.params.virtual.enabled) {
+          swiper.realIndex = getVirtualRealIndex(activeIndex);
+        }
+        return;
+      }
+      // Get real index
+      let realIndex;
+      if (swiper.virtual && params.virtual.enabled && params.loop) {
+        realIndex = getVirtualRealIndex(activeIndex);
+      } else if (swiper.slides[activeIndex]) {
+        realIndex = parseInt(swiper.slides[activeIndex].getAttribute('data-swiper-slide-index') || activeIndex, 10);
+      } else {
+        realIndex = activeIndex;
+      }
+      Object.assign(swiper, {
+        snapIndex,
+        realIndex,
+        previousIndex,
+        activeIndex
+      });
+      swiper.emit('activeIndexChange');
+      swiper.emit('snapIndexChange');
+      if (previousRealIndex !== realIndex) {
+        swiper.emit('realIndexChange');
+      }
+      if (swiper.initialized || swiper.params.runCallbacksOnInit) {
+        swiper.emit('slideChange');
+      }
+    }
+
+    function updateClickedSlide(e) {
+      const swiper = this;
+      const params = swiper.params;
+      const slide = e.closest(`.${params.slideClass}, swiper-slide`);
+      let slideFound = false;
+      let slideIndex;
+      if (slide) {
+        for (let i = 0; i < swiper.slides.length; i += 1) {
+          if (swiper.slides[i] === slide) {
+            slideFound = true;
+            slideIndex = i;
+            break;
+          }
+        }
+      }
+      if (slide && slideFound) {
+        swiper.clickedSlide = slide;
+        if (swiper.virtual && swiper.params.virtual.enabled) {
+          swiper.clickedIndex = parseInt(slide.getAttribute('data-swiper-slide-index'), 10);
+        } else {
+          swiper.clickedIndex = slideIndex;
+        }
+      } else {
+        swiper.clickedSlide = undefined;
+        swiper.clickedIndex = undefined;
+        return;
+      }
+      if (params.slideToClickedSlide && swiper.clickedIndex !== undefined && swiper.clickedIndex !== swiper.activeIndex) {
+        swiper.slideToClickedSlide();
+      }
+    }
+
+    var update = {
+      updateSize,
+      updateSlides,
+      updateAutoHeight,
+      updateSlidesOffset,
+      updateSlidesProgress,
+      updateProgress,
+      updateSlidesClasses,
+      updateActiveIndex,
+      updateClickedSlide
+    };
+
+    function getSwiperTranslate(axis = this.isHorizontal() ? 'x' : 'y') {
+      const swiper = this;
+      const {
+        params,
+        rtlTranslate: rtl,
+        translate,
+        wrapperEl
+      } = swiper;
+      if (params.virtualTranslate) {
+        return rtl ? -translate : translate;
+      }
+      if (params.cssMode) {
+        return translate;
+      }
+      let currentTranslate = getTranslate(wrapperEl, axis);
+      if (rtl) currentTranslate = -currentTranslate;
+      return currentTranslate || 0;
+    }
+
+    function setTranslate(translate, byController) {
+      const swiper = this;
+      const {
+        rtlTranslate: rtl,
+        params,
+        wrapperEl,
+        progress
+      } = swiper;
+      let x = 0;
+      let y = 0;
+      const z = 0;
+      if (swiper.isHorizontal()) {
+        x = rtl ? -translate : translate;
+      } else {
+        y = translate;
+      }
+      if (params.roundLengths) {
+        x = Math.floor(x);
+        y = Math.floor(y);
+      }
+      if (params.cssMode) {
+        wrapperEl[swiper.isHorizontal() ? 'scrollLeft' : 'scrollTop'] = swiper.isHorizontal() ? -x : -y;
+      } else if (!params.virtualTranslate) {
+        wrapperEl.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+      }
+      swiper.previousTranslate = swiper.translate;
+      swiper.translate = swiper.isHorizontal() ? x : y;
+
+      // Check if we need to update progress
+      let newProgress;
+      const translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
+      if (translatesDiff === 0) {
+        newProgress = 0;
+      } else {
+        newProgress = (translate - swiper.minTranslate()) / translatesDiff;
+      }
+      if (newProgress !== progress) {
+        swiper.updateProgress(translate);
+      }
+      swiper.emit('setTranslate', swiper.translate, byController);
+    }
+
+    function minTranslate() {
+      return -this.snapGrid[0];
+    }
+
+    function maxTranslate() {
+      return -this.snapGrid[this.snapGrid.length - 1];
+    }
+
+    function translateTo(translate = 0, speed = this.params.speed, runCallbacks = true, translateBounds = true, internal) {
+      const swiper = this;
+      const {
+        params,
+        wrapperEl
+      } = swiper;
+      if (swiper.animating && params.preventInteractionOnTransition) {
+        return false;
+      }
+      const minTranslate = swiper.minTranslate();
+      const maxTranslate = swiper.maxTranslate();
+      let newTranslate;
+      if (translateBounds && translate > minTranslate) newTranslate = minTranslate;else if (translateBounds && translate < maxTranslate) newTranslate = maxTranslate;else newTranslate = translate;
+
+      // Update progress
+      swiper.updateProgress(newTranslate);
+      if (params.cssMode) {
+        const isH = swiper.isHorizontal();
+        if (speed === 0) {
+          wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = -newTranslate;
+        } else {
+          if (!swiper.support.smoothScroll) {
+            animateCSSModeScroll({
+              swiper,
+              targetPosition: -newTranslate,
+              side: isH ? 'left' : 'top'
+            });
+            return true;
+          }
+          wrapperEl.scrollTo({
+            [isH ? 'left' : 'top']: -newTranslate,
+            behavior: 'smooth'
+          });
+        }
+        return true;
+      }
+      if (speed === 0) {
+        swiper.setTransition(0);
+        swiper.setTranslate(newTranslate);
+        if (runCallbacks) {
+          swiper.emit('beforeTransitionStart', speed, internal);
+          swiper.emit('transitionEnd');
+        }
+      } else {
+        swiper.setTransition(speed);
+        swiper.setTranslate(newTranslate);
+        if (runCallbacks) {
+          swiper.emit('beforeTransitionStart', speed, internal);
+          swiper.emit('transitionStart');
+        }
+        if (!swiper.animating) {
+          swiper.animating = true;
+          if (!swiper.onTranslateToWrapperTransitionEnd) {
+            swiper.onTranslateToWrapperTransitionEnd = function transitionEnd(e) {
+              if (!swiper || swiper.destroyed) return;
+              if (e.target !== this) return;
+              swiper.wrapperEl.removeEventListener('transitionend', swiper.onTranslateToWrapperTransitionEnd);
+              swiper.onTranslateToWrapperTransitionEnd = null;
+              delete swiper.onTranslateToWrapperTransitionEnd;
+              if (runCallbacks) {
+                swiper.emit('transitionEnd');
+              }
+            };
+          }
+          swiper.wrapperEl.addEventListener('transitionend', swiper.onTranslateToWrapperTransitionEnd);
+        }
+      }
+      return true;
+    }
+
+    var translate = {
+      getTranslate: getSwiperTranslate,
+      setTranslate,
+      minTranslate,
+      maxTranslate,
+      translateTo
+    };
+
+    function setTransition(duration, byController) {
+      const swiper = this;
+      if (!swiper.params.cssMode) {
+        swiper.wrapperEl.style.transitionDuration = `${duration}ms`;
+      }
+      swiper.emit('setTransition', duration, byController);
+    }
+
+    function transitionEmit({
+      swiper,
+      runCallbacks,
+      direction,
+      step
+    }) {
+      const {
+        activeIndex,
+        previousIndex
+      } = swiper;
+      let dir = direction;
+      if (!dir) {
+        if (activeIndex > previousIndex) dir = 'next';else if (activeIndex < previousIndex) dir = 'prev';else dir = 'reset';
+      }
+      swiper.emit(`transition${step}`);
+      if (runCallbacks && activeIndex !== previousIndex) {
+        if (dir === 'reset') {
+          swiper.emit(`slideResetTransition${step}`);
+          return;
+        }
+        swiper.emit(`slideChangeTransition${step}`);
+        if (dir === 'next') {
+          swiper.emit(`slideNextTransition${step}`);
+        } else {
+          swiper.emit(`slidePrevTransition${step}`);
+        }
+      }
+    }
+
+    function transitionStart(runCallbacks = true, direction) {
+      const swiper = this;
+      const {
+        params
+      } = swiper;
+      if (params.cssMode) return;
+      if (params.autoHeight) {
+        swiper.updateAutoHeight();
+      }
+      transitionEmit({
+        swiper,
+        runCallbacks,
+        direction,
+        step: 'Start'
+      });
+    }
+
+    function transitionEnd(runCallbacks = true, direction) {
+      const swiper = this;
+      const {
+        params
+      } = swiper;
+      swiper.animating = false;
+      if (params.cssMode) return;
+      swiper.setTransition(0);
+      transitionEmit({
+        swiper,
+        runCallbacks,
+        direction,
+        step: 'End'
+      });
+    }
+
+    var transition = {
+      setTransition,
+      transitionStart,
+      transitionEnd
+    };
+
+    function slideTo(index = 0, speed = this.params.speed, runCallbacks = true, internal, initial) {
+      if (typeof index === 'string') {
+        index = parseInt(index, 10);
+      }
+      const swiper = this;
+      let slideIndex = index;
+      if (slideIndex < 0) slideIndex = 0;
+      const {
+        params,
+        snapGrid,
+        slidesGrid,
+        previousIndex,
+        activeIndex,
+        rtlTranslate: rtl,
+        wrapperEl,
+        enabled
+      } = swiper;
+      if (swiper.animating && params.preventInteractionOnTransition || !enabled && !internal && !initial) {
+        return false;
+      }
+      const skip = Math.min(swiper.params.slidesPerGroupSkip, slideIndex);
+      let snapIndex = skip + Math.floor((slideIndex - skip) / swiper.params.slidesPerGroup);
+      if (snapIndex >= snapGrid.length) snapIndex = snapGrid.length - 1;
+      const translate = -snapGrid[snapIndex];
+      // Normalize slideIndex
+      if (params.normalizeSlideIndex) {
+        for (let i = 0; i < slidesGrid.length; i += 1) {
+          const normalizedTranslate = -Math.floor(translate * 100);
+          const normalizedGrid = Math.floor(slidesGrid[i] * 100);
+          const normalizedGridNext = Math.floor(slidesGrid[i + 1] * 100);
+          if (typeof slidesGrid[i + 1] !== 'undefined') {
+            if (normalizedTranslate >= normalizedGrid && normalizedTranslate < normalizedGridNext - (normalizedGridNext - normalizedGrid) / 2) {
+              slideIndex = i;
+            } else if (normalizedTranslate >= normalizedGrid && normalizedTranslate < normalizedGridNext) {
+              slideIndex = i + 1;
+            }
+          } else if (normalizedTranslate >= normalizedGrid) {
+            slideIndex = i;
+          }
+        }
+      }
+      // Directions locks
+      if (swiper.initialized && slideIndex !== activeIndex) {
+        if (!swiper.allowSlideNext && translate < swiper.translate && translate < swiper.minTranslate()) {
+          return false;
+        }
+        if (!swiper.allowSlidePrev && translate > swiper.translate && translate > swiper.maxTranslate()) {
+          if ((activeIndex || 0) !== slideIndex) {
+            return false;
+          }
+        }
+      }
+      if (slideIndex !== (previousIndex || 0) && runCallbacks) {
+        swiper.emit('beforeSlideChangeStart');
+      }
+
+      // Update progress
+      swiper.updateProgress(translate);
+      let direction;
+      if (slideIndex > activeIndex) direction = 'next';else if (slideIndex < activeIndex) direction = 'prev';else direction = 'reset';
+
+      // Update Index
+      if (rtl && -translate === swiper.translate || !rtl && translate === swiper.translate) {
+        swiper.updateActiveIndex(slideIndex);
+        // Update Height
+        if (params.autoHeight) {
+          swiper.updateAutoHeight();
+        }
+        swiper.updateSlidesClasses();
+        if (params.effect !== 'slide') {
+          swiper.setTranslate(translate);
+        }
+        if (direction !== 'reset') {
+          swiper.transitionStart(runCallbacks, direction);
+          swiper.transitionEnd(runCallbacks, direction);
+        }
+        return false;
+      }
+      if (params.cssMode) {
+        const isH = swiper.isHorizontal();
+        const t = rtl ? translate : -translate;
+        if (speed === 0) {
+          const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+          if (isVirtual) {
+            swiper.wrapperEl.style.scrollSnapType = 'none';
+            swiper._immediateVirtual = true;
+          }
+          if (isVirtual && !swiper._cssModeVirtualInitialSet && swiper.params.initialSlide > 0) {
+            swiper._cssModeVirtualInitialSet = true;
+            requestAnimationFrame(() => {
+              wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = t;
+            });
+          } else {
+            wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = t;
+          }
+          if (isVirtual) {
+            requestAnimationFrame(() => {
+              swiper.wrapperEl.style.scrollSnapType = '';
+              swiper._immediateVirtual = false;
+            });
+          }
+        } else {
+          if (!swiper.support.smoothScroll) {
+            animateCSSModeScroll({
+              swiper,
+              targetPosition: t,
+              side: isH ? 'left' : 'top'
+            });
+            return true;
+          }
+          wrapperEl.scrollTo({
+            [isH ? 'left' : 'top']: t,
+            behavior: 'smooth'
+          });
+        }
+        return true;
+      }
+      swiper.setTransition(speed);
+      swiper.setTranslate(translate);
+      swiper.updateActiveIndex(slideIndex);
+      swiper.updateSlidesClasses();
+      swiper.emit('beforeTransitionStart', speed, internal);
+      swiper.transitionStart(runCallbacks, direction);
+      if (speed === 0) {
+        swiper.transitionEnd(runCallbacks, direction);
+      } else if (!swiper.animating) {
+        swiper.animating = true;
+        if (!swiper.onSlideToWrapperTransitionEnd) {
+          swiper.onSlideToWrapperTransitionEnd = function transitionEnd(e) {
+            if (!swiper || swiper.destroyed) return;
+            if (e.target !== this) return;
+            swiper.wrapperEl.removeEventListener('transitionend', swiper.onSlideToWrapperTransitionEnd);
+            swiper.onSlideToWrapperTransitionEnd = null;
+            delete swiper.onSlideToWrapperTransitionEnd;
+            swiper.transitionEnd(runCallbacks, direction);
+          };
+        }
+        swiper.wrapperEl.addEventListener('transitionend', swiper.onSlideToWrapperTransitionEnd);
+      }
+      return true;
+    }
+
+    function slideToLoop(index = 0, speed = this.params.speed, runCallbacks = true, internal) {
+      if (typeof index === 'string') {
+        const indexAsNumber = parseInt(index, 10);
+        index = indexAsNumber;
+      }
+      const swiper = this;
+      let newIndex = index;
+      if (swiper.params.loop) {
+        if (swiper.virtual && swiper.params.virtual.enabled) {
+          // eslint-disable-next-line
+          newIndex = newIndex + swiper.virtual.slidesBefore;
+        } else {
+          newIndex = swiper.getSlideIndex(swiper.slides.filter(slideEl => slideEl.getAttribute('data-swiper-slide-index') * 1 === newIndex)[0]);
+        }
+      }
+      return swiper.slideTo(newIndex, speed, runCallbacks, internal);
+    }
+
+    /* eslint no-unused-vars: "off" */
+    function slideNext(speed = this.params.speed, runCallbacks = true, internal) {
+      const swiper = this;
+      const {
+        enabled,
+        params,
+        animating
+      } = swiper;
+      if (!enabled) return swiper;
+      let perGroup = params.slidesPerGroup;
+      if (params.slidesPerView === 'auto' && params.slidesPerGroup === 1 && params.slidesPerGroupAuto) {
+        perGroup = Math.max(swiper.slidesPerViewDynamic('current', true), 1);
+      }
+      const increment = swiper.activeIndex < params.slidesPerGroupSkip ? 1 : perGroup;
+      const isVirtual = swiper.virtual && params.virtual.enabled;
+      if (params.loop) {
+        if (animating && !isVirtual && params.loopPreventsSliding) return false;
+        swiper.loopFix({
+          direction: 'next'
+        });
+        // eslint-disable-next-line
+        swiper._clientLeft = swiper.wrapperEl.clientLeft;
+      }
+      if (params.rewind && swiper.isEnd) {
+        return swiper.slideTo(0, speed, runCallbacks, internal);
+      }
+      return swiper.slideTo(swiper.activeIndex + increment, speed, runCallbacks, internal);
+    }
+
+    /* eslint no-unused-vars: "off" */
+    function slidePrev(speed = this.params.speed, runCallbacks = true, internal) {
+      const swiper = this;
+      const {
+        params,
+        snapGrid,
+        slidesGrid,
+        rtlTranslate,
+        enabled,
+        animating
+      } = swiper;
+      if (!enabled) return swiper;
+      const isVirtual = swiper.virtual && params.virtual.enabled;
+      if (params.loop) {
+        if (animating && !isVirtual && params.loopPreventsSliding) return false;
+        swiper.loopFix({
+          direction: 'prev'
+        });
+        // eslint-disable-next-line
+        swiper._clientLeft = swiper.wrapperEl.clientLeft;
+      }
+      const translate = rtlTranslate ? swiper.translate : -swiper.translate;
+      function normalize(val) {
+        if (val < 0) return -Math.floor(Math.abs(val));
+        return Math.floor(val);
+      }
+      const normalizedTranslate = normalize(translate);
+      const normalizedSnapGrid = snapGrid.map(val => normalize(val));
+      let prevSnap = snapGrid[normalizedSnapGrid.indexOf(normalizedTranslate) - 1];
+      if (typeof prevSnap === 'undefined' && params.cssMode) {
+        let prevSnapIndex;
+        snapGrid.forEach((snap, snapIndex) => {
+          if (normalizedTranslate >= snap) {
+            // prevSnap = snap;
+            prevSnapIndex = snapIndex;
+          }
+        });
+        if (typeof prevSnapIndex !== 'undefined') {
+          prevSnap = snapGrid[prevSnapIndex > 0 ? prevSnapIndex - 1 : prevSnapIndex];
+        }
+      }
+      let prevIndex = 0;
+      if (typeof prevSnap !== 'undefined') {
+        prevIndex = slidesGrid.indexOf(prevSnap);
+        if (prevIndex < 0) prevIndex = swiper.activeIndex - 1;
+        if (params.slidesPerView === 'auto' && params.slidesPerGroup === 1 && params.slidesPerGroupAuto) {
+          prevIndex = prevIndex - swiper.slidesPerViewDynamic('previous', true) + 1;
+          prevIndex = Math.max(prevIndex, 0);
+        }
+      }
+      if (params.rewind && swiper.isBeginning) {
+        const lastIndex = swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual ? swiper.virtual.slides.length - 1 : swiper.slides.length - 1;
+        return swiper.slideTo(lastIndex, speed, runCallbacks, internal);
+      }
+      return swiper.slideTo(prevIndex, speed, runCallbacks, internal);
+    }
+
+    /* eslint no-unused-vars: "off" */
+    function slideReset(speed = this.params.speed, runCallbacks = true, internal) {
+      const swiper = this;
+      return swiper.slideTo(swiper.activeIndex, speed, runCallbacks, internal);
+    }
+
+    /* eslint no-unused-vars: "off" */
+    function slideToClosest(speed = this.params.speed, runCallbacks = true, internal, threshold = 0.5) {
+      const swiper = this;
+      let index = swiper.activeIndex;
+      const skip = Math.min(swiper.params.slidesPerGroupSkip, index);
+      const snapIndex = skip + Math.floor((index - skip) / swiper.params.slidesPerGroup);
+      const translate = swiper.rtlTranslate ? swiper.translate : -swiper.translate;
+      if (translate >= swiper.snapGrid[snapIndex]) {
+        // The current translate is on or after the current snap index, so the choice
+        // is between the current index and the one after it.
+        const currentSnap = swiper.snapGrid[snapIndex];
+        const nextSnap = swiper.snapGrid[snapIndex + 1];
+        if (translate - currentSnap > (nextSnap - currentSnap) * threshold) {
+          index += swiper.params.slidesPerGroup;
+        }
+      } else {
+        // The current translate is before the current snap index, so the choice
+        // is between the current index and the one before it.
+        const prevSnap = swiper.snapGrid[snapIndex - 1];
+        const currentSnap = swiper.snapGrid[snapIndex];
+        if (translate - prevSnap <= (currentSnap - prevSnap) * threshold) {
+          index -= swiper.params.slidesPerGroup;
+        }
+      }
+      index = Math.max(index, 0);
+      index = Math.min(index, swiper.slidesGrid.length - 1);
+      return swiper.slideTo(index, speed, runCallbacks, internal);
+    }
+
+    function slideToClickedSlide() {
+      const swiper = this;
+      const {
+        params,
+        slidesEl
+      } = swiper;
+      const slidesPerView = params.slidesPerView === 'auto' ? swiper.slidesPerViewDynamic() : params.slidesPerView;
+      let slideToIndex = swiper.clickedIndex;
+      let realIndex;
+      const slideSelector = swiper.isElement ? `swiper-slide` : `.${params.slideClass}`;
+      if (params.loop) {
+        if (swiper.animating) return;
+        realIndex = parseInt(swiper.clickedSlide.getAttribute('data-swiper-slide-index'), 10);
+        if (params.centeredSlides) {
+          if (slideToIndex < swiper.loopedSlides - slidesPerView / 2 || slideToIndex > swiper.slides.length - swiper.loopedSlides + slidesPerView / 2) {
+            swiper.loopFix();
+            slideToIndex = swiper.getSlideIndex(elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
+            nextTick(() => {
+              swiper.slideTo(slideToIndex);
+            });
+          } else {
+            swiper.slideTo(slideToIndex);
+          }
+        } else if (slideToIndex > swiper.slides.length - slidesPerView) {
+          swiper.loopFix();
+          slideToIndex = swiper.getSlideIndex(elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
+          nextTick(() => {
+            swiper.slideTo(slideToIndex);
+          });
+        } else {
+          swiper.slideTo(slideToIndex);
+        }
+      } else {
+        swiper.slideTo(slideToIndex);
+      }
+    }
+
+    var slide = {
+      slideTo,
+      slideToLoop,
+      slideNext,
+      slidePrev,
+      slideReset,
+      slideToClosest,
+      slideToClickedSlide
+    };
+
+    function loopCreate(slideRealIndex) {
+      const swiper = this;
+      const {
+        params,
+        slidesEl
+      } = swiper;
+      if (!params.loop || swiper.virtual && swiper.params.virtual.enabled) return;
+      const slides = elementChildren(slidesEl, `.${params.slideClass}, swiper-slide`);
+      slides.forEach((el, index) => {
+        el.setAttribute('data-swiper-slide-index', index);
+      });
+      swiper.loopFix({
+        slideRealIndex,
+        direction: params.centeredSlides ? undefined : 'next'
+      });
+    }
+
+    function loopFix({
+      slideRealIndex,
+      slideTo = true,
+      direction,
+      setTranslate,
+      activeSlideIndex,
+      byController,
+      byMousewheel
+    } = {}) {
+      const swiper = this;
+      if (!swiper.params.loop) return;
+      swiper.emit('beforeLoopFix');
+      const {
+        slides,
+        allowSlidePrev,
+        allowSlideNext,
+        slidesEl,
+        params
+      } = swiper;
+      swiper.allowSlidePrev = true;
+      swiper.allowSlideNext = true;
+      if (swiper.virtual && params.virtual.enabled) {
+        if (slideTo) {
+          if (!params.centeredSlides && swiper.snapIndex === 0) {
+            swiper.slideTo(swiper.virtual.slides.length, 0, false, true);
+          } else if (params.centeredSlides && swiper.snapIndex < params.slidesPerView) {
+            swiper.slideTo(swiper.virtual.slides.length + swiper.snapIndex, 0, false, true);
+          } else if (swiper.snapIndex === swiper.snapGrid.length - 1) {
+            swiper.slideTo(swiper.virtual.slidesBefore, 0, false, true);
+          }
+        }
+        swiper.allowSlidePrev = allowSlidePrev;
+        swiper.allowSlideNext = allowSlideNext;
+        swiper.emit('loopFix');
+        return;
+      }
+      const slidesPerView = params.slidesPerView === 'auto' ? swiper.slidesPerViewDynamic() : Math.ceil(parseFloat(params.slidesPerView, 10));
+      let loopedSlides = params.loopedSlides || slidesPerView;
+      if (loopedSlides % params.slidesPerGroup !== 0) {
+        loopedSlides += params.slidesPerGroup - loopedSlides % params.slidesPerGroup;
+      }
+      swiper.loopedSlides = loopedSlides;
+      const prependSlidesIndexes = [];
+      const appendSlidesIndexes = [];
+      let activeIndex = swiper.activeIndex;
+      if (typeof activeSlideIndex === 'undefined') {
+        activeSlideIndex = swiper.getSlideIndex(swiper.slides.filter(el => el.classList.contains('swiper-slide-active'))[0]);
+      } else {
+        activeIndex = activeSlideIndex;
+      }
+      const isNext = direction === 'next' || !direction;
+      const isPrev = direction === 'prev' || !direction;
+      let slidesPrepended = 0;
+      let slidesAppended = 0;
+      // prepend last slides before start
+      if (activeSlideIndex < loopedSlides) {
+        slidesPrepended = Math.max(loopedSlides - activeSlideIndex, params.slidesPerGroup);
+        for (let i = 0; i < loopedSlides - activeSlideIndex; i += 1) {
+          const index = i - Math.floor(i / slides.length) * slides.length;
+          prependSlidesIndexes.push(slides.length - index - 1);
+        }
+      } else if (activeSlideIndex /* + slidesPerView */ > swiper.slides.length - loopedSlides * 2) {
+        slidesAppended = Math.max(activeSlideIndex - (swiper.slides.length - loopedSlides * 2), params.slidesPerGroup);
+        for (let i = 0; i < slidesAppended; i += 1) {
+          const index = i - Math.floor(i / slides.length) * slides.length;
+          appendSlidesIndexes.push(index);
+        }
+      }
+      if (isPrev) {
+        prependSlidesIndexes.forEach(index => {
+          slidesEl.prepend(swiper.slides[index]);
+        });
+      }
+      if (isNext) {
+        appendSlidesIndexes.forEach(index => {
+          slidesEl.append(swiper.slides[index]);
+        });
+      }
+      swiper.recalcSlides();
+      if (params.watchSlidesProgress) {
+        swiper.updateSlidesOffset();
+      }
+      if (slideTo) {
+        if (prependSlidesIndexes.length > 0 && isPrev) {
+          if (typeof slideRealIndex === 'undefined') {
+            const currentSlideTranslate = swiper.slidesGrid[activeIndex];
+            const newSlideTranslate = swiper.slidesGrid[activeIndex + slidesPrepended];
+            const diff = newSlideTranslate - currentSlideTranslate;
+            if (byMousewheel) {
+              swiper.setTranslate(swiper.translate - diff);
+            } else {
+              swiper.slideTo(activeIndex + slidesPrepended, 0, false, true);
+              if (setTranslate) {
+                swiper.touches[swiper.isHorizontal() ? 'startX' : 'startY'] += diff;
+              }
+            }
+          } else {
+            if (setTranslate) {
+              swiper.slideToLoop(slideRealIndex, 0, false, true);
+            }
+          }
+        } else if (appendSlidesIndexes.length > 0 && isNext) {
+          if (typeof slideRealIndex === 'undefined') {
+            const currentSlideTranslate = swiper.slidesGrid[activeIndex];
+            const newSlideTranslate = swiper.slidesGrid[activeIndex - slidesAppended];
+            const diff = newSlideTranslate - currentSlideTranslate;
+            if (byMousewheel) {
+              swiper.setTranslate(swiper.translate - diff);
+            } else {
+              swiper.slideTo(activeIndex - slidesAppended, 0, false, true);
+              if (setTranslate) {
+                swiper.touches[swiper.isHorizontal() ? 'startX' : 'startY'] += diff;
+              }
+            }
+          } else {
+            swiper.slideToLoop(slideRealIndex, 0, false, true);
+          }
+        }
+      }
+      swiper.allowSlidePrev = allowSlidePrev;
+      swiper.allowSlideNext = allowSlideNext;
+      if (swiper.controller && swiper.controller.control && !byController) {
+        const loopParams = {
+          slideRealIndex,
+          slideTo: false,
+          direction,
+          setTranslate,
+          activeSlideIndex,
+          byController: true
+        };
+        if (Array.isArray(swiper.controller.control)) {
+          swiper.controller.control.forEach(c => {
+            if (c.params.loop) c.loopFix(loopParams);
+          });
+        } else if (swiper.controller.control instanceof swiper.constructor && swiper.controller.control.params.loop) {
+          swiper.controller.control.loopFix(loopParams);
+        }
+      }
+      swiper.emit('loopFix');
+    }
+
+    function loopDestroy() {
+      const swiper = this;
+      const {
+        slides,
+        params,
+        slidesEl
+      } = swiper;
+      if (!params.loop || swiper.virtual && swiper.params.virtual.enabled) return;
+      swiper.recalcSlides();
+      const newSlidesOrder = [];
+      slides.forEach(slideEl => {
+        const index = typeof slideEl.swiperSlideIndex === 'undefined' ? slideEl.getAttribute('data-swiper-slide-index') * 1 : slideEl.swiperSlideIndex;
+        newSlidesOrder[index] = slideEl;
+      });
+      slides.forEach(slideEl => {
+        slideEl.removeAttribute('data-swiper-slide-index');
+      });
+      newSlidesOrder.forEach(slideEl => {
+        slidesEl.append(slideEl);
+      });
+      swiper.recalcSlides();
+      swiper.slideTo(swiper.realIndex, 0);
+    }
+
+    var loop = {
+      loopCreate,
+      loopFix,
+      loopDestroy
+    };
+
+    function setGrabCursor(moving) {
+      const swiper = this;
+      if (!swiper.params.simulateTouch || swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode) return;
+      const el = swiper.params.touchEventsTarget === 'container' ? swiper.el : swiper.wrapperEl;
+      if (swiper.isElement) {
+        swiper.__preventObserver__ = true;
+      }
+      el.style.cursor = 'move';
+      el.style.cursor = moving ? 'grabbing' : 'grab';
+      if (swiper.isElement) {
+        requestAnimationFrame(() => {
+          swiper.__preventObserver__ = false;
+        });
+      }
+    }
+
+    function unsetGrabCursor() {
+      const swiper = this;
+      if (swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode) {
+        return;
+      }
+      if (swiper.isElement) {
+        swiper.__preventObserver__ = true;
+      }
+      swiper[swiper.params.touchEventsTarget === 'container' ? 'el' : 'wrapperEl'].style.cursor = '';
+      if (swiper.isElement) {
+        requestAnimationFrame(() => {
+          swiper.__preventObserver__ = false;
+        });
+      }
+    }
+
+    var grabCursor = {
+      setGrabCursor,
+      unsetGrabCursor
+    };
+
+    // Modified from https://stackoverflow.com/questions/54520554/custom-element-getrootnode-closest-function-crossing-multiple-parent-shadowd
+    function closestElement(selector, base = this) {
+      function __closestFrom(el) {
+        if (!el || el === getDocument() || el === getWindow()) return null;
+        if (el.assignedSlot) el = el.assignedSlot;
+        const found = el.closest(selector);
+        if (!found && !el.getRootNode) {
+          return null;
+        }
+        return found || __closestFrom(el.getRootNode().host);
+      }
+      return __closestFrom(base);
+    }
+    function onTouchStart(event) {
+      const swiper = this;
+      const document = getDocument();
+      const window = getWindow();
+      const data = swiper.touchEventsData;
+      data.evCache.push(event);
+      const {
+        params,
+        touches,
+        enabled
+      } = swiper;
+      if (!enabled) return;
+      if (!params.simulateTouch && event.pointerType === 'mouse') return;
+      if (swiper.animating && params.preventInteractionOnTransition) {
+        return;
+      }
+      if (!swiper.animating && params.cssMode && params.loop) {
+        swiper.loopFix();
+      }
+      let e = event;
+      if (e.originalEvent) e = e.originalEvent;
+      let targetEl = e.target;
+      if (params.touchEventsTarget === 'wrapper') {
+        if (!swiper.wrapperEl.contains(targetEl)) return;
+      }
+      if ('which' in e && e.which === 3) return;
+      if ('button' in e && e.button > 0) return;
+      if (data.isTouched && data.isMoved) return;
+
+      // change target el for shadow root component
+      const swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== '';
+      // eslint-disable-next-line
+      const eventPath = event.composedPath ? event.composedPath() : event.path;
+      if (swipingClassHasValue && e.target && e.target.shadowRoot && eventPath) {
+        targetEl = eventPath[0];
+      }
+      const noSwipingSelector = params.noSwipingSelector ? params.noSwipingSelector : `.${params.noSwipingClass}`;
+      const isTargetShadow = !!(e.target && e.target.shadowRoot);
+
+      // use closestElement for shadow root element to get the actual closest for nested shadow root element
+      if (params.noSwiping && (isTargetShadow ? closestElement(noSwipingSelector, targetEl) : targetEl.closest(noSwipingSelector))) {
+        swiper.allowClick = true;
+        return;
+      }
+      if (params.swipeHandler) {
+        if (!targetEl.closest(params.swipeHandler)) return;
+      }
+      touches.currentX = e.pageX;
+      touches.currentY = e.pageY;
+      const startX = touches.currentX;
+      const startY = touches.currentY;
+
+      // Do NOT start if iOS edge swipe is detected. Otherwise iOS app cannot swipe-to-go-back anymore
+
+      const edgeSwipeDetection = params.edgeSwipeDetection || params.iOSEdgeSwipeDetection;
+      const edgeSwipeThreshold = params.edgeSwipeThreshold || params.iOSEdgeSwipeThreshold;
+      if (edgeSwipeDetection && (startX <= edgeSwipeThreshold || startX >= window.innerWidth - edgeSwipeThreshold)) {
+        if (edgeSwipeDetection === 'prevent') {
+          event.preventDefault();
+        } else {
+          return;
+        }
+      }
+      Object.assign(data, {
+        isTouched: true,
+        isMoved: false,
+        allowTouchCallbacks: true,
+        isScrolling: undefined,
+        startMoving: undefined
+      });
+      touches.startX = startX;
+      touches.startY = startY;
+      data.touchStartTime = now();
+      swiper.allowClick = true;
+      swiper.updateSize();
+      swiper.swipeDirection = undefined;
+      if (params.threshold > 0) data.allowThresholdMove = false;
+      let preventDefault = true;
+      if (targetEl.matches(data.focusableElements)) {
+        preventDefault = false;
+        if (targetEl.nodeName === 'SELECT') {
+          data.isTouched = false;
+        }
+      }
+      if (document.activeElement && document.activeElement.matches(data.focusableElements) && document.activeElement !== targetEl) {
+        document.activeElement.blur();
+      }
+      const shouldPreventDefault = preventDefault && swiper.allowTouchMove && params.touchStartPreventDefault;
+      if ((params.touchStartForcePreventDefault || shouldPreventDefault) && !targetEl.isContentEditable) {
+        e.preventDefault();
+      }
+      if (swiper.params.freeMode && swiper.params.freeMode.enabled && swiper.freeMode && swiper.animating && !params.cssMode) {
+        swiper.freeMode.onTouchStart();
+      }
+      swiper.emit('touchStart', e);
+    }
+
+    function onTouchMove(event) {
+      const document = getDocument();
+      const swiper = this;
+      const data = swiper.touchEventsData;
+      const {
+        params,
+        touches,
+        rtlTranslate: rtl,
+        enabled
+      } = swiper;
+      if (!enabled) return;
+      if (!params.simulateTouch && event.pointerType === 'mouse') return;
+      let e = event;
+      if (e.originalEvent) e = e.originalEvent;
+      if (!data.isTouched) {
+        if (data.startMoving && data.isScrolling) {
+          swiper.emit('touchMoveOpposite', e);
+        }
+        return;
+      }
+      const pointerIndex = data.evCache.findIndex(cachedEv => cachedEv.pointerId === e.pointerId);
+      if (pointerIndex >= 0) data.evCache[pointerIndex] = e;
+      const targetTouch = data.evCache.length > 1 ? data.evCache[0] : e;
+      const pageX = targetTouch.pageX;
+      const pageY = targetTouch.pageY;
+      if (e.preventedByNestedSwiper) {
+        touches.startX = pageX;
+        touches.startY = pageY;
+        return;
+      }
+      if (!swiper.allowTouchMove) {
+        if (!e.target.matches(data.focusableElements)) {
+          swiper.allowClick = false;
+        }
+        if (data.isTouched) {
+          Object.assign(touches, {
+            startX: pageX,
+            startY: pageY,
+            prevX: swiper.touches.currentX,
+            prevY: swiper.touches.currentY,
+            currentX: pageX,
+            currentY: pageY
+          });
+          data.touchStartTime = now();
+        }
+        return;
+      }
+      if (params.touchReleaseOnEdges && !params.loop) {
+        if (swiper.isVertical()) {
+          // Vertical
+          if (pageY < touches.startY && swiper.translate <= swiper.maxTranslate() || pageY > touches.startY && swiper.translate >= swiper.minTranslate()) {
+            data.isTouched = false;
+            data.isMoved = false;
+            return;
+          }
+        } else if (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate()) {
+          return;
+        }
+      }
+      if (document.activeElement) {
+        if (e.target === document.activeElement && e.target.matches(data.focusableElements)) {
+          data.isMoved = true;
+          swiper.allowClick = false;
+          return;
+        }
+      }
+      if (data.allowTouchCallbacks) {
+        swiper.emit('touchMove', e);
+      }
+      if (e.targetTouches && e.targetTouches.length > 1) return;
+      touches.currentX = pageX;
+      touches.currentY = pageY;
+      const diffX = touches.currentX - touches.startX;
+      const diffY = touches.currentY - touches.startY;
+      if (swiper.params.threshold && Math.sqrt(diffX ** 2 + diffY ** 2) < swiper.params.threshold) return;
+      if (typeof data.isScrolling === 'undefined') {
+        let touchAngle;
+        if (swiper.isHorizontal() && touches.currentY === touches.startY || swiper.isVertical() && touches.currentX === touches.startX) {
+          data.isScrolling = false;
+        } else {
+          // eslint-disable-next-line
+          if (diffX * diffX + diffY * diffY >= 25) {
+            touchAngle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * 180 / Math.PI;
+            data.isScrolling = swiper.isHorizontal() ? touchAngle > params.touchAngle : 90 - touchAngle > params.touchAngle;
+          }
+        }
+      }
+      if (data.isScrolling) {
+        swiper.emit('touchMoveOpposite', e);
+      }
+      if (typeof data.startMoving === 'undefined') {
+        if (touches.currentX !== touches.startX || touches.currentY !== touches.startY) {
+          data.startMoving = true;
+        }
+      }
+      if (data.isScrolling || swiper.zoom && swiper.params.zoom && swiper.params.zoom.enabled && data.evCache.length > 1) {
+        data.isTouched = false;
+        return;
+      }
+      if (!data.startMoving) {
+        return;
+      }
+      swiper.allowClick = false;
+      if (!params.cssMode && e.cancelable) {
+        e.preventDefault();
+      }
+      if (params.touchMoveStopPropagation && !params.nested) {
+        e.stopPropagation();
+      }
+      let diff = swiper.isHorizontal() ? diffX : diffY;
+      let touchesDiff = swiper.isHorizontal() ? touches.currentX - touches.previousX : touches.currentY - touches.previousY;
+      if (params.oneWayMovement) {
+        diff = Math.abs(diff) * (rtl ? 1 : -1);
+        touchesDiff = Math.abs(touchesDiff) * (rtl ? 1 : -1);
+      }
+      touches.diff = diff;
+      diff *= params.touchRatio;
+      if (rtl) {
+        diff = -diff;
+        touchesDiff = -touchesDiff;
+      }
+      const prevTouchesDirection = swiper.touchesDirection;
+      swiper.swipeDirection = diff > 0 ? 'prev' : 'next';
+      swiper.touchesDirection = touchesDiff > 0 ? 'prev' : 'next';
+      const isLoop = swiper.params.loop && !params.cssMode;
+      if (!data.isMoved) {
+        if (isLoop) {
+          swiper.loopFix({
+            direction: swiper.swipeDirection
+          });
+        }
+        data.startTranslate = swiper.getTranslate();
+        swiper.setTransition(0);
+        if (swiper.animating) {
+          const evt = new window.CustomEvent('transitionend', {
+            bubbles: true,
+            cancelable: true
+          });
+          swiper.wrapperEl.dispatchEvent(evt);
+        }
+        data.allowMomentumBounce = false;
+        // Grab Cursor
+        if (params.grabCursor && (swiper.allowSlideNext === true || swiper.allowSlidePrev === true)) {
+          swiper.setGrabCursor(true);
+        }
+        swiper.emit('sliderFirstMove', e);
+      }
+      let loopFixed;
+      if (data.isMoved && prevTouchesDirection !== swiper.touchesDirection && isLoop && Math.abs(diff) >= 1) {
+        // need another loop fix
+        swiper.loopFix({
+          direction: swiper.swipeDirection,
+          setTranslate: true
+        });
+        loopFixed = true;
+      }
+      swiper.emit('sliderMove', e);
+      data.isMoved = true;
+      data.currentTranslate = diff + data.startTranslate;
+      let disableParentSwiper = true;
+      let resistanceRatio = params.resistanceRatio;
+      if (params.touchReleaseOnEdges) {
+        resistanceRatio = 0;
+      }
+      if (diff > 0) {
+        if (isLoop && !loopFixed && data.currentTranslate > (params.centeredSlides ? swiper.minTranslate() - swiper.size / 2 : swiper.minTranslate())) {
+          swiper.loopFix({
+            direction: 'prev',
+            setTranslate: true,
+            activeSlideIndex: 0
+          });
+        }
+        if (data.currentTranslate > swiper.minTranslate()) {
+          disableParentSwiper = false;
+          if (params.resistance) {
+            data.currentTranslate = swiper.minTranslate() - 1 + (-swiper.minTranslate() + data.startTranslate + diff) ** resistanceRatio;
+          }
+        }
+      } else if (diff < 0) {
+        if (isLoop && !loopFixed && data.currentTranslate < (params.centeredSlides ? swiper.maxTranslate() + swiper.size / 2 : swiper.maxTranslate())) {
+          swiper.loopFix({
+            direction: 'next',
+            setTranslate: true,
+            activeSlideIndex: swiper.slides.length - (params.slidesPerView === 'auto' ? swiper.slidesPerViewDynamic() : Math.ceil(parseFloat(params.slidesPerView, 10)))
+          });
+        }
+        if (data.currentTranslate < swiper.maxTranslate()) {
+          disableParentSwiper = false;
+          if (params.resistance) {
+            data.currentTranslate = swiper.maxTranslate() + 1 - (swiper.maxTranslate() - data.startTranslate - diff) ** resistanceRatio;
+          }
+        }
+      }
+      if (disableParentSwiper) {
+        e.preventedByNestedSwiper = true;
+      }
+
+      // Directions locks
+      if (!swiper.allowSlideNext && swiper.swipeDirection === 'next' && data.currentTranslate < data.startTranslate) {
+        data.currentTranslate = data.startTranslate;
+      }
+      if (!swiper.allowSlidePrev && swiper.swipeDirection === 'prev' && data.currentTranslate > data.startTranslate) {
+        data.currentTranslate = data.startTranslate;
+      }
+      if (!swiper.allowSlidePrev && !swiper.allowSlideNext) {
+        data.currentTranslate = data.startTranslate;
+      }
+
+      // Threshold
+      if (params.threshold > 0) {
+        if (Math.abs(diff) > params.threshold || data.allowThresholdMove) {
+          if (!data.allowThresholdMove) {
+            data.allowThresholdMove = true;
+            touches.startX = touches.currentX;
+            touches.startY = touches.currentY;
+            data.currentTranslate = data.startTranslate;
+            touches.diff = swiper.isHorizontal() ? touches.currentX - touches.startX : touches.currentY - touches.startY;
+            return;
+          }
+        } else {
+          data.currentTranslate = data.startTranslate;
+          return;
+        }
+      }
+      if (!params.followFinger || params.cssMode) return;
+
+      // Update active index in free mode
+      if (params.freeMode && params.freeMode.enabled && swiper.freeMode || params.watchSlidesProgress) {
+        swiper.updateActiveIndex();
+        swiper.updateSlidesClasses();
+      }
+      if (swiper.params.freeMode && params.freeMode.enabled && swiper.freeMode) {
+        swiper.freeMode.onTouchMove();
+      }
+      // Update progress
+      swiper.updateProgress(data.currentTranslate);
+      // Update translate
+      swiper.setTranslate(data.currentTranslate);
+    }
+
+    function onTouchEnd(event) {
+      const swiper = this;
+      const data = swiper.touchEventsData;
+      const pointerIndex = data.evCache.findIndex(cachedEv => cachedEv.pointerId === event.pointerId);
+      if (pointerIndex >= 0) {
+        data.evCache.splice(pointerIndex, 1);
+      }
+      if (['pointercancel', 'pointerout', 'pointerleave'].includes(event.type)) {
+        const proceed = event.type === 'pointercancel' && (swiper.browser.isSafari || swiper.browser.isWebView);
+        if (!proceed) {
+          return;
+        }
+      }
+      const {
+        params,
+        touches,
+        rtlTranslate: rtl,
+        slidesGrid,
+        enabled
+      } = swiper;
+      if (!enabled) return;
+      if (!params.simulateTouch && event.pointerType === 'mouse') return;
+      let e = event;
+      if (e.originalEvent) e = e.originalEvent;
+      if (data.allowTouchCallbacks) {
+        swiper.emit('touchEnd', e);
+      }
+      data.allowTouchCallbacks = false;
+      if (!data.isTouched) {
+        if (data.isMoved && params.grabCursor) {
+          swiper.setGrabCursor(false);
+        }
+        data.isMoved = false;
+        data.startMoving = false;
+        return;
+      }
+      // Return Grab Cursor
+      if (params.grabCursor && data.isMoved && data.isTouched && (swiper.allowSlideNext === true || swiper.allowSlidePrev === true)) {
+        swiper.setGrabCursor(false);
+      }
+
+      // Time diff
+      const touchEndTime = now();
+      const timeDiff = touchEndTime - data.touchStartTime;
+
+      // Tap, doubleTap, Click
+      if (swiper.allowClick) {
+        const pathTree = e.path || e.composedPath && e.composedPath();
+        swiper.updateClickedSlide(pathTree && pathTree[0] || e.target);
+        swiper.emit('tap click', e);
+        if (timeDiff < 300 && touchEndTime - data.lastClickTime < 300) {
+          swiper.emit('doubleTap doubleClick', e);
+        }
+      }
+      data.lastClickTime = now();
+      nextTick(() => {
+        if (!swiper.destroyed) swiper.allowClick = true;
+      });
+      if (!data.isTouched || !data.isMoved || !swiper.swipeDirection || touches.diff === 0 || data.currentTranslate === data.startTranslate) {
+        data.isTouched = false;
+        data.isMoved = false;
+        data.startMoving = false;
+        return;
+      }
+      data.isTouched = false;
+      data.isMoved = false;
+      data.startMoving = false;
+      let currentPos;
+      if (params.followFinger) {
+        currentPos = rtl ? swiper.translate : -swiper.translate;
+      } else {
+        currentPos = -data.currentTranslate;
+      }
+      if (params.cssMode) {
+        return;
+      }
+      if (swiper.params.freeMode && params.freeMode.enabled) {
+        swiper.freeMode.onTouchEnd({
+          currentPos
+        });
+        return;
+      }
+
+      // Find current slide
+      let stopIndex = 0;
+      let groupSize = swiper.slidesSizesGrid[0];
+      for (let i = 0; i < slidesGrid.length; i += i < params.slidesPerGroupSkip ? 1 : params.slidesPerGroup) {
+        const increment = i < params.slidesPerGroupSkip - 1 ? 1 : params.slidesPerGroup;
+        if (typeof slidesGrid[i + increment] !== 'undefined') {
+          if (currentPos >= slidesGrid[i] && currentPos < slidesGrid[i + increment]) {
+            stopIndex = i;
+            groupSize = slidesGrid[i + increment] - slidesGrid[i];
+          }
+        } else if (currentPos >= slidesGrid[i]) {
+          stopIndex = i;
+          groupSize = slidesGrid[slidesGrid.length - 1] - slidesGrid[slidesGrid.length - 2];
+        }
+      }
+      let rewindFirstIndex = null;
+      let rewindLastIndex = null;
+      if (params.rewind) {
+        if (swiper.isBeginning) {
+          rewindLastIndex = swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual ? swiper.virtual.slides.length - 1 : swiper.slides.length - 1;
+        } else if (swiper.isEnd) {
+          rewindFirstIndex = 0;
+        }
+      }
+      // Find current slide size
+      const ratio = (currentPos - slidesGrid[stopIndex]) / groupSize;
+      const increment = stopIndex < params.slidesPerGroupSkip - 1 ? 1 : params.slidesPerGroup;
+      if (timeDiff > params.longSwipesMs) {
+        // Long touches
+        if (!params.longSwipes) {
+          swiper.slideTo(swiper.activeIndex);
+          return;
+        }
+        if (swiper.swipeDirection === 'next') {
+          if (ratio >= params.longSwipesRatio) swiper.slideTo(params.rewind && swiper.isEnd ? rewindFirstIndex : stopIndex + increment);else swiper.slideTo(stopIndex);
+        }
+        if (swiper.swipeDirection === 'prev') {
+          if (ratio > 1 - params.longSwipesRatio) {
+            swiper.slideTo(stopIndex + increment);
+          } else if (rewindLastIndex !== null && ratio < 0 && Math.abs(ratio) > params.longSwipesRatio) {
+            swiper.slideTo(rewindLastIndex);
+          } else {
+            swiper.slideTo(stopIndex);
+          }
+        }
+      } else {
+        // Short swipes
+        if (!params.shortSwipes) {
+          swiper.slideTo(swiper.activeIndex);
+          return;
+        }
+        const isNavButtonTarget = swiper.navigation && (e.target === swiper.navigation.nextEl || e.target === swiper.navigation.prevEl);
+        if (!isNavButtonTarget) {
+          if (swiper.swipeDirection === 'next') {
+            swiper.slideTo(rewindFirstIndex !== null ? rewindFirstIndex : stopIndex + increment);
+          }
+          if (swiper.swipeDirection === 'prev') {
+            swiper.slideTo(rewindLastIndex !== null ? rewindLastIndex : stopIndex);
+          }
+        } else if (e.target === swiper.navigation.nextEl) {
+          swiper.slideTo(stopIndex + increment);
+        } else {
+          swiper.slideTo(stopIndex);
+        }
+      }
+    }
+
+    let timeout;
+    function onResize() {
+      const swiper = this;
+      const {
+        params,
+        el
+      } = swiper;
+      if (el && el.offsetWidth === 0) return;
+
+      // Breakpoints
+      if (params.breakpoints) {
+        swiper.setBreakpoint();
+      }
+
+      // Save locks
+      const {
+        allowSlideNext,
+        allowSlidePrev,
+        snapGrid
+      } = swiper;
+      const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+
+      // Disable locks on resize
+      swiper.allowSlideNext = true;
+      swiper.allowSlidePrev = true;
+      swiper.updateSize();
+      swiper.updateSlides();
+      swiper.updateSlidesClasses();
+      const isVirtualLoop = isVirtual && params.loop;
+      if ((params.slidesPerView === 'auto' || params.slidesPerView > 1) && swiper.isEnd && !swiper.isBeginning && !swiper.params.centeredSlides && !isVirtualLoop) {
+        swiper.slideTo(swiper.slides.length - 1, 0, false, true);
+      } else {
+        if (swiper.params.loop && !isVirtual) {
+          swiper.slideToLoop(swiper.realIndex, 0, false, true);
+        } else {
+          swiper.slideTo(swiper.activeIndex, 0, false, true);
+        }
+      }
+      if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
+            swiper.autoplay.resume();
+          }
+        }, 500);
+      }
+      // Return locks after resize
+      swiper.allowSlidePrev = allowSlidePrev;
+      swiper.allowSlideNext = allowSlideNext;
+      if (swiper.params.watchOverflow && snapGrid !== swiper.snapGrid) {
+        swiper.checkOverflow();
+      }
+    }
+
+    function onClick(e) {
+      const swiper = this;
+      if (!swiper.enabled) return;
+      if (!swiper.allowClick) {
+        if (swiper.params.preventClicks) e.preventDefault();
+        if (swiper.params.preventClicksPropagation && swiper.animating) {
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        }
+      }
+    }
+
+    function onScroll() {
+      const swiper = this;
+      const {
+        wrapperEl,
+        rtlTranslate,
+        enabled
+      } = swiper;
+      if (!enabled) return;
+      swiper.previousTranslate = swiper.translate;
+      if (swiper.isHorizontal()) {
+        swiper.translate = -wrapperEl.scrollLeft;
+      } else {
+        swiper.translate = -wrapperEl.scrollTop;
+      }
+      // eslint-disable-next-line
+      if (swiper.translate === 0) swiper.translate = 0;
+      swiper.updateActiveIndex();
+      swiper.updateSlidesClasses();
+      let newProgress;
+      const translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
+      if (translatesDiff === 0) {
+        newProgress = 0;
+      } else {
+        newProgress = (swiper.translate - swiper.minTranslate()) / translatesDiff;
+      }
+      if (newProgress !== swiper.progress) {
+        swiper.updateProgress(rtlTranslate ? -swiper.translate : swiper.translate);
+      }
+      swiper.emit('setTranslate', swiper.translate, false);
+    }
+
+    const processLazyPreloader = (swiper, imageEl) => {
+      if (!swiper || swiper.destroyed || !swiper.params) return;
+      const slideSelector = () => swiper.isElement ? `swiper-slide` : `.${swiper.params.slideClass}`;
+      const slideEl = imageEl.closest(slideSelector());
+      if (slideEl) {
+        const lazyEl = slideEl.querySelector(`.${swiper.params.lazyPreloaderClass}`);
+        if (lazyEl) lazyEl.remove();
+      }
+    };
+
+    function onLoad(e) {
+      const swiper = this;
+      processLazyPreloader(swiper, e.target);
+      swiper.update();
+    }
+
+    let dummyEventAttached = false;
+    function dummyEventListener() {}
+    const events = (swiper, method) => {
+      const document = getDocument();
+      const {
+        params,
+        el,
+        wrapperEl,
+        device
+      } = swiper;
+      const capture = !!params.nested;
+      const domMethod = method === 'on' ? 'addEventListener' : 'removeEventListener';
+      const swiperMethod = method;
+
+      // Touch Events
+      el[domMethod]('pointerdown', swiper.onTouchStart, {
+        passive: false
+      });
+      document[domMethod]('pointermove', swiper.onTouchMove, {
+        passive: false,
+        capture
+      });
+      document[domMethod]('pointerup', swiper.onTouchEnd, {
+        passive: true
+      });
+      document[domMethod]('pointercancel', swiper.onTouchEnd, {
+        passive: true
+      });
+      document[domMethod]('pointerout', swiper.onTouchEnd, {
+        passive: true
+      });
+      document[domMethod]('pointerleave', swiper.onTouchEnd, {
+        passive: true
+      });
+
+      // Prevent Links Clicks
+      if (params.preventClicks || params.preventClicksPropagation) {
+        el[domMethod]('click', swiper.onClick, true);
+      }
+      if (params.cssMode) {
+        wrapperEl[domMethod]('scroll', swiper.onScroll);
+      }
+
+      // Resize handler
+      if (params.updateOnWindowResize) {
+        swiper[swiperMethod](device.ios || device.android ? 'resize orientationchange observerUpdate' : 'resize observerUpdate', onResize, true);
+      } else {
+        swiper[swiperMethod]('observerUpdate', onResize, true);
+      }
+
+      // Images loader
+      el[domMethod]('load', swiper.onLoad, {
+        capture: true
+      });
+    };
+    function attachEvents() {
+      const swiper = this;
+      const document = getDocument();
+      const {
+        params
+      } = swiper;
+      swiper.onTouchStart = onTouchStart.bind(swiper);
+      swiper.onTouchMove = onTouchMove.bind(swiper);
+      swiper.onTouchEnd = onTouchEnd.bind(swiper);
+      if (params.cssMode) {
+        swiper.onScroll = onScroll.bind(swiper);
+      }
+      swiper.onClick = onClick.bind(swiper);
+      swiper.onLoad = onLoad.bind(swiper);
+      if (!dummyEventAttached) {
+        document.addEventListener('touchstart', dummyEventListener);
+        dummyEventAttached = true;
+      }
+      events(swiper, 'on');
+    }
+    function detachEvents() {
+      const swiper = this;
+      events(swiper, 'off');
+    }
+    var events$1 = {
+      attachEvents,
+      detachEvents
+    };
+
+    const isGridEnabled = (swiper, params) => {
+      return swiper.grid && params.grid && params.grid.rows > 1;
+    };
+    function setBreakpoint() {
+      const swiper = this;
+      const {
+        realIndex,
+        initialized,
+        params,
+        el
+      } = swiper;
+      const breakpoints = params.breakpoints;
+      if (!breakpoints || breakpoints && Object.keys(breakpoints).length === 0) return;
+
+      // Get breakpoint for window width and update parameters
+      const breakpoint = swiper.getBreakpoint(breakpoints, swiper.params.breakpointsBase, swiper.el);
+      if (!breakpoint || swiper.currentBreakpoint === breakpoint) return;
+      const breakpointOnlyParams = breakpoint in breakpoints ? breakpoints[breakpoint] : undefined;
+      const breakpointParams = breakpointOnlyParams || swiper.originalParams;
+      const wasMultiRow = isGridEnabled(swiper, params);
+      const isMultiRow = isGridEnabled(swiper, breakpointParams);
+      const wasEnabled = params.enabled;
+      if (wasMultiRow && !isMultiRow) {
+        el.classList.remove(`${params.containerModifierClass}grid`, `${params.containerModifierClass}grid-column`);
+        swiper.emitContainerClasses();
+      } else if (!wasMultiRow && isMultiRow) {
+        el.classList.add(`${params.containerModifierClass}grid`);
+        if (breakpointParams.grid.fill && breakpointParams.grid.fill === 'column' || !breakpointParams.grid.fill && params.grid.fill === 'column') {
+          el.classList.add(`${params.containerModifierClass}grid-column`);
+        }
+        swiper.emitContainerClasses();
+      }
+
+      // Toggle navigation, pagination, scrollbar
+      ['navigation', 'pagination', 'scrollbar'].forEach(prop => {
+        const wasModuleEnabled = params[prop] && params[prop].enabled;
+        const isModuleEnabled = breakpointParams[prop] && breakpointParams[prop].enabled;
+        if (wasModuleEnabled && !isModuleEnabled) {
+          swiper[prop].disable();
+        }
+        if (!wasModuleEnabled && isModuleEnabled) {
+          swiper[prop].enable();
+        }
+      });
+      const directionChanged = breakpointParams.direction && breakpointParams.direction !== params.direction;
+      const needsReLoop = params.loop && (breakpointParams.slidesPerView !== params.slidesPerView || directionChanged);
+      if (directionChanged && initialized) {
+        swiper.changeDirection();
+      }
+      extend$1(swiper.params, breakpointParams);
+      const isEnabled = swiper.params.enabled;
+      Object.assign(swiper, {
+        allowTouchMove: swiper.params.allowTouchMove,
+        allowSlideNext: swiper.params.allowSlideNext,
+        allowSlidePrev: swiper.params.allowSlidePrev
+      });
+      if (wasEnabled && !isEnabled) {
+        swiper.disable();
+      } else if (!wasEnabled && isEnabled) {
+        swiper.enable();
+      }
+      swiper.currentBreakpoint = breakpoint;
+      swiper.emit('_beforeBreakpoint', breakpointParams);
+      if (needsReLoop && initialized) {
+        swiper.loopDestroy();
+        swiper.loopCreate(realIndex);
+        swiper.updateSlides();
+      }
+      swiper.emit('breakpoint', breakpointParams);
+    }
+
+    function getBreakpoint(breakpoints, base = 'window', containerEl) {
+      if (!breakpoints || base === 'container' && !containerEl) return undefined;
+      let breakpoint = false;
+      const window = getWindow();
+      const currentHeight = base === 'window' ? window.innerHeight : containerEl.clientHeight;
+      const points = Object.keys(breakpoints).map(point => {
+        if (typeof point === 'string' && point.indexOf('@') === 0) {
+          const minRatio = parseFloat(point.substr(1));
+          const value = currentHeight * minRatio;
+          return {
+            value,
+            point
+          };
+        }
+        return {
+          value: point,
+          point
+        };
+      });
+      points.sort((a, b) => parseInt(a.value, 10) - parseInt(b.value, 10));
+      for (let i = 0; i < points.length; i += 1) {
+        const {
+          point,
+          value
+        } = points[i];
+        if (base === 'window') {
+          if (window.matchMedia(`(min-width: ${value}px)`).matches) {
+            breakpoint = point;
+          }
+        } else if (value <= containerEl.clientWidth) {
+          breakpoint = point;
+        }
+      }
+      return breakpoint || 'max';
+    }
+
+    var breakpoints = {
+      setBreakpoint,
+      getBreakpoint
+    };
+
+    function prepareClasses(entries, prefix) {
+      const resultClasses = [];
+      entries.forEach(item => {
+        if (typeof item === 'object') {
+          Object.keys(item).forEach(classNames => {
+            if (item[classNames]) {
+              resultClasses.push(prefix + classNames);
+            }
+          });
+        } else if (typeof item === 'string') {
+          resultClasses.push(prefix + item);
+        }
+      });
+      return resultClasses;
+    }
+    function addClasses() {
+      const swiper = this;
+      const {
+        classNames,
+        params,
+        rtl,
+        el,
+        device
+      } = swiper;
+      // prettier-ignore
+      const suffixes = prepareClasses(['initialized', params.direction, {
+        'free-mode': swiper.params.freeMode && params.freeMode.enabled
+      }, {
+        'autoheight': params.autoHeight
+      }, {
+        'rtl': rtl
+      }, {
+        'grid': params.grid && params.grid.rows > 1
+      }, {
+        'grid-column': params.grid && params.grid.rows > 1 && params.grid.fill === 'column'
+      }, {
+        'android': device.android
+      }, {
+        'ios': device.ios
+      }, {
+        'css-mode': params.cssMode
+      }, {
+        'centered': params.cssMode && params.centeredSlides
+      }, {
+        'watch-progress': params.watchSlidesProgress
+      }], params.containerModifierClass);
+      classNames.push(...suffixes);
+      el.classList.add(...classNames);
+      swiper.emitContainerClasses();
+    }
+
+    function removeClasses() {
+      const swiper = this;
+      const {
+        el,
+        classNames
+      } = swiper;
+      el.classList.remove(...classNames);
+      swiper.emitContainerClasses();
+    }
+
+    var classes = {
+      addClasses,
+      removeClasses
+    };
+
+    function checkOverflow() {
+      const swiper = this;
+      const {
+        isLocked: wasLocked,
+        params
+      } = swiper;
+      const {
+        slidesOffsetBefore
+      } = params;
+      if (slidesOffsetBefore) {
+        const lastSlideIndex = swiper.slides.length - 1;
+        const lastSlideRightEdge = swiper.slidesGrid[lastSlideIndex] + swiper.slidesSizesGrid[lastSlideIndex] + slidesOffsetBefore * 2;
+        swiper.isLocked = swiper.size > lastSlideRightEdge;
+      } else {
+        swiper.isLocked = swiper.snapGrid.length === 1;
+      }
+      if (params.allowSlideNext === true) {
+        swiper.allowSlideNext = !swiper.isLocked;
+      }
+      if (params.allowSlidePrev === true) {
+        swiper.allowSlidePrev = !swiper.isLocked;
+      }
+      if (wasLocked && wasLocked !== swiper.isLocked) {
+        swiper.isEnd = false;
+      }
+      if (wasLocked !== swiper.isLocked) {
+        swiper.emit(swiper.isLocked ? 'lock' : 'unlock');
+      }
+    }
+    var checkOverflow$1 = {
+      checkOverflow
+    };
+
+    var defaults = {
+      init: true,
+      direction: 'horizontal',
+      oneWayMovement: false,
+      touchEventsTarget: 'wrapper',
+      initialSlide: 0,
+      speed: 300,
+      cssMode: false,
+      updateOnWindowResize: true,
+      resizeObserver: true,
+      nested: false,
+      createElements: false,
+      enabled: true,
+      focusableElements: 'input, select, option, textarea, button, video, label',
+      // Overrides
+      width: null,
+      height: null,
+      //
+      preventInteractionOnTransition: false,
+      // ssr
+      userAgent: null,
+      url: null,
+      // To support iOS's swipe-to-go-back gesture (when being used in-app).
+      edgeSwipeDetection: false,
+      edgeSwipeThreshold: 20,
+      // Autoheight
+      autoHeight: false,
+      // Set wrapper width
+      setWrapperSize: false,
+      // Virtual Translate
+      virtualTranslate: false,
+      // Effects
+      effect: 'slide',
+      // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+
+      // Breakpoints
+      breakpoints: undefined,
+      breakpointsBase: 'window',
+      // Slides grid
+      spaceBetween: 0,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      slidesPerGroupSkip: 0,
+      slidesPerGroupAuto: false,
+      centeredSlides: false,
+      centeredSlidesBounds: false,
+      slidesOffsetBefore: 0,
+      // in px
+      slidesOffsetAfter: 0,
+      // in px
+      normalizeSlideIndex: true,
+      centerInsufficientSlides: false,
+      // Disable swiper and hide navigation when container not overflow
+      watchOverflow: true,
+      // Round length
+      roundLengths: false,
+      // Touches
+      touchRatio: 1,
+      touchAngle: 45,
+      simulateTouch: true,
+      shortSwipes: true,
+      longSwipes: true,
+      longSwipesRatio: 0.5,
+      longSwipesMs: 300,
+      followFinger: true,
+      allowTouchMove: true,
+      threshold: 5,
+      touchMoveStopPropagation: false,
+      touchStartPreventDefault: true,
+      touchStartForcePreventDefault: false,
+      touchReleaseOnEdges: false,
+      // Unique Navigation Elements
+      uniqueNavElements: true,
+      // Resistance
+      resistance: true,
+      resistanceRatio: 0.85,
+      // Progress
+      watchSlidesProgress: false,
+      // Cursor
+      grabCursor: false,
+      // Clicks
+      preventClicks: true,
+      preventClicksPropagation: true,
+      slideToClickedSlide: false,
+      // loop
+      loop: false,
+      loopedSlides: null,
+      loopPreventsSliding: true,
+      // rewind
+      rewind: false,
+      // Swiping/no swiping
+      allowSlidePrev: true,
+      allowSlideNext: true,
+      swipeHandler: null,
+      // '.swipe-handler',
+      noSwiping: true,
+      noSwipingClass: 'swiper-no-swiping',
+      noSwipingSelector: null,
+      // Passive Listeners
+      passiveListeners: true,
+      maxBackfaceHiddenSlides: 10,
+      // NS
+      containerModifierClass: 'swiper-',
+      // NEW
+      slideClass: 'swiper-slide',
+      slideActiveClass: 'swiper-slide-active',
+      slideVisibleClass: 'swiper-slide-visible',
+      slideNextClass: 'swiper-slide-next',
+      slidePrevClass: 'swiper-slide-prev',
+      wrapperClass: 'swiper-wrapper',
+      lazyPreloaderClass: 'swiper-lazy-preloader',
+      // Callbacks
+      runCallbacksOnInit: true,
+      // Internals
+      _emitClasses: false
+    };
+
+    function moduleExtendParams(params, allModulesParams) {
+      return function extendParams(obj = {}) {
+        const moduleParamName = Object.keys(obj)[0];
+        const moduleParams = obj[moduleParamName];
+        if (typeof moduleParams !== 'object' || moduleParams === null) {
+          extend$1(allModulesParams, obj);
+          return;
+        }
+        if (['navigation', 'pagination', 'scrollbar'].indexOf(moduleParamName) >= 0 && params[moduleParamName] === true) {
+          params[moduleParamName] = {
+            auto: true
+          };
+        }
+        if (!(moduleParamName in params && 'enabled' in moduleParams)) {
+          extend$1(allModulesParams, obj);
+          return;
+        }
+        if (params[moduleParamName] === true) {
+          params[moduleParamName] = {
+            enabled: true
+          };
+        }
+        if (typeof params[moduleParamName] === 'object' && !('enabled' in params[moduleParamName])) {
+          params[moduleParamName].enabled = true;
+        }
+        if (!params[moduleParamName]) params[moduleParamName] = {
+          enabled: false
+        };
+        extend$1(allModulesParams, obj);
+      };
+    }
+
+    /* eslint no-param-reassign: "off" */
+    const prototypes = {
+      eventsEmitter,
+      update,
+      translate,
+      transition,
+      slide,
+      loop,
+      grabCursor,
+      events: events$1,
+      breakpoints,
+      checkOverflow: checkOverflow$1,
+      classes
+    };
+    const extendedDefaults = {};
+    class Swiper {
+      constructor(...args) {
+        let el;
+        let params;
+        if (args.length === 1 && args[0].constructor && Object.prototype.toString.call(args[0]).slice(8, -1) === 'Object') {
+          params = args[0];
+        } else {
+          [el, params] = args;
+        }
+        if (!params) params = {};
+        params = extend$1({}, params);
+        if (el && !params.el) params.el = el;
+        const document = getDocument();
+        if (params.el && typeof params.el === 'string' && document.querySelectorAll(params.el).length > 1) {
+          const swipers = [];
+          document.querySelectorAll(params.el).forEach(containerEl => {
+            const newParams = extend$1({}, params, {
+              el: containerEl
+            });
+            swipers.push(new Swiper(newParams));
+          });
+          // eslint-disable-next-line no-constructor-return
+          return swipers;
+        }
+
+        // Swiper Instance
+        const swiper = this;
+        swiper.__swiper__ = true;
+        swiper.support = getSupport();
+        swiper.device = getDevice({
+          userAgent: params.userAgent
+        });
+        swiper.browser = getBrowser();
+        swiper.eventsListeners = {};
+        swiper.eventsAnyListeners = [];
+        swiper.modules = [...swiper.__modules__];
+        if (params.modules && Array.isArray(params.modules)) {
+          swiper.modules.push(...params.modules);
+        }
+        const allModulesParams = {};
+        swiper.modules.forEach(mod => {
+          mod({
+            params,
+            swiper,
+            extendParams: moduleExtendParams(params, allModulesParams),
+            on: swiper.on.bind(swiper),
+            once: swiper.once.bind(swiper),
+            off: swiper.off.bind(swiper),
+            emit: swiper.emit.bind(swiper)
+          });
+        });
+
+        // Extend defaults with modules params
+        const swiperParams = extend$1({}, defaults, allModulesParams);
+
+        // Extend defaults with passed params
+        swiper.params = extend$1({}, swiperParams, extendedDefaults, params);
+        swiper.originalParams = extend$1({}, swiper.params);
+        swiper.passedParams = extend$1({}, params);
+
+        // add event listeners
+        if (swiper.params && swiper.params.on) {
+          Object.keys(swiper.params.on).forEach(eventName => {
+            swiper.on(eventName, swiper.params.on[eventName]);
+          });
+        }
+        if (swiper.params && swiper.params.onAny) {
+          swiper.onAny(swiper.params.onAny);
+        }
+
+        // Extend Swiper
+        Object.assign(swiper, {
+          enabled: swiper.params.enabled,
+          el,
+          // Classes
+          classNames: [],
+          // Slides
+          slides: [],
+          slidesGrid: [],
+          snapGrid: [],
+          slidesSizesGrid: [],
+          // isDirection
+          isHorizontal() {
+            return swiper.params.direction === 'horizontal';
+          },
+          isVertical() {
+            return swiper.params.direction === 'vertical';
+          },
+          // Indexes
+          activeIndex: 0,
+          realIndex: 0,
+          //
+          isBeginning: true,
+          isEnd: false,
+          // Props
+          translate: 0,
+          previousTranslate: 0,
+          progress: 0,
+          velocity: 0,
+          animating: false,
+          // Locks
+          allowSlideNext: swiper.params.allowSlideNext,
+          allowSlidePrev: swiper.params.allowSlidePrev,
+          // Touch Events
+          touchEventsData: {
+            isTouched: undefined,
+            isMoved: undefined,
+            allowTouchCallbacks: undefined,
+            touchStartTime: undefined,
+            isScrolling: undefined,
+            currentTranslate: undefined,
+            startTranslate: undefined,
+            allowThresholdMove: undefined,
+            // Form elements to match
+            focusableElements: swiper.params.focusableElements,
+            // Last click time
+            lastClickTime: now(),
+            clickTimeout: undefined,
+            // Velocities
+            velocities: [],
+            allowMomentumBounce: undefined,
+            startMoving: undefined,
+            evCache: []
+          },
+          // Clicks
+          allowClick: true,
+          // Touches
+          allowTouchMove: swiper.params.allowTouchMove,
+          touches: {
+            startX: 0,
+            startY: 0,
+            currentX: 0,
+            currentY: 0,
+            diff: 0
+          },
+          // Images
+          imagesToLoad: [],
+          imagesLoaded: 0
+        });
+        swiper.emit('_swiper');
+
+        // Init
+        if (swiper.params.init) {
+          swiper.init();
+        }
+
+        // Return app instance
+        // eslint-disable-next-line no-constructor-return
+        return swiper;
+      }
+      getSlideIndex(slideEl) {
+        const {
+          slidesEl,
+          params
+        } = this;
+        const slides = elementChildren(slidesEl, `.${params.slideClass}, swiper-slide`);
+        const firstSlideIndex = elementIndex(slides[0]);
+        return elementIndex(slideEl) - firstSlideIndex;
+      }
+      recalcSlides() {
+        const swiper = this;
+        const {
+          slidesEl,
+          params
+        } = swiper;
+        swiper.slides = elementChildren(slidesEl, `.${params.slideClass}, swiper-slide`);
+      }
+      enable() {
+        const swiper = this;
+        if (swiper.enabled) return;
+        swiper.enabled = true;
+        if (swiper.params.grabCursor) {
+          swiper.setGrabCursor();
+        }
+        swiper.emit('enable');
+      }
+      disable() {
+        const swiper = this;
+        if (!swiper.enabled) return;
+        swiper.enabled = false;
+        if (swiper.params.grabCursor) {
+          swiper.unsetGrabCursor();
+        }
+        swiper.emit('disable');
+      }
+      setProgress(progress, speed) {
+        const swiper = this;
+        progress = Math.min(Math.max(progress, 0), 1);
+        const min = swiper.minTranslate();
+        const max = swiper.maxTranslate();
+        const current = (max - min) * progress + min;
+        swiper.translateTo(current, typeof speed === 'undefined' ? 0 : speed);
+        swiper.updateActiveIndex();
+        swiper.updateSlidesClasses();
+      }
+      emitContainerClasses() {
+        const swiper = this;
+        if (!swiper.params._emitClasses || !swiper.el) return;
+        const cls = swiper.el.className.split(' ').filter(className => {
+          return className.indexOf('swiper') === 0 || className.indexOf(swiper.params.containerModifierClass) === 0;
+        });
+        swiper.emit('_containerClasses', cls.join(' '));
+      }
+      getSlideClasses(slideEl) {
+        const swiper = this;
+        if (swiper.destroyed) return '';
+        return slideEl.className.split(' ').filter(className => {
+          return className.indexOf('swiper-slide') === 0 || className.indexOf(swiper.params.slideClass) === 0;
+        }).join(' ');
+      }
+      emitSlidesClasses() {
+        const swiper = this;
+        if (!swiper.params._emitClasses || !swiper.el) return;
+        const updates = [];
+        swiper.slides.forEach(slideEl => {
+          const classNames = swiper.getSlideClasses(slideEl);
+          updates.push({
+            slideEl,
+            classNames
+          });
+          swiper.emit('_slideClass', slideEl, classNames);
+        });
+        swiper.emit('_slideClasses', updates);
+      }
+      slidesPerViewDynamic(view = 'current', exact = false) {
+        const swiper = this;
+        const {
+          params,
+          slides,
+          slidesGrid,
+          slidesSizesGrid,
+          size: swiperSize,
+          activeIndex
+        } = swiper;
+        let spv = 1;
+        if (params.centeredSlides) {
+          let slideSize = slides[activeIndex].swiperSlideSize;
+          let breakLoop;
+          for (let i = activeIndex + 1; i < slides.length; i += 1) {
+            if (slides[i] && !breakLoop) {
+              slideSize += slides[i].swiperSlideSize;
+              spv += 1;
+              if (slideSize > swiperSize) breakLoop = true;
+            }
+          }
+          for (let i = activeIndex - 1; i >= 0; i -= 1) {
+            if (slides[i] && !breakLoop) {
+              slideSize += slides[i].swiperSlideSize;
+              spv += 1;
+              if (slideSize > swiperSize) breakLoop = true;
+            }
+          }
+        } else {
+          // eslint-disable-next-line
+          if (view === 'current') {
+            for (let i = activeIndex + 1; i < slides.length; i += 1) {
+              const slideInView = exact ? slidesGrid[i] + slidesSizesGrid[i] - slidesGrid[activeIndex] < swiperSize : slidesGrid[i] - slidesGrid[activeIndex] < swiperSize;
+              if (slideInView) {
+                spv += 1;
+              }
+            }
+          } else {
+            // previous
+            for (let i = activeIndex - 1; i >= 0; i -= 1) {
+              const slideInView = slidesGrid[activeIndex] - slidesGrid[i] < swiperSize;
+              if (slideInView) {
+                spv += 1;
+              }
+            }
+          }
+        }
+        return spv;
+      }
+      update() {
+        const swiper = this;
+        if (!swiper || swiper.destroyed) return;
+        const {
+          snapGrid,
+          params
+        } = swiper;
+        // Breakpoints
+        if (params.breakpoints) {
+          swiper.setBreakpoint();
+        }
+        [...swiper.el.querySelectorAll('[loading="lazy"]')].forEach(imageEl => {
+          if (imageEl.complete) {
+            processLazyPreloader(swiper, imageEl);
+          }
+        });
+        swiper.updateSize();
+        swiper.updateSlides();
+        swiper.updateProgress();
+        swiper.updateSlidesClasses();
+        function setTranslate() {
+          const translateValue = swiper.rtlTranslate ? swiper.translate * -1 : swiper.translate;
+          const newTranslate = Math.min(Math.max(translateValue, swiper.maxTranslate()), swiper.minTranslate());
+          swiper.setTranslate(newTranslate);
+          swiper.updateActiveIndex();
+          swiper.updateSlidesClasses();
+        }
+        let translated;
+        if (swiper.params.freeMode && swiper.params.freeMode.enabled) {
+          setTranslate();
+          if (swiper.params.autoHeight) {
+            swiper.updateAutoHeight();
+          }
+        } else {
+          if ((swiper.params.slidesPerView === 'auto' || swiper.params.slidesPerView > 1) && swiper.isEnd && !swiper.params.centeredSlides) {
+            translated = swiper.slideTo(swiper.slides.length - 1, 0, false, true);
+          } else {
+            translated = swiper.slideTo(swiper.activeIndex, 0, false, true);
+          }
+          if (!translated) {
+            setTranslate();
+          }
+        }
+        if (params.watchOverflow && snapGrid !== swiper.snapGrid) {
+          swiper.checkOverflow();
+        }
+        swiper.emit('update');
+      }
+      changeDirection(newDirection, needUpdate = true) {
+        const swiper = this;
+        const currentDirection = swiper.params.direction;
+        if (!newDirection) {
+          // eslint-disable-next-line
+          newDirection = currentDirection === 'horizontal' ? 'vertical' : 'horizontal';
+        }
+        if (newDirection === currentDirection || newDirection !== 'horizontal' && newDirection !== 'vertical') {
+          return swiper;
+        }
+        swiper.el.classList.remove(`${swiper.params.containerModifierClass}${currentDirection}`);
+        swiper.el.classList.add(`${swiper.params.containerModifierClass}${newDirection}`);
+        swiper.emitContainerClasses();
+        swiper.params.direction = newDirection;
+        swiper.slides.forEach(slideEl => {
+          if (newDirection === 'vertical') {
+            slideEl.style.width = '';
+          } else {
+            slideEl.style.height = '';
+          }
+        });
+        swiper.emit('changeDirection');
+        if (needUpdate) swiper.update();
+        return swiper;
+      }
+      changeLanguageDirection(direction) {
+        const swiper = this;
+        if (swiper.rtl && direction === 'rtl' || !swiper.rtl && direction === 'ltr') return;
+        swiper.rtl = direction === 'rtl';
+        swiper.rtlTranslate = swiper.params.direction === 'horizontal' && swiper.rtl;
+        if (swiper.rtl) {
+          swiper.el.classList.add(`${swiper.params.containerModifierClass}rtl`);
+          swiper.el.dir = 'rtl';
+        } else {
+          swiper.el.classList.remove(`${swiper.params.containerModifierClass}rtl`);
+          swiper.el.dir = 'ltr';
+        }
+        swiper.update();
+      }
+      mount(element) {
+        const swiper = this;
+        if (swiper.mounted) return true;
+
+        // Find el
+        let el = element || swiper.params.el;
+        if (typeof el === 'string') {
+          el = document.querySelector(el);
+        }
+        if (!el) {
+          return false;
+        }
+        el.swiper = swiper;
+        if (el.shadowEl) {
+          swiper.isElement = true;
+        }
+        const getWrapperSelector = () => {
+          return `.${(swiper.params.wrapperClass || '').trim().split(' ').join('.')}`;
+        };
+        const getWrapper = () => {
+          if (el && el.shadowRoot && el.shadowRoot.querySelector) {
+            const res = el.shadowRoot.querySelector(getWrapperSelector());
+            // Children needs to return slot items
+            return res;
+          }
+          return elementChildren(el, getWrapperSelector())[0];
+        };
+        // Find Wrapper
+        let wrapperEl = getWrapper();
+        if (!wrapperEl && swiper.params.createElements) {
+          wrapperEl = createElement('div', swiper.params.wrapperClass);
+          el.append(wrapperEl);
+          elementChildren(el, `.${swiper.params.slideClass}`).forEach(slideEl => {
+            wrapperEl.append(slideEl);
+          });
+        }
+        Object.assign(swiper, {
+          el,
+          wrapperEl,
+          slidesEl: swiper.isElement ? el : wrapperEl,
+          mounted: true,
+          // RTL
+          rtl: el.dir.toLowerCase() === 'rtl' || elementStyle(el, 'direction') === 'rtl',
+          rtlTranslate: swiper.params.direction === 'horizontal' && (el.dir.toLowerCase() === 'rtl' || elementStyle(el, 'direction') === 'rtl'),
+          wrongRTL: elementStyle(wrapperEl, 'display') === '-webkit-box'
+        });
+        return true;
+      }
+      init(el) {
+        const swiper = this;
+        if (swiper.initialized) return swiper;
+        const mounted = swiper.mount(el);
+        if (mounted === false) return swiper;
+        swiper.emit('beforeInit');
+
+        // Set breakpoint
+        if (swiper.params.breakpoints) {
+          swiper.setBreakpoint();
+        }
+
+        // Add Classes
+        swiper.addClasses();
+
+        // Update size
+        swiper.updateSize();
+
+        // Update slides
+        swiper.updateSlides();
+        if (swiper.params.watchOverflow) {
+          swiper.checkOverflow();
+        }
+
+        // Set Grab Cursor
+        if (swiper.params.grabCursor && swiper.enabled) {
+          swiper.setGrabCursor();
+        }
+
+        // Slide To Initial Slide
+        if (swiper.params.loop && swiper.virtual && swiper.params.virtual.enabled) {
+          swiper.slideTo(swiper.params.initialSlide + swiper.virtual.slidesBefore, 0, swiper.params.runCallbacksOnInit, false, true);
+        } else {
+          swiper.slideTo(swiper.params.initialSlide, 0, swiper.params.runCallbacksOnInit, false, true);
+        }
+
+        // Create loop
+        if (swiper.params.loop) {
+          swiper.loopCreate();
+        }
+
+        // Attach events
+        swiper.attachEvents();
+        [...swiper.el.querySelectorAll('[loading="lazy"]')].forEach(imageEl => {
+          if (imageEl.complete) {
+            processLazyPreloader(swiper, imageEl);
+          } else {
+            imageEl.addEventListener('load', e => {
+              processLazyPreloader(swiper, e.target);
+            });
+          }
+        });
+
+        // Init Flag
+        swiper.initialized = true;
+
+        // Emit
+        swiper.emit('init');
+        swiper.emit('afterInit');
+        return swiper;
+      }
+      destroy(deleteInstance = true, cleanStyles = true) {
+        const swiper = this;
+        const {
+          params,
+          el,
+          wrapperEl,
+          slides
+        } = swiper;
+        if (typeof swiper.params === 'undefined' || swiper.destroyed) {
+          return null;
+        }
+        swiper.emit('beforeDestroy');
+
+        // Init Flag
+        swiper.initialized = false;
+
+        // Detach events
+        swiper.detachEvents();
+
+        // Destroy loop
+        if (params.loop) {
+          swiper.loopDestroy();
+        }
+
+        // Cleanup styles
+        if (cleanStyles) {
+          swiper.removeClasses();
+          el.removeAttribute('style');
+          wrapperEl.removeAttribute('style');
+          if (slides && slides.length) {
+            slides.forEach(slideEl => {
+              slideEl.classList.remove(params.slideVisibleClass, params.slideActiveClass, params.slideNextClass, params.slidePrevClass);
+              slideEl.removeAttribute('style');
+              slideEl.removeAttribute('data-swiper-slide-index');
+            });
+          }
+        }
+        swiper.emit('destroy');
+
+        // Detach emitter events
+        Object.keys(swiper.eventsListeners).forEach(eventName => {
+          swiper.off(eventName);
+        });
+        if (deleteInstance !== false) {
+          swiper.el.swiper = null;
+          deleteProps(swiper);
+        }
+        swiper.destroyed = true;
+        return null;
+      }
+      static extendDefaults(newDefaults) {
+        extend$1(extendedDefaults, newDefaults);
+      }
+      static get extendedDefaults() {
+        return extendedDefaults;
+      }
+      static get defaults() {
+        return defaults;
+      }
+      static installModule(mod) {
+        if (!Swiper.prototype.__modules__) Swiper.prototype.__modules__ = [];
+        const modules = Swiper.prototype.__modules__;
+        if (typeof mod === 'function' && modules.indexOf(mod) < 0) {
+          modules.push(mod);
+        }
+      }
+      static use(module) {
+        if (Array.isArray(module)) {
+          module.forEach(m => Swiper.installModule(m));
+          return Swiper;
+        }
+        Swiper.installModule(module);
+        return Swiper;
+      }
+    }
+    Object.keys(prototypes).forEach(prototypeGroup => {
+      Object.keys(prototypes[prototypeGroup]).forEach(protoMethod => {
+        Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
+      });
+    });
+    Swiper.use([Resize, Observer]);
+
+    function Virtual({
+      swiper,
+      extendParams,
+      on,
+      emit
+    }) {
+      extendParams({
+        virtual: {
+          enabled: false,
+          slides: [],
+          cache: true,
+          renderSlide: null,
+          renderExternal: null,
+          renderExternalUpdate: true,
+          addSlidesBefore: 0,
+          addSlidesAfter: 0
+        }
+      });
+      let cssModeTimeout;
+      const document = getDocument();
+      swiper.virtual = {
+        cache: {},
+        from: undefined,
+        to: undefined,
+        slides: [],
+        offset: 0,
+        slidesGrid: []
+      };
+      const tempDOM = document.createElement('div');
+      function renderSlide(slide, index) {
+        const params = swiper.params.virtual;
+        if (params.cache && swiper.virtual.cache[index]) {
+          return swiper.virtual.cache[index];
+        }
+        // eslint-disable-next-line
+        let slideEl;
+        if (params.renderSlide) {
+          slideEl = params.renderSlide.call(swiper, slide, index);
+          if (typeof slideEl === 'string') {
+            tempDOM.innerHTML = slideEl;
+            slideEl = tempDOM.children[0];
+          }
+        } else if (swiper.isElement) {
+          slideEl = createElement('swiper-slide');
+        } else {
+          slideEl = createElement('div', swiper.params.slideClass);
+        }
+        slideEl.setAttribute('data-swiper-slide-index', index);
+        if (!params.renderSlide) {
+          slideEl.innerHTML = slide;
+        }
+        if (params.cache) swiper.virtual.cache[index] = slideEl;
+        return slideEl;
+      }
+      function update(force) {
+        const {
+          slidesPerView,
+          slidesPerGroup,
+          centeredSlides,
+          loop: isLoop
+        } = swiper.params;
+        const {
+          addSlidesBefore,
+          addSlidesAfter
+        } = swiper.params.virtual;
+        const {
+          from: previousFrom,
+          to: previousTo,
+          slides,
+          slidesGrid: previousSlidesGrid,
+          offset: previousOffset
+        } = swiper.virtual;
+        if (!swiper.params.cssMode) {
+          swiper.updateActiveIndex();
+        }
+        const activeIndex = swiper.activeIndex || 0;
+        let offsetProp;
+        if (swiper.rtlTranslate) offsetProp = 'right';else offsetProp = swiper.isHorizontal() ? 'left' : 'top';
+        let slidesAfter;
+        let slidesBefore;
+        if (centeredSlides) {
+          slidesAfter = Math.floor(slidesPerView / 2) + slidesPerGroup + addSlidesAfter;
+          slidesBefore = Math.floor(slidesPerView / 2) + slidesPerGroup + addSlidesBefore;
+        } else {
+          slidesAfter = slidesPerView + (slidesPerGroup - 1) + addSlidesAfter;
+          slidesBefore = (isLoop ? slidesPerView : slidesPerGroup) + addSlidesBefore;
+        }
+        let from = activeIndex - slidesBefore;
+        let to = activeIndex + slidesAfter;
+        if (!isLoop) {
+          from = Math.max(from, 0);
+          to = Math.min(to, slides.length - 1);
+        }
+        let offset = (swiper.slidesGrid[from] || 0) - (swiper.slidesGrid[0] || 0);
+        if (isLoop && activeIndex >= slidesBefore) {
+          from -= slidesBefore;
+          if (!centeredSlides) offset += swiper.slidesGrid[0];
+        } else if (isLoop && activeIndex < slidesBefore) {
+          from = -slidesBefore;
+          if (centeredSlides) offset += swiper.slidesGrid[0];
+        }
+        Object.assign(swiper.virtual, {
+          from,
+          to,
+          offset,
+          slidesGrid: swiper.slidesGrid,
+          slidesBefore,
+          slidesAfter
+        });
+        function onRendered() {
+          swiper.updateSlides();
+          swiper.updateProgress();
+          swiper.updateSlidesClasses();
+          emit('virtualUpdate');
+        }
+        if (previousFrom === from && previousTo === to && !force) {
+          if (swiper.slidesGrid !== previousSlidesGrid && offset !== previousOffset) {
+            swiper.slides.forEach(slideEl => {
+              slideEl.style[offsetProp] = `${offset}px`;
+            });
+          }
+          swiper.updateProgress();
+          emit('virtualUpdate');
+          return;
+        }
+        if (swiper.params.virtual.renderExternal) {
+          swiper.params.virtual.renderExternal.call(swiper, {
+            offset,
+            from,
+            to,
+            slides: function getSlides() {
+              const slidesToRender = [];
+              for (let i = from; i <= to; i += 1) {
+                slidesToRender.push(slides[i]);
+              }
+              return slidesToRender;
+            }()
+          });
+          if (swiper.params.virtual.renderExternalUpdate) {
+            onRendered();
+          } else {
+            emit('virtualUpdate');
+          }
+          return;
+        }
+        const prependIndexes = [];
+        const appendIndexes = [];
+        const getSlideIndex = index => {
+          let slideIndex = index;
+          if (index < 0) {
+            slideIndex = slides.length + index;
+          } else if (slideIndex >= slides.length) {
+            // eslint-disable-next-line
+            slideIndex = slideIndex - slides.length;
+          }
+          return slideIndex;
+        };
+        if (force) {
+          swiper.slidesEl.querySelectorAll(`.${swiper.params.slideClass}, swiper-slide`).forEach(slideEl => {
+            slideEl.remove();
+          });
+        } else {
+          for (let i = previousFrom; i <= previousTo; i += 1) {
+            if (i < from || i > to) {
+              const slideIndex = getSlideIndex(i);
+              swiper.slidesEl.querySelectorAll(`.${swiper.params.slideClass}[data-swiper-slide-index="${slideIndex}"], swiper-slide[data-swiper-slide-index="${slideIndex}"]`).forEach(slideEl => {
+                slideEl.remove();
+              });
+            }
+          }
+        }
+        const loopFrom = isLoop ? -slides.length : 0;
+        const loopTo = isLoop ? slides.length * 2 : slides.length;
+        for (let i = loopFrom; i < loopTo; i += 1) {
+          if (i >= from && i <= to) {
+            const slideIndex = getSlideIndex(i);
+            if (typeof previousTo === 'undefined' || force) {
+              appendIndexes.push(slideIndex);
+            } else {
+              if (i > previousTo) appendIndexes.push(slideIndex);
+              if (i < previousFrom) prependIndexes.push(slideIndex);
+            }
+          }
+        }
+        appendIndexes.forEach(index => {
+          swiper.slidesEl.append(renderSlide(slides[index], index));
+        });
+        if (isLoop) {
+          for (let i = prependIndexes.length - 1; i >= 0; i -= 1) {
+            const index = prependIndexes[i];
+            swiper.slidesEl.prepend(renderSlide(slides[index], index));
+          }
+        } else {
+          prependIndexes.sort((a, b) => b - a);
+          prependIndexes.forEach(index => {
+            swiper.slidesEl.prepend(renderSlide(slides[index], index));
+          });
+        }
+        elementChildren(swiper.slidesEl, '.swiper-slide, swiper-slide').forEach(slideEl => {
+          slideEl.style[offsetProp] = `${offset}px`;
+        });
+        onRendered();
+      }
+      function appendSlide(slides) {
+        if (typeof slides === 'object' && 'length' in slides) {
+          for (let i = 0; i < slides.length; i += 1) {
+            if (slides[i]) swiper.virtual.slides.push(slides[i]);
+          }
+        } else {
+          swiper.virtual.slides.push(slides);
+        }
+        update(true);
+      }
+      function prependSlide(slides) {
+        const activeIndex = swiper.activeIndex;
+        let newActiveIndex = activeIndex + 1;
+        let numberOfNewSlides = 1;
+        if (Array.isArray(slides)) {
+          for (let i = 0; i < slides.length; i += 1) {
+            if (slides[i]) swiper.virtual.slides.unshift(slides[i]);
+          }
+          newActiveIndex = activeIndex + slides.length;
+          numberOfNewSlides = slides.length;
+        } else {
+          swiper.virtual.slides.unshift(slides);
+        }
+        if (swiper.params.virtual.cache) {
+          const cache = swiper.virtual.cache;
+          const newCache = {};
+          Object.keys(cache).forEach(cachedIndex => {
+            const cachedEl = cache[cachedIndex];
+            const cachedElIndex = cachedEl.getAttribute('data-swiper-slide-index');
+            if (cachedElIndex) {
+              cachedEl.setAttribute('data-swiper-slide-index', parseInt(cachedElIndex, 10) + numberOfNewSlides);
+            }
+            newCache[parseInt(cachedIndex, 10) + numberOfNewSlides] = cachedEl;
+          });
+          swiper.virtual.cache = newCache;
+        }
+        update(true);
+        swiper.slideTo(newActiveIndex, 0);
+      }
+      function removeSlide(slidesIndexes) {
+        if (typeof slidesIndexes === 'undefined' || slidesIndexes === null) return;
+        let activeIndex = swiper.activeIndex;
+        if (Array.isArray(slidesIndexes)) {
+          for (let i = slidesIndexes.length - 1; i >= 0; i -= 1) {
+            swiper.virtual.slides.splice(slidesIndexes[i], 1);
+            if (swiper.params.virtual.cache) {
+              delete swiper.virtual.cache[slidesIndexes[i]];
+            }
+            if (slidesIndexes[i] < activeIndex) activeIndex -= 1;
+            activeIndex = Math.max(activeIndex, 0);
+          }
+        } else {
+          swiper.virtual.slides.splice(slidesIndexes, 1);
+          if (swiper.params.virtual.cache) {
+            delete swiper.virtual.cache[slidesIndexes];
+          }
+          if (slidesIndexes < activeIndex) activeIndex -= 1;
+          activeIndex = Math.max(activeIndex, 0);
+        }
+        update(true);
+        swiper.slideTo(activeIndex, 0);
+      }
+      function removeAllSlides() {
+        swiper.virtual.slides = [];
+        if (swiper.params.virtual.cache) {
+          swiper.virtual.cache = {};
+        }
+        update(true);
+        swiper.slideTo(0, 0);
+      }
+      on('beforeInit', () => {
+        if (!swiper.params.virtual.enabled) return;
+        let domSlidesAssigned;
+        if (typeof swiper.passedParams.virtual.slides === 'undefined') {
+          const slides = [...swiper.slidesEl.children].filter(el => el.matches(`.${swiper.params.slideClass}, swiper-slide`));
+          if (slides && slides.length) {
+            swiper.virtual.slides = [...slides];
+            domSlidesAssigned = true;
+            slides.forEach((slideEl, slideIndex) => {
+              slideEl.setAttribute('data-swiper-slide-index', slideIndex);
+              swiper.virtual.cache[slideIndex] = slideEl;
+              slideEl.remove();
+            });
+          }
+        }
+        if (!domSlidesAssigned) {
+          swiper.virtual.slides = swiper.params.virtual.slides;
+        }
+        swiper.classNames.push(`${swiper.params.containerModifierClass}virtual`);
+        swiper.params.watchSlidesProgress = true;
+        swiper.originalParams.watchSlidesProgress = true;
+        if (!swiper.params.initialSlide) {
+          update();
+        }
+      });
+      on('setTranslate', () => {
+        if (!swiper.params.virtual.enabled) return;
+        if (swiper.params.cssMode && !swiper._immediateVirtual) {
+          clearTimeout(cssModeTimeout);
+          cssModeTimeout = setTimeout(() => {
+            update();
+          }, 100);
+        } else {
+          update();
+        }
+      });
+      on('init update resize', () => {
+        if (!swiper.params.virtual.enabled) return;
+        if (swiper.params.cssMode) {
+          setCSSProperty(swiper.wrapperEl, '--swiper-virtual-size', `${swiper.virtualSize}px`);
+        }
+      });
+      Object.assign(swiper.virtual, {
+        appendSlide,
+        prependSlide,
+        removeSlide,
+        removeAllSlides,
+        update
+      });
+    }
+
+    /* eslint-disable consistent-return */
+    function Keyboard({
+      swiper,
+      extendParams,
+      on,
+      emit
+    }) {
+      const document = getDocument();
+      const window = getWindow();
+      swiper.keyboard = {
+        enabled: false
+      };
+      extendParams({
+        keyboard: {
+          enabled: false,
+          onlyInViewport: true,
+          pageUpDown: true
+        }
+      });
+      function handle(event) {
+        if (!swiper.enabled) return;
+        const {
+          rtlTranslate: rtl
+        } = swiper;
+        let e = event;
+        if (e.originalEvent) e = e.originalEvent; // jquery fix
+        const kc = e.keyCode || e.charCode;
+        const pageUpDown = swiper.params.keyboard.pageUpDown;
+        const isPageUp = pageUpDown && kc === 33;
+        const isPageDown = pageUpDown && kc === 34;
+        const isArrowLeft = kc === 37;
+        const isArrowRight = kc === 39;
+        const isArrowUp = kc === 38;
+        const isArrowDown = kc === 40;
+        // Directions locks
+        if (!swiper.allowSlideNext && (swiper.isHorizontal() && isArrowRight || swiper.isVertical() && isArrowDown || isPageDown)) {
+          return false;
+        }
+        if (!swiper.allowSlidePrev && (swiper.isHorizontal() && isArrowLeft || swiper.isVertical() && isArrowUp || isPageUp)) {
+          return false;
+        }
+        if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) {
+          return undefined;
+        }
+        if (document.activeElement && document.activeElement.nodeName && (document.activeElement.nodeName.toLowerCase() === 'input' || document.activeElement.nodeName.toLowerCase() === 'textarea')) {
+          return undefined;
+        }
+        if (swiper.params.keyboard.onlyInViewport && (isPageUp || isPageDown || isArrowLeft || isArrowRight || isArrowUp || isArrowDown)) {
+          let inView = false;
+          // Check that swiper should be inside of visible area of window
+          if (elementParents(swiper.el, `.${swiper.params.slideClass}, swiper-slide`).length > 0 && elementParents(swiper.el, `.${swiper.params.slideActiveClass}`).length === 0) {
+            return undefined;
+          }
+          const el = swiper.el;
+          const swiperWidth = el.clientWidth;
+          const swiperHeight = el.clientHeight;
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+          const swiperOffset = elementOffset(el);
+          if (rtl) swiperOffset.left -= el.scrollLeft;
+          const swiperCoord = [[swiperOffset.left, swiperOffset.top], [swiperOffset.left + swiperWidth, swiperOffset.top], [swiperOffset.left, swiperOffset.top + swiperHeight], [swiperOffset.left + swiperWidth, swiperOffset.top + swiperHeight]];
+          for (let i = 0; i < swiperCoord.length; i += 1) {
+            const point = swiperCoord[i];
+            if (point[0] >= 0 && point[0] <= windowWidth && point[1] >= 0 && point[1] <= windowHeight) {
+              if (point[0] === 0 && point[1] === 0) continue; // eslint-disable-line
+              inView = true;
+            }
+          }
+          if (!inView) return undefined;
+        }
+        if (swiper.isHorizontal()) {
+          if (isPageUp || isPageDown || isArrowLeft || isArrowRight) {
+            if (e.preventDefault) e.preventDefault();else e.returnValue = false;
+          }
+          if ((isPageDown || isArrowRight) && !rtl || (isPageUp || isArrowLeft) && rtl) swiper.slideNext();
+          if ((isPageUp || isArrowLeft) && !rtl || (isPageDown || isArrowRight) && rtl) swiper.slidePrev();
+        } else {
+          if (isPageUp || isPageDown || isArrowUp || isArrowDown) {
+            if (e.preventDefault) e.preventDefault();else e.returnValue = false;
+          }
+          if (isPageDown || isArrowDown) swiper.slideNext();
+          if (isPageUp || isArrowUp) swiper.slidePrev();
+        }
+        emit('keyPress', kc);
+        return undefined;
+      }
+      function enable() {
+        if (swiper.keyboard.enabled) return;
+        document.addEventListener('keydown', handle);
+        swiper.keyboard.enabled = true;
+      }
+      function disable() {
+        if (!swiper.keyboard.enabled) return;
+        document.removeEventListener('keydown', handle);
+        swiper.keyboard.enabled = false;
+      }
+      on('init', () => {
+        if (swiper.params.keyboard.enabled) {
+          enable();
+        }
+      });
+      on('destroy', () => {
+        if (swiper.keyboard.enabled) {
+          disable();
+        }
+      });
+      Object.assign(swiper.keyboard, {
+        enable,
+        disable
+      });
+    }
+
+    /* eslint-disable consistent-return */
+    function Mousewheel({
+      swiper,
+      extendParams,
+      on,
+      emit
+    }) {
+      const window = getWindow();
+      extendParams({
+        mousewheel: {
+          enabled: false,
+          releaseOnEdges: false,
+          invert: false,
+          forceToAxis: false,
+          sensitivity: 1,
+          eventsTarget: 'container',
+          thresholdDelta: null,
+          thresholdTime: null
+        }
+      });
+      swiper.mousewheel = {
+        enabled: false
+      };
+      let timeout;
+      let lastScrollTime = now();
+      let lastEventBeforeSnap;
+      const recentWheelEvents = [];
+      function normalize(e) {
+        // Reasonable defaults
+        const PIXEL_STEP = 10;
+        const LINE_HEIGHT = 40;
+        const PAGE_HEIGHT = 800;
+        let sX = 0;
+        let sY = 0; // spinX, spinY
+        let pX = 0;
+        let pY = 0; // pixelX, pixelY
+
+        // Legacy
+        if ('detail' in e) {
+          sY = e.detail;
+        }
+        if ('wheelDelta' in e) {
+          sY = -e.wheelDelta / 120;
+        }
+        if ('wheelDeltaY' in e) {
+          sY = -e.wheelDeltaY / 120;
+        }
+        if ('wheelDeltaX' in e) {
+          sX = -e.wheelDeltaX / 120;
+        }
+
+        // side scrolling on FF with DOMMouseScroll
+        if ('axis' in e && e.axis === e.HORIZONTAL_AXIS) {
+          sX = sY;
+          sY = 0;
+        }
+        pX = sX * PIXEL_STEP;
+        pY = sY * PIXEL_STEP;
+        if ('deltaY' in e) {
+          pY = e.deltaY;
+        }
+        if ('deltaX' in e) {
+          pX = e.deltaX;
+        }
+        if (e.shiftKey && !pX) {
+          // if user scrolls with shift he wants horizontal scroll
+          pX = pY;
+          pY = 0;
+        }
+        if ((pX || pY) && e.deltaMode) {
+          if (e.deltaMode === 1) {
+            // delta in LINE units
+            pX *= LINE_HEIGHT;
+            pY *= LINE_HEIGHT;
+          } else {
+            // delta in PAGE units
+            pX *= PAGE_HEIGHT;
+            pY *= PAGE_HEIGHT;
+          }
+        }
+
+        // Fall-back if spin cannot be determined
+        if (pX && !sX) {
+          sX = pX < 1 ? -1 : 1;
+        }
+        if (pY && !sY) {
+          sY = pY < 1 ? -1 : 1;
+        }
+        return {
+          spinX: sX,
+          spinY: sY,
+          pixelX: pX,
+          pixelY: pY
+        };
+      }
+      function handleMouseEnter() {
+        if (!swiper.enabled) return;
+        swiper.mouseEntered = true;
+      }
+      function handleMouseLeave() {
+        if (!swiper.enabled) return;
+        swiper.mouseEntered = false;
+      }
+      function animateSlider(newEvent) {
+        if (swiper.params.mousewheel.thresholdDelta && newEvent.delta < swiper.params.mousewheel.thresholdDelta) {
+          // Prevent if delta of wheel scroll delta is below configured threshold
+          return false;
+        }
+        if (swiper.params.mousewheel.thresholdTime && now() - lastScrollTime < swiper.params.mousewheel.thresholdTime) {
+          // Prevent if time between scrolls is below configured threshold
+          return false;
+        }
+
+        // If the movement is NOT big enough and
+        // if the last time the user scrolled was too close to the current one (avoid continuously triggering the slider):
+        //   Don't go any further (avoid insignificant scroll movement).
+        if (newEvent.delta >= 6 && now() - lastScrollTime < 60) {
+          // Return false as a default
+          return true;
+        }
+        // If user is scrolling towards the end:
+        //   If the slider hasn't hit the latest slide or
+        //   if the slider is a loop and
+        //   if the slider isn't moving right now:
+        //     Go to next slide and
+        //     emit a scroll event.
+        // Else (the user is scrolling towards the beginning) and
+        // if the slider hasn't hit the first slide or
+        // if the slider is a loop and
+        // if the slider isn't moving right now:
+        //   Go to prev slide and
+        //   emit a scroll event.
+        if (newEvent.direction < 0) {
+          if ((!swiper.isEnd || swiper.params.loop) && !swiper.animating) {
+            swiper.slideNext();
+            emit('scroll', newEvent.raw);
+          }
+        } else if ((!swiper.isBeginning || swiper.params.loop) && !swiper.animating) {
+          swiper.slidePrev();
+          emit('scroll', newEvent.raw);
+        }
+        // If you got here is because an animation has been triggered so store the current time
+        lastScrollTime = new window.Date().getTime();
+        // Return false as a default
+        return false;
+      }
+      function releaseScroll(newEvent) {
+        const params = swiper.params.mousewheel;
+        if (newEvent.direction < 0) {
+          if (swiper.isEnd && !swiper.params.loop && params.releaseOnEdges) {
+            // Return true to animate scroll on edges
+            return true;
+          }
+        } else if (swiper.isBeginning && !swiper.params.loop && params.releaseOnEdges) {
+          // Return true to animate scroll on edges
+          return true;
+        }
+        return false;
+      }
+      function handle(event) {
+        let e = event;
+        let disableParentSwiper = true;
+        if (!swiper.enabled) return;
+        const params = swiper.params.mousewheel;
+        if (swiper.params.cssMode) {
+          e.preventDefault();
+        }
+        let targetEl = swiper.el;
+        if (swiper.params.mousewheel.eventsTarget !== 'container') {
+          targetEl = document.querySelector(swiper.params.mousewheel.eventsTarget);
+        }
+        const targetElContainsTarget = targetEl && targetEl.contains(e.target);
+        if (!swiper.mouseEntered && !targetElContainsTarget && !params.releaseOnEdges) return true;
+        if (e.originalEvent) e = e.originalEvent; // jquery fix
+        let delta = 0;
+        const rtlFactor = swiper.rtlTranslate ? -1 : 1;
+        const data = normalize(e);
+        if (params.forceToAxis) {
+          if (swiper.isHorizontal()) {
+            if (Math.abs(data.pixelX) > Math.abs(data.pixelY)) delta = -data.pixelX * rtlFactor;else return true;
+          } else if (Math.abs(data.pixelY) > Math.abs(data.pixelX)) delta = -data.pixelY;else return true;
+        } else {
+          delta = Math.abs(data.pixelX) > Math.abs(data.pixelY) ? -data.pixelX * rtlFactor : -data.pixelY;
+        }
+        if (delta === 0) return true;
+        if (params.invert) delta = -delta;
+
+        // Get the scroll positions
+        let positions = swiper.getTranslate() + delta * params.sensitivity;
+        if (positions >= swiper.minTranslate()) positions = swiper.minTranslate();
+        if (positions <= swiper.maxTranslate()) positions = swiper.maxTranslate();
+
+        // When loop is true:
+        //     the disableParentSwiper will be true.
+        // When loop is false:
+        //     if the scroll positions is not on edge,
+        //     then the disableParentSwiper will be true.
+        //     if the scroll on edge positions,
+        //     then the disableParentSwiper will be false.
+        disableParentSwiper = swiper.params.loop ? true : !(positions === swiper.minTranslate() || positions === swiper.maxTranslate());
+        if (disableParentSwiper && swiper.params.nested) e.stopPropagation();
+        if (!swiper.params.freeMode || !swiper.params.freeMode.enabled) {
+          // Register the new event in a variable which stores the relevant data
+          const newEvent = {
+            time: now(),
+            delta: Math.abs(delta),
+            direction: Math.sign(delta),
+            raw: event
+          };
+
+          // Keep the most recent events
+          if (recentWheelEvents.length >= 2) {
+            recentWheelEvents.shift(); // only store the last N events
+          }
+
+          const prevEvent = recentWheelEvents.length ? recentWheelEvents[recentWheelEvents.length - 1] : undefined;
+          recentWheelEvents.push(newEvent);
+
+          // If there is at least one previous recorded event:
+          //   If direction has changed or
+          //   if the scroll is quicker than the previous one:
+          //     Animate the slider.
+          // Else (this is the first time the wheel is moved):
+          //     Animate the slider.
+          if (prevEvent) {
+            if (newEvent.direction !== prevEvent.direction || newEvent.delta > prevEvent.delta || newEvent.time > prevEvent.time + 150) {
+              animateSlider(newEvent);
+            }
+          } else {
+            animateSlider(newEvent);
+          }
+
+          // If it's time to release the scroll:
+          //   Return now so you don't hit the preventDefault.
+          if (releaseScroll(newEvent)) {
+            return true;
+          }
+        } else {
+          // Freemode or scrollContainer:
+
+          // If we recently snapped after a momentum scroll, then ignore wheel events
+          // to give time for the deceleration to finish. Stop ignoring after 500 msecs
+          // or if it's a new scroll (larger delta or inverse sign as last event before
+          // an end-of-momentum snap).
+          const newEvent = {
+            time: now(),
+            delta: Math.abs(delta),
+            direction: Math.sign(delta)
+          };
+          const ignoreWheelEvents = lastEventBeforeSnap && newEvent.time < lastEventBeforeSnap.time + 500 && newEvent.delta <= lastEventBeforeSnap.delta && newEvent.direction === lastEventBeforeSnap.direction;
+          if (!ignoreWheelEvents) {
+            lastEventBeforeSnap = undefined;
+            let position = swiper.getTranslate() + delta * params.sensitivity;
+            const wasBeginning = swiper.isBeginning;
+            const wasEnd = swiper.isEnd;
+            if (position >= swiper.minTranslate()) position = swiper.minTranslate();
+            if (position <= swiper.maxTranslate()) position = swiper.maxTranslate();
+            swiper.setTransition(0);
+            swiper.setTranslate(position);
+            swiper.updateProgress();
+            swiper.updateActiveIndex();
+            swiper.updateSlidesClasses();
+            if (!wasBeginning && swiper.isBeginning || !wasEnd && swiper.isEnd) {
+              swiper.updateSlidesClasses();
+            }
+            if (swiper.params.loop) {
+              swiper.loopFix({
+                direction: newEvent.direction < 0 ? 'next' : 'prev',
+                byMousewheel: true
+              });
+            }
+            if (swiper.params.freeMode.sticky) {
+              // When wheel scrolling starts with sticky (aka snap) enabled, then detect
+              // the end of a momentum scroll by storing recent (N=15?) wheel events.
+              // 1. do all N events have decreasing or same (absolute value) delta?
+              // 2. did all N events arrive in the last M (M=500?) msecs?
+              // 3. does the earliest event have an (absolute value) delta that's
+              //    at least P (P=1?) larger than the most recent event's delta?
+              // 4. does the latest event have a delta that's smaller than Q (Q=6?) pixels?
+              // If 1-4 are "yes" then we're near the end of a momentum scroll deceleration.
+              // Snap immediately and ignore remaining wheel events in this scroll.
+              // See comment above for "remaining wheel events in this scroll" determination.
+              // If 1-4 aren't satisfied, then wait to snap until 500ms after the last event.
+              clearTimeout(timeout);
+              timeout = undefined;
+              if (recentWheelEvents.length >= 15) {
+                recentWheelEvents.shift(); // only store the last N events
+              }
+
+              const prevEvent = recentWheelEvents.length ? recentWheelEvents[recentWheelEvents.length - 1] : undefined;
+              const firstEvent = recentWheelEvents[0];
+              recentWheelEvents.push(newEvent);
+              if (prevEvent && (newEvent.delta > prevEvent.delta || newEvent.direction !== prevEvent.direction)) {
+                // Increasing or reverse-sign delta means the user started scrolling again. Clear the wheel event log.
+                recentWheelEvents.splice(0);
+              } else if (recentWheelEvents.length >= 15 && newEvent.time - firstEvent.time < 500 && firstEvent.delta - newEvent.delta >= 1 && newEvent.delta <= 6) {
+                // We're at the end of the deceleration of a momentum scroll, so there's no need
+                // to wait for more events. Snap ASAP on the next tick.
+                // Also, because there's some remaining momentum we'll bias the snap in the
+                // direction of the ongoing scroll because it's better UX for the scroll to snap
+                // in the same direction as the scroll instead of reversing to snap.  Therefore,
+                // if it's already scrolled more than 20% in the current direction, keep going.
+                const snapToThreshold = delta > 0 ? 0.8 : 0.2;
+                lastEventBeforeSnap = newEvent;
+                recentWheelEvents.splice(0);
+                timeout = nextTick(() => {
+                  swiper.slideToClosest(swiper.params.speed, true, undefined, snapToThreshold);
+                }, 0); // no delay; move on next tick
+              }
+
+              if (!timeout) {
+                // if we get here, then we haven't detected the end of a momentum scroll, so
+                // we'll consider a scroll "complete" when there haven't been any wheel events
+                // for 500ms.
+                timeout = nextTick(() => {
+                  const snapToThreshold = 0.5;
+                  lastEventBeforeSnap = newEvent;
+                  recentWheelEvents.splice(0);
+                  swiper.slideToClosest(swiper.params.speed, true, undefined, snapToThreshold);
+                }, 500);
+              }
+            }
+
+            // Emit event
+            if (!ignoreWheelEvents) emit('scroll', e);
+
+            // Stop autoplay
+            if (swiper.params.autoplay && swiper.params.autoplayDisableOnInteraction) swiper.autoplay.stop();
+            // Return page scroll on edge positions
+            if (position === swiper.minTranslate() || position === swiper.maxTranslate()) return true;
+          }
+        }
+        if (e.preventDefault) e.preventDefault();else e.returnValue = false;
+        return false;
+      }
+      function events(method) {
+        let targetEl = swiper.el;
+        if (swiper.params.mousewheel.eventsTarget !== 'container') {
+          targetEl = document.querySelector(swiper.params.mousewheel.eventsTarget);
+        }
+        targetEl[method]('mouseenter', handleMouseEnter);
+        targetEl[method]('mouseleave', handleMouseLeave);
+        targetEl[method]('wheel', handle);
+      }
+      function enable() {
+        if (swiper.params.cssMode) {
+          swiper.wrapperEl.removeEventListener('wheel', handle);
+          return true;
+        }
+        if (swiper.mousewheel.enabled) return false;
+        events('addEventListener');
+        swiper.mousewheel.enabled = true;
+        return true;
+      }
+      function disable() {
+        if (swiper.params.cssMode) {
+          swiper.wrapperEl.addEventListener(event, handle);
+          return true;
+        }
+        if (!swiper.mousewheel.enabled) return false;
+        events('removeEventListener');
+        swiper.mousewheel.enabled = false;
+        return true;
+      }
+      on('init', () => {
+        if (!swiper.params.mousewheel.enabled && swiper.params.cssMode) {
+          disable();
+        }
+        if (swiper.params.mousewheel.enabled) enable();
+      });
+      on('destroy', () => {
+        if (swiper.params.cssMode) {
+          enable();
+        }
+        if (swiper.mousewheel.enabled) disable();
+      });
+      Object.assign(swiper.mousewheel, {
+        enable,
+        disable
+      });
+    }
+
+    function createElementIfNotDefined(swiper, originalParams, params, checkProps) {
+      if (swiper.params.createElements) {
+        Object.keys(checkProps).forEach(key => {
+          if (!params[key] && params.auto === true) {
+            let element = elementChildren(swiper.el, `.${checkProps[key]}`)[0];
+            if (!element) {
+              element = createElement('div', checkProps[key]);
+              element.className = checkProps[key];
+              swiper.el.append(element);
+            }
+            params[key] = element;
+            originalParams[key] = element;
+          }
+        });
+      }
+      return params;
+    }
+
+    function Navigation({
+      swiper,
+      extendParams,
+      on,
+      emit
+    }) {
+      extendParams({
+        navigation: {
+          nextEl: null,
+          prevEl: null,
+          hideOnClick: false,
+          disabledClass: 'swiper-button-disabled',
+          hiddenClass: 'swiper-button-hidden',
+          lockClass: 'swiper-button-lock',
+          navigationDisabledClass: 'swiper-navigation-disabled'
+        }
+      });
+      swiper.navigation = {
+        nextEl: null,
+        prevEl: null
+      };
+      const makeElementsArray = el => {
+        if (!Array.isArray(el)) el = [el].filter(e => !!e);
+        return el;
+      };
+      function getEl(el) {
+        let res;
+        if (el && typeof el === 'string' && swiper.isElement) {
+          res = swiper.el.shadowRoot.querySelector(el);
+          if (res) return res;
+        }
+        if (el) {
+          if (typeof el === 'string') res = [...document.querySelectorAll(el)];
+          if (swiper.params.uniqueNavElements && typeof el === 'string' && res.length > 1 && swiper.el.querySelectorAll(el).length === 1) {
+            res = swiper.el.querySelector(el);
+          }
+        }
+        if (el && !res) return el;
+        // if (Array.isArray(res) && res.length === 1) res = res[0];
+        return res;
+      }
+      function toggleEl(el, disabled) {
+        const params = swiper.params.navigation;
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          if (subEl) {
+            subEl.classList[disabled ? 'add' : 'remove'](...params.disabledClass.split(' '));
+            if (subEl.tagName === 'BUTTON') subEl.disabled = disabled;
+            if (swiper.params.watchOverflow && swiper.enabled) {
+              subEl.classList[swiper.isLocked ? 'add' : 'remove'](params.lockClass);
+            }
+          }
+        });
+      }
+      function update() {
+        // Update Navigation Buttons
+        const {
+          nextEl,
+          prevEl
+        } = swiper.navigation;
+        if (swiper.params.loop) {
+          toggleEl(prevEl, false);
+          toggleEl(nextEl, false);
+          return;
+        }
+        toggleEl(prevEl, swiper.isBeginning && !swiper.params.rewind);
+        toggleEl(nextEl, swiper.isEnd && !swiper.params.rewind);
+      }
+      function onPrevClick(e) {
+        e.preventDefault();
+        if (swiper.isBeginning && !swiper.params.loop && !swiper.params.rewind) return;
+        swiper.slidePrev();
+        emit('navigationPrev');
+      }
+      function onNextClick(e) {
+        e.preventDefault();
+        if (swiper.isEnd && !swiper.params.loop && !swiper.params.rewind) return;
+        swiper.slideNext();
+        emit('navigationNext');
+      }
+      function init() {
+        const params = swiper.params.navigation;
+        swiper.params.navigation = createElementIfNotDefined(swiper, swiper.originalParams.navigation, swiper.params.navigation, {
+          nextEl: 'swiper-button-next',
+          prevEl: 'swiper-button-prev'
+        });
+        if (!(params.nextEl || params.prevEl)) return;
+        let nextEl = getEl(params.nextEl);
+        let prevEl = getEl(params.prevEl);
+        Object.assign(swiper.navigation, {
+          nextEl,
+          prevEl
+        });
+        nextEl = makeElementsArray(nextEl);
+        prevEl = makeElementsArray(prevEl);
+        const initButton = (el, dir) => {
+          if (el) {
+            el.addEventListener('click', dir === 'next' ? onNextClick : onPrevClick);
+          }
+          if (!swiper.enabled && el) {
+            el.classList.add(...params.lockClass.split(' '));
+          }
+        };
+        nextEl.forEach(el => initButton(el, 'next'));
+        prevEl.forEach(el => initButton(el, 'prev'));
+      }
+      function destroy() {
+        let {
+          nextEl,
+          prevEl
+        } = swiper.navigation;
+        nextEl = makeElementsArray(nextEl);
+        prevEl = makeElementsArray(prevEl);
+        const destroyButton = (el, dir) => {
+          el.removeEventListener('click', dir === 'next' ? onNextClick : onPrevClick);
+          el.classList.remove(...swiper.params.navigation.disabledClass.split(' '));
+        };
+        nextEl.forEach(el => destroyButton(el, 'next'));
+        prevEl.forEach(el => destroyButton(el, 'prev'));
+      }
+      on('init', () => {
+        if (swiper.params.navigation.enabled === false) {
+          // eslint-disable-next-line
+          disable();
+        } else {
+          init();
+          update();
+        }
+      });
+      on('toEdge fromEdge lock unlock', () => {
+        update();
+      });
+      on('destroy', () => {
+        destroy();
+      });
+      on('enable disable', () => {
+        let {
+          nextEl,
+          prevEl
+        } = swiper.navigation;
+        nextEl = makeElementsArray(nextEl);
+        prevEl = makeElementsArray(prevEl);
+        [...nextEl, ...prevEl].filter(el => !!el).forEach(el => el.classList[swiper.enabled ? 'remove' : 'add'](swiper.params.navigation.lockClass));
+      });
+      on('click', (_s, e) => {
+        let {
+          nextEl,
+          prevEl
+        } = swiper.navigation;
+        nextEl = makeElementsArray(nextEl);
+        prevEl = makeElementsArray(prevEl);
+        const targetEl = e.target;
+        if (swiper.params.navigation.hideOnClick && !prevEl.includes(targetEl) && !nextEl.includes(targetEl)) {
+          if (swiper.pagination && swiper.params.pagination && swiper.params.pagination.clickable && (swiper.pagination.el === targetEl || swiper.pagination.el.contains(targetEl))) return;
+          let isHidden;
+          if (nextEl.length) {
+            isHidden = nextEl[0].classList.contains(swiper.params.navigation.hiddenClass);
+          } else if (prevEl.length) {
+            isHidden = prevEl[0].classList.contains(swiper.params.navigation.hiddenClass);
+          }
+          if (isHidden === true) {
+            emit('navigationShow');
+          } else {
+            emit('navigationHide');
+          }
+          [...nextEl, ...prevEl].filter(el => !!el).forEach(el => el.classList.toggle(swiper.params.navigation.hiddenClass));
+        }
+      });
+      const enable = () => {
+        swiper.el.classList.remove(...swiper.params.navigation.navigationDisabledClass.split(' '));
+        init();
+        update();
+      };
+      const disable = () => {
+        swiper.el.classList.add(...swiper.params.navigation.navigationDisabledClass.split(' '));
+        destroy();
+      };
+      Object.assign(swiper.navigation, {
+        enable,
+        disable,
+        update,
+        init,
+        destroy
+      });
+    }
+
+    function classesToSelector(classes = '') {
+      return `.${classes.trim().replace(/([\.:!\/])/g, '\\$1') // eslint-disable-line
+  .replace(/ /g, '.')}`;
+    }
+
+    function Pagination({
+      swiper,
+      extendParams,
+      on,
+      emit
+    }) {
+      const pfx = 'swiper-pagination';
+      extendParams({
+        pagination: {
+          el: null,
+          bulletElement: 'span',
+          clickable: false,
+          hideOnClick: false,
+          renderBullet: null,
+          renderProgressbar: null,
+          renderFraction: null,
+          renderCustom: null,
+          progressbarOpposite: false,
+          type: 'bullets',
+          // 'bullets' or 'progressbar' or 'fraction' or 'custom'
+          dynamicBullets: false,
+          dynamicMainBullets: 1,
+          formatFractionCurrent: number => number,
+          formatFractionTotal: number => number,
+          bulletClass: `${pfx}-bullet`,
+          bulletActiveClass: `${pfx}-bullet-active`,
+          modifierClass: `${pfx}-`,
+          currentClass: `${pfx}-current`,
+          totalClass: `${pfx}-total`,
+          hiddenClass: `${pfx}-hidden`,
+          progressbarFillClass: `${pfx}-progressbar-fill`,
+          progressbarOppositeClass: `${pfx}-progressbar-opposite`,
+          clickableClass: `${pfx}-clickable`,
+          lockClass: `${pfx}-lock`,
+          horizontalClass: `${pfx}-horizontal`,
+          verticalClass: `${pfx}-vertical`,
+          paginationDisabledClass: `${pfx}-disabled`
+        }
+      });
+      swiper.pagination = {
+        el: null,
+        bullets: []
+      };
+      let bulletSize;
+      let dynamicBulletIndex = 0;
+      const makeElementsArray = el => {
+        if (!Array.isArray(el)) el = [el].filter(e => !!e);
+        return el;
+      };
+      function isPaginationDisabled() {
+        return !swiper.params.pagination.el || !swiper.pagination.el || Array.isArray(swiper.pagination.el) && swiper.pagination.el.length === 0;
+      }
+      function setSideBullets(bulletEl, position) {
+        const {
+          bulletActiveClass
+        } = swiper.params.pagination;
+        if (!bulletEl) return;
+        bulletEl = bulletEl[`${position === 'prev' ? 'previous' : 'next'}ElementSibling`];
+        if (bulletEl) {
+          bulletEl.classList.add(`${bulletActiveClass}-${position}`);
+          bulletEl = bulletEl[`${position === 'prev' ? 'previous' : 'next'}ElementSibling`];
+          if (bulletEl) {
+            bulletEl.classList.add(`${bulletActiveClass}-${position}-${position}`);
+          }
+        }
+      }
+      function onBulletClick(e) {
+        const bulletEl = e.target.closest(classesToSelector(swiper.params.pagination.bulletClass));
+        if (!bulletEl) {
+          return;
+        }
+        e.preventDefault();
+        const index = elementIndex(bulletEl) * swiper.params.slidesPerGroup;
+        if (swiper.params.loop) {
+          if (swiper.realIndex === index) return;
+          if (index < swiper.loopedSlides || index > swiper.slides.length - swiper.loopedSlides) {
+            swiper.loopFix({
+              direction: index < swiper.loopedSlides ? 'prev' : 'next',
+              activeSlideIndex: index,
+              slideTo: false
+            });
+          }
+          swiper.slideToLoop(index);
+        } else {
+          swiper.slideTo(index);
+        }
+      }
+      function update() {
+        // Render || Update Pagination bullets/items
+        const rtl = swiper.rtl;
+        const params = swiper.params.pagination;
+        if (isPaginationDisabled()) return;
+        let el = swiper.pagination.el;
+        el = makeElementsArray(el);
+        // Current/Total
+        let current;
+        const slidesLength = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.slides.length : swiper.slides.length;
+        const total = swiper.params.loop ? Math.ceil(slidesLength / swiper.params.slidesPerGroup) : swiper.snapGrid.length;
+        if (swiper.params.loop) {
+          current = swiper.params.slidesPerGroup > 1 ? Math.floor(swiper.realIndex / swiper.params.slidesPerGroup) : swiper.realIndex;
+        } else if (typeof swiper.snapIndex !== 'undefined') {
+          current = swiper.snapIndex;
+        } else {
+          current = swiper.activeIndex || 0;
+        }
+        // Types
+        if (params.type === 'bullets' && swiper.pagination.bullets && swiper.pagination.bullets.length > 0) {
+          const bullets = swiper.pagination.bullets;
+          let firstIndex;
+          let lastIndex;
+          let midIndex;
+          if (params.dynamicBullets) {
+            bulletSize = elementOuterSize(bullets[0], swiper.isHorizontal() ? 'width' : 'height', true);
+            el.forEach(subEl => {
+              subEl.style[swiper.isHorizontal() ? 'width' : 'height'] = `${bulletSize * (params.dynamicMainBullets + 4)}px`;
+            });
+            if (params.dynamicMainBullets > 1 && swiper.previousIndex !== undefined) {
+              dynamicBulletIndex += current - (swiper.previousIndex || 0);
+              if (dynamicBulletIndex > params.dynamicMainBullets - 1) {
+                dynamicBulletIndex = params.dynamicMainBullets - 1;
+              } else if (dynamicBulletIndex < 0) {
+                dynamicBulletIndex = 0;
+              }
+            }
+            firstIndex = Math.max(current - dynamicBulletIndex, 0);
+            lastIndex = firstIndex + (Math.min(bullets.length, params.dynamicMainBullets) - 1);
+            midIndex = (lastIndex + firstIndex) / 2;
+          }
+          bullets.forEach(bulletEl => {
+            bulletEl.classList.remove(...['', '-next', '-next-next', '-prev', '-prev-prev', '-main'].map(suffix => `${params.bulletActiveClass}${suffix}`));
+          });
+          if (el.length > 1) {
+            bullets.forEach(bullet => {
+              const bulletIndex = elementIndex(bullet);
+              if (bulletIndex === current) {
+                bullet.classList.add(params.bulletActiveClass);
+              }
+              if (params.dynamicBullets) {
+                if (bulletIndex >= firstIndex && bulletIndex <= lastIndex) {
+                  bullet.classList.add(`${params.bulletActiveClass}-main`);
+                }
+                if (bulletIndex === firstIndex) {
+                  setSideBullets(bullet, 'prev');
+                }
+                if (bulletIndex === lastIndex) {
+                  setSideBullets(bullet, 'next');
+                }
+              }
+            });
+          } else {
+            const bullet = bullets[current];
+            if (bullet) {
+              bullet.classList.add(params.bulletActiveClass);
+            }
+            if (params.dynamicBullets) {
+              const firstDisplayedBullet = bullets[firstIndex];
+              const lastDisplayedBullet = bullets[lastIndex];
+              for (let i = firstIndex; i <= lastIndex; i += 1) {
+                if (bullets[i]) {
+                  bullets[i].classList.add(`${params.bulletActiveClass}-main`);
+                }
+              }
+              setSideBullets(firstDisplayedBullet, 'prev');
+              setSideBullets(lastDisplayedBullet, 'next');
+            }
+          }
+          if (params.dynamicBullets) {
+            const dynamicBulletsLength = Math.min(bullets.length, params.dynamicMainBullets + 4);
+            const bulletsOffset = (bulletSize * dynamicBulletsLength - bulletSize) / 2 - midIndex * bulletSize;
+            const offsetProp = rtl ? 'right' : 'left';
+            bullets.forEach(bullet => {
+              bullet.style[swiper.isHorizontal() ? offsetProp : 'top'] = `${bulletsOffset}px`;
+            });
+          }
+        }
+        el.forEach((subEl, subElIndex) => {
+          if (params.type === 'fraction') {
+            subEl.querySelectorAll(classesToSelector(params.currentClass)).forEach(fractionEl => {
+              fractionEl.textContent = params.formatFractionCurrent(current + 1);
+            });
+            subEl.querySelectorAll(classesToSelector(params.totalClass)).forEach(totalEl => {
+              totalEl.textContent = params.formatFractionTotal(total);
+            });
+          }
+          if (params.type === 'progressbar') {
+            let progressbarDirection;
+            if (params.progressbarOpposite) {
+              progressbarDirection = swiper.isHorizontal() ? 'vertical' : 'horizontal';
+            } else {
+              progressbarDirection = swiper.isHorizontal() ? 'horizontal' : 'vertical';
+            }
+            const scale = (current + 1) / total;
+            let scaleX = 1;
+            let scaleY = 1;
+            if (progressbarDirection === 'horizontal') {
+              scaleX = scale;
+            } else {
+              scaleY = scale;
+            }
+            subEl.querySelectorAll(classesToSelector(params.progressbarFillClass)).forEach(progressEl => {
+              progressEl.style.transform = `translate3d(0,0,0) scaleX(${scaleX}) scaleY(${scaleY})`;
+              progressEl.style.transitionDuration = `${swiper.params.speed}ms`;
+            });
+          }
+          if (params.type === 'custom' && params.renderCustom) {
+            subEl.innerHTML = params.renderCustom(swiper, current + 1, total);
+            if (subElIndex === 0) emit('paginationRender', subEl);
+          } else {
+            if (subElIndex === 0) emit('paginationRender', subEl);
+            emit('paginationUpdate', subEl);
+          }
+          if (swiper.params.watchOverflow && swiper.enabled) {
+            subEl.classList[swiper.isLocked ? 'add' : 'remove'](params.lockClass);
+          }
+        });
+      }
+      function render() {
+        // Render Container
+        const params = swiper.params.pagination;
+        if (isPaginationDisabled()) return;
+        const slidesLength = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.slides.length : swiper.slides.length;
+        let el = swiper.pagination.el;
+        el = makeElementsArray(el);
+        let paginationHTML = '';
+        if (params.type === 'bullets') {
+          let numberOfBullets = swiper.params.loop ? Math.ceil(slidesLength / swiper.params.slidesPerGroup) : swiper.snapGrid.length;
+          if (swiper.params.freeMode && swiper.params.freeMode.enabled && numberOfBullets > slidesLength) {
+            numberOfBullets = slidesLength;
+          }
+          for (let i = 0; i < numberOfBullets; i += 1) {
+            if (params.renderBullet) {
+              paginationHTML += params.renderBullet.call(swiper, i, params.bulletClass);
+            } else {
+              paginationHTML += `<${params.bulletElement} class="${params.bulletClass}"></${params.bulletElement}>`;
+            }
+          }
+        }
+        if (params.type === 'fraction') {
+          if (params.renderFraction) {
+            paginationHTML = params.renderFraction.call(swiper, params.currentClass, params.totalClass);
+          } else {
+            paginationHTML = `<span class="${params.currentClass}"></span>` + ' / ' + `<span class="${params.totalClass}"></span>`;
+          }
+        }
+        if (params.type === 'progressbar') {
+          if (params.renderProgressbar) {
+            paginationHTML = params.renderProgressbar.call(swiper, params.progressbarFillClass);
+          } else {
+            paginationHTML = `<span class="${params.progressbarFillClass}"></span>`;
+          }
+        }
+        el.forEach(subEl => {
+          if (params.type !== 'custom') {
+            subEl.innerHTML = paginationHTML || '';
+          }
+          if (params.type === 'bullets') {
+            swiper.pagination.bullets = [...subEl.querySelectorAll(classesToSelector(params.bulletClass))];
+          }
+        });
+        if (params.type !== 'custom') {
+          emit('paginationRender', el[0]);
+        }
+      }
+      function init() {
+        swiper.params.pagination = createElementIfNotDefined(swiper, swiper.originalParams.pagination, swiper.params.pagination, {
+          el: 'swiper-pagination'
+        });
+        const params = swiper.params.pagination;
+        if (!params.el) return;
+        let el;
+        if (typeof params.el === 'string' && swiper.isElement) {
+          el = swiper.el.shadowRoot.querySelector(params.el);
+        }
+        if (!el && typeof params.el === 'string') {
+          el = [...document.querySelectorAll(params.el)];
+        }
+        if (!el) {
+          el = params.el;
+        }
+        if (!el || el.length === 0) return;
+        if (swiper.params.uniqueNavElements && typeof params.el === 'string' && Array.isArray(el) && el.length > 1) {
+          el = [...swiper.el.querySelectorAll(params.el)];
+          // check if it belongs to another nested Swiper
+          if (el.length > 1) {
+            el = el.filter(subEl => {
+              if (elementParents(subEl, '.swiper')[0] !== swiper.el) return false;
+              return true;
+            })[0];
+          }
+        }
+        if (Array.isArray(el) && el.length === 1) el = el[0];
+        Object.assign(swiper.pagination, {
+          el
+        });
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          if (params.type === 'bullets' && params.clickable) {
+            subEl.classList.add(params.clickableClass);
+          }
+          subEl.classList.add(params.modifierClass + params.type);
+          subEl.classList.add(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
+          if (params.type === 'bullets' && params.dynamicBullets) {
+            subEl.classList.add(`${params.modifierClass}${params.type}-dynamic`);
+            dynamicBulletIndex = 0;
+            if (params.dynamicMainBullets < 1) {
+              params.dynamicMainBullets = 1;
+            }
+          }
+          if (params.type === 'progressbar' && params.progressbarOpposite) {
+            subEl.classList.add(params.progressbarOppositeClass);
+          }
+          if (params.clickable) {
+            subEl.addEventListener('click', onBulletClick);
+          }
+          if (!swiper.enabled) {
+            subEl.classList.add(params.lockClass);
+          }
+        });
+      }
+      function destroy() {
+        const params = swiper.params.pagination;
+        if (isPaginationDisabled()) return;
+        let el = swiper.pagination.el;
+        if (el) {
+          el = makeElementsArray(el);
+          el.forEach(subEl => {
+            subEl.classList.remove(params.hiddenClass);
+            subEl.classList.remove(params.modifierClass + params.type);
+            subEl.classList.remove(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
+            if (params.clickable) {
+              subEl.removeEventListener('click', onBulletClick);
+            }
+          });
+        }
+        if (swiper.pagination.bullets) swiper.pagination.bullets.forEach(subEl => subEl.classList.remove(params.bulletActiveClass));
+      }
+      on('init', () => {
+        if (swiper.params.pagination.enabled === false) {
+          // eslint-disable-next-line
+          disable();
+        } else {
+          init();
+          render();
+          update();
+        }
+      });
+      on('activeIndexChange', () => {
+        if (typeof swiper.snapIndex === 'undefined') {
+          update();
+        }
+      });
+      on('snapIndexChange', () => {
+        update();
+      });
+      on('snapGridLengthChange', () => {
+        render();
+        update();
+      });
+      on('destroy', () => {
+        destroy();
+      });
+      on('enable disable', () => {
+        let {
+          el
+        } = swiper.pagination;
+        if (el) {
+          el = makeElementsArray(el);
+          el.forEach(subEl => subEl.classList[swiper.enabled ? 'remove' : 'add'](swiper.params.pagination.lockClass));
+        }
+      });
+      on('lock unlock', () => {
+        update();
+      });
+      on('click', (_s, e) => {
+        const targetEl = e.target;
+        let {
+          el
+        } = swiper.pagination;
+        if (!Array.isArray(el)) el = [el].filter(element => !!element);
+        if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && el && el.length > 0 && !targetEl.classList.contains(swiper.params.pagination.bulletClass)) {
+          if (swiper.navigation && (swiper.navigation.nextEl && targetEl === swiper.navigation.nextEl || swiper.navigation.prevEl && targetEl === swiper.navigation.prevEl)) return;
+          const isHidden = el[0].classList.contains(swiper.params.pagination.hiddenClass);
+          if (isHidden === true) {
+            emit('paginationShow');
+          } else {
+            emit('paginationHide');
+          }
+          el.forEach(subEl => subEl.classList.toggle(swiper.params.pagination.hiddenClass));
+        }
+      });
+      const enable = () => {
+        swiper.el.classList.remove(swiper.params.pagination.paginationDisabledClass);
+        let {
+          el
+        } = swiper.pagination;
+        if (el) {
+          el = makeElementsArray(el);
+          el.forEach(subEl => subEl.classList.remove(swiper.params.pagination.paginationDisabledClass));
+        }
+        init();
+        render();
+        update();
+      };
+      const disable = () => {
+        swiper.el.classList.add(swiper.params.pagination.paginationDisabledClass);
+        let {
+          el
+        } = swiper.pagination;
+        if (el) {
+          el = makeElementsArray(el);
+          el.forEach(subEl => subEl.classList.add(swiper.params.pagination.paginationDisabledClass));
+        }
+        destroy();
+      };
+      Object.assign(swiper.pagination, {
+        enable,
+        disable,
+        render,
+        update,
+        init,
+        destroy
+      });
+    }
+
+    function Scrollbar({
+      swiper,
+      extendParams,
+      on,
+      emit
+    }) {
+      const document = getDocument();
+      let isTouched = false;
+      let timeout = null;
+      let dragTimeout = null;
+      let dragStartPos;
+      let dragSize;
+      let trackSize;
+      let divider;
+      extendParams({
+        scrollbar: {
+          el: null,
+          dragSize: 'auto',
+          hide: false,
+          draggable: false,
+          snapOnRelease: true,
+          lockClass: 'swiper-scrollbar-lock',
+          dragClass: 'swiper-scrollbar-drag',
+          scrollbarDisabledClass: 'swiper-scrollbar-disabled',
+          horizontalClass: `swiper-scrollbar-horizontal`,
+          verticalClass: `swiper-scrollbar-vertical`
+        }
+      });
+      swiper.scrollbar = {
+        el: null,
+        dragEl: null
+      };
+      function setTranslate() {
+        if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+        const {
+          scrollbar,
+          rtlTranslate: rtl
+        } = swiper;
+        const {
+          dragEl,
+          el
+        } = scrollbar;
+        const params = swiper.params.scrollbar;
+        const progress = swiper.params.loop ? swiper.progressLoop : swiper.progress;
+        let newSize = dragSize;
+        let newPos = (trackSize - dragSize) * progress;
+        if (rtl) {
+          newPos = -newPos;
+          if (newPos > 0) {
+            newSize = dragSize - newPos;
+            newPos = 0;
+          } else if (-newPos + dragSize > trackSize) {
+            newSize = trackSize + newPos;
+          }
+        } else if (newPos < 0) {
+          newSize = dragSize + newPos;
+          newPos = 0;
+        } else if (newPos + dragSize > trackSize) {
+          newSize = trackSize - newPos;
+        }
+        if (swiper.isHorizontal()) {
+          dragEl.style.transform = `translate3d(${newPos}px, 0, 0)`;
+          dragEl.style.width = `${newSize}px`;
+        } else {
+          dragEl.style.transform = `translate3d(0px, ${newPos}px, 0)`;
+          dragEl.style.height = `${newSize}px`;
+        }
+        if (params.hide) {
+          clearTimeout(timeout);
+          el.style.opacity = 1;
+          timeout = setTimeout(() => {
+            el.style.opacity = 0;
+            el.style.transitionDuration = '400ms';
+          }, 1000);
+        }
+      }
+      function setTransition(duration) {
+        if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+        swiper.scrollbar.dragEl.style.transitionDuration = `${duration}ms`;
+      }
+      function updateSize() {
+        if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+        const {
+          scrollbar
+        } = swiper;
+        const {
+          dragEl,
+          el
+        } = scrollbar;
+        dragEl.style.width = '';
+        dragEl.style.height = '';
+        trackSize = swiper.isHorizontal() ? el.offsetWidth : el.offsetHeight;
+        divider = swiper.size / (swiper.virtualSize + swiper.params.slidesOffsetBefore - (swiper.params.centeredSlides ? swiper.snapGrid[0] : 0));
+        if (swiper.params.scrollbar.dragSize === 'auto') {
+          dragSize = trackSize * divider;
+        } else {
+          dragSize = parseInt(swiper.params.scrollbar.dragSize, 10);
+        }
+        if (swiper.isHorizontal()) {
+          dragEl.style.width = `${dragSize}px`;
+        } else {
+          dragEl.style.height = `${dragSize}px`;
+        }
+        if (divider >= 1) {
+          el.style.display = 'none';
+        } else {
+          el.style.display = '';
+        }
+        if (swiper.params.scrollbar.hide) {
+          el.style.opacity = 0;
+        }
+        if (swiper.params.watchOverflow && swiper.enabled) {
+          scrollbar.el.classList[swiper.isLocked ? 'add' : 'remove'](swiper.params.scrollbar.lockClass);
+        }
+      }
+      function getPointerPosition(e) {
+        return swiper.isHorizontal() ? e.clientX : e.clientY;
+      }
+      function setDragPosition(e) {
+        const {
+          scrollbar,
+          rtlTranslate: rtl
+        } = swiper;
+        const {
+          el
+        } = scrollbar;
+        let positionRatio;
+        positionRatio = (getPointerPosition(e) - elementOffset(el)[swiper.isHorizontal() ? 'left' : 'top'] - (dragStartPos !== null ? dragStartPos : dragSize / 2)) / (trackSize - dragSize);
+        positionRatio = Math.max(Math.min(positionRatio, 1), 0);
+        if (rtl) {
+          positionRatio = 1 - positionRatio;
+        }
+        const position = swiper.minTranslate() + (swiper.maxTranslate() - swiper.minTranslate()) * positionRatio;
+        swiper.updateProgress(position);
+        swiper.setTranslate(position);
+        swiper.updateActiveIndex();
+        swiper.updateSlidesClasses();
+      }
+      function onDragStart(e) {
+        const params = swiper.params.scrollbar;
+        const {
+          scrollbar,
+          wrapperEl
+        } = swiper;
+        const {
+          el,
+          dragEl
+        } = scrollbar;
+        isTouched = true;
+        dragStartPos = e.target === dragEl ? getPointerPosition(e) - e.target.getBoundingClientRect()[swiper.isHorizontal() ? 'left' : 'top'] : null;
+        e.preventDefault();
+        e.stopPropagation();
+        wrapperEl.style.transitionDuration = '100ms';
+        dragEl.style.transitionDuration = '100ms';
+        setDragPosition(e);
+        clearTimeout(dragTimeout);
+        el.style.transitionDuration = '0ms';
+        if (params.hide) {
+          el.style.opacity = 1;
+        }
+        if (swiper.params.cssMode) {
+          swiper.wrapperEl.style['scroll-snap-type'] = 'none';
+        }
+        emit('scrollbarDragStart', e);
+      }
+      function onDragMove(e) {
+        const {
+          scrollbar,
+          wrapperEl
+        } = swiper;
+        const {
+          el,
+          dragEl
+        } = scrollbar;
+        if (!isTouched) return;
+        if (e.preventDefault) e.preventDefault();else e.returnValue = false;
+        setDragPosition(e);
+        wrapperEl.style.transitionDuration = '0ms';
+        el.style.transitionDuration = '0ms';
+        dragEl.style.transitionDuration = '0ms';
+        emit('scrollbarDragMove', e);
+      }
+      function onDragEnd(e) {
+        const params = swiper.params.scrollbar;
+        const {
+          scrollbar,
+          wrapperEl
+        } = swiper;
+        const {
+          el
+        } = scrollbar;
+        if (!isTouched) return;
+        isTouched = false;
+        if (swiper.params.cssMode) {
+          swiper.wrapperEl.style['scroll-snap-type'] = '';
+          wrapperEl.style.transitionDuration = '';
+        }
+        if (params.hide) {
+          clearTimeout(dragTimeout);
+          dragTimeout = nextTick(() => {
+            el.style.opacity = 0;
+            el.style.transitionDuration = '400ms';
+          }, 1000);
+        }
+        emit('scrollbarDragEnd', e);
+        if (params.snapOnRelease) {
+          swiper.slideToClosest();
+        }
+      }
+      function events(method) {
+        const {
+          scrollbar,
+          params
+        } = swiper;
+        const el = scrollbar.el;
+        if (!el) return;
+        const target = el;
+        const activeListener = params.passiveListeners ? {
+          passive: false,
+          capture: false
+        } : false;
+        const passiveListener = params.passiveListeners ? {
+          passive: true,
+          capture: false
+        } : false;
+        if (!target) return;
+        const eventMethod = method === 'on' ? 'addEventListener' : 'removeEventListener';
+        target[eventMethod]('pointerdown', onDragStart, activeListener);
+        document[eventMethod]('pointermove', onDragMove, activeListener);
+        document[eventMethod]('pointerup', onDragEnd, passiveListener);
+      }
+      function enableDraggable() {
+        if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+        events('on');
+      }
+      function disableDraggable() {
+        if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+        events('off');
+      }
+      function init() {
+        const {
+          scrollbar,
+          el: swiperEl
+        } = swiper;
+        swiper.params.scrollbar = createElementIfNotDefined(swiper, swiper.originalParams.scrollbar, swiper.params.scrollbar, {
+          el: 'swiper-scrollbar'
+        });
+        const params = swiper.params.scrollbar;
+        if (!params.el) return;
+        let el;
+        if (typeof params.el === 'string' && swiper.isElement) {
+          el = swiper.el.shadowRoot.querySelector(params.el);
+        }
+        if (!el && typeof params.el === 'string') {
+          el = document.querySelectorAll(params.el);
+        } else if (!el) {
+          el = params.el;
+        }
+        if (swiper.params.uniqueNavElements && typeof params.el === 'string' && el.length > 1 && swiperEl.querySelectorAll(params.el).length === 1) {
+          el = swiperEl.querySelector(params.el);
+        }
+        if (el.length > 0) el = el[0];
+        el.classList.add(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
+        let dragEl;
+        if (el) {
+          dragEl = el.querySelector(`.${swiper.params.scrollbar.dragClass}`);
+          if (!dragEl) {
+            dragEl = createElement('div', swiper.params.scrollbar.dragClass);
+            el.append(dragEl);
+          }
+        }
+        Object.assign(scrollbar, {
+          el,
+          dragEl
+        });
+        if (params.draggable) {
+          enableDraggable();
+        }
+        if (el) {
+          el.classList[swiper.enabled ? 'remove' : 'add'](swiper.params.scrollbar.lockClass);
+        }
+      }
+      function destroy() {
+        const params = swiper.params.scrollbar;
+        const el = swiper.scrollbar.el;
+        if (el) {
+          el.classList.remove(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
+        }
+        disableDraggable();
+      }
+      on('init', () => {
+        if (swiper.params.scrollbar.enabled === false) {
+          // eslint-disable-next-line
+          disable();
+        } else {
+          init();
+          updateSize();
+          setTranslate();
+        }
+      });
+      on('update resize observerUpdate lock unlock', () => {
+        updateSize();
+      });
+      on('setTranslate', () => {
+        setTranslate();
+      });
+      on('setTransition', (_s, duration) => {
+        setTransition(duration);
+      });
+      on('enable disable', () => {
+        const {
+          el
+        } = swiper.scrollbar;
+        if (el) {
+          el.classList[swiper.enabled ? 'remove' : 'add'](swiper.params.scrollbar.lockClass);
+        }
+      });
+      on('destroy', () => {
+        destroy();
+      });
+      const enable = () => {
+        swiper.el.classList.remove(swiper.params.scrollbar.scrollbarDisabledClass);
+        if (swiper.scrollbar.el) {
+          swiper.scrollbar.el.classList.remove(swiper.params.scrollbar.scrollbarDisabledClass);
+        }
+        init();
+        updateSize();
+        setTranslate();
+      };
+      const disable = () => {
+        swiper.el.classList.add(swiper.params.scrollbar.scrollbarDisabledClass);
+        if (swiper.scrollbar.el) {
+          swiper.scrollbar.el.classList.add(swiper.params.scrollbar.scrollbarDisabledClass);
+        }
+        destroy();
+      };
+      Object.assign(swiper.scrollbar, {
+        enable,
+        disable,
+        updateSize,
+        setTranslate,
+        init,
+        destroy
+      });
+    }
+
+    function Parallax({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        parallax: {
+          enabled: false
+        }
+      });
+      const setTransform = (el, progress) => {
+        const {
+          rtl
+        } = swiper;
+        const rtlFactor = rtl ? -1 : 1;
+        const p = el.getAttribute('data-swiper-parallax') || '0';
+        let x = el.getAttribute('data-swiper-parallax-x');
+        let y = el.getAttribute('data-swiper-parallax-y');
+        const scale = el.getAttribute('data-swiper-parallax-scale');
+        const opacity = el.getAttribute('data-swiper-parallax-opacity');
+        const rotate = el.getAttribute('data-swiper-parallax-rotate');
+        if (x || y) {
+          x = x || '0';
+          y = y || '0';
+        } else if (swiper.isHorizontal()) {
+          x = p;
+          y = '0';
+        } else {
+          y = p;
+          x = '0';
+        }
+        if (x.indexOf('%') >= 0) {
+          x = `${parseInt(x, 10) * progress * rtlFactor}%`;
+        } else {
+          x = `${x * progress * rtlFactor}px`;
+        }
+        if (y.indexOf('%') >= 0) {
+          y = `${parseInt(y, 10) * progress}%`;
+        } else {
+          y = `${y * progress}px`;
+        }
+        if (typeof opacity !== 'undefined' && opacity !== null) {
+          const currentOpacity = opacity - (opacity - 1) * (1 - Math.abs(progress));
+          el.style.opacity = currentOpacity;
+        }
+        let transform = `translate3d(${x}, ${y}, 0px)`;
+        if (typeof scale !== 'undefined' && scale !== null) {
+          const currentScale = scale - (scale - 1) * (1 - Math.abs(progress));
+          transform += ` scale(${currentScale})`;
+        }
+        if (rotate && typeof rotate !== 'undefined' && rotate !== null) {
+          const currentRotate = rotate * progress * -1;
+          transform += ` rotate(${currentRotate}deg)`;
+        }
+        el.style.transform = transform;
+      };
+      const setTranslate = () => {
+        const {
+          el,
+          slides,
+          progress,
+          snapGrid
+        } = swiper;
+        elementChildren(el, '[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]').forEach(subEl => {
+          setTransform(subEl, progress);
+        });
+        slides.forEach((slideEl, slideIndex) => {
+          let slideProgress = slideEl.progress;
+          if (swiper.params.slidesPerGroup > 1 && swiper.params.slidesPerView !== 'auto') {
+            slideProgress += Math.ceil(slideIndex / 2) - progress * (snapGrid.length - 1);
+          }
+          slideProgress = Math.min(Math.max(slideProgress, -1), 1);
+          slideEl.querySelectorAll('[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale], [data-swiper-parallax-rotate]').forEach(subEl => {
+            setTransform(subEl, slideProgress);
+          });
+        });
+      };
+      const setTransition = (duration = swiper.params.speed) => {
+        const {
+          el
+        } = swiper;
+        el.querySelectorAll('[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]').forEach(parallaxEl => {
+          let parallaxDuration = parseInt(parallaxEl.getAttribute('data-swiper-parallax-duration'), 10) || duration;
+          if (duration === 0) parallaxDuration = 0;
+          parallaxEl.style.transitionDuration = `${parallaxDuration}ms`;
+        });
+      };
+      on('beforeInit', () => {
+        if (!swiper.params.parallax.enabled) return;
+        swiper.params.watchSlidesProgress = true;
+        swiper.originalParams.watchSlidesProgress = true;
+      });
+      on('init', () => {
+        if (!swiper.params.parallax.enabled) return;
+        setTranslate();
+      });
+      on('setTranslate', () => {
+        if (!swiper.params.parallax.enabled) return;
+        setTranslate();
+      });
+      on('setTransition', (_swiper, duration) => {
+        if (!swiper.params.parallax.enabled) return;
+        setTransition(duration);
+      });
+    }
+
+    function Zoom({
+      swiper,
+      extendParams,
+      on,
+      emit
+    }) {
+      const window = getWindow();
+      extendParams({
+        zoom: {
+          enabled: false,
+          maxRatio: 3,
+          minRatio: 1,
+          toggle: true,
+          containerClass: 'swiper-zoom-container',
+          zoomedSlideClass: 'swiper-slide-zoomed'
+        }
+      });
+      swiper.zoom = {
+        enabled: false
+      };
+      let currentScale = 1;
+      let isScaling = false;
+      let fakeGestureTouched;
+      let fakeGestureMoved;
+      const evCache = [];
+      const gesture = {
+        slideEl: undefined,
+        slideWidth: undefined,
+        slideHeight: undefined,
+        imageEl: undefined,
+        imageWrapEl: undefined,
+        maxRatio: 3
+      };
+      const image = {
+        isTouched: undefined,
+        isMoved: undefined,
+        currentX: undefined,
+        currentY: undefined,
+        minX: undefined,
+        minY: undefined,
+        maxX: undefined,
+        maxY: undefined,
+        width: undefined,
+        height: undefined,
+        startX: undefined,
+        startY: undefined,
+        touchesStart: {},
+        touchesCurrent: {}
+      };
+      const velocity = {
+        x: undefined,
+        y: undefined,
+        prevPositionX: undefined,
+        prevPositionY: undefined,
+        prevTime: undefined
+      };
+      let scale = 1;
+      Object.defineProperty(swiper.zoom, 'scale', {
+        get() {
+          return scale;
+        },
+        set(value) {
+          if (scale !== value) {
+            const imageEl = gesture.imageEl;
+            const slideEl = gesture.slideEl;
+            emit('zoomChange', value, imageEl, slideEl);
+          }
+          scale = value;
+        }
+      });
+      function getDistanceBetweenTouches() {
+        if (evCache.length < 2) return 1;
+        const x1 = evCache[0].pageX;
+        const y1 = evCache[0].pageY;
+        const x2 = evCache[1].pageX;
+        const y2 = evCache[1].pageY;
+        const distance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+        return distance;
+      }
+      function getScaleOrigin() {
+        if (evCache.length < 2) return {
+          x: null,
+          y: null
+        };
+        const box = gesture.imageEl.getBoundingClientRect();
+        return [(evCache[0].pageX + (evCache[1].pageX - evCache[0].pageX) / 2 - box.x) / currentScale, (evCache[0].pageY + (evCache[1].pageY - evCache[0].pageY) / 2 - box.y) / currentScale];
+      }
+      function getSlideSelector() {
+        return swiper.isElement ? `swiper-slide` : `.${swiper.params.slideClass}`;
+      }
+      function eventWithinSlide(e) {
+        const slideSelector = getSlideSelector();
+        if (e.target.matches(slideSelector)) return true;
+        if (swiper.slides.filter(slideEl => slideEl.contains(e.target)).length > 0) return true;
+        return false;
+      }
+      function eventWithinZoomContainer(e) {
+        const selector = `.${swiper.params.zoom.containerClass}`;
+        if (e.target.matches(selector)) return true;
+        if ([...swiper.el.querySelectorAll(selector)].filter(containerEl => containerEl.contains(e.target)).length > 0) return true;
+        return false;
+      }
+
+      // Events
+      function onGestureStart(e) {
+        if (e.pointerType === 'mouse') {
+          evCache.splice(0, evCache.length);
+        }
+        if (!eventWithinSlide(e)) return;
+        const params = swiper.params.zoom;
+        fakeGestureTouched = false;
+        fakeGestureMoved = false;
+        evCache.push(e);
+        if (evCache.length < 2) {
+          return;
+        }
+        fakeGestureTouched = true;
+        gesture.scaleStart = getDistanceBetweenTouches();
+        if (!gesture.slideEl) {
+          gesture.slideEl = e.target.closest(`.${swiper.params.slideClass}, swiper-slide`);
+          if (!gesture.slideEl) gesture.slideEl = swiper.slides[swiper.activeIndex];
+          let imageEl = gesture.slideEl.querySelector(`.${params.containerClass}`);
+          if (imageEl) {
+            imageEl = imageEl.querySelectorAll('picture, img, svg, canvas, .swiper-zoom-target')[0];
+          }
+          gesture.imageEl = imageEl;
+          if (imageEl) {
+            gesture.imageWrapEl = elementParents(gesture.imageEl, `.${params.containerClass}`)[0];
+          } else {
+            gesture.imageWrapEl = undefined;
+          }
+          if (!gesture.imageWrapEl) {
+            gesture.imageEl = undefined;
+            return;
+          }
+          gesture.maxRatio = gesture.imageWrapEl.getAttribute('data-swiper-zoom') || params.maxRatio;
+        }
+        if (gesture.imageEl) {
+          const [originX, originY] = getScaleOrigin();
+          gesture.imageEl.style.transformOrigin = `${originX}px ${originY}px`;
+          gesture.imageEl.style.transitionDuration = '0ms';
+        }
+        isScaling = true;
+      }
+      function onGestureChange(e) {
+        if (!eventWithinSlide(e)) return;
+        const params = swiper.params.zoom;
+        const zoom = swiper.zoom;
+        const pointerIndex = evCache.findIndex(cachedEv => cachedEv.pointerId === e.pointerId);
+        if (pointerIndex >= 0) evCache[pointerIndex] = e;
+        if (evCache.length < 2) {
+          return;
+        }
+        fakeGestureMoved = true;
+        gesture.scaleMove = getDistanceBetweenTouches();
+        if (!gesture.imageEl) {
+          return;
+        }
+        zoom.scale = gesture.scaleMove / gesture.scaleStart * currentScale;
+        if (zoom.scale > gesture.maxRatio) {
+          zoom.scale = gesture.maxRatio - 1 + (zoom.scale - gesture.maxRatio + 1) ** 0.5;
+        }
+        if (zoom.scale < params.minRatio) {
+          zoom.scale = params.minRatio + 1 - (params.minRatio - zoom.scale + 1) ** 0.5;
+        }
+        gesture.imageEl.style.transform = `translate3d(0,0,0) scale(${zoom.scale})`;
+      }
+      function onGestureEnd(e) {
+        if (!eventWithinSlide(e)) return;
+        if (e.pointerType === 'mouse' && e.type === 'pointerout') return;
+        const params = swiper.params.zoom;
+        const zoom = swiper.zoom;
+        const pointerIndex = evCache.findIndex(cachedEv => cachedEv.pointerId === e.pointerId);
+        if (pointerIndex >= 0) evCache.splice(pointerIndex, 1);
+        if (!fakeGestureTouched || !fakeGestureMoved) {
+          return;
+        }
+        fakeGestureTouched = false;
+        fakeGestureMoved = false;
+        if (!gesture.imageEl) return;
+        zoom.scale = Math.max(Math.min(zoom.scale, gesture.maxRatio), params.minRatio);
+        gesture.imageEl.style.transitionDuration = `${swiper.params.speed}ms`;
+        gesture.imageEl.style.transform = `translate3d(0,0,0) scale(${zoom.scale})`;
+        currentScale = zoom.scale;
+        isScaling = false;
+        if (zoom.scale === 1) gesture.slideEl = undefined;
+      }
+      function onTouchStart(e) {
+        const device = swiper.device;
+        if (!gesture.imageEl) return;
+        if (image.isTouched) return;
+        if (device.android && e.cancelable) e.preventDefault();
+        image.isTouched = true;
+        image.touchesStart.x = e.pageX;
+        image.touchesStart.y = e.pageY;
+      }
+      function onTouchMove(e) {
+        if (!eventWithinSlide(e) || !eventWithinZoomContainer(e)) return;
+        const zoom = swiper.zoom;
+        if (!gesture.imageEl) return;
+        swiper.allowClick = false;
+        if (!image.isTouched || !gesture.slideEl) return;
+        if (!image.isMoved) {
+          image.width = gesture.imageEl.offsetWidth;
+          image.height = gesture.imageEl.offsetHeight;
+          image.startX = getTranslate(gesture.imageWrapEl, 'x') || 0;
+          image.startY = getTranslate(gesture.imageWrapEl, 'y') || 0;
+          gesture.slideWidth = gesture.slideEl.offsetWidth;
+          gesture.slideHeight = gesture.slideEl.offsetHeight;
+          gesture.imageWrapEl.style.transitionDuration = '0ms';
+        }
+        // Define if we need image drag
+        const scaledWidth = image.width * zoom.scale;
+        const scaledHeight = image.height * zoom.scale;
+        if (scaledWidth < gesture.slideWidth && scaledHeight < gesture.slideHeight) return;
+        image.minX = Math.min(gesture.slideWidth / 2 - scaledWidth / 2, 0);
+        image.maxX = -image.minX;
+        image.minY = Math.min(gesture.slideHeight / 2 - scaledHeight / 2, 0);
+        image.maxY = -image.minY;
+        image.touchesCurrent.x = evCache.length > 0 ? evCache[0].pageX : e.pageX;
+        image.touchesCurrent.y = evCache.length > 0 ? evCache[0].pageY : e.pageY;
+        if (!image.isMoved && !isScaling) {
+          if (swiper.isHorizontal() && (Math.floor(image.minX) === Math.floor(image.startX) && image.touchesCurrent.x < image.touchesStart.x || Math.floor(image.maxX) === Math.floor(image.startX) && image.touchesCurrent.x > image.touchesStart.x)) {
+            image.isTouched = false;
+            return;
+          }
+          if (!swiper.isHorizontal() && (Math.floor(image.minY) === Math.floor(image.startY) && image.touchesCurrent.y < image.touchesStart.y || Math.floor(image.maxY) === Math.floor(image.startY) && image.touchesCurrent.y > image.touchesStart.y)) {
+            image.isTouched = false;
+            return;
+          }
+        }
+        if (e.cancelable) {
+          e.preventDefault();
+        }
+        e.stopPropagation();
+        image.isMoved = true;
+        image.currentX = image.touchesCurrent.x - image.touchesStart.x + image.startX;
+        image.currentY = image.touchesCurrent.y - image.touchesStart.y + image.startY;
+        if (image.currentX < image.minX) {
+          image.currentX = image.minX + 1 - (image.minX - image.currentX + 1) ** 0.8;
+        }
+        if (image.currentX > image.maxX) {
+          image.currentX = image.maxX - 1 + (image.currentX - image.maxX + 1) ** 0.8;
+        }
+        if (image.currentY < image.minY) {
+          image.currentY = image.minY + 1 - (image.minY - image.currentY + 1) ** 0.8;
+        }
+        if (image.currentY > image.maxY) {
+          image.currentY = image.maxY - 1 + (image.currentY - image.maxY + 1) ** 0.8;
+        }
+
+        // Velocity
+        if (!velocity.prevPositionX) velocity.prevPositionX = image.touchesCurrent.x;
+        if (!velocity.prevPositionY) velocity.prevPositionY = image.touchesCurrent.y;
+        if (!velocity.prevTime) velocity.prevTime = Date.now();
+        velocity.x = (image.touchesCurrent.x - velocity.prevPositionX) / (Date.now() - velocity.prevTime) / 2;
+        velocity.y = (image.touchesCurrent.y - velocity.prevPositionY) / (Date.now() - velocity.prevTime) / 2;
+        if (Math.abs(image.touchesCurrent.x - velocity.prevPositionX) < 2) velocity.x = 0;
+        if (Math.abs(image.touchesCurrent.y - velocity.prevPositionY) < 2) velocity.y = 0;
+        velocity.prevPositionX = image.touchesCurrent.x;
+        velocity.prevPositionY = image.touchesCurrent.y;
+        velocity.prevTime = Date.now();
+        gesture.imageWrapEl.style.transform = `translate3d(${image.currentX}px, ${image.currentY}px,0)`;
+      }
+      function onTouchEnd() {
+        const zoom = swiper.zoom;
+        if (!gesture.imageEl) return;
+        if (!image.isTouched || !image.isMoved) {
+          image.isTouched = false;
+          image.isMoved = false;
+          return;
+        }
+        image.isTouched = false;
+        image.isMoved = false;
+        let momentumDurationX = 300;
+        let momentumDurationY = 300;
+        const momentumDistanceX = velocity.x * momentumDurationX;
+        const newPositionX = image.currentX + momentumDistanceX;
+        const momentumDistanceY = velocity.y * momentumDurationY;
+        const newPositionY = image.currentY + momentumDistanceY;
+
+        // Fix duration
+        if (velocity.x !== 0) momentumDurationX = Math.abs((newPositionX - image.currentX) / velocity.x);
+        if (velocity.y !== 0) momentumDurationY = Math.abs((newPositionY - image.currentY) / velocity.y);
+        const momentumDuration = Math.max(momentumDurationX, momentumDurationY);
+        image.currentX = newPositionX;
+        image.currentY = newPositionY;
+
+        // Define if we need image drag
+        const scaledWidth = image.width * zoom.scale;
+        const scaledHeight = image.height * zoom.scale;
+        image.minX = Math.min(gesture.slideWidth / 2 - scaledWidth / 2, 0);
+        image.maxX = -image.minX;
+        image.minY = Math.min(gesture.slideHeight / 2 - scaledHeight / 2, 0);
+        image.maxY = -image.minY;
+        image.currentX = Math.max(Math.min(image.currentX, image.maxX), image.minX);
+        image.currentY = Math.max(Math.min(image.currentY, image.maxY), image.minY);
+        gesture.imageWrapEl.style.transitionDuration = `${momentumDuration}ms`;
+        gesture.imageWrapEl.style.transform = `translate3d(${image.currentX}px, ${image.currentY}px,0)`;
+      }
+      function onTransitionEnd() {
+        const zoom = swiper.zoom;
+        if (gesture.slideEl && swiper.previousIndex !== swiper.activeIndex) {
+          if (gesture.imageEl) {
+            gesture.imageEl.style.transform = 'translate3d(0,0,0) scale(1)';
+          }
+          if (gesture.imageWrapEl) {
+            gesture.imageWrapEl.style.transform = 'translate3d(0,0,0)';
+          }
+          zoom.scale = 1;
+          currentScale = 1;
+          gesture.slideEl = undefined;
+          gesture.imageEl = undefined;
+          gesture.imageWrapEl = undefined;
+        }
+      }
+      function zoomIn(e) {
+        const zoom = swiper.zoom;
+        const params = swiper.params.zoom;
+        if (!gesture.slideEl) {
+          if (e && e.target) {
+            gesture.slideEl = e.target.closest(`.${swiper.params.slideClass}, swiper-slide`);
+          }
+          if (!gesture.slideEl) {
+            if (swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual) {
+              gesture.slideEl = elementChildren(swiper.slidesEl, `.${swiper.params.slideActiveClass}`)[0];
+            } else {
+              gesture.slideEl = swiper.slides[swiper.activeIndex];
+            }
+          }
+          let imageEl = gesture.slideEl.querySelector(`.${params.containerClass}`);
+          if (imageEl) {
+            imageEl = imageEl.querySelectorAll('picture, img, svg, canvas, .swiper-zoom-target')[0];
+          }
+          gesture.imageEl = imageEl;
+          if (imageEl) {
+            gesture.imageWrapEl = elementParents(gesture.imageEl, `.${params.containerClass}`)[0];
+          } else {
+            gesture.imageWrapEl = undefined;
+          }
+        }
+        if (!gesture.imageEl || !gesture.imageWrapEl) return;
+        if (swiper.params.cssMode) {
+          swiper.wrapperEl.style.overflow = 'hidden';
+          swiper.wrapperEl.style.touchAction = 'none';
+        }
+        gesture.slideEl.classList.add(`${params.zoomedSlideClass}`);
+        let touchX;
+        let touchY;
+        let offsetX;
+        let offsetY;
+        let diffX;
+        let diffY;
+        let translateX;
+        let translateY;
+        let imageWidth;
+        let imageHeight;
+        let scaledWidth;
+        let scaledHeight;
+        let translateMinX;
+        let translateMinY;
+        let translateMaxX;
+        let translateMaxY;
+        let slideWidth;
+        let slideHeight;
+        if (typeof image.touchesStart.x === 'undefined' && e) {
+          touchX = e.pageX;
+          touchY = e.pageY;
+        } else {
+          touchX = image.touchesStart.x;
+          touchY = image.touchesStart.y;
+        }
+        const forceZoomRatio = typeof e === 'number' ? e : null;
+        if (currentScale === 1 && forceZoomRatio) {
+          touchX = undefined;
+          touchY = undefined;
+        }
+        zoom.scale = forceZoomRatio || gesture.imageWrapEl.getAttribute('data-swiper-zoom') || params.maxRatio;
+        currentScale = forceZoomRatio || gesture.imageWrapEl.getAttribute('data-swiper-zoom') || params.maxRatio;
+        if (e && !(currentScale === 1 && forceZoomRatio)) {
+          slideWidth = gesture.slideEl.offsetWidth;
+          slideHeight = gesture.slideEl.offsetHeight;
+          offsetX = elementOffset(gesture.slideEl).left + window.scrollX;
+          offsetY = elementOffset(gesture.slideEl).top + window.scrollY;
+          diffX = offsetX + slideWidth / 2 - touchX;
+          diffY = offsetY + slideHeight / 2 - touchY;
+          imageWidth = gesture.imageEl.offsetWidth;
+          imageHeight = gesture.imageEl.offsetHeight;
+          scaledWidth = imageWidth * zoom.scale;
+          scaledHeight = imageHeight * zoom.scale;
+          translateMinX = Math.min(slideWidth / 2 - scaledWidth / 2, 0);
+          translateMinY = Math.min(slideHeight / 2 - scaledHeight / 2, 0);
+          translateMaxX = -translateMinX;
+          translateMaxY = -translateMinY;
+          translateX = diffX * zoom.scale;
+          translateY = diffY * zoom.scale;
+          if (translateX < translateMinX) {
+            translateX = translateMinX;
+          }
+          if (translateX > translateMaxX) {
+            translateX = translateMaxX;
+          }
+          if (translateY < translateMinY) {
+            translateY = translateMinY;
+          }
+          if (translateY > translateMaxY) {
+            translateY = translateMaxY;
+          }
+        } else {
+          translateX = 0;
+          translateY = 0;
+        }
+        gesture.imageWrapEl.style.transitionDuration = '300ms';
+        gesture.imageWrapEl.style.transform = `translate3d(${translateX}px, ${translateY}px,0)`;
+        gesture.imageEl.style.transitionDuration = '300ms';
+        gesture.imageEl.style.transform = `translate3d(0,0,0) scale(${zoom.scale})`;
+      }
+      function zoomOut() {
+        const zoom = swiper.zoom;
+        const params = swiper.params.zoom;
+        if (!gesture.slideEl) {
+          if (swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual) {
+            gesture.slideEl = elementChildren(swiper.slidesEl, `.${swiper.params.slideActiveClass}`)[0];
+          } else {
+            gesture.slideEl = swiper.slides[swiper.activeIndex];
+          }
+          let imageEl = gesture.slideEl.querySelector(`.${params.containerClass}`);
+          if (imageEl) {
+            imageEl = imageEl.querySelectorAll('picture, img, svg, canvas, .swiper-zoom-target')[0];
+          }
+          gesture.imageEl = imageEl;
+          if (imageEl) {
+            gesture.imageWrapEl = elementParents(gesture.imageEl, `.${params.containerClass}`)[0];
+          } else {
+            gesture.imageWrapEl = undefined;
+          }
+        }
+        if (!gesture.imageEl || !gesture.imageWrapEl) return;
+        if (swiper.params.cssMode) {
+          swiper.wrapperEl.style.overflow = '';
+          swiper.wrapperEl.style.touchAction = '';
+        }
+        zoom.scale = 1;
+        currentScale = 1;
+        gesture.imageWrapEl.style.transitionDuration = '300ms';
+        gesture.imageWrapEl.style.transform = 'translate3d(0,0,0)';
+        gesture.imageEl.style.transitionDuration = '300ms';
+        gesture.imageEl.style.transform = 'translate3d(0,0,0) scale(1)';
+        gesture.slideEl.classList.remove(`${params.zoomedSlideClass}`);
+        gesture.slideEl = undefined;
+      }
+
+      // Toggle Zoom
+      function zoomToggle(e) {
+        const zoom = swiper.zoom;
+        if (zoom.scale && zoom.scale !== 1) {
+          // Zoom Out
+          zoomOut();
+        } else {
+          // Zoom In
+          zoomIn(e);
+        }
+      }
+      function getListeners() {
+        const passiveListener = swiper.params.passiveListeners ? {
+          passive: true,
+          capture: false
+        } : false;
+        const activeListenerWithCapture = swiper.params.passiveListeners ? {
+          passive: false,
+          capture: true
+        } : true;
+        return {
+          passiveListener,
+          activeListenerWithCapture
+        };
+      }
+
+      // Attach/Detach Events
+      function enable() {
+        const zoom = swiper.zoom;
+        if (zoom.enabled) return;
+        zoom.enabled = true;
+        const {
+          passiveListener,
+          activeListenerWithCapture
+        } = getListeners();
+
+        // Scale image
+
+        swiper.wrapperEl.addEventListener('pointerdown', onGestureStart, passiveListener);
+        swiper.wrapperEl.addEventListener('pointermove', onGestureChange, activeListenerWithCapture);
+        ['pointerup', 'pointercancel', 'pointerout'].forEach(eventName => {
+          swiper.wrapperEl.addEventListener(eventName, onGestureEnd, passiveListener);
+        });
+
+        // Move image
+        swiper.wrapperEl.addEventListener('pointermove', onTouchMove, activeListenerWithCapture);
+      }
+      function disable() {
+        const zoom = swiper.zoom;
+        if (!zoom.enabled) return;
+        zoom.enabled = false;
+        const {
+          passiveListener,
+          activeListenerWithCapture
+        } = getListeners();
+
+        // Scale image
+        swiper.wrapperEl.removeEventListener('pointerdown', onGestureStart, passiveListener);
+        swiper.wrapperEl.removeEventListener('pointermove', onGestureChange, activeListenerWithCapture);
+        ['pointerup', 'pointercancel', 'pointerout'].forEach(eventName => {
+          swiper.wrapperEl.removeEventListener(eventName, onGestureEnd, passiveListener);
+        });
+
+        // Move image
+        swiper.wrapperEl.removeEventListener('pointermove', onTouchMove, activeListenerWithCapture);
+      }
+      on('init', () => {
+        if (swiper.params.zoom.enabled) {
+          enable();
+        }
+      });
+      on('destroy', () => {
+        disable();
+      });
+      on('touchStart', (_s, e) => {
+        if (!swiper.zoom.enabled) return;
+        onTouchStart(e);
+      });
+      on('touchEnd', (_s, e) => {
+        if (!swiper.zoom.enabled) return;
+        onTouchEnd();
+      });
+      on('doubleTap', (_s, e) => {
+        if (!swiper.animating && swiper.params.zoom.enabled && swiper.zoom.enabled && swiper.params.zoom.toggle) {
+          zoomToggle(e);
+        }
+      });
+      on('transitionEnd', () => {
+        if (swiper.zoom.enabled && swiper.params.zoom.enabled) {
+          onTransitionEnd();
+        }
+      });
+      on('slideChange', () => {
+        if (swiper.zoom.enabled && swiper.params.zoom.enabled && swiper.params.cssMode) {
+          onTransitionEnd();
+        }
+      });
+      Object.assign(swiper.zoom, {
+        enable,
+        disable,
+        in: zoomIn,
+        out: zoomOut,
+        toggle: zoomToggle
+      });
+    }
+
+    /* eslint no-bitwise: ["error", { "allow": [">>"] }] */
+    function Controller({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        controller: {
+          control: undefined,
+          inverse: false,
+          by: 'slide' // or 'container'
+        }
+      });
+
+      swiper.controller = {
+        control: undefined
+      };
+      function LinearSpline(x, y) {
+        const binarySearch = function search() {
+          let maxIndex;
+          let minIndex;
+          let guess;
+          return (array, val) => {
+            minIndex = -1;
+            maxIndex = array.length;
+            while (maxIndex - minIndex > 1) {
+              guess = maxIndex + minIndex >> 1;
+              if (array[guess] <= val) {
+                minIndex = guess;
+              } else {
+                maxIndex = guess;
+              }
+            }
+            return maxIndex;
+          };
+        }();
+        this.x = x;
+        this.y = y;
+        this.lastIndex = x.length - 1;
+        // Given an x value (x2), return the expected y2 value:
+        // (x1,y1) is the known point before given value,
+        // (x3,y3) is the known point after given value.
+        let i1;
+        let i3;
+        this.interpolate = function interpolate(x2) {
+          if (!x2) return 0;
+
+          // Get the indexes of x1 and x3 (the array indexes before and after given x2):
+          i3 = binarySearch(this.x, x2);
+          i1 = i3 - 1;
+
+          // We have our indexes i1 & i3, so we can calculate already:
+          // y2 := ((x2−x1) × (y3−y1)) ÷ (x3−x1) + y1
+          return (x2 - this.x[i1]) * (this.y[i3] - this.y[i1]) / (this.x[i3] - this.x[i1]) + this.y[i1];
+        };
+        return this;
+      }
+      // xxx: for now i will just save one spline function to to
+      function getInterpolateFunction(c) {
+        if (!swiper.controller.spline) {
+          swiper.controller.spline = swiper.params.loop ? new LinearSpline(swiper.slidesGrid, c.slidesGrid) : new LinearSpline(swiper.snapGrid, c.snapGrid);
+        }
+      }
+      function setTranslate(_t, byController) {
+        const controlled = swiper.controller.control;
+        let multiplier;
+        let controlledTranslate;
+        const Swiper = swiper.constructor;
+        function setControlledTranslate(c) {
+          // this will create an Interpolate function based on the snapGrids
+          // x is the Grid of the scrolled scroller and y will be the controlled scroller
+          // it makes sense to create this only once and recall it for the interpolation
+          // the function does a lot of value caching for performance
+          const translate = swiper.rtlTranslate ? -swiper.translate : swiper.translate;
+          if (swiper.params.controller.by === 'slide') {
+            getInterpolateFunction(c);
+            // i am not sure why the values have to be multiplicated this way, tried to invert the snapGrid
+            // but it did not work out
+            controlledTranslate = -swiper.controller.spline.interpolate(-translate);
+          }
+          if (!controlledTranslate || swiper.params.controller.by === 'container') {
+            multiplier = (c.maxTranslate() - c.minTranslate()) / (swiper.maxTranslate() - swiper.minTranslate());
+            controlledTranslate = (translate - swiper.minTranslate()) * multiplier + c.minTranslate();
+          }
+          if (swiper.params.controller.inverse) {
+            controlledTranslate = c.maxTranslate() - controlledTranslate;
+          }
+          c.updateProgress(controlledTranslate);
+          c.setTranslate(controlledTranslate, swiper);
+          c.updateActiveIndex();
+          c.updateSlidesClasses();
+        }
+        if (Array.isArray(controlled)) {
+          for (let i = 0; i < controlled.length; i += 1) {
+            if (controlled[i] !== byController && controlled[i] instanceof Swiper) {
+              setControlledTranslate(controlled[i]);
+            }
+          }
+        } else if (controlled instanceof Swiper && byController !== controlled) {
+          setControlledTranslate(controlled);
+        }
+      }
+      function setTransition(duration, byController) {
+        const Swiper = swiper.constructor;
+        const controlled = swiper.controller.control;
+        let i;
+        function setControlledTransition(c) {
+          c.setTransition(duration, swiper);
+          if (duration !== 0) {
+            c.transitionStart();
+            if (c.params.autoHeight) {
+              nextTick(() => {
+                c.updateAutoHeight();
+              });
+            }
+            elementTransitionEnd(c.wrapperEl, () => {
+              if (!controlled) return;
+              c.transitionEnd();
+            });
+          }
+        }
+        if (Array.isArray(controlled)) {
+          for (i = 0; i < controlled.length; i += 1) {
+            if (controlled[i] !== byController && controlled[i] instanceof Swiper) {
+              setControlledTransition(controlled[i]);
+            }
+          }
+        } else if (controlled instanceof Swiper && byController !== controlled) {
+          setControlledTransition(controlled);
+        }
+      }
+      function removeSpline() {
+        if (!swiper.controller.control) return;
+        if (swiper.controller.spline) {
+          swiper.controller.spline = undefined;
+          delete swiper.controller.spline;
+        }
+      }
+      on('beforeInit', () => {
+        if (typeof window !== 'undefined' && (
+        // eslint-disable-line
+        typeof swiper.params.controller.control === 'string' || swiper.params.controller.control instanceof HTMLElement)) {
+          const controlElement = document.querySelector(swiper.params.controller.control);
+          if (controlElement && controlElement.swiper) {
+            swiper.controller.control = controlElement.swiper;
+          } else if (controlElement) {
+            const onControllerSwiper = e => {
+              swiper.controller.control = e.detail[0];
+              swiper.update();
+              controlElement.removeEventListener('init', onControllerSwiper);
+            };
+            controlElement.addEventListener('init', onControllerSwiper);
+          }
+          return;
+        }
+        swiper.controller.control = swiper.params.controller.control;
+      });
+      on('update', () => {
+        removeSpline();
+      });
+      on('resize', () => {
+        removeSpline();
+      });
+      on('observerUpdate', () => {
+        removeSpline();
+      });
+      on('setTranslate', (_s, translate, byController) => {
+        if (!swiper.controller.control) return;
+        swiper.controller.setTranslate(translate, byController);
+      });
+      on('setTransition', (_s, duration, byController) => {
+        if (!swiper.controller.control) return;
+        swiper.controller.setTransition(duration, byController);
+      });
+      Object.assign(swiper.controller, {
+        setTranslate,
+        setTransition
+      });
+    }
+
+    function A11y({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        a11y: {
+          enabled: true,
+          notificationClass: 'swiper-notification',
+          prevSlideMessage: 'Previous slide',
+          nextSlideMessage: 'Next slide',
+          firstSlideMessage: 'This is the first slide',
+          lastSlideMessage: 'This is the last slide',
+          paginationBulletMessage: 'Go to slide {{index}}',
+          slideLabelMessage: '{{index}} / {{slidesLength}}',
+          containerMessage: null,
+          containerRoleDescriptionMessage: null,
+          itemRoleDescriptionMessage: null,
+          slideRole: 'group',
+          id: null
+        }
+      });
+      swiper.a11y = {
+        clicked: false
+      };
+      let liveRegion = null;
+      function notify(message) {
+        const notification = liveRegion;
+        if (notification.length === 0) return;
+        notification.innerHTML = '';
+        notification.innerHTML = message;
+      }
+      const makeElementsArray = el => {
+        if (!Array.isArray(el)) el = [el].filter(e => !!e);
+        return el;
+      };
+      function getRandomNumber(size = 16) {
+        const randomChar = () => Math.round(16 * Math.random()).toString(16);
+        return 'x'.repeat(size).replace(/x/g, randomChar);
+      }
+      function makeElFocusable(el) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('tabIndex', '0');
+        });
+      }
+      function makeElNotFocusable(el) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('tabIndex', '-1');
+        });
+      }
+      function addElRole(el, role) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('role', role);
+        });
+      }
+      function addElRoleDescription(el, description) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('aria-roledescription', description);
+        });
+      }
+      function addElControls(el, controls) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('aria-controls', controls);
+        });
+      }
+      function addElLabel(el, label) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('aria-label', label);
+        });
+      }
+      function addElId(el, id) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('id', id);
+        });
+      }
+      function addElLive(el, live) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('aria-live', live);
+        });
+      }
+      function disableEl(el) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('aria-disabled', true);
+        });
+      }
+      function enableEl(el) {
+        el = makeElementsArray(el);
+        el.forEach(subEl => {
+          subEl.setAttribute('aria-disabled', false);
+        });
+      }
+      function onEnterOrSpaceKey(e) {
+        if (e.keyCode !== 13 && e.keyCode !== 32) return;
+        const params = swiper.params.a11y;
+        const targetEl = e.target;
+        if (swiper.pagination && swiper.pagination.el && (targetEl === swiper.pagination.el || swiper.pagination.el.contains(e.target))) {
+          if (!e.target.matches(classesToSelector(swiper.params.pagination.bulletClass))) return;
+        }
+        if (swiper.navigation && swiper.navigation.nextEl && targetEl === swiper.navigation.nextEl) {
+          if (!(swiper.isEnd && !swiper.params.loop)) {
+            swiper.slideNext();
+          }
+          if (swiper.isEnd) {
+            notify(params.lastSlideMessage);
+          } else {
+            notify(params.nextSlideMessage);
+          }
+        }
+        if (swiper.navigation && swiper.navigation.prevEl && targetEl === swiper.navigation.prevEl) {
+          if (!(swiper.isBeginning && !swiper.params.loop)) {
+            swiper.slidePrev();
+          }
+          if (swiper.isBeginning) {
+            notify(params.firstSlideMessage);
+          } else {
+            notify(params.prevSlideMessage);
+          }
+        }
+        if (swiper.pagination && targetEl.matches(classesToSelector(swiper.params.pagination.bulletClass))) {
+          targetEl.click();
+        }
+      }
+      function updateNavigation() {
+        if (swiper.params.loop || swiper.params.rewind || !swiper.navigation) return;
+        const {
+          nextEl,
+          prevEl
+        } = swiper.navigation;
+        if (prevEl) {
+          if (swiper.isBeginning) {
+            disableEl(prevEl);
+            makeElNotFocusable(prevEl);
+          } else {
+            enableEl(prevEl);
+            makeElFocusable(prevEl);
+          }
+        }
+        if (nextEl) {
+          if (swiper.isEnd) {
+            disableEl(nextEl);
+            makeElNotFocusable(nextEl);
+          } else {
+            enableEl(nextEl);
+            makeElFocusable(nextEl);
+          }
+        }
+      }
+      function hasPagination() {
+        return swiper.pagination && swiper.pagination.bullets && swiper.pagination.bullets.length;
+      }
+      function hasClickablePagination() {
+        return hasPagination() && swiper.params.pagination.clickable;
+      }
+      function updatePagination() {
+        const params = swiper.params.a11y;
+        if (!hasPagination()) return;
+        swiper.pagination.bullets.forEach(bulletEl => {
+          if (swiper.params.pagination.clickable) {
+            makeElFocusable(bulletEl);
+            if (!swiper.params.pagination.renderBullet) {
+              addElRole(bulletEl, 'button');
+              addElLabel(bulletEl, params.paginationBulletMessage.replace(/\{\{index\}\}/, elementIndex(bulletEl) + 1));
+            }
+          }
+          if (bulletEl.matches(`.${swiper.params.pagination.bulletActiveClass}`)) {
+            bulletEl.setAttribute('aria-current', 'true');
+          } else {
+            bulletEl.removeAttribute('aria-current');
+          }
+        });
+      }
+      const initNavEl = (el, wrapperId, message) => {
+        makeElFocusable(el);
+        if (el.tagName !== 'BUTTON') {
+          addElRole(el, 'button');
+          el.addEventListener('keydown', onEnterOrSpaceKey);
+        }
+        addElLabel(el, message);
+        addElControls(el, wrapperId);
+      };
+      const handlePointerDown = () => {
+        swiper.a11y.clicked = true;
+      };
+      const handlePointerUp = () => {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            if (!swiper.destroyed) {
+              swiper.a11y.clicked = false;
+            }
+          });
+        });
+      };
+      const handleFocus = e => {
+        if (swiper.a11y.clicked) return;
+        const slideEl = e.target.closest(`.${swiper.params.slideClass}, swiper-slide`);
+        if (!slideEl || !swiper.slides.includes(slideEl)) return;
+        const isActive = swiper.slides.indexOf(slideEl) === swiper.activeIndex;
+        const isVisible = swiper.params.watchSlidesProgress && swiper.visibleSlides && swiper.visibleSlides.includes(slideEl);
+        if (isActive || isVisible) return;
+        if (e.sourceCapabilities && e.sourceCapabilities.firesTouchEvents) return;
+        if (swiper.isHorizontal()) {
+          swiper.el.scrollLeft = 0;
+        } else {
+          swiper.el.scrollTop = 0;
+        }
+        swiper.slideTo(swiper.slides.indexOf(slideEl), 0);
+      };
+      const initSlides = () => {
+        const params = swiper.params.a11y;
+        if (params.itemRoleDescriptionMessage) {
+          addElRoleDescription(swiper.slides, params.itemRoleDescriptionMessage);
+        }
+        if (params.slideRole) {
+          addElRole(swiper.slides, params.slideRole);
+        }
+        const slidesLength = swiper.slides.length;
+        if (params.slideLabelMessage) {
+          swiper.slides.forEach((slideEl, index) => {
+            const slideIndex = swiper.params.loop ? parseInt(slideEl.getAttribute('data-swiper-slide-index'), 10) : index;
+            const ariaLabelMessage = params.slideLabelMessage.replace(/\{\{index\}\}/, slideIndex + 1).replace(/\{\{slidesLength\}\}/, slidesLength);
+            addElLabel(slideEl, ariaLabelMessage);
+          });
+        }
+      };
+      const init = () => {
+        const params = swiper.params.a11y;
+        swiper.el.append(liveRegion);
+
+        // Container
+        const containerEl = swiper.el;
+        if (params.containerRoleDescriptionMessage) {
+          addElRoleDescription(containerEl, params.containerRoleDescriptionMessage);
+        }
+        if (params.containerMessage) {
+          addElLabel(containerEl, params.containerMessage);
+        }
+
+        // Wrapper
+        const wrapperEl = swiper.wrapperEl;
+        const wrapperId = params.id || wrapperEl.getAttribute('id') || `swiper-wrapper-${getRandomNumber(16)}`;
+        const live = swiper.params.autoplay && swiper.params.autoplay.enabled ? 'off' : 'polite';
+        addElId(wrapperEl, wrapperId);
+        addElLive(wrapperEl, live);
+
+        // Slide
+        initSlides();
+
+        // Navigation
+        let {
+          nextEl,
+          prevEl
+        } = swiper.navigation ? swiper.navigation : {};
+        nextEl = makeElementsArray(nextEl);
+        prevEl = makeElementsArray(prevEl);
+        if (nextEl) {
+          nextEl.forEach(el => initNavEl(el, wrapperId, params.nextSlideMessage));
+        }
+        if (prevEl) {
+          prevEl.forEach(el => initNavEl(el, wrapperId, params.prevSlideMessage));
+        }
+
+        // Pagination
+        if (hasClickablePagination()) {
+          const paginationEl = Array.isArray(swiper.pagination.el) ? swiper.pagination.el : [swiper.pagination.el];
+          paginationEl.forEach(el => {
+            el.addEventListener('keydown', onEnterOrSpaceKey);
+          });
+        }
+
+        // Tab focus
+        swiper.el.addEventListener('focus', handleFocus, true);
+        swiper.el.addEventListener('pointerdown', handlePointerDown, true);
+        swiper.el.addEventListener('pointerup', handlePointerUp, true);
+      };
+      function destroy() {
+        if (liveRegion && liveRegion.length > 0) liveRegion.remove();
+        let {
+          nextEl,
+          prevEl
+        } = swiper.navigation ? swiper.navigation : {};
+        nextEl = makeElementsArray(nextEl);
+        prevEl = makeElementsArray(prevEl);
+        if (nextEl) {
+          nextEl.forEach(el => el.removeEventListener('keydown', onEnterOrSpaceKey));
+        }
+        if (prevEl) {
+          prevEl.forEach(el => el.removeEventListener('keydown', onEnterOrSpaceKey));
+        }
+
+        // Pagination
+        if (hasClickablePagination()) {
+          const paginationEl = Array.isArray(swiper.pagination.el) ? swiper.pagination.el : [swiper.pagination.el];
+          paginationEl.forEach(el => {
+            el.removeEventListener('keydown', onEnterOrSpaceKey);
+          });
+        }
+
+        // Tab focus
+        swiper.el.removeEventListener('focus', handleFocus, true);
+        swiper.el.removeEventListener('pointerdown', handlePointerDown, true);
+        swiper.el.removeEventListener('pointerup', handlePointerUp, true);
+      }
+      on('beforeInit', () => {
+        liveRegion = createElement('span', swiper.params.a11y.notificationClass);
+        liveRegion.setAttribute('aria-live', 'assertive');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        if (swiper.isElement) {
+          liveRegion.setAttribute('slot', 'container-end');
+        }
+      });
+      on('afterInit', () => {
+        if (!swiper.params.a11y.enabled) return;
+        init();
+      });
+      on('slidesLengthChange snapGridLengthChange slidesGridLengthChange', () => {
+        if (!swiper.params.a11y.enabled) return;
+        initSlides();
+      });
+      on('fromEdge toEdge afterInit lock unlock', () => {
+        if (!swiper.params.a11y.enabled) return;
+        updateNavigation();
+      });
+      on('paginationUpdate', () => {
+        if (!swiper.params.a11y.enabled) return;
+        updatePagination();
+      });
+      on('destroy', () => {
+        if (!swiper.params.a11y.enabled) return;
+        destroy();
+      });
+    }
+
+    function History({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        history: {
+          enabled: false,
+          root: '',
+          replaceState: false,
+          key: 'slides',
+          keepQuery: false
+        }
+      });
+      let initialized = false;
+      let paths = {};
+      const slugify = text => {
+        return text.toString().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-').replace(/^-+/, '').replace(/-+$/, '');
+      };
+      const getPathValues = urlOverride => {
+        const window = getWindow();
+        let location;
+        if (urlOverride) {
+          location = new URL(urlOverride);
+        } else {
+          location = window.location;
+        }
+        const pathArray = location.pathname.slice(1).split('/').filter(part => part !== '');
+        const total = pathArray.length;
+        const key = pathArray[total - 2];
+        const value = pathArray[total - 1];
+        return {
+          key,
+          value
+        };
+      };
+      const setHistory = (key, index) => {
+        const window = getWindow();
+        if (!initialized || !swiper.params.history.enabled) return;
+        let location;
+        if (swiper.params.url) {
+          location = new URL(swiper.params.url);
+        } else {
+          location = window.location;
+        }
+        const slide = swiper.slides[index];
+        let value = slugify(slide.getAttribute('data-history'));
+        if (swiper.params.history.root.length > 0) {
+          let root = swiper.params.history.root;
+          if (root[root.length - 1] === '/') root = root.slice(0, root.length - 1);
+          value = `${root}/${key ? `${key}/` : ''}${value}`;
+        } else if (!location.pathname.includes(key)) {
+          value = `${key ? `${key}/` : ''}${value}`;
+        }
+        if (swiper.params.history.keepQuery) {
+          value += location.search;
+        }
+        const currentState = window.history.state;
+        if (currentState && currentState.value === value) {
+          return;
+        }
+        if (swiper.params.history.replaceState) {
+          window.history.replaceState({
+            value
+          }, null, value);
+        } else {
+          window.history.pushState({
+            value
+          }, null, value);
+        }
+      };
+      const scrollToSlide = (speed, value, runCallbacks) => {
+        if (value) {
+          for (let i = 0, length = swiper.slides.length; i < length; i += 1) {
+            const slide = swiper.slides[i];
+            const slideHistory = slugify(slide.getAttribute('data-history'));
+            if (slideHistory === value) {
+              const index = swiper.getSlideIndex(slide);
+              swiper.slideTo(index, speed, runCallbacks);
+            }
+          }
+        } else {
+          swiper.slideTo(0, speed, runCallbacks);
+        }
+      };
+      const setHistoryPopState = () => {
+        paths = getPathValues(swiper.params.url);
+        scrollToSlide(swiper.params.speed, paths.value, false);
+      };
+      const init = () => {
+        const window = getWindow();
+        if (!swiper.params.history) return;
+        if (!window.history || !window.history.pushState) {
+          swiper.params.history.enabled = false;
+          swiper.params.hashNavigation.enabled = true;
+          return;
+        }
+        initialized = true;
+        paths = getPathValues(swiper.params.url);
+        if (!paths.key && !paths.value) {
+          if (!swiper.params.history.replaceState) {
+            window.addEventListener('popstate', setHistoryPopState);
+          }
+          return;
+        }
+        scrollToSlide(0, paths.value, swiper.params.runCallbacksOnInit);
+        if (!swiper.params.history.replaceState) {
+          window.addEventListener('popstate', setHistoryPopState);
+        }
+      };
+      const destroy = () => {
+        const window = getWindow();
+        if (!swiper.params.history.replaceState) {
+          window.removeEventListener('popstate', setHistoryPopState);
+        }
+      };
+      on('init', () => {
+        if (swiper.params.history.enabled) {
+          init();
+        }
+      });
+      on('destroy', () => {
+        if (swiper.params.history.enabled) {
+          destroy();
+        }
+      });
+      on('transitionEnd _freeModeNoMomentumRelease', () => {
+        if (initialized) {
+          setHistory(swiper.params.history.key, swiper.activeIndex);
+        }
+      });
+      on('slideChange', () => {
+        if (initialized && swiper.params.cssMode) {
+          setHistory(swiper.params.history.key, swiper.activeIndex);
+        }
+      });
+    }
+
+    function HashNavigation({
+      swiper,
+      extendParams,
+      emit,
+      on
+    }) {
+      let initialized = false;
+      const document = getDocument();
+      const window = getWindow();
+      extendParams({
+        hashNavigation: {
+          enabled: false,
+          replaceState: false,
+          watchState: false
+        }
+      });
+      const onHashChange = () => {
+        emit('hashChange');
+        const newHash = document.location.hash.replace('#', '');
+        const activeSlideHash = swiper.slides[swiper.activeIndex].getAttribute('data-hash');
+        if (newHash !== activeSlideHash) {
+          const newIndex = swiper.getSlideIndex(elementChildren(swiper.slidesEl, `.${swiper.params.slideClass}[data-hash="${newHash}"], swiper-slide[data-hash="${newHash}"]`)[0]);
+          if (typeof newIndex === 'undefined') return;
+          swiper.slideTo(newIndex);
+        }
+      };
+      const setHash = () => {
+        if (!initialized || !swiper.params.hashNavigation.enabled) return;
+        if (swiper.params.hashNavigation.replaceState && window.history && window.history.replaceState) {
+          window.history.replaceState(null, null, `#${swiper.slides[swiper.activeIndex].getAttribute('data-hash')}` || '');
+          emit('hashSet');
+        } else {
+          const slide = swiper.slides[swiper.activeIndex];
+          const hash = slide.getAttribute('data-hash') || slide.getAttribute('data-history');
+          document.location.hash = hash || '';
+          emit('hashSet');
+        }
+      };
+      const init = () => {
+        if (!swiper.params.hashNavigation.enabled || swiper.params.history && swiper.params.history.enabled) return;
+        initialized = true;
+        const hash = document.location.hash.replace('#', '');
+        if (hash) {
+          const speed = 0;
+          for (let i = 0, length = swiper.slides.length; i < length; i += 1) {
+            const slide = swiper.slides[i];
+            const slideHash = slide.getAttribute('data-hash') || slide.getAttribute('data-history');
+            if (slideHash === hash) {
+              const index = swiper.getSlideIndex(slide);
+              swiper.slideTo(index, speed, swiper.params.runCallbacksOnInit, true);
+            }
+          }
+        }
+        if (swiper.params.hashNavigation.watchState) {
+          window.addEventListener('hashchange', onHashChange);
+        }
+      };
+      const destroy = () => {
+        if (swiper.params.hashNavigation.watchState) {
+          window.removeEventListener('hashchange', onHashChange);
+        }
+      };
+      on('init', () => {
+        if (swiper.params.hashNavigation.enabled) {
+          init();
+        }
+      });
+      on('destroy', () => {
+        if (swiper.params.hashNavigation.enabled) {
+          destroy();
+        }
+      });
+      on('transitionEnd _freeModeNoMomentumRelease', () => {
+        if (initialized) {
+          setHash();
+        }
+      });
+      on('slideChange', () => {
+        if (initialized && swiper.params.cssMode) {
+          setHash();
+        }
+      });
+    }
+
+    /* eslint no-underscore-dangle: "off" */
+    function Autoplay({
+      swiper,
+      extendParams,
+      on,
+      emit,
+      params
+    }) {
+      swiper.autoplay = {
+        running: false,
+        paused: false,
+        timeLeft: 0
+      };
+      extendParams({
+        autoplay: {
+          enabled: false,
+          delay: 3000,
+          waitForTransition: true,
+          disableOnInteraction: true,
+          stopOnLastSlide: false,
+          reverseDirection: false,
+          pauseOnMouseEnter: false
+        }
+      });
+      let timeout;
+      let raf;
+      let autoplayDelayTotal = params && params.autoplay ? params.autoplay.delay : 3000;
+      let autoplayDelayCurrent = params && params.autoplay ? params.autoplay.delay : 3000;
+      let autoplayTimeLeft;
+      let autoplayStartTime = new Date().getTime;
+      let wasPaused;
+      let isTouched;
+      let pausedByTouch;
+      let touchStartTimeout;
+      let slideChanged;
+      let pausedByInteraction;
+      function onTransitionEnd(e) {
+        if (!swiper || swiper.destroyed || !swiper.wrapperEl) return;
+        if (e.target !== swiper.wrapperEl) return;
+        swiper.wrapperEl.removeEventListener('transitionend', onTransitionEnd);
+        resume();
+      }
+      const calcTimeLeft = () => {
+        if (swiper.destroyed || !swiper.autoplay.running) return;
+        if (swiper.autoplay.paused) {
+          wasPaused = true;
+        } else if (wasPaused) {
+          autoplayDelayCurrent = autoplayTimeLeft;
+          wasPaused = false;
+        }
+        const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - new Date().getTime();
+        swiper.autoplay.timeLeft = timeLeft;
+        emit('autoplayTimeLeft', timeLeft, timeLeft / autoplayDelayTotal);
+        raf = requestAnimationFrame(() => {
+          calcTimeLeft();
+        });
+      };
+      const getSlideDelay = () => {
+        let activeSlideEl;
+        if (swiper.virtual && swiper.params.virtual.enabled) {
+          activeSlideEl = swiper.slides.filter(slideEl => slideEl.classList.contains('swiper-slide-active'))[0];
+        } else {
+          activeSlideEl = swiper.slides[swiper.activeIndex];
+        }
+        if (!activeSlideEl) return undefined;
+        const currentSlideDelay = parseInt(activeSlideEl.getAttribute('data-swiper-autoplay'), 10);
+        return currentSlideDelay;
+      };
+      const run = delayForce => {
+        if (swiper.destroyed || !swiper.autoplay.running) return;
+        cancelAnimationFrame(raf);
+        calcTimeLeft();
+        let delay = typeof delayForce === 'undefined' ? swiper.params.autoplay.delay : delayForce;
+        autoplayDelayTotal = swiper.params.autoplay.delay;
+        autoplayDelayCurrent = swiper.params.autoplay.delay;
+        const currentSlideDelay = getSlideDelay();
+        if (!Number.isNaN(currentSlideDelay) && currentSlideDelay > 0 && typeof delayForce === 'undefined') {
+          delay = currentSlideDelay;
+          autoplayDelayTotal = currentSlideDelay;
+          autoplayDelayCurrent = currentSlideDelay;
+        }
+        autoplayTimeLeft = delay;
+        const speed = swiper.params.speed;
+        const proceed = () => {
+          if (!swiper || swiper.destroyed) return;
+          if (swiper.params.autoplay.reverseDirection) {
+            if (!swiper.isBeginning || swiper.params.loop || swiper.params.rewind) {
+              swiper.slidePrev(speed, true, true);
+              emit('autoplay');
+            } else if (!swiper.params.autoplay.stopOnLastSlide) {
+              swiper.slideTo(swiper.slides.length - 1, speed, true, true);
+              emit('autoplay');
+            }
+          } else {
+            if (!swiper.isEnd || swiper.params.loop || swiper.params.rewind) {
+              swiper.slideNext(speed, true, true);
+              emit('autoplay');
+            } else if (!swiper.params.autoplay.stopOnLastSlide) {
+              swiper.slideTo(0, speed, true, true);
+              emit('autoplay');
+            }
+          }
+          if (swiper.params.cssMode) {
+            autoplayStartTime = new Date().getTime();
+            requestAnimationFrame(() => {
+              run();
+            });
+          }
+        };
+        if (delay > 0) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            proceed();
+          }, delay);
+        } else {
+          requestAnimationFrame(() => {
+            proceed();
+          });
+        }
+
+        // eslint-disable-next-line
+        return delay;
+      };
+      const start = () => {
+        swiper.autoplay.running = true;
+        run();
+        emit('autoplayStart');
+      };
+      const stop = () => {
+        swiper.autoplay.running = false;
+        clearTimeout(timeout);
+        cancelAnimationFrame(raf);
+        emit('autoplayStop');
+      };
+      const pause = (internal, reset) => {
+        if (swiper.destroyed || !swiper.autoplay.running) return;
+        clearTimeout(timeout);
+        if (!internal) {
+          pausedByInteraction = true;
+        }
+        const proceed = () => {
+          emit('autoplayPause');
+          if (swiper.params.autoplay.waitForTransition) {
+            swiper.wrapperEl.addEventListener('transitionend', onTransitionEnd);
+          } else {
+            resume();
+          }
+        };
+        swiper.autoplay.paused = true;
+        if (reset) {
+          if (slideChanged) {
+            autoplayTimeLeft = swiper.params.autoplay.delay;
+          }
+          slideChanged = false;
+          proceed();
+          return;
+        }
+        const delay = autoplayTimeLeft || swiper.params.autoplay.delay;
+        autoplayTimeLeft = delay - (new Date().getTime() - autoplayStartTime);
+        if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop) return;
+        if (autoplayTimeLeft < 0) autoplayTimeLeft = 0;
+        proceed();
+      };
+      const resume = () => {
+        if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop || swiper.destroyed || !swiper.autoplay.running) return;
+        autoplayStartTime = new Date().getTime();
+        if (pausedByInteraction) {
+          pausedByInteraction = false;
+          run(autoplayTimeLeft);
+        } else {
+          run();
+        }
+        swiper.autoplay.paused = false;
+        emit('autoplayResume');
+      };
+      const onVisibilityChange = () => {
+        if (swiper.destroyed || !swiper.autoplay.running) return;
+        const document = getDocument();
+        if (document.visibilityState === 'hidden') {
+          pausedByInteraction = true;
+          pause(true);
+        }
+        if (document.visibilityState === 'visible') {
+          resume();
+        }
+      };
+      const onPointerEnter = e => {
+        if (e.pointerType !== 'mouse') return;
+        pausedByInteraction = true;
+        pause(true);
+      };
+      const onPointerLeave = e => {
+        if (e.pointerType !== 'mouse') return;
+        if (swiper.autoplay.paused) {
+          resume();
+        }
+      };
+      const attachMouseEvents = () => {
+        if (swiper.params.autoplay.pauseOnMouseEnter) {
+          swiper.el.addEventListener('pointerenter', onPointerEnter);
+          swiper.el.addEventListener('pointerleave', onPointerLeave);
+        }
+      };
+      const detachMouseEvents = () => {
+        swiper.el.removeEventListener('pointerenter', onPointerEnter);
+        swiper.el.removeEventListener('pointerleave', onPointerLeave);
+      };
+      const attachDocumentEvents = () => {
+        const document = getDocument();
+        document.addEventListener('visibilitychange', onVisibilityChange);
+      };
+      const detachDocumentEvents = () => {
+        const document = getDocument();
+        document.removeEventListener('visibilitychange', onVisibilityChange);
+      };
+      on('init', () => {
+        if (swiper.params.autoplay.enabled) {
+          attachMouseEvents();
+          attachDocumentEvents();
+          autoplayStartTime = new Date().getTime();
+          start();
+        }
+      });
+      on('destroy', () => {
+        detachMouseEvents();
+        detachDocumentEvents();
+        if (swiper.autoplay.running) {
+          stop();
+        }
+      });
+      on('beforeTransitionStart', (_s, speed, internal) => {
+        if (swiper.destroyed || !swiper.autoplay.running) return;
+        if (internal || !swiper.params.autoplay.disableOnInteraction) {
+          pause(true, true);
+        } else {
+          stop();
+        }
+      });
+      on('sliderFirstMove', () => {
+        if (swiper.destroyed || !swiper.autoplay.running) return;
+        if (swiper.params.autoplay.disableOnInteraction) {
+          stop();
+          return;
+        }
+        isTouched = true;
+        pausedByTouch = false;
+        pausedByInteraction = false;
+        touchStartTimeout = setTimeout(() => {
+          pausedByInteraction = true;
+          pausedByTouch = true;
+          pause(true);
+        }, 200);
+      });
+      on('touchEnd', () => {
+        if (swiper.destroyed || !swiper.autoplay.running || !isTouched) return;
+        clearTimeout(touchStartTimeout);
+        clearTimeout(timeout);
+        if (swiper.params.autoplay.disableOnInteraction) {
+          pausedByTouch = false;
+          isTouched = false;
+          return;
+        }
+        if (pausedByTouch && swiper.params.cssMode) resume();
+        pausedByTouch = false;
+        isTouched = false;
+      });
+      on('slideChange', () => {
+        if (swiper.destroyed || !swiper.autoplay.running) return;
+        slideChanged = true;
+      });
+      Object.assign(swiper.autoplay, {
+        start,
+        stop,
+        pause,
+        resume
+      });
+    }
+
+    function Thumb({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        thumbs: {
+          swiper: null,
+          multipleActiveThumbs: true,
+          autoScrollOffset: 0,
+          slideThumbActiveClass: 'swiper-slide-thumb-active',
+          thumbsContainerClass: 'swiper-thumbs'
+        }
+      });
+      let initialized = false;
+      let swiperCreated = false;
+      swiper.thumbs = {
+        swiper: null
+      };
+      function onThumbClick() {
+        const thumbsSwiper = swiper.thumbs.swiper;
+        if (!thumbsSwiper || thumbsSwiper.destroyed) return;
+        const clickedIndex = thumbsSwiper.clickedIndex;
+        const clickedSlide = thumbsSwiper.clickedSlide;
+        if (clickedSlide && clickedSlide.classList.contains(swiper.params.thumbs.slideThumbActiveClass)) return;
+        if (typeof clickedIndex === 'undefined' || clickedIndex === null) return;
+        let slideToIndex;
+        if (thumbsSwiper.params.loop) {
+          slideToIndex = parseInt(thumbsSwiper.clickedSlide.getAttribute('data-swiper-slide-index'), 10);
+        } else {
+          slideToIndex = clickedIndex;
+        }
+        if (swiper.params.loop) {
+          swiper.slideToLoop(slideToIndex);
+        } else {
+          swiper.slideTo(slideToIndex);
+        }
+      }
+      function init() {
+        const {
+          thumbs: thumbsParams
+        } = swiper.params;
+        if (initialized) return false;
+        initialized = true;
+        const SwiperClass = swiper.constructor;
+        if (thumbsParams.swiper instanceof SwiperClass) {
+          swiper.thumbs.swiper = thumbsParams.swiper;
+          Object.assign(swiper.thumbs.swiper.originalParams, {
+            watchSlidesProgress: true,
+            slideToClickedSlide: false
+          });
+          Object.assign(swiper.thumbs.swiper.params, {
+            watchSlidesProgress: true,
+            slideToClickedSlide: false
+          });
+          swiper.thumbs.swiper.update();
+        } else if (isObject$1(thumbsParams.swiper)) {
+          const thumbsSwiperParams = Object.assign({}, thumbsParams.swiper);
+          Object.assign(thumbsSwiperParams, {
+            watchSlidesProgress: true,
+            slideToClickedSlide: false
+          });
+          swiper.thumbs.swiper = new SwiperClass(thumbsSwiperParams);
+          swiperCreated = true;
+        }
+        swiper.thumbs.swiper.el.classList.add(swiper.params.thumbs.thumbsContainerClass);
+        swiper.thumbs.swiper.on('tap', onThumbClick);
+        return true;
+      }
+      function update(initial) {
+        const thumbsSwiper = swiper.thumbs.swiper;
+        if (!thumbsSwiper || thumbsSwiper.destroyed) return;
+        const slidesPerView = thumbsSwiper.params.slidesPerView === 'auto' ? thumbsSwiper.slidesPerViewDynamic() : thumbsSwiper.params.slidesPerView;
+
+        // Activate thumbs
+        let thumbsToActivate = 1;
+        const thumbActiveClass = swiper.params.thumbs.slideThumbActiveClass;
+        if (swiper.params.slidesPerView > 1 && !swiper.params.centeredSlides) {
+          thumbsToActivate = swiper.params.slidesPerView;
+        }
+        if (!swiper.params.thumbs.multipleActiveThumbs) {
+          thumbsToActivate = 1;
+        }
+        thumbsToActivate = Math.floor(thumbsToActivate);
+        thumbsSwiper.slides.forEach(slideEl => slideEl.classList.remove(thumbActiveClass));
+        if (thumbsSwiper.params.loop || thumbsSwiper.params.virtual && thumbsSwiper.params.virtual.enabled) {
+          for (let i = 0; i < thumbsToActivate; i += 1) {
+            elementChildren(thumbsSwiper.slidesEl, `[data-swiper-slide-index="${swiper.realIndex + i}"]`).forEach(slideEl => {
+              slideEl.classList.add(thumbActiveClass);
+            });
+          }
+        } else {
+          for (let i = 0; i < thumbsToActivate; i += 1) {
+            if (thumbsSwiper.slides[swiper.realIndex + i]) {
+              thumbsSwiper.slides[swiper.realIndex + i].classList.add(thumbActiveClass);
+            }
+          }
+        }
+        const autoScrollOffset = swiper.params.thumbs.autoScrollOffset;
+        const useOffset = autoScrollOffset && !thumbsSwiper.params.loop;
+        if (swiper.realIndex !== thumbsSwiper.realIndex || useOffset) {
+          const currentThumbsIndex = thumbsSwiper.activeIndex;
+          let newThumbsIndex;
+          let direction;
+          if (thumbsSwiper.params.loop) {
+            const newThumbsSlide = thumbsSwiper.slides.filter(slideEl => slideEl.getAttribute('data-swiper-slide-index') === `${swiper.realIndex}`)[0];
+            newThumbsIndex = thumbsSwiper.slides.indexOf(newThumbsSlide);
+            direction = swiper.activeIndex > swiper.previousIndex ? 'next' : 'prev';
+          } else {
+            newThumbsIndex = swiper.realIndex;
+            direction = newThumbsIndex > swiper.previousIndex ? 'next' : 'prev';
+          }
+          if (useOffset) {
+            newThumbsIndex += direction === 'next' ? autoScrollOffset : -1 * autoScrollOffset;
+          }
+          if (thumbsSwiper.visibleSlidesIndexes && thumbsSwiper.visibleSlidesIndexes.indexOf(newThumbsIndex) < 0) {
+            if (thumbsSwiper.params.centeredSlides) {
+              if (newThumbsIndex > currentThumbsIndex) {
+                newThumbsIndex = newThumbsIndex - Math.floor(slidesPerView / 2) + 1;
+              } else {
+                newThumbsIndex = newThumbsIndex + Math.floor(slidesPerView / 2) - 1;
+              }
+            } else if (newThumbsIndex > currentThumbsIndex && thumbsSwiper.params.slidesPerGroup === 1) ;
+            thumbsSwiper.slideTo(newThumbsIndex, initial ? 0 : undefined);
+          }
+        }
+      }
+      on('beforeInit', () => {
+        const {
+          thumbs
+        } = swiper.params;
+        if (!thumbs || !thumbs.swiper) return;
+        if (typeof thumbs.swiper === 'string' || thumbs.swiper instanceof HTMLElement) {
+          const document = getDocument();
+          const getThumbsElementAndInit = () => {
+            const thumbsElement = typeof thumbs.swiper === 'string' ? document.querySelector(thumbs.swiper) : thumbs.swiper;
+            if (thumbsElement && thumbsElement.swiper) {
+              thumbs.swiper = thumbsElement.swiper;
+              init();
+              update(true);
+            } else if (thumbsElement) {
+              const onThumbsSwiper = e => {
+                thumbs.swiper = e.detail[0];
+                thumbsElement.removeEventListener('init', onThumbsSwiper);
+                init();
+                update(true);
+                thumbs.swiper.update();
+                swiper.update();
+              };
+              thumbsElement.addEventListener('init', onThumbsSwiper);
+            }
+            return thumbsElement;
+          };
+          const watchForThumbsToAppear = () => {
+            if (swiper.destroyed) return;
+            const thumbsElement = getThumbsElementAndInit();
+            if (!thumbsElement) {
+              requestAnimationFrame(watchForThumbsToAppear);
+            }
+          };
+          requestAnimationFrame(watchForThumbsToAppear);
+        } else {
+          init();
+          update(true);
+        }
+      });
+      on('slideChange update resize observerUpdate', () => {
+        update();
+      });
+      on('setTransition', (_s, duration) => {
+        const thumbsSwiper = swiper.thumbs.swiper;
+        if (!thumbsSwiper || thumbsSwiper.destroyed) return;
+        thumbsSwiper.setTransition(duration);
+      });
+      on('beforeDestroy', () => {
+        const thumbsSwiper = swiper.thumbs.swiper;
+        if (!thumbsSwiper || thumbsSwiper.destroyed) return;
+        if (swiperCreated) {
+          thumbsSwiper.destroy();
+        }
+      });
+      Object.assign(swiper.thumbs, {
+        init,
+        update
+      });
+    }
+
+    function freeMode({
+      swiper,
+      extendParams,
+      emit,
+      once
+    }) {
+      extendParams({
+        freeMode: {
+          enabled: false,
+          momentum: true,
+          momentumRatio: 1,
+          momentumBounce: true,
+          momentumBounceRatio: 1,
+          momentumVelocityRatio: 1,
+          sticky: false,
+          minimumVelocity: 0.02
+        }
+      });
+      function onTouchStart() {
+        const translate = swiper.getTranslate();
+        swiper.setTranslate(translate);
+        swiper.setTransition(0);
+        swiper.touchEventsData.velocities.length = 0;
+        swiper.freeMode.onTouchEnd({
+          currentPos: swiper.rtl ? swiper.translate : -swiper.translate
+        });
+      }
+      function onTouchMove() {
+        const {
+          touchEventsData: data,
+          touches
+        } = swiper;
+        // Velocity
+        if (data.velocities.length === 0) {
+          data.velocities.push({
+            position: touches[swiper.isHorizontal() ? 'startX' : 'startY'],
+            time: data.touchStartTime
+          });
+        }
+        data.velocities.push({
+          position: touches[swiper.isHorizontal() ? 'currentX' : 'currentY'],
+          time: now()
+        });
+      }
+      function onTouchEnd({
+        currentPos
+      }) {
+        const {
+          params,
+          wrapperEl,
+          rtlTranslate: rtl,
+          snapGrid,
+          touchEventsData: data
+        } = swiper;
+        // Time diff
+        const touchEndTime = now();
+        const timeDiff = touchEndTime - data.touchStartTime;
+        if (currentPos < -swiper.minTranslate()) {
+          swiper.slideTo(swiper.activeIndex);
+          return;
+        }
+        if (currentPos > -swiper.maxTranslate()) {
+          if (swiper.slides.length < snapGrid.length) {
+            swiper.slideTo(snapGrid.length - 1);
+          } else {
+            swiper.slideTo(swiper.slides.length - 1);
+          }
+          return;
+        }
+        if (params.freeMode.momentum) {
+          if (data.velocities.length > 1) {
+            const lastMoveEvent = data.velocities.pop();
+            const velocityEvent = data.velocities.pop();
+            const distance = lastMoveEvent.position - velocityEvent.position;
+            const time = lastMoveEvent.time - velocityEvent.time;
+            swiper.velocity = distance / time;
+            swiper.velocity /= 2;
+            if (Math.abs(swiper.velocity) < params.freeMode.minimumVelocity) {
+              swiper.velocity = 0;
+            }
+            // this implies that the user stopped moving a finger then released.
+            // There would be no events with distance zero, so the last event is stale.
+            if (time > 150 || now() - lastMoveEvent.time > 300) {
+              swiper.velocity = 0;
+            }
+          } else {
+            swiper.velocity = 0;
+          }
+          swiper.velocity *= params.freeMode.momentumVelocityRatio;
+          data.velocities.length = 0;
+          let momentumDuration = 1000 * params.freeMode.momentumRatio;
+          const momentumDistance = swiper.velocity * momentumDuration;
+          let newPosition = swiper.translate + momentumDistance;
+          if (rtl) newPosition = -newPosition;
+          let doBounce = false;
+          let afterBouncePosition;
+          const bounceAmount = Math.abs(swiper.velocity) * 20 * params.freeMode.momentumBounceRatio;
+          let needsLoopFix;
+          if (newPosition < swiper.maxTranslate()) {
+            if (params.freeMode.momentumBounce) {
+              if (newPosition + swiper.maxTranslate() < -bounceAmount) {
+                newPosition = swiper.maxTranslate() - bounceAmount;
+              }
+              afterBouncePosition = swiper.maxTranslate();
+              doBounce = true;
+              data.allowMomentumBounce = true;
+            } else {
+              newPosition = swiper.maxTranslate();
+            }
+            if (params.loop && params.centeredSlides) needsLoopFix = true;
+          } else if (newPosition > swiper.minTranslate()) {
+            if (params.freeMode.momentumBounce) {
+              if (newPosition - swiper.minTranslate() > bounceAmount) {
+                newPosition = swiper.minTranslate() + bounceAmount;
+              }
+              afterBouncePosition = swiper.minTranslate();
+              doBounce = true;
+              data.allowMomentumBounce = true;
+            } else {
+              newPosition = swiper.minTranslate();
+            }
+            if (params.loop && params.centeredSlides) needsLoopFix = true;
+          } else if (params.freeMode.sticky) {
+            let nextSlide;
+            for (let j = 0; j < snapGrid.length; j += 1) {
+              if (snapGrid[j] > -newPosition) {
+                nextSlide = j;
+                break;
+              }
+            }
+            if (Math.abs(snapGrid[nextSlide] - newPosition) < Math.abs(snapGrid[nextSlide - 1] - newPosition) || swiper.swipeDirection === 'next') {
+              newPosition = snapGrid[nextSlide];
+            } else {
+              newPosition = snapGrid[nextSlide - 1];
+            }
+            newPosition = -newPosition;
+          }
+          if (needsLoopFix) {
+            once('transitionEnd', () => {
+              swiper.loopFix();
+            });
+          }
+          // Fix duration
+          if (swiper.velocity !== 0) {
+            if (rtl) {
+              momentumDuration = Math.abs((-newPosition - swiper.translate) / swiper.velocity);
+            } else {
+              momentumDuration = Math.abs((newPosition - swiper.translate) / swiper.velocity);
+            }
+            if (params.freeMode.sticky) {
+              // If freeMode.sticky is active and the user ends a swipe with a slow-velocity
+              // event, then durations can be 20+ seconds to slide one (or zero!) slides.
+              // It's easy to see this when simulating touch with mouse events. To fix this,
+              // limit single-slide swipes to the default slide duration. This also has the
+              // nice side effect of matching slide speed if the user stopped moving before
+              // lifting finger or mouse vs. moving slowly before lifting the finger/mouse.
+              // For faster swipes, also apply limits (albeit higher ones).
+              const moveDistance = Math.abs((rtl ? -newPosition : newPosition) - swiper.translate);
+              const currentSlideSize = swiper.slidesSizesGrid[swiper.activeIndex];
+              if (moveDistance < currentSlideSize) {
+                momentumDuration = params.speed;
+              } else if (moveDistance < 2 * currentSlideSize) {
+                momentumDuration = params.speed * 1.5;
+              } else {
+                momentumDuration = params.speed * 2.5;
+              }
+            }
+          } else if (params.freeMode.sticky) {
+            swiper.slideToClosest();
+            return;
+          }
+          if (params.freeMode.momentumBounce && doBounce) {
+            swiper.updateProgress(afterBouncePosition);
+            swiper.setTransition(momentumDuration);
+            swiper.setTranslate(newPosition);
+            swiper.transitionStart(true, swiper.swipeDirection);
+            swiper.animating = true;
+            elementTransitionEnd(wrapperEl, () => {
+              if (!swiper || swiper.destroyed || !data.allowMomentumBounce) return;
+              emit('momentumBounce');
+              swiper.setTransition(params.speed);
+              setTimeout(() => {
+                swiper.setTranslate(afterBouncePosition);
+                elementTransitionEnd(wrapperEl, () => {
+                  if (!swiper || swiper.destroyed) return;
+                  swiper.transitionEnd();
+                });
+              }, 0);
+            });
+          } else if (swiper.velocity) {
+            emit('_freeModeNoMomentumRelease');
+            swiper.updateProgress(newPosition);
+            swiper.setTransition(momentumDuration);
+            swiper.setTranslate(newPosition);
+            swiper.transitionStart(true, swiper.swipeDirection);
+            if (!swiper.animating) {
+              swiper.animating = true;
+              elementTransitionEnd(wrapperEl, () => {
+                if (!swiper || swiper.destroyed) return;
+                swiper.transitionEnd();
+              });
+            }
+          } else {
+            swiper.updateProgress(newPosition);
+          }
+          swiper.updateActiveIndex();
+          swiper.updateSlidesClasses();
+        } else if (params.freeMode.sticky) {
+          swiper.slideToClosest();
+          return;
+        } else if (params.freeMode) {
+          emit('_freeModeNoMomentumRelease');
+        }
+        if (!params.freeMode.momentum || timeDiff >= params.longSwipesMs) {
+          swiper.updateProgress();
+          swiper.updateActiveIndex();
+          swiper.updateSlidesClasses();
+        }
+      }
+      Object.assign(swiper, {
+        freeMode: {
+          onTouchStart,
+          onTouchMove,
+          onTouchEnd
+        }
+      });
+    }
+
+    function Grid({
+      swiper,
+      extendParams
+    }) {
+      extendParams({
+        grid: {
+          rows: 1,
+          fill: 'column'
+        }
+      });
+      let slidesNumberEvenToRows;
+      let slidesPerRow;
+      let numFullColumns;
+      const initSlides = slidesLength => {
+        const {
+          slidesPerView
+        } = swiper.params;
+        const {
+          rows,
+          fill
+        } = swiper.params.grid;
+        slidesPerRow = slidesNumberEvenToRows / rows;
+        numFullColumns = Math.floor(slidesLength / rows);
+        if (Math.floor(slidesLength / rows) === slidesLength / rows) {
+          slidesNumberEvenToRows = slidesLength;
+        } else {
+          slidesNumberEvenToRows = Math.ceil(slidesLength / rows) * rows;
+        }
+        if (slidesPerView !== 'auto' && fill === 'row') {
+          slidesNumberEvenToRows = Math.max(slidesNumberEvenToRows, slidesPerView * rows);
+        }
+      };
+      const updateSlide = (i, slide, slidesLength, getDirectionLabel) => {
+        const {
+          slidesPerGroup,
+          spaceBetween
+        } = swiper.params;
+        const {
+          rows,
+          fill
+        } = swiper.params.grid;
+        // Set slides order
+        let newSlideOrderIndex;
+        let column;
+        let row;
+        if (fill === 'row' && slidesPerGroup > 1) {
+          const groupIndex = Math.floor(i / (slidesPerGroup * rows));
+          const slideIndexInGroup = i - rows * slidesPerGroup * groupIndex;
+          const columnsInGroup = groupIndex === 0 ? slidesPerGroup : Math.min(Math.ceil((slidesLength - groupIndex * rows * slidesPerGroup) / rows), slidesPerGroup);
+          row = Math.floor(slideIndexInGroup / columnsInGroup);
+          column = slideIndexInGroup - row * columnsInGroup + groupIndex * slidesPerGroup;
+          newSlideOrderIndex = column + row * slidesNumberEvenToRows / rows;
+          slide.style.order = newSlideOrderIndex;
+        } else if (fill === 'column') {
+          column = Math.floor(i / rows);
+          row = i - column * rows;
+          if (column > numFullColumns || column === numFullColumns && row === rows - 1) {
+            row += 1;
+            if (row >= rows) {
+              row = 0;
+              column += 1;
+            }
+          }
+        } else {
+          row = Math.floor(i / slidesPerRow);
+          column = i - row * slidesPerRow;
+        }
+        slide.style[getDirectionLabel('margin-top')] = row !== 0 ? spaceBetween && `${spaceBetween}px` : '';
+      };
+      const updateWrapperSize = (slideSize, snapGrid, getDirectionLabel) => {
+        const {
+          spaceBetween,
+          centeredSlides,
+          roundLengths
+        } = swiper.params;
+        const {
+          rows
+        } = swiper.params.grid;
+        swiper.virtualSize = (slideSize + spaceBetween) * slidesNumberEvenToRows;
+        swiper.virtualSize = Math.ceil(swiper.virtualSize / rows) - spaceBetween;
+        swiper.wrapperEl.style[getDirectionLabel('width')] = `${swiper.virtualSize + spaceBetween}px`;
+        if (centeredSlides) {
+          const newSlidesGrid = [];
+          for (let i = 0; i < snapGrid.length; i += 1) {
+            let slidesGridItem = snapGrid[i];
+            if (roundLengths) slidesGridItem = Math.floor(slidesGridItem);
+            if (snapGrid[i] < swiper.virtualSize + snapGrid[0]) newSlidesGrid.push(slidesGridItem);
+          }
+          snapGrid.splice(0, snapGrid.length);
+          snapGrid.push(...newSlidesGrid);
+        }
+      };
+      swiper.grid = {
+        initSlides,
+        updateSlide,
+        updateWrapperSize
+      };
+    }
+
+    function appendSlide(slides) {
+      const swiper = this;
+      const {
+        params,
+        slidesEl
+      } = swiper;
+      if (params.loop) {
+        swiper.loopDestroy();
+      }
+      const appendElement = slideEl => {
+        if (typeof slideEl === 'string') {
+          const tempDOM = document.createElement('div');
+          tempDOM.innerHTML = slideEl;
+          slidesEl.append(tempDOM.children[0]);
+          tempDOM.innerHTML = '';
+        } else {
+          slidesEl.append(slideEl);
+        }
+      };
+      if (typeof slides === 'object' && 'length' in slides) {
+        for (let i = 0; i < slides.length; i += 1) {
+          if (slides[i]) appendElement(slides[i]);
+        }
+      } else {
+        appendElement(slides);
+      }
+      swiper.recalcSlides();
+      if (params.loop) {
+        swiper.loopCreate();
+      }
+      if (!params.observer || swiper.isElement) {
+        swiper.update();
+      }
+    }
+
+    function prependSlide(slides) {
+      const swiper = this;
+      const {
+        params,
+        activeIndex,
+        slidesEl
+      } = swiper;
+      if (params.loop) {
+        swiper.loopDestroy();
+      }
+      let newActiveIndex = activeIndex + 1;
+      const prependElement = slideEl => {
+        if (typeof slideEl === 'string') {
+          const tempDOM = document.createElement('div');
+          tempDOM.innerHTML = slideEl;
+          slidesEl.prepend(tempDOM.children[0]);
+          tempDOM.innerHTML = '';
+        } else {
+          slidesEl.prepend(slideEl);
+        }
+      };
+      if (typeof slides === 'object' && 'length' in slides) {
+        for (let i = 0; i < slides.length; i += 1) {
+          if (slides[i]) prependElement(slides[i]);
+        }
+        newActiveIndex = activeIndex + slides.length;
+      } else {
+        prependElement(slides);
+      }
+      swiper.recalcSlides();
+      if (params.loop) {
+        swiper.loopCreate();
+      }
+      if (!params.observer || swiper.isElement) {
+        swiper.update();
+      }
+      swiper.slideTo(newActiveIndex, 0, false);
+    }
+
+    function addSlide(index, slides) {
+      const swiper = this;
+      const {
+        params,
+        activeIndex,
+        slidesEl
+      } = swiper;
+      let activeIndexBuffer = activeIndex;
+      if (params.loop) {
+        activeIndexBuffer -= swiper.loopedSlides;
+        swiper.loopDestroy();
+        swiper.recalcSlides();
+      }
+      const baseLength = swiper.slides.length;
+      if (index <= 0) {
+        swiper.prependSlide(slides);
+        return;
+      }
+      if (index >= baseLength) {
+        swiper.appendSlide(slides);
+        return;
+      }
+      let newActiveIndex = activeIndexBuffer > index ? activeIndexBuffer + 1 : activeIndexBuffer;
+      const slidesBuffer = [];
+      for (let i = baseLength - 1; i >= index; i -= 1) {
+        const currentSlide = swiper.slides[i];
+        currentSlide.remove();
+        slidesBuffer.unshift(currentSlide);
+      }
+      if (typeof slides === 'object' && 'length' in slides) {
+        for (let i = 0; i < slides.length; i += 1) {
+          if (slides[i]) slidesEl.append(slides[i]);
+        }
+        newActiveIndex = activeIndexBuffer > index ? activeIndexBuffer + slides.length : activeIndexBuffer;
+      } else {
+        slidesEl.append(slides);
+      }
+      for (let i = 0; i < slidesBuffer.length; i += 1) {
+        slidesEl.append(slidesBuffer[i]);
+      }
+      swiper.recalcSlides();
+      if (params.loop) {
+        swiper.loopCreate();
+      }
+      if (!params.observer || swiper.isElement) {
+        swiper.update();
+      }
+      if (params.loop) {
+        swiper.slideTo(newActiveIndex + swiper.loopedSlides, 0, false);
+      } else {
+        swiper.slideTo(newActiveIndex, 0, false);
+      }
+    }
+
+    function removeSlide(slidesIndexes) {
+      const swiper = this;
+      const {
+        params,
+        activeIndex
+      } = swiper;
+      let activeIndexBuffer = activeIndex;
+      if (params.loop) {
+        activeIndexBuffer -= swiper.loopedSlides;
+        swiper.loopDestroy();
+      }
+      let newActiveIndex = activeIndexBuffer;
+      let indexToRemove;
+      if (typeof slidesIndexes === 'object' && 'length' in slidesIndexes) {
+        for (let i = 0; i < slidesIndexes.length; i += 1) {
+          indexToRemove = slidesIndexes[i];
+          if (swiper.slides[indexToRemove]) swiper.slides[indexToRemove].remove();
+          if (indexToRemove < newActiveIndex) newActiveIndex -= 1;
+        }
+        newActiveIndex = Math.max(newActiveIndex, 0);
+      } else {
+        indexToRemove = slidesIndexes;
+        if (swiper.slides[indexToRemove]) swiper.slides[indexToRemove].remove();
+        if (indexToRemove < newActiveIndex) newActiveIndex -= 1;
+        newActiveIndex = Math.max(newActiveIndex, 0);
+      }
+      swiper.recalcSlides();
+      if (params.loop) {
+        swiper.loopCreate();
+      }
+      if (!params.observer || swiper.isElement) {
+        swiper.update();
+      }
+      if (params.loop) {
+        swiper.slideTo(newActiveIndex + swiper.loopedSlides, 0, false);
+      } else {
+        swiper.slideTo(newActiveIndex, 0, false);
+      }
+    }
+
+    function removeAllSlides() {
+      const swiper = this;
+      const slidesIndexes = [];
+      for (let i = 0; i < swiper.slides.length; i += 1) {
+        slidesIndexes.push(i);
+      }
+      swiper.removeSlide(slidesIndexes);
+    }
+
+    function Manipulation({
+      swiper
+    }) {
+      Object.assign(swiper, {
+        appendSlide: appendSlide.bind(swiper),
+        prependSlide: prependSlide.bind(swiper),
+        addSlide: addSlide.bind(swiper),
+        removeSlide: removeSlide.bind(swiper),
+        removeAllSlides: removeAllSlides.bind(swiper)
+      });
+    }
+
+    function effectInit(params) {
+      const {
+        effect,
+        swiper,
+        on,
+        setTranslate,
+        setTransition,
+        overwriteParams,
+        perspective,
+        recreateShadows,
+        getEffectParams
+      } = params;
+      on('beforeInit', () => {
+        if (swiper.params.effect !== effect) return;
+        swiper.classNames.push(`${swiper.params.containerModifierClass}${effect}`);
+        if (perspective && perspective()) {
+          swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
+        }
+        const overwriteParamsResult = overwriteParams ? overwriteParams() : {};
+        Object.assign(swiper.params, overwriteParamsResult);
+        Object.assign(swiper.originalParams, overwriteParamsResult);
+      });
+      on('setTranslate', () => {
+        if (swiper.params.effect !== effect) return;
+        setTranslate();
+      });
+      on('setTransition', (_s, duration) => {
+        if (swiper.params.effect !== effect) return;
+        setTransition(duration);
+      });
+      on('transitionEnd', () => {
+        if (swiper.params.effect !== effect) return;
+        if (recreateShadows) {
+          if (!getEffectParams || !getEffectParams().slideShadows) return;
+          // remove shadows
+          swiper.slides.forEach(slideEl => {
+            slideEl.querySelectorAll('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').forEach(shadowEl => shadowEl.remove());
+          });
+          // create new one
+          recreateShadows();
+        }
+      });
+      let requireUpdateOnVirtual;
+      on('virtualUpdate', () => {
+        if (swiper.params.effect !== effect) return;
+        if (!swiper.slides.length) {
+          requireUpdateOnVirtual = true;
+        }
+        requestAnimationFrame(() => {
+          if (requireUpdateOnVirtual && swiper.slides && swiper.slides.length) {
+            setTranslate();
+            requireUpdateOnVirtual = false;
+          }
+        });
+      });
+    }
+
+    function effectTarget(effectParams, slideEl) {
+      const transformEl = getSlideTransformEl(slideEl);
+      if (transformEl !== slideEl) {
+        transformEl.style.backfaceVisibility = 'hidden';
+        transformEl.style['-webkit-backface-visibility'] = 'hidden';
+      }
+      return transformEl;
+    }
+
+    function effectVirtualTransitionEnd({
+      swiper,
+      duration,
+      transformElements,
+      allSlides
+    }) {
+      const {
+        activeIndex
+      } = swiper;
+      const getSlide = el => {
+        if (!el.parentElement) {
+          // assume shadow root
+          const slide = swiper.slides.filter(slideEl => slideEl.shadowEl && slideEl.shadowEl === el.parentNode)[0];
+          return slide;
+        }
+        return el.parentElement;
+      };
+      if (swiper.params.virtualTranslate && duration !== 0) {
+        let eventTriggered = false;
+        let transitionEndTarget;
+        if (allSlides) {
+          transitionEndTarget = transformElements;
+        } else {
+          transitionEndTarget = transformElements.filter(transformEl => {
+            const el = transformEl.classList.contains('swiper-slide-transform') ? getSlide(transformEl) : transformEl;
+            return swiper.getSlideIndex(el) === activeIndex;
+          });
+        }
+        transitionEndTarget.forEach(el => {
+          elementTransitionEnd(el, () => {
+            if (eventTriggered) return;
+            if (!swiper || swiper.destroyed) return;
+            eventTriggered = true;
+            swiper.animating = false;
+            const evt = new window.CustomEvent('transitionend', {
+              bubbles: true,
+              cancelable: true
+            });
+            swiper.wrapperEl.dispatchEvent(evt);
+          });
+        });
+      }
+    }
+
+    function EffectFade({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        fadeEffect: {
+          crossFade: false
+        }
+      });
+      const setTranslate = () => {
+        const {
+          slides
+        } = swiper;
+        const params = swiper.params.fadeEffect;
+        for (let i = 0; i < slides.length; i += 1) {
+          const slideEl = swiper.slides[i];
+          const offset = slideEl.swiperSlideOffset;
+          let tx = -offset;
+          if (!swiper.params.virtualTranslate) tx -= swiper.translate;
+          let ty = 0;
+          if (!swiper.isHorizontal()) {
+            ty = tx;
+            tx = 0;
+          }
+          const slideOpacity = swiper.params.fadeEffect.crossFade ? Math.max(1 - Math.abs(slideEl.progress), 0) : 1 + Math.min(Math.max(slideEl.progress, -1), 0);
+          const targetEl = effectTarget(params, slideEl);
+          targetEl.style.opacity = slideOpacity;
+          targetEl.style.transform = `translate3d(${tx}px, ${ty}px, 0px)`;
+        }
+      };
+      const setTransition = duration => {
+        const transformElements = swiper.slides.map(slideEl => getSlideTransformEl(slideEl));
+        transformElements.forEach(el => {
+          el.style.transitionDuration = `${duration}ms`;
+        });
+        effectVirtualTransitionEnd({
+          swiper,
+          duration,
+          transformElements,
+          allSlides: true
+        });
+      };
+      effectInit({
+        effect: 'fade',
+        swiper,
+        on,
+        setTranslate,
+        setTransition,
+        overwriteParams: () => ({
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          watchSlidesProgress: true,
+          spaceBetween: 0,
+          virtualTranslate: !swiper.params.cssMode
+        })
+      });
+    }
+
+    function EffectCube({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        cubeEffect: {
+          slideShadows: true,
+          shadow: true,
+          shadowOffset: 20,
+          shadowScale: 0.94
+        }
+      });
+      const createSlideShadows = (slideEl, progress, isHorizontal) => {
+        let shadowBefore = isHorizontal ? slideEl.querySelector('.swiper-slide-shadow-left') : slideEl.querySelector('.swiper-slide-shadow-top');
+        let shadowAfter = isHorizontal ? slideEl.querySelector('.swiper-slide-shadow-right') : slideEl.querySelector('.swiper-slide-shadow-bottom');
+        if (!shadowBefore) {
+          shadowBefore = createElement('div', `swiper-slide-shadow-${isHorizontal ? 'left' : 'top'}`);
+          slideEl.append(shadowBefore);
+        }
+        if (!shadowAfter) {
+          shadowAfter = createElement('div', `swiper-slide-shadow-${isHorizontal ? 'right' : 'bottom'}`);
+          slideEl.append(shadowAfter);
+        }
+        if (shadowBefore) shadowBefore.style.opacity = Math.max(-progress, 0);
+        if (shadowAfter) shadowAfter.style.opacity = Math.max(progress, 0);
+      };
+      const recreateShadows = () => {
+        // create new ones
+        const isHorizontal = swiper.isHorizontal();
+        swiper.slides.forEach(slideEl => {
+          const progress = Math.max(Math.min(slideEl.progress, 1), -1);
+          createSlideShadows(slideEl, progress, isHorizontal);
+        });
+      };
+      const setTranslate = () => {
+        const {
+          el,
+          wrapperEl,
+          slides,
+          width: swiperWidth,
+          height: swiperHeight,
+          rtlTranslate: rtl,
+          size: swiperSize,
+          browser
+        } = swiper;
+        const params = swiper.params.cubeEffect;
+        const isHorizontal = swiper.isHorizontal();
+        const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+        let wrapperRotate = 0;
+        let cubeShadowEl;
+        if (params.shadow) {
+          if (isHorizontal) {
+            cubeShadowEl = swiper.slidesEl.querySelector('.swiper-cube-shadow');
+            if (!cubeShadowEl) {
+              cubeShadowEl = createElement('div', 'swiper-cube-shadow');
+              swiper.slidesEl.append(cubeShadowEl);
+            }
+            cubeShadowEl.style.height = `${swiperWidth}px`;
+          } else {
+            cubeShadowEl = el.querySelector('.swiper-cube-shadow');
+            if (!cubeShadowEl) {
+              cubeShadowEl = createElement('div', 'swiper-cube-shadow');
+              el.append(cubeShadowEl);
+            }
+          }
+        }
+        for (let i = 0; i < slides.length; i += 1) {
+          const slideEl = slides[i];
+          let slideIndex = i;
+          if (isVirtual) {
+            slideIndex = parseInt(slideEl.getAttribute('data-swiper-slide-index'), 10);
+          }
+          let slideAngle = slideIndex * 90;
+          let round = Math.floor(slideAngle / 360);
+          if (rtl) {
+            slideAngle = -slideAngle;
+            round = Math.floor(-slideAngle / 360);
+          }
+          const progress = Math.max(Math.min(slideEl.progress, 1), -1);
+          let tx = 0;
+          let ty = 0;
+          let tz = 0;
+          if (slideIndex % 4 === 0) {
+            tx = -round * 4 * swiperSize;
+            tz = 0;
+          } else if ((slideIndex - 1) % 4 === 0) {
+            tx = 0;
+            tz = -round * 4 * swiperSize;
+          } else if ((slideIndex - 2) % 4 === 0) {
+            tx = swiperSize + round * 4 * swiperSize;
+            tz = swiperSize;
+          } else if ((slideIndex - 3) % 4 === 0) {
+            tx = -swiperSize;
+            tz = 3 * swiperSize + swiperSize * 4 * round;
+          }
+          if (rtl) {
+            tx = -tx;
+          }
+          if (!isHorizontal) {
+            ty = tx;
+            tx = 0;
+          }
+          const transform = `rotateX(${isHorizontal ? 0 : -slideAngle}deg) rotateY(${isHorizontal ? slideAngle : 0}deg) translate3d(${tx}px, ${ty}px, ${tz}px)`;
+          if (progress <= 1 && progress > -1) {
+            wrapperRotate = slideIndex * 90 + progress * 90;
+            if (rtl) wrapperRotate = -slideIndex * 90 - progress * 90;
+          }
+          slideEl.style.transform = transform;
+          if (params.slideShadows) {
+            createSlideShadows(slideEl, progress, isHorizontal);
+          }
+        }
+        wrapperEl.style.transformOrigin = `50% 50% -${swiperSize / 2}px`;
+        wrapperEl.style['-webkit-transform-origin'] = `50% 50% -${swiperSize / 2}px`;
+        if (params.shadow) {
+          if (isHorizontal) {
+            cubeShadowEl.style.transform = `translate3d(0px, ${swiperWidth / 2 + params.shadowOffset}px, ${-swiperWidth / 2}px) rotateX(90deg) rotateZ(0deg) scale(${params.shadowScale})`;
+          } else {
+            const shadowAngle = Math.abs(wrapperRotate) - Math.floor(Math.abs(wrapperRotate) / 90) * 90;
+            const multiplier = 1.5 - (Math.sin(shadowAngle * 2 * Math.PI / 360) / 2 + Math.cos(shadowAngle * 2 * Math.PI / 360) / 2);
+            const scale1 = params.shadowScale;
+            const scale2 = params.shadowScale / multiplier;
+            const offset = params.shadowOffset;
+            cubeShadowEl.style.transform = `scale3d(${scale1}, 1, ${scale2}) translate3d(0px, ${swiperHeight / 2 + offset}px, ${-swiperHeight / 2 / scale2}px) rotateX(-90deg)`;
+          }
+        }
+        const zFactor = (browser.isSafari || browser.isWebView) && browser.needPerspectiveFix ? -swiperSize / 2 : 0;
+        wrapperEl.style.transform = `translate3d(0px,0,${zFactor}px) rotateX(${swiper.isHorizontal() ? 0 : wrapperRotate}deg) rotateY(${swiper.isHorizontal() ? -wrapperRotate : 0}deg)`;
+        wrapperEl.style.setProperty('--swiper-cube-translate-z', `${zFactor}px`);
+      };
+      const setTransition = duration => {
+        const {
+          el,
+          slides
+        } = swiper;
+        slides.forEach(slideEl => {
+          slideEl.style.transitionDuration = `${duration}ms`;
+          slideEl.querySelectorAll('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').forEach(subEl => {
+            subEl.style.transitionDuration = `${duration}ms`;
+          });
+        });
+        if (swiper.params.cubeEffect.shadow && !swiper.isHorizontal()) {
+          const shadowEl = el.querySelector('.swiper-cube-shadow');
+          if (shadowEl) shadowEl.style.transitionDuration = `${duration}ms`;
+        }
+      };
+      effectInit({
+        effect: 'cube',
+        swiper,
+        on,
+        setTranslate,
+        setTransition,
+        recreateShadows,
+        getEffectParams: () => swiper.params.cubeEffect,
+        perspective: () => true,
+        overwriteParams: () => ({
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          watchSlidesProgress: true,
+          resistanceRatio: 0,
+          spaceBetween: 0,
+          centeredSlides: false,
+          virtualTranslate: true
+        })
+      });
+    }
+
+    function createShadow(params, slideEl, side) {
+      const shadowClass = `swiper-slide-shadow${side ? `-${side}` : ''}`;
+      const shadowContainer = getSlideTransformEl(slideEl);
+      let shadowEl = shadowContainer.querySelector(`.${shadowClass}`);
+      if (!shadowEl) {
+        shadowEl = createElement('div', `swiper-slide-shadow${side ? `-${side}` : ''}`);
+        shadowContainer.append(shadowEl);
+      }
+      return shadowEl;
+    }
+
+    function EffectFlip({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        flipEffect: {
+          slideShadows: true,
+          limitRotation: true
+        }
+      });
+      const createSlideShadows = (slideEl, progress, params) => {
+        let shadowBefore = swiper.isHorizontal() ? slideEl.querySelector('.swiper-slide-shadow-left') : slideEl.querySelector('.swiper-slide-shadow-top');
+        let shadowAfter = swiper.isHorizontal() ? slideEl.querySelector('.swiper-slide-shadow-right') : slideEl.querySelector('.swiper-slide-shadow-bottom');
+        if (!shadowBefore) {
+          shadowBefore = createShadow(params, slideEl, swiper.isHorizontal() ? 'left' : 'top');
+        }
+        if (!shadowAfter) {
+          shadowAfter = createShadow(params, slideEl, swiper.isHorizontal() ? 'right' : 'bottom');
+        }
+        if (shadowBefore) shadowBefore.style.opacity = Math.max(-progress, 0);
+        if (shadowAfter) shadowAfter.style.opacity = Math.max(progress, 0);
+      };
+      const recreateShadows = () => {
+        // Set shadows
+        const params = swiper.params.flipEffect;
+        swiper.slides.forEach(slideEl => {
+          let progress = slideEl.progress;
+          if (swiper.params.flipEffect.limitRotation) {
+            progress = Math.max(Math.min(slideEl.progress, 1), -1);
+          }
+          createSlideShadows(slideEl, progress, params);
+        });
+      };
+      const setTranslate = () => {
+        const {
+          slides,
+          rtlTranslate: rtl
+        } = swiper;
+        const params = swiper.params.flipEffect;
+        for (let i = 0; i < slides.length; i += 1) {
+          const slideEl = slides[i];
+          let progress = slideEl.progress;
+          if (swiper.params.flipEffect.limitRotation) {
+            progress = Math.max(Math.min(slideEl.progress, 1), -1);
+          }
+          const offset = slideEl.swiperSlideOffset;
+          const rotate = -180 * progress;
+          let rotateY = rotate;
+          let rotateX = 0;
+          let tx = swiper.params.cssMode ? -offset - swiper.translate : -offset;
+          let ty = 0;
+          if (!swiper.isHorizontal()) {
+            ty = tx;
+            tx = 0;
+            rotateX = -rotateY;
+            rotateY = 0;
+          } else if (rtl) {
+            rotateY = -rotateY;
+          }
+          slideEl.style.zIndex = -Math.abs(Math.round(progress)) + slides.length;
+          if (params.slideShadows) {
+            createSlideShadows(slideEl, progress, params);
+          }
+          const transform = `translate3d(${tx}px, ${ty}px, 0px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+          const targetEl = effectTarget(params, slideEl);
+          targetEl.style.transform = transform;
+        }
+      };
+      const setTransition = duration => {
+        const transformElements = swiper.slides.map(slideEl => getSlideTransformEl(slideEl));
+        transformElements.forEach(el => {
+          el.style.transitionDuration = `${duration}ms`;
+          el.querySelectorAll('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').forEach(shadowEl => {
+            shadowEl.style.transitionDuration = `${duration}ms`;
+          });
+        });
+        effectVirtualTransitionEnd({
+          swiper,
+          duration,
+          transformElements
+        });
+      };
+      effectInit({
+        effect: 'flip',
+        swiper,
+        on,
+        setTranslate,
+        setTransition,
+        recreateShadows,
+        getEffectParams: () => swiper.params.flipEffect,
+        perspective: () => true,
+        overwriteParams: () => ({
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          watchSlidesProgress: true,
+          spaceBetween: 0,
+          virtualTranslate: !swiper.params.cssMode
+        })
+      });
+    }
+
+    function EffectCoverflow({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          scale: 1,
+          modifier: 1,
+          slideShadows: true
+        }
+      });
+      const setTranslate = () => {
+        const {
+          width: swiperWidth,
+          height: swiperHeight,
+          slides,
+          slidesSizesGrid
+        } = swiper;
+        const params = swiper.params.coverflowEffect;
+        const isHorizontal = swiper.isHorizontal();
+        const transform = swiper.translate;
+        const center = isHorizontal ? -transform + swiperWidth / 2 : -transform + swiperHeight / 2;
+        const rotate = isHorizontal ? params.rotate : -params.rotate;
+        const translate = params.depth;
+        // Each slide offset from center
+        for (let i = 0, length = slides.length; i < length; i += 1) {
+          const slideEl = slides[i];
+          const slideSize = slidesSizesGrid[i];
+          const slideOffset = slideEl.swiperSlideOffset;
+          const centerOffset = (center - slideOffset - slideSize / 2) / slideSize;
+          const offsetMultiplier = typeof params.modifier === 'function' ? params.modifier(centerOffset) : centerOffset * params.modifier;
+          let rotateY = isHorizontal ? rotate * offsetMultiplier : 0;
+          let rotateX = isHorizontal ? 0 : rotate * offsetMultiplier;
+          // var rotateZ = 0
+          let translateZ = -translate * Math.abs(offsetMultiplier);
+          let stretch = params.stretch;
+          // Allow percentage to make a relative stretch for responsive sliders
+          if (typeof stretch === 'string' && stretch.indexOf('%') !== -1) {
+            stretch = parseFloat(params.stretch) / 100 * slideSize;
+          }
+          let translateY = isHorizontal ? 0 : stretch * offsetMultiplier;
+          let translateX = isHorizontal ? stretch * offsetMultiplier : 0;
+          let scale = 1 - (1 - params.scale) * Math.abs(offsetMultiplier);
+
+          // Fix for ultra small values
+          if (Math.abs(translateX) < 0.001) translateX = 0;
+          if (Math.abs(translateY) < 0.001) translateY = 0;
+          if (Math.abs(translateZ) < 0.001) translateZ = 0;
+          if (Math.abs(rotateY) < 0.001) rotateY = 0;
+          if (Math.abs(rotateX) < 0.001) rotateX = 0;
+          if (Math.abs(scale) < 0.001) scale = 0;
+          const slideTransform = `translate3d(${translateX}px,${translateY}px,${translateZ}px)  rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
+          const targetEl = effectTarget(params, slideEl);
+          targetEl.style.transform = slideTransform;
+          slideEl.style.zIndex = -Math.abs(Math.round(offsetMultiplier)) + 1;
+          if (params.slideShadows) {
+            // Set shadows
+            let shadowBeforeEl = isHorizontal ? slideEl.querySelector('.swiper-slide-shadow-left') : slideEl.querySelector('.swiper-slide-shadow-top');
+            let shadowAfterEl = isHorizontal ? slideEl.querySelector('.swiper-slide-shadow-right') : slideEl.querySelector('.swiper-slide-shadow-bottom');
+            if (!shadowBeforeEl) {
+              shadowBeforeEl = createShadow(params, slideEl, isHorizontal ? 'left' : 'top');
+            }
+            if (!shadowAfterEl) {
+              shadowAfterEl = createShadow(params, slideEl, isHorizontal ? 'right' : 'bottom');
+            }
+            if (shadowBeforeEl) shadowBeforeEl.style.opacity = offsetMultiplier > 0 ? offsetMultiplier : 0;
+            if (shadowAfterEl) shadowAfterEl.style.opacity = -offsetMultiplier > 0 ? -offsetMultiplier : 0;
+          }
+        }
+      };
+      const setTransition = duration => {
+        const transformElements = swiper.slides.map(slideEl => getSlideTransformEl(slideEl));
+        transformElements.forEach(el => {
+          el.style.transitionDuration = `${duration}ms`;
+          el.querySelectorAll('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').forEach(shadowEl => {
+            shadowEl.style.transitionDuration = `${duration}ms`;
+          });
+        });
+      };
+      effectInit({
+        effect: 'coverflow',
+        swiper,
+        on,
+        setTranslate,
+        setTransition,
+        perspective: () => true,
+        overwriteParams: () => ({
+          watchSlidesProgress: true
+        })
+      });
+    }
+
+    function EffectCreative({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        creativeEffect: {
+          limitProgress: 1,
+          shadowPerProgress: false,
+          progressMultiplier: 1,
+          perspective: true,
+          prev: {
+            translate: [0, 0, 0],
+            rotate: [0, 0, 0],
+            opacity: 1,
+            scale: 1
+          },
+          next: {
+            translate: [0, 0, 0],
+            rotate: [0, 0, 0],
+            opacity: 1,
+            scale: 1
+          }
+        }
+      });
+      const getTranslateValue = value => {
+        if (typeof value === 'string') return value;
+        return `${value}px`;
+      };
+      const setTranslate = () => {
+        const {
+          slides,
+          wrapperEl,
+          slidesSizesGrid
+        } = swiper;
+        const params = swiper.params.creativeEffect;
+        const {
+          progressMultiplier: multiplier
+        } = params;
+        const isCenteredSlides = swiper.params.centeredSlides;
+        if (isCenteredSlides) {
+          const margin = slidesSizesGrid[0] / 2 - swiper.params.slidesOffsetBefore || 0;
+          wrapperEl.style.transform = `translateX(calc(50% - ${margin}px))`;
+        }
+        for (let i = 0; i < slides.length; i += 1) {
+          const slideEl = slides[i];
+          const slideProgress = slideEl.progress;
+          const progress = Math.min(Math.max(slideEl.progress, -params.limitProgress), params.limitProgress);
+          let originalProgress = progress;
+          if (!isCenteredSlides) {
+            originalProgress = Math.min(Math.max(slideEl.originalProgress, -params.limitProgress), params.limitProgress);
+          }
+          const offset = slideEl.swiperSlideOffset;
+          const t = [swiper.params.cssMode ? -offset - swiper.translate : -offset, 0, 0];
+          const r = [0, 0, 0];
+          let custom = false;
+          if (!swiper.isHorizontal()) {
+            t[1] = t[0];
+            t[0] = 0;
+          }
+          let data = {
+            translate: [0, 0, 0],
+            rotate: [0, 0, 0],
+            scale: 1,
+            opacity: 1
+          };
+          if (progress < 0) {
+            data = params.next;
+            custom = true;
+          } else if (progress > 0) {
+            data = params.prev;
+            custom = true;
+          }
+          // set translate
+          t.forEach((value, index) => {
+            t[index] = `calc(${value}px + (${getTranslateValue(data.translate[index])} * ${Math.abs(progress * multiplier)}))`;
+          });
+          // set rotates
+          r.forEach((value, index) => {
+            r[index] = data.rotate[index] * Math.abs(progress * multiplier);
+          });
+          slideEl.style.zIndex = -Math.abs(Math.round(slideProgress)) + slides.length;
+          const translateString = t.join(', ');
+          const rotateString = `rotateX(${r[0]}deg) rotateY(${r[1]}deg) rotateZ(${r[2]}deg)`;
+          const scaleString = originalProgress < 0 ? `scale(${1 + (1 - data.scale) * originalProgress * multiplier})` : `scale(${1 - (1 - data.scale) * originalProgress * multiplier})`;
+          const opacityString = originalProgress < 0 ? 1 + (1 - data.opacity) * originalProgress * multiplier : 1 - (1 - data.opacity) * originalProgress * multiplier;
+          const transform = `translate3d(${translateString}) ${rotateString} ${scaleString}`;
+
+          // Set shadows
+          if (custom && data.shadow || !custom) {
+            let shadowEl = slideEl.querySelector('.swiper-slide-shadow');
+            if (!shadowEl && data.shadow) {
+              shadowEl = createShadow(params, slideEl);
+            }
+            if (shadowEl) {
+              const shadowOpacity = params.shadowPerProgress ? progress * (1 / params.limitProgress) : progress;
+              shadowEl.style.opacity = Math.min(Math.max(Math.abs(shadowOpacity), 0), 1);
+            }
+          }
+          const targetEl = effectTarget(params, slideEl);
+          targetEl.style.transform = transform;
+          targetEl.style.opacity = opacityString;
+          if (data.origin) {
+            targetEl.style.transformOrigin = data.origin;
+          }
+        }
+      };
+      const setTransition = duration => {
+        const transformElements = swiper.slides.map(slideEl => getSlideTransformEl(slideEl));
+        transformElements.forEach(el => {
+          el.style.transitionDuration = `${duration}ms`;
+          el.querySelectorAll('.swiper-slide-shadow').forEach(shadowEl => {
+            shadowEl.style.transitionDuration = `${duration}ms`;
+          });
+        });
+        effectVirtualTransitionEnd({
+          swiper,
+          duration,
+          transformElements,
+          allSlides: true
+        });
+      };
+      effectInit({
+        effect: 'creative',
+        swiper,
+        on,
+        setTranslate,
+        setTransition,
+        perspective: () => swiper.params.creativeEffect.perspective,
+        overwriteParams: () => ({
+          watchSlidesProgress: true,
+          virtualTranslate: !swiper.params.cssMode
+        })
+      });
+    }
+
+    function EffectCards({
+      swiper,
+      extendParams,
+      on
+    }) {
+      extendParams({
+        cardsEffect: {
+          slideShadows: true,
+          rotate: true,
+          perSlideRotate: 2,
+          perSlideOffset: 8
+        }
+      });
+      const setTranslate = () => {
+        const {
+          slides,
+          activeIndex
+        } = swiper;
+        const params = swiper.params.cardsEffect;
+        const {
+          startTranslate,
+          isTouched
+        } = swiper.touchEventsData;
+        const currentTranslate = swiper.translate;
+        for (let i = 0; i < slides.length; i += 1) {
+          const slideEl = slides[i];
+          const slideProgress = slideEl.progress;
+          const progress = Math.min(Math.max(slideProgress, -4), 4);
+          let offset = slideEl.swiperSlideOffset;
+          if (swiper.params.centeredSlides && !swiper.params.cssMode) {
+            swiper.wrapperEl.style.transform = `translateX(${swiper.minTranslate()}px)`;
+          }
+          if (swiper.params.centeredSlides && swiper.params.cssMode) {
+            offset -= slides[0].swiperSlideOffset;
+          }
+          let tX = swiper.params.cssMode ? -offset - swiper.translate : -offset;
+          let tY = 0;
+          const tZ = -100 * Math.abs(progress);
+          let scale = 1;
+          let rotate = -params.perSlideRotate * progress;
+          let tXAdd = params.perSlideOffset - Math.abs(progress) * 0.75;
+          const slideIndex = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.from + i : i;
+          const isSwipeToNext = (slideIndex === activeIndex || slideIndex === activeIndex - 1) && progress > 0 && progress < 1 && (isTouched || swiper.params.cssMode) && currentTranslate < startTranslate;
+          const isSwipeToPrev = (slideIndex === activeIndex || slideIndex === activeIndex + 1) && progress < 0 && progress > -1 && (isTouched || swiper.params.cssMode) && currentTranslate > startTranslate;
+          if (isSwipeToNext || isSwipeToPrev) {
+            const subProgress = (1 - Math.abs((Math.abs(progress) - 0.5) / 0.5)) ** 0.5;
+            rotate += -28 * progress * subProgress;
+            scale += -0.5 * subProgress;
+            tXAdd += 96 * subProgress;
+            tY = `${-25 * subProgress * Math.abs(progress)}%`;
+          }
+          if (progress < 0) {
+            // next
+            tX = `calc(${tX}px + (${tXAdd * Math.abs(progress)}%))`;
+          } else if (progress > 0) {
+            // prev
+            tX = `calc(${tX}px + (-${tXAdd * Math.abs(progress)}%))`;
+          } else {
+            tX = `${tX}px`;
+          }
+          if (!swiper.isHorizontal()) {
+            const prevY = tY;
+            tY = tX;
+            tX = prevY;
+          }
+          const scaleString = progress < 0 ? `${1 + (1 - scale) * progress}` : `${1 - (1 - scale) * progress}`;
+          const transform = `
+        translate3d(${tX}, ${tY}, ${tZ}px)
+        rotateZ(${params.rotate ? rotate : 0}deg)
+        scale(${scaleString})
+      `;
+          if (params.slideShadows) {
+            // Set shadows
+            let shadowEl = slideEl.querySelector('.swiper-slide-shadow');
+            if (!shadowEl) {
+              shadowEl = createShadow(params, slideEl);
+            }
+            if (shadowEl) shadowEl.style.opacity = Math.min(Math.max((Math.abs(progress) - 0.5) / 0.5, 0), 1);
+          }
+          slideEl.style.zIndex = -Math.abs(Math.round(slideProgress)) + slides.length;
+          const targetEl = effectTarget(params, slideEl);
+          targetEl.style.transform = transform;
+        }
+      };
+      const setTransition = duration => {
+        const transformElements = swiper.slides.map(slideEl => getSlideTransformEl(slideEl));
+        transformElements.forEach(el => {
+          el.style.transitionDuration = `${duration}ms`;
+          el.querySelectorAll('.swiper-slide-shadow').forEach(shadowEl => {
+            shadowEl.style.transitionDuration = `${duration}ms`;
+          });
+        });
+        effectVirtualTransitionEnd({
+          swiper,
+          duration,
+          transformElements
+        });
+      };
+      effectInit({
+        effect: 'cards',
+        swiper,
+        on,
+        setTranslate,
+        setTransition,
+        perspective: () => true,
+        overwriteParams: () => ({
+          watchSlidesProgress: true,
+          virtualTranslate: !swiper.params.cssMode
+        })
+      });
+    }
+
+    /**
+     * Swiper 9.1.0
+     * Most modern mobile touch slider and framework with hardware accelerated transitions
+     * https://swiperjs.com
+     *
+     * Copyright 2014-2023 Vladimir Kharlampidi
+     *
+     * Released under the MIT License
+     *
+     * Released on: February 28, 2023
+     */
+
+    // Swiper Class
+    const modules = [Virtual, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar, Parallax, Zoom, Controller, A11y, History, HashNavigation, Autoplay, Thumb, freeMode, Grid, Manipulation, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCreative, EffectCards];
+    Swiper.use(modules);
+
+    /* underscore in name -> watch for changes */
+    const paramsList = ['modules', 'init', '_direction', 'oneWayMovement', 'touchEventsTarget', 'initialSlide', '_speed', 'cssMode', 'updateOnWindowResize', 'resizeObserver', 'nested', 'focusableElements', '_enabled', '_width', '_height', 'preventInteractionOnTransition', 'userAgent', 'url', '_edgeSwipeDetection', '_edgeSwipeThreshold', '_freeMode', '_autoHeight', 'setWrapperSize', 'virtualTranslate', '_effect', 'breakpoints', '_spaceBetween', '_slidesPerView', 'maxBackfaceHiddenSlides', '_grid', '_slidesPerGroup', '_slidesPerGroupSkip', '_slidesPerGroupAuto', '_centeredSlides', '_centeredSlidesBounds', '_slidesOffsetBefore', '_slidesOffsetAfter', 'normalizeSlideIndex', '_centerInsufficientSlides', '_watchOverflow', 'roundLengths', 'touchRatio', 'touchAngle', 'simulateTouch', '_shortSwipes', '_longSwipes', 'longSwipesRatio', 'longSwipesMs', '_followFinger', 'allowTouchMove', '_threshold', 'touchMoveStopPropagation', 'touchStartPreventDefault', 'touchStartForcePreventDefault', 'touchReleaseOnEdges', 'uniqueNavElements', '_resistance', '_resistanceRatio', '_watchSlidesProgress', '_grabCursor', 'preventClicks', 'preventClicksPropagation', '_slideToClickedSlide', '_loop', 'loopedSlides', 'loopPreventsSliding', '_rewind', '_allowSlidePrev', '_allowSlideNext', '_swipeHandler', '_noSwiping', 'noSwipingClass', 'noSwipingSelector', 'passiveListeners', 'containerModifierClass', 'slideClass', 'slideActiveClass', 'slideVisibleClass', 'slideNextClass', 'slidePrevClass', 'wrapperClass', 'lazyPreloaderClass', 'runCallbacksOnInit', 'observer', 'observeParents', 'observeSlideChildren',
+    // modules
+    'a11y', '_autoplay', '_controller', 'coverflowEffect', 'cubeEffect', 'fadeEffect', 'flipEffect', 'creativeEffect', 'cardsEffect', 'hashNavigation', 'history', 'keyboard', 'mousewheel', '_navigation', '_pagination', 'parallax', '_scrollbar', '_thumbs', 'virtual', 'zoom', 'control', 'injectStyles', 'injectStylesUrls'];
+
+    function isObject(o) {
+      return typeof o === 'object' && o !== null && o.constructor && Object.prototype.toString.call(o).slice(8, -1) === 'Object';
+    }
+    function extend(target, src) {
+      const noExtend = ['__proto__', 'constructor', 'prototype'];
+      Object.keys(src).filter(key => noExtend.indexOf(key) < 0).forEach(key => {
+        if (typeof target[key] === 'undefined') target[key] = src[key];else if (isObject(src[key]) && isObject(target[key]) && Object.keys(src[key]).length > 0) {
+          if (src[key].__swiper__) target[key] = src[key];else extend(target[key], src[key]);
+        } else {
+          target[key] = src[key];
+        }
+      });
+    }
+    function needsNavigation(params = {}) {
+      return params.navigation && typeof params.navigation.nextEl === 'undefined' && typeof params.navigation.prevEl === 'undefined';
+    }
+    function needsPagination(params = {}) {
+      return params.pagination && typeof params.pagination.el === 'undefined';
+    }
+    function needsScrollbar(params = {}) {
+      return params.scrollbar && typeof params.scrollbar.el === 'undefined';
+    }
+    function attrToProp(attrName = '') {
+      return attrName.replace(/-[a-z]/g, l => l.toUpperCase().replace('-', ''));
+    }
+
+    const formatValue = (val) => {
+      if (parseFloat(val) === Number(val)) return Number(val);
+      if (val === 'true') return true;
+      if (val === '') return true;
+      if (val === 'false') return false;
+      if (val === 'null') return null;
+      if (val === 'undefined') return undefined;
+      return val;
+    };
+
+    const modulesParamsList = [
+      'a11y',
+      'autoplay',
+      'controller',
+      'cards-effect',
+      'coverflow-effect',
+      'creative-effect',
+      'cube-effect',
+      'fade-effect',
+      'flip-effect',
+      'free-mode',
+      'grid',
+      'hash-navigation',
+      'history',
+      'keyboard',
+      'mousewheel',
+      'navigation',
+      'pagination',
+      'parallax',
+      'scrollbar',
+      'thumbs',
+      'virtual',
+      'zoom',
+    ];
+
+    function getParams(element) {
+      const params = {};
+      const passedParams = {};
+      extend(params, defaults);
+
+      const localParamsList = [...paramsList, 'on'];
+
+      const allowedParams = localParamsList.map((key) => key.replace(/_/, ''));
+
+      // First check props
+      localParamsList.forEach((paramName) => {
+        paramName = paramName.replace('_', '');
+        if (typeof element[paramName] !== 'undefined') {
+          passedParams[paramName] = element[paramName];
+        }
+      });
+
+      // Attributes
+      [...element.attributes].forEach((attr) => {
+        const moduleParam = modulesParamsList.filter(
+          (mParam) => attr.name.indexOf(`${mParam}-`) === 0,
+        )[0];
+        if (moduleParam) {
+          const parentObjName = attrToProp(moduleParam);
+          const subObjName = attrToProp(attr.name.split(`${moduleParam}-`)[1]);
+          if (!passedParams[parentObjName]) passedParams[parentObjName] = {};
+          if (passedParams[parentObjName] === true) {
+            passedParams[parentObjName] = { enabled: true };
+          }
+          passedParams[parentObjName][subObjName] = formatValue(attr.value);
+        } else {
+          const name = attrToProp(attr.name);
+          if (!allowedParams.includes(name)) return;
+          const value = formatValue(attr.value);
+          if (passedParams[name] && modulesParamsList.includes(attr.name)) {
+            if (passedParams[name].constructor !== Object) {
+              passedParams[name] = {};
+            }
+            passedParams[name].enabled = value;
+          } else {
+            passedParams[name] = value;
+          }
+        }
+      });
+
+      extend(params, passedParams);
+
+      if (params.navigation) {
+        params.navigation = {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+          ...(params.navigation !== true ? params.navigation : {}),
+        };
+      } else if (params.navigation === false) {
+        delete params.navigation;
+      }
+
+      if (params.scrollbar) {
+        params.scrollbar = {
+          el: '.swiper-scrollbar',
+          ...(params.scrollbar !== true ? params.scrollbar : {}),
+        };
+      } else if (params.scrollbar === false) {
+        delete params.scrollbar;
+      }
+
+      if (params.pagination) {
+        params.pagination = {
+          el: '.swiper-pagination',
+          ...(params.pagination !== true ? params.pagination : {}),
+        };
+      } else if (params.pagination === false) {
+        delete params.pagination;
+      }
+
+      return { params, passedParams };
+    }
+
+    function updateSwiper({
+      swiper,
+      slides,
+      passedParams,
+      changedParams,
+      nextEl,
+      prevEl,
+      scrollbarEl,
+      paginationEl
+    }) {
+      const updateParams = changedParams.filter(key => key !== 'children' && key !== 'direction' && key !== 'wrapperClass');
+      const {
+        params: currentParams,
+        pagination,
+        navigation,
+        scrollbar,
+        virtual,
+        thumbs
+      } = swiper;
+      let needThumbsInit;
+      let needControllerInit;
+      let needPaginationInit;
+      let needScrollbarInit;
+      let needNavigationInit;
+      let loopNeedDestroy;
+      let loopNeedEnable;
+      let loopNeedReloop;
+      if (changedParams.includes('thumbs') && passedParams.thumbs && passedParams.thumbs.swiper && currentParams.thumbs && !currentParams.thumbs.swiper) {
+        needThumbsInit = true;
+      }
+      if (changedParams.includes('controller') && passedParams.controller && passedParams.controller.control && currentParams.controller && !currentParams.controller.control) {
+        needControllerInit = true;
+      }
+      if (changedParams.includes('pagination') && passedParams.pagination && (passedParams.pagination.el || paginationEl) && (currentParams.pagination || currentParams.pagination === false) && pagination && !pagination.el) {
+        needPaginationInit = true;
+      }
+      if (changedParams.includes('scrollbar') && passedParams.scrollbar && (passedParams.scrollbar.el || scrollbarEl) && (currentParams.scrollbar || currentParams.scrollbar === false) && scrollbar && !scrollbar.el) {
+        needScrollbarInit = true;
+      }
+      if (changedParams.includes('navigation') && passedParams.navigation && (passedParams.navigation.prevEl || prevEl) && (passedParams.navigation.nextEl || nextEl) && (currentParams.navigation || currentParams.navigation === false) && navigation && !navigation.prevEl && !navigation.nextEl) {
+        needNavigationInit = true;
+      }
+      const destroyModule = mod => {
+        if (!swiper[mod]) return;
+        swiper[mod].destroy();
+        if (mod === 'navigation') {
+          if (swiper.isElement) {
+            swiper[mod].prevEl.remove();
+            swiper[mod].nextEl.remove();
+          }
+          currentParams[mod].prevEl = undefined;
+          currentParams[mod].nextEl = undefined;
+          swiper[mod].prevEl = undefined;
+          swiper[mod].nextEl = undefined;
+        } else {
+          if (swiper.isElement) {
+            swiper[mod].el.remove();
+          }
+          currentParams[mod].el = undefined;
+          swiper[mod].el = undefined;
+        }
+      };
+      if (changedParams.includes('loop') && swiper.isElement) {
+        if (currentParams.loop && !passedParams.loop) {
+          loopNeedDestroy = true;
+        } else if (!currentParams.loop && passedParams.loop) {
+          loopNeedEnable = true;
+        } else {
+          loopNeedReloop = true;
+        }
+      }
+      updateParams.forEach(key => {
+        if (isObject(currentParams[key]) && isObject(passedParams[key])) {
+          extend(currentParams[key], passedParams[key]);
+        } else {
+          const newValue = passedParams[key];
+          if ((newValue === true || newValue === false) && (key === 'navigation' || key === 'pagination' || key === 'scrollbar')) {
+            if (newValue === false) {
+              destroyModule(key);
+            }
+          } else {
+            currentParams[key] = passedParams[key];
+          }
+        }
+      });
+      if (updateParams.includes('controller') && !needControllerInit && swiper.controller && swiper.controller.control && currentParams.controller && currentParams.controller.control) {
+        swiper.controller.control = currentParams.controller.control;
+      }
+      if (changedParams.includes('children') && slides && virtual && currentParams.virtual.enabled) {
+        virtual.slides = slides;
+        virtual.update(true);
+      }
+      if (changedParams.includes('children') && slides && currentParams.loop) {
+        loopNeedReloop = true;
+      }
+      if (needThumbsInit) {
+        const initialized = thumbs.init();
+        if (initialized) thumbs.update(true);
+      }
+      if (needControllerInit) {
+        swiper.controller.control = currentParams.controller.control;
+      }
+      if (needPaginationInit) {
+        if (swiper.isElement && (!paginationEl || typeof paginationEl === 'string')) {
+          paginationEl = document.createElement('div');
+          paginationEl.classList.add('swiper-pagination');
+          swiper.el.shadowEl.appendChild(paginationEl);
+        }
+        if (paginationEl) currentParams.pagination.el = paginationEl;
+        pagination.init();
+        pagination.render();
+        pagination.update();
+      }
+      if (needScrollbarInit) {
+        if (swiper.isElement && (!scrollbarEl || typeof scrollbarEl === 'string')) {
+          scrollbarEl = document.createElement('div');
+          scrollbarEl.classList.add('swiper-scrollbar');
+          swiper.el.shadowEl.appendChild(scrollbarEl);
+        }
+        if (scrollbarEl) currentParams.scrollbar.el = scrollbarEl;
+        scrollbar.init();
+        scrollbar.updateSize();
+        scrollbar.setTranslate();
+      }
+      if (needNavigationInit) {
+        if (swiper.isElement) {
+          if (!nextEl || typeof nextEl === 'string') {
+            nextEl = document.createElement('div');
+            nextEl.classList.add('swiper-button-next');
+            swiper.el.shadowEl.appendChild(nextEl);
+          }
+          if (!prevEl || typeof prevEl === 'string') {
+            prevEl = document.createElement('div');
+            prevEl.classList.add('swiper-button-prev');
+            swiper.el.shadowEl.appendChild(prevEl);
+          }
+        }
+        if (nextEl) currentParams.navigation.nextEl = nextEl;
+        if (prevEl) currentParams.navigation.prevEl = prevEl;
+        navigation.init();
+        navigation.update();
+      }
+      if (changedParams.includes('allowSlideNext')) {
+        swiper.allowSlideNext = passedParams.allowSlideNext;
+      }
+      if (changedParams.includes('allowSlidePrev')) {
+        swiper.allowSlidePrev = passedParams.allowSlidePrev;
+      }
+      if (changedParams.includes('direction')) {
+        swiper.changeDirection(passedParams.direction, false);
+      }
+      if (loopNeedDestroy || loopNeedReloop) {
+        swiper.loopDestroy();
+      }
+      if (loopNeedEnable || loopNeedReloop) {
+        swiper.loopCreate();
+      }
+      swiper.update();
+    }
+
+    /**
+     * Swiper Custom Element 9.1.0
+     * Most modern mobile touch slider and framework with hardware accelerated transitions
+     * https://swiperjs.com
+     *
+     * Copyright 2014-2023 Vladimir Kharlampidi
+     *
+     * Released under the MIT License
+     *
+     * Released on: February 28, 2023
+     */
+
+    const SwiperFontCSS = `@font-face{font-family:swiper-icons;src:url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');font-weight:400;font-style:normal}`; const SwiperCSS = `:root{--swiper-theme-color:#007aff}.swiper,swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;display:block}:host(.swiper-vertical)>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);box-sizing:content-box}.swiper-android swiper-slide,.swiper-wrapper{transform:translate3d(0px,0,0)}.swiper-horizontal{touch-action:pan-y}.swiper-vertical{touch-action:pan-x}swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;display:block}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight swiper-slide{height:auto}:host(.swiper-autoheight) .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden swiper-slide{transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}:host(.swiper-3d.swiper-css-mode) .swiper-wrapper{perspective:1200px}:host(.swiper-3d) .swiper-wrapper{transform-style:preserve-3d}.swiper-3d{perspective:1200px}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top,.swiper-3d swiper-slide{transform-style:preserve-3d}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}:host(.swiper-css-mode)>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}:host(.swiper-css-mode)>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-css-mode>swiper-slide{scroll-snap-align:start start}:host(.swiper-horizontal.swiper-css-mode)>.swiper-wrapper{scroll-snap-type:x mandatory}:host(.swiper-vertical.swiper-css-mode)>.swiper-wrapper{scroll-snap-type:y mandatory}:host(.swiper-centered)>.swiper-wrapper::before{content:'';flex-shrink:0;order:9999}.swiper-centered>swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}.swiper-centered.swiper-horizontal>swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}:host(.swiper-centered.swiper-horizontal)>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.swiper-centered.swiper-vertical>swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}:host(.swiper-centered.swiper-vertical)>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;box-sizing:border-box;border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top-color:transparent}.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader{animation:swiper-preloader-spin 1s infinite linear}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.swiper-virtual swiper-slide{-webkit-backface-visibility:hidden;transform:translateZ(0)}:host(.swiper-virtual.swiper-css-mode) .swiper-wrapper::after{content:'';position:absolute;left:0;top:0;pointer-events:none}:host(.swiper-virtual.swiper-css-mode.swiper-horizontal) .swiper-wrapper::after{height:1px;width:var(--swiper-virtual-size)}:host(.swiper-virtual.swiper-css-mode.swiper-vertical) .swiper-wrapper::after{width:1px;height:var(--swiper-virtual-size)}:root{--swiper-navigation-size:44px}.swiper-button-next,.swiper-button-prev{position:absolute;top:var(--swiper-navigation-top-offset,50%);width:calc(var(--swiper-navigation-size)/ 44 * 27);height:var(--swiper-navigation-size);margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));z-index:10;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--swiper-navigation-color,var(--swiper-theme-color))}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-next.swiper-button-hidden,.swiper-button-prev.swiper-button-hidden{opacity:0;cursor:auto;pointer-events:none}.swiper-navigation-disabled .swiper-button-next,.swiper-navigation-disabled .swiper-button-prev{display:none!important}.swiper-button-next:after,.swiper-button-prev:after{font-family:swiper-icons;font-size:var(--swiper-navigation-size);text-transform:none!important;letter-spacing:0;font-variant:initial;line-height:1}.swiper-button-prev,:host(.swiper-rtl) .swiper-button-next{left:var(--swiper-navigation-sides-offset,10px);right:auto}.swiper-button-prev:after,:host(.swiper-rtl) .swiper-button-next:after{content:'prev'}.swiper-button-next,:host(.swiper-rtl) .swiper-button-prev{right:var(--swiper-navigation-sides-offset,10px);left:auto}.swiper-button-next:after,:host(.swiper-rtl) .swiper-button-prev:after{content:'next'}.swiper-button-lock{display:none}.swiper-pagination{position:absolute;text-align:center;transition:.3s opacity;transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-disabled>.swiper-pagination,.swiper-pagination.swiper-pagination-disabled{display:none!important}.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:var(--swiper-pagination-bottom,8px);top:var(--swiper-pagination-top,auto);left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{transform:scale(.33)}.swiper-pagination-bullet{width:var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));height:var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));display:inline-block;border-radius:50%;background:var(--swiper-pagination-bullet-inactive-color,#000);opacity:var(--swiper-pagination-bullet-inactive-opacity, .2)}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet:only-child{display:none!important}.swiper-pagination-bullet-active{opacity:var(--swiper-pagination-bullet-opacity, 1);background:var(--swiper-pagination-color,var(--swiper-theme-color))}.swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets{right:var(--swiper-pagination-right,8px);left:var(--swiper-pagination-left,auto);top:50%;transform:translate3d(0px,-50%,0)}.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:var(--swiper-pagination-bullet-vertical-gap,6px) 0;display:block}.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px}.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:.2s transform,.2s top}.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,4px)}.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s left}.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,:host(.swiper-horizontal.swiper-rtl) .swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s right}.swiper-pagination-fraction{color:var(--swiper-pagination-fraction-color,inherit)}.swiper-pagination-progressbar{background:var(--swiper-pagination-progressbar-bg-color,rgba(0,0,0,.25));position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:var(--swiper-pagination-color,var(--swiper-theme-color));position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}:host(.swiper-rtl) .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}.swiper-horizontal>.swiper-pagination-progressbar,.swiper-pagination-progressbar.swiper-pagination-horizontal,.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:var(--swiper-pagination-progressbar-size,4px);left:0;top:0}.swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-vertical,.swiper-vertical>.swiper-pagination-progressbar{width:var(--swiper-pagination-progressbar-size,4px);height:100%;left:0;top:0}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:var(--swiper-scrollbar-border-radius,10px);position:relative;-ms-touch-action:none;background:var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))}.swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled{display:none!important}.swiper-horizontal>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-horizontal{position:absolute;left:var(--swiper-scrollbar-sides-offset,1%);bottom:var(--swiper-scrollbar-bottom,4px);top:var(--swiper-scrollbar-top,auto);z-index:50;height:var(--swiper-scrollbar-size,4px);width:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.swiper-scrollbar.swiper-scrollbar-vertical,.swiper-vertical>.swiper-scrollbar{position:absolute;left:var(--swiper-scrollbar-left,auto);right:var(--swiper-scrollbar-right,4px);top:var(--swiper-scrollbar-sides-offset,1%);z-index:50;width:var(--swiper-scrollbar-size,4px);height:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:var(--swiper-scrollbar-drag-bg-color,rgba(0,0,0,.5));border-radius:var(--swiper-scrollbar-border-radius,10px);left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;object-fit:contain}.swiper-slide-zoomed{cursor:move;touch-action:none}.swiper .swiper-notification,swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}:host(.swiper-free-mode)>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}:host(.swiper-grid)>.swiper-wrapper{flex-wrap:wrap}:host(.swiper-grid-column)>.swiper-wrapper{flex-wrap:wrap;flex-direction:column}.swiper-fade.swiper-free-mode swiper-slide{transition-timing-function:ease-out}.swiper-fade swiper-slide{pointer-events:none;transition-property:opacity}.swiper-fade swiper-slide swiper-slide{pointer-events:none}.swiper-fade .swiper-slide-active,.swiper-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-cube{overflow:visible}.swiper-cube swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}.swiper-cube swiper-slide swiper-slide{pointer-events:none}.swiper-cube.swiper-rtl swiper-slide{transform-origin:100% 0}.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-next,.swiper-cube .swiper-slide-prev,.swiper-cube swiper-slide-next+swiper-slide{pointer-events:auto;visibility:visible}.swiper-cube .swiper-slide-shadow-bottom,.swiper-cube .swiper-slide-shadow-left,.swiper-cube .swiper-slide-shadow-right,.swiper-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0px;width:100%;height:100%;opacity:.6;z-index:0}.swiper-cube .swiper-cube-shadow:before{content:'';background:#000;position:absolute;left:0;top:0;bottom:0;right:0;filter:blur(50px)}.swiper-flip{overflow:visible}.swiper-flip swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-flip swiper-slide swiper-slide{pointer-events:none}.swiper-flip .swiper-slide-active,.swiper-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-flip .swiper-slide-shadow-bottom,.swiper-flip .swiper-slide-shadow-left,.swiper-flip .swiper-slide-shadow-right,.swiper-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-creative swiper-slide{-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;transition-property:transform,opacity,height}.swiper-cards{overflow:visible}.swiper-cards swiper-slide{transform-origin:center bottom;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden}`;
+
+    let globalInjectStyles = true;
+
+    const addGlobalStyles = (preInit, swiper) => {
+      let globalStyles = document.querySelector('style#swiper-element-styles');
+      const shouldOverwrite = globalStyles && globalStyles.preInit && !preInit;
+      if (!preInit && swiper) {
+        swiper.cssLinks().forEach((url) => {
+          const linkEl = document.createElement('link');
+          linkEl.rel = 'stylesheet';
+          linkEl.href = url;
+          document.head.prepend(linkEl);
+        });
+      }
+      if (!globalStyles || shouldOverwrite) {
+        globalStyles = globalStyles || document.createElement('style');
+        globalStyles.textContent = [SwiperFontCSS, swiper ? swiper.cssStyles() : ''].join('\n'); // eslint-disable-line
+        globalStyles.id = 'swiper-element-styles';
+        globalStyles.preInit = preInit;
+        document.head.prepend(globalStyles);
+      }
+    };
+
+    class DummyHTMLElement {}
+
+    const ClassToExtend =
+      typeof window === 'undefined' || typeof HTMLElement === 'undefined'
+        ? DummyHTMLElement
+        : HTMLElement;
+
+    class SwiperContainer extends ClassToExtend {
+      constructor() {
+        super();
+
+        this.tempDiv = document.createElement('div');
+        this.shadowEl = this.attachShadow({ mode: 'open' });
+      }
+
+      cssStyles() {
+        return [
+          globalInjectStyles ? SwiperCSS : '', // eslint-disable-line
+          ...(this.injectStyles && Array.isArray(this.injectStyles) ? this.injectStyles : []),
+        ].join('\n');
+      }
+
+      cssLinks() {
+        return this.injectStylesUrls || [];
+      }
+
+      render() {
+        if (globalInjectStyles) {
+          // global styles
+          addGlobalStyles(false, this);
+        }
+
+        // local styles
+        const localStyles = this.cssStyles();
+        if (localStyles.length) {
+          this.stylesEl = document.createElement('style');
+          this.stylesEl.textContent = localStyles;
+          this.shadowEl.appendChild(this.stylesEl);
+        }
+
+        this.cssLinks().forEach((url) => {
+          const linkExists = document.querySelector(`link[href="${url}"]`);
+          if (linkExists) return;
+          const linkEl = document.createElement('link');
+          linkEl.rel = 'stylesheet';
+          linkEl.href = url;
+          this.shadowEl.appendChild(linkEl);
+        });
+        // prettier-ignore
+        this.tempDiv.innerHTML = `
+      <slot name="container-start"></slot>
+      <div class="swiper-wrapper">
+        <slot></slot>
+      </div>
+      <slot name="container-end"></slot>
+      ${needsNavigation(this.passedParams) ? `
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      ` : ''}
+      ${needsPagination(this.passedParams) ? `
+        <div class="swiper-pagination"></div>
+      ` : '' }
+      ${needsScrollbar(this.passedParams) ? `
+        <div class="swiper-scrollbar"></div>
+      ` : '' }
+    `;
+        [...this.tempDiv.children].forEach((el) => {
+          this.shadowEl.appendChild(el);
+        });
+      }
+
+      initialize() {
+        if (this.initialized) return;
+        this.initialized = true;
+        const { params: swiperParams, passedParams } = getParams(this);
+        this.swiperParams = swiperParams;
+        this.passedParams = passedParams;
+        delete this.swiperParams.init;
+
+        this.render();
+        // eslint-disable-next-line
+        this.swiper = new Swiper(this, {
+          ...swiperParams,
+          touchEventsTarget: 'container',
+          ...(swiperParams.virtual ? {} : { observer: true }),
+          onAny: (name, ...args) => {
+            const event = new CustomEvent(name.toLowerCase(), {
+              detail: args,
+              bubbles: true,
+              cancelable: true,
+            });
+            this.dispatchEvent(event);
+          },
+        });
+      }
+
+      connectedCallback() {
+        if (this.init === false || this.getAttribute('init') === 'false') {
+          addGlobalStyles(true, this);
+          return;
+        }
+        this.initialize();
+      }
+
+      disconnectedCallback() {
+        if (this.swiper && this.swiper.destroy) {
+          this.swiper.destroy();
+        }
+      }
+
+      updateSwiperOnPropChange(propName) {
+        const { params: swiperParams, passedParams } = getParams(this);
+        this.passedParams = passedParams;
+        this.swiperParams = swiperParams;
+
+        updateSwiper({
+          swiper: this.swiper,
+          passedParams: this.passedParams,
+          changedParams: [attrToProp(propName)],
+          ...(propName === 'navigation' && passedParams[propName]
+            ? {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+              }
+            : {}),
+          ...(propName === 'pagination' && passedParams[propName]
+            ? {
+                paginationEl: '.swiper-pagination',
+              }
+            : {}),
+          ...(propName === 'scrollbar' && passedParams[propName]
+            ? {
+                scrollbarEl: '.swiper-scrollbar',
+              }
+            : {}),
+        });
+      }
+
+      attributeChangedCallback(attr, prevValue, newValue) {
+        if (!this.initialized) return;
+        this.updateSwiperOnPropChange(attr, newValue);
+      }
+
+      static get observedAttributes() {
+        const attrs = paramsList
+          .filter((param) => param.includes('_'))
+          .map((param) =>
+            param
+              .replace(/[A-Z]/g, (v) => `-${v}`)
+              .replace('_', '')
+              .toLowerCase(),
+          );
+        return attrs;
+      }
+    }
+
+    paramsList.forEach((paramName) => {
+      if (paramName === 'init') return;
+      paramName = paramName.replace('_', '');
+      Object.defineProperty(SwiperContainer.prototype, paramName, {
+        get() {
+          return (this.passedParams || {})[paramName];
+        },
+        set(value) {
+          if (!this.passedParams) this.passedParams = {};
+          this.passedParams[paramName] = value;
+          if (!this.initialized) return;
+          this.updateSwiperOnPropChange(paramName, value);
+        },
+      });
+    });
+
+    class SwiperSlide extends ClassToExtend {
+      constructor() {
+        super();
+
+        this.tempDiv = document.createElement('div');
+        this.shadowEl = this.attachShadow({ mode: 'open' });
+      }
+
+      render() {
+        const lazy =
+          this.lazy || this.getAttribute('lazy') === '' || this.getAttribute('lazy') === 'true';
+
+        this.tempDiv.innerHTML = `<slot />`;
+
+        [...this.tempDiv.children].forEach((el) => {
+          this.shadowEl.appendChild(el);
+        });
+
+        if (lazy) {
+          const lazyDiv = document.createElement('div');
+          lazyDiv.classList.add('swiper-lazy-preloader');
+          this.appendChild(lazyDiv);
+        }
+      }
+
+      initialize() {
+        this.render();
+      }
+
+      connectedCallback() {
+        this.initialize();
+      }
+    }
+
+    // eslint-disable-next-line
+    const register = (injectStyles = true) => {
+      if (typeof window === 'undefined') return;
+      if (!injectStyles) {
+        globalInjectStyles = false;
+      }
+      if (globalInjectStyles) {
+        addGlobalStyles(true);
+      }
+      if (!window.customElements.get('swiper-container'))
+        window.customElements.define('swiper-container', SwiperContainer);
+      if (!window.customElements.get('swiper-slide'))
+        window.customElements.define('swiper-slide', SwiperSlide);
+    };
+
+    if (typeof window !== 'undefined') {
+      window.SwiperElementRegisterParams = (params) => {
+        paramsList.push(...params);
+      };
+    }
+
+    const subscriber_queue = [];
+    /**
+     * Creates a `Readable` store that allows reading by subscription.
+     * @param value initial value
+     * @param {StartStopNotifier}start start and stop notifications for subscriptions
+     */
+    function readable(value, start) {
+        return {
+            subscribe: writable(value, start).subscribe
+        };
+    }
+    /**
+     * Create a `Writable` store that allows both updating and reading by subscription.
+     * @param {*=}value initial value
+     * @param {StartStopNotifier=}start start and stop notifications for subscriptions
+     */
+    function writable(value, start = noop) {
+        let stop;
+        const subscribers = new Set();
+        function set(new_value) {
+            if (safe_not_equal(value, new_value)) {
+                value = new_value;
+                if (stop) { // store is ready
+                    const run_queue = !subscriber_queue.length;
+                    for (const subscriber of subscribers) {
+                        subscriber[1]();
+                        subscriber_queue.push(subscriber, value);
+                    }
+                    if (run_queue) {
+                        for (let i = 0; i < subscriber_queue.length; i += 2) {
+                            subscriber_queue[i][0](subscriber_queue[i + 1]);
+                        }
+                        subscriber_queue.length = 0;
+                    }
+                }
+            }
+        }
+        function update(fn) {
+            set(fn(value));
+        }
+        function subscribe(run, invalidate = noop) {
+            const subscriber = [run, invalidate];
+            subscribers.add(subscriber);
+            if (subscribers.size === 1) {
+                stop = start(set) || noop;
+            }
+            run(value);
+            return () => {
+                subscribers.delete(subscriber);
+                if (subscribers.size === 0) {
+                    stop();
+                    stop = null;
+                }
+            };
+        }
+        return { set, update, subscribe };
+    }
+
+    /* src/snap.svelte generated by Svelte v3.55.1 */
+    const file$9 = "src/snap.svelte";
+
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[7] = list[i];
+    	child_ctx[9] = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[7] = list[i];
+    	child_ctx[9] = i;
+    	return child_ctx;
+    }
+
+    // (37:0) {#each imgs as img, i}
+    function create_each_block_1(ctx) {
+    	let swiper_slide;
+    	let img;
+    	let img_src_value;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			swiper_slide = element("swiper-slide");
+    			img = element("img");
+    			t = space();
+    			if (!src_url_equal(img.src, img_src_value = /*imgs*/ ctx[1][/*i*/ ctx[9]])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			attr_dev(img, "loading", "lazy");
+    			attr_dev(img, "class", "svelte-jffll7");
+    			add_location(img, file$9, 38, 16, 2613);
+    			set_custom_element_data(swiper_slide, "lazy", "true");
+    			set_custom_element_data(swiper_slide, "class", "svelte-jffll7");
+    			add_location(swiper_slide, file$9, 37, 12, 2569);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, swiper_slide, anchor);
+    			append_dev(swiper_slide, img);
+    			append_dev(swiper_slide, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(swiper_slide);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(37:0) {#each imgs as img, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (53:4) {:else}
+    function create_else_block(ctx) {
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[5](/*i*/ ctx[9]);
+    	}
+
+    	function keypress_handler_1() {
+    		return /*keypress_handler_1*/ ctx[6](/*i*/ ctx[9]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			img = element("img");
+    			attr_dev(img, "class", "image svelte-jffll7");
+    			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			add_location(img, file$9, 54, 20, 3197);
+    			attr_dev(div, "class", "snap-image svelte-jffll7");
+    			set_style(div, "margin-right", "5px");
+    			add_location(div, file$9, 53, 16, 3126);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(img, "click", click_handler_1, false, false, false),
+    					listen_dev(img, "keypress", keypress_handler_1, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(53:4) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (49:4) {#if i%5 == 4}
+    function create_if_block$1(ctx) {
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler() {
+    		return /*click_handler*/ ctx[3](/*i*/ ctx[9]);
+    	}
+
+    	function keypress_handler() {
+    		return /*keypress_handler*/ ctx[4](/*i*/ ctx[9]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			img = element("img");
+    			attr_dev(img, "class", "image svelte-jffll7");
+    			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[7])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			add_location(img, file$9, 50, 20, 2946);
+    			attr_dev(div, "class", "snap-image svelte-jffll7");
+    			add_location(div, file$9, 49, 16, 2901);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(img, "click", click_handler, false, false, false),
+    					listen_dev(img, "keypress", keypress_handler, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(49:4) {#if i%5 == 4}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (47:0) {#each imgs as img, i}
+    function create_each_block$1(ctx) {
+    	let button;
+    	let t;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*i*/ ctx[9] % 5 == 4) return create_if_block$1;
+    		return create_else_block;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			if_block.c();
+    			t = space();
+    			attr_dev(button, "class", "snap-bnt svelte-jffll7");
+    			add_location(button, file$9, 47, 12, 2840);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+    			if_block.m(button, null);
+    			append_dev(button, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if_block.p(ctx, dirty);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$1.name,
+    		type: "each",
+    		source: "(47:0) {#each imgs as img, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$9(ctx) {
+    	let div4;
+    	let div0;
+    	let fa;
+    	let t0;
+    	let t1;
+    	let div1;
+    	let swiper_container;
+    	let t2;
+    	let div3;
+    	let div2;
+    	let current;
+
+    	fa = new Fa({
+    			props: { icon: faCameraRetro },
+    			$$inline: true
+    		});
+
+    	let each_value_1 = /*imgs*/ ctx[1];
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
+
+    	let each_value = /*imgs*/ ctx[1];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div4 = element("div");
+    			div0 = element("div");
+    			create_component(fa.$$.fragment);
+    			t0 = text("\n        Snap");
+    			t1 = space();
+    			div1 = element("div");
+    			swiper_container = element("swiper-container");
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t2 = space();
+    			div3 = element("div");
+    			div2 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(div0, "class", "snap-head svelte-jffll7");
+    			add_location(div0, file$9, 29, 4, 2343);
+    			set_custom_element_data(swiper_container, "auto-height", "true");
+    			set_custom_element_data(swiper_container, "navigation", "true");
+    			add_location(swiper_container, file$9, 35, 8, 2461);
+    			attr_dev(div1, "class", "swiper");
+    			add_location(div1, file$9, 34, 4, 2432);
+    			attr_dev(div2, "class", "snap-grid svelte-jffll7");
+    			add_location(div2, file$9, 45, 8, 2781);
+    			attr_dev(div3, "class", "snap-main svelte-jffll7");
+    			add_location(div3, file$9, 44, 4, 2749);
+    			attr_dev(div4, "class", "snap-outline svelte-jffll7");
+    			add_location(div4, file$9, 28, 0, 2312);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div0);
+    			mount_component(fa, div0, null);
+    			append_dev(div0, t0);
+    			append_dev(div4, t1);
+    			append_dev(div4, div1);
+    			append_dev(div1, swiper_container);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(swiper_container, null);
+    			}
+
+    			/*swiper_container_binding*/ ctx[2](swiper_container);
+    			append_dev(div4, t2);
+    			append_dev(div4, div3);
+    			append_dev(div3, div2);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div2, null);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*imgs*/ 2) {
+    				each_value_1 = /*imgs*/ ctx[1];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(swiper_container, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (dirty & /*imgs, swiperEl*/ 3) {
+    				each_value = /*imgs*/ ctx[1];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div2, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div4);
+    			destroy_component(fa);
+    			destroy_each(each_blocks_1, detaching);
+    			/*swiper_container_binding*/ ctx[2](null);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$9.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$9($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Snap', slots, []);
+    	register();
+
+    	let imgs = [
+    		"https://lh3.googleusercontent.com/b9dC_zyDxpidhSMcxG4MPlg5yGgHrxT2JjQl_jnz3XdEsnvUPoh0ZgpJXGMa61miJw6CRghGECvTiheWWdKjdg0bYk7Yh8WDf5rGTI_wbzV0uvsM_MSn2aLHCtOIoYjZSLKaIOtq1Bs=w2400",
+    		"https://lh3.googleusercontent.com/wRilQs3DmleP-DjgTjhgZewTWTaifFKS5gAYKu9WCZhseD7Pp83aLOxMkiU5OJLLLcfYdSWB3mNUTQJ34_m44-tgnL1Oz8uu-7MJ_impTZV1jy1P-TZ_O1NHDb9248NPyXuUh8YeC2I=w2400",
+    		"https://lh3.googleusercontent.com/twfO9WB1e8YybIA74IJ3ZSNUVTPPGzU3IMASYOXHea8xGZ-Qwr1VaFsaRZwZVzEz1-5XPegZ7QEiNLEJrNAM2qEMyzr0rBA-ARP1MZu6HLebAvLcI8fVQOAHe2N5lu2JpMdSsyYxwCE=w2400",
+    		"https://lh3.googleusercontent.com/4oGJObbkPWVj-HhV8qdit7nfbGhyvVp3ttZ9sMSWHBRoVB7K_ShAG3exNx-dtQ7Er4I4n2c3OADQUKPnhMebDUJdXM-lBrdLYB4idZWR9xN1pAzUA9rtB4UdIFhaeed1WnHTUgZYjLc=w2400",
+    		"https://lh3.googleusercontent.com/dynQGfMaf7X5umBor9cGjPQ4Sr-x5NsufxmB0WA0h1TVqZ28flLgH1XjX7LYyeTyfQ4m53bARuUrbPv0BlFtzeOt5HCoPyQQqLkjecBpS-f0Qw46LRUb7DrX4ffLXr6enAYgFeYMH8c=w2400",
+    		"https://lh3.googleusercontent.com/NedVhB4OaksfNdQEOc9Cp-Q_-RgEOY5AR-fssgWPG0C9Xj4a0aNvwTlIHnCVt4EsH2mF_Uk-5Z9-s0idFmwWq1gh02cB4M6GVIUFRw9wu1d1raKJ_vJllt00RMjduWBRH0Mj5IsJprE=w2400",
+    		"https://lh3.googleusercontent.com/8gUTIZZ6M3rmm9DwfFKIWOYyyHp-DjotfSx85d92GKfyrKEovOKhwIChI2fpukJL6s3QEL7tXlTOT0O4C6En0AY_vrE_40agXVgixJBOriX9mRb8OQRkRJoUpxVY2L5M6n58otNhrpI=w2400",
+    		"https://lh3.googleusercontent.com/L5bFSXC14yxmVoMOXmiTLYcYjThW7G_zZ3LKHKEAPyl4M8w2YHIhiZCTBmtGOLiNBLODFHdJoEt0sO_Jut652yLnjAQbzHYYw-0QwTiDvzyWA-3ismnH9ojFWYHrRYWareSZPheTmkI=w2400",
+    		"https://lh3.googleusercontent.com/Wx3sgucTOCvN4Twgbs6HmR5rQ5nJim1J3WuzgChbwIAeDisK5fo1XqVEj4mKWFRFvzV5LtqRD2oLXVR_wKD9HY7-72SgKUCAVH7zL4o46a5eQzmyGGwKlZnrWzM24uKonc95Xy5qigc=w2400",
+    		"https://lh3.googleusercontent.com/dOBQfCZsCj5-6s3FBROPYY-uyvJCxX0W6OKJrOly7lVTPwjaOWiTS_KYxV_6nYffZFy3feBldgsJo4zQtyIGLCQ_JU9XxkJs1jeKvihyaENVuGnjLC-REhqXLjqBqqFW0TMYumb6nck=w2400"
+    	];
+
+    	let swiperEl;
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Snap> was created with unknown prop '${key}'`);
+    	});
+
+    	function swiper_container_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			swiperEl = $$value;
+    			$$invalidate(0, swiperEl);
+    		});
+    	}
+
+    	const click_handler = i => swiperEl.swiper.slideTo(i);
+    	const keypress_handler = i => swiperEl.swiper.slideTo(i);
+    	const click_handler_1 = i => swiperEl.swiper.slideTo(i);
+    	const keypress_handler_1 = i => swiperEl.swiper.slideTo(i);
+
+    	$$self.$capture_state = () => ({
+    		Fa,
+    		register,
+    		Swiper,
+    		readable,
+    		faCameraRetro,
+    		faCircleChevronLeft,
+    		faCircleChevronRight,
+    		onMount,
+    		imgs,
+    		swiperEl
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('imgs' in $$props) $$invalidate(1, imgs = $$props.imgs);
+    		if ('swiperEl' in $$props) $$invalidate(0, swiperEl = $$props.swiperEl);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		swiperEl,
+    		imgs,
+    		swiper_container_binding,
+    		click_handler,
+    		keypress_handler,
+    		click_handler_1,
+    		keypress_handler_1
+    	];
+    }
+
+    class Snap extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Snap",
+    			options,
+    			id: create_fragment$9.name
+    		});
+    	}
+    }
+
+    /* src/video.svelte generated by Svelte v3.55.1 */
+    const file$8 = "src/video.svelte";
+
+    function create_fragment$8(ctx) {
+    	let div2;
+    	let div0;
+    	let fa;
+    	let t0;
+    	let t1;
+    	let div1;
+    	let iframe;
+    	let iframe_src_value;
+    	let current;
+
+    	fa = new Fa({
+    			props: { icon: faCirclePlay },
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div0 = element("div");
+    			create_component(fa.$$.fragment);
+    			t0 = text("\n        Video");
+    			t1 = space();
+    			div1 = element("div");
+    			iframe = element("iframe");
+    			attr_dev(div0, "class", "video-head svelte-76dvrn");
+    			add_location(div0, file$8, 6, 4, 152);
+    			attr_dev(iframe, "title", "");
+    			attr_dev(iframe, "width", "425px");
+    			attr_dev(iframe, "height", "240px");
+    			if (!src_url_equal(iframe.src, iframe_src_value = "https://www.youtube.com/embed/3cCezdU6uk4")) attr_dev(iframe, "src", iframe_src_value);
+    			attr_dev(iframe, "frameborder", "0");
+    			attr_dev(iframe, "allow", "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;");
+    			iframe.allowFullscreen = true;
+    			add_location(iframe, file$8, 11, 8, 274);
+    			attr_dev(div1, "class", "video-main");
+    			add_location(div1, file$8, 10, 4, 241);
+    			attr_dev(div2, "class", "video-outline svelte-76dvrn");
+    			add_location(div2, file$8, 5, 0, 120);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			mount_component(fa, div0, null);
+    			append_dev(div0, t0);
+    			append_dev(div2, t1);
+    			append_dev(div2, div1);
+    			append_dev(div1, iframe);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div2);
+    			destroy_component(fa);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$8.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$8($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Video', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Video> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ Fa, faCirclePlay });
+    	return [];
+    }
+
+    class Video extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Video",
+    			options,
+    			id: create_fragment$8.name
+    		});
+    	}
+    }
+
+    /* src/notiBox.svelte generated by Svelte v3.55.1 */
+
+    const file$7 = "src/notiBox.svelte";
+
+    function create_fragment$7(ctx) {
+    	let div3;
+    	let div2;
+    	let div0;
+    	let t1;
+    	let div1;
+    	let t2;
+    	let br0;
+    	let t3;
+    	let br1;
+    	let t4;
+    	let br2;
+    	let br3;
+    	let t5;
+    	let br4;
+    	let t6;
+    	let br5;
+    	let t7;
+    	let br6;
+    	let t8;
+
+    	const block = {
+    		c: function create() {
+    			div3 = element("div");
+    			div2 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "드리고 싶은 말씀";
+    			t1 = space();
+    			div1 = element("div");
+    			t2 = text("코로나19가 장기화되면서\n            ");
+    			br0 = element("br");
+    			t3 = text("\n            종식을 예측할 수 없어 많은 고민 끝에\n            ");
+    			br1 = element("br");
+    			t4 = text("\n            결혼식을 예정대로 진행하게 되었습니다.\n            ");
+    			br2 = element("br");
+    			br3 = element("br");
+    			t5 = text("\n            혹여나 청첩장 전달이 누가 되지 않을지\n            ");
+    			br4 = element("br");
+    			t6 = text("\n            걱정이 많지만 참석이 어려우시더라도\n            ");
+    			br5 = element("br");
+    			t7 = text("\n            멀리서 축하해주시는 마음\n            ");
+    			br6 = element("br");
+    			t8 = text("\n            감사히 받겠습니다.");
+    			attr_dev(div0, "class", "title svelte-l5gzi2");
+    			add_location(div0, file$7, 6, 8, 91);
+    			add_location(br0, file$7, 9, 12, 196);
+    			add_location(br1, file$7, 11, 12, 247);
+    			add_location(br2, file$7, 13, 12, 298);
+    			add_location(br3, file$7, 13, 16, 302);
+    			add_location(br4, file$7, 15, 12, 353);
+    			add_location(br5, file$7, 17, 12, 402);
+    			add_location(br6, file$7, 19, 12, 445);
+    			attr_dev(div1, "class", "main-text svelte-l5gzi2");
+    			add_location(div1, file$7, 7, 8, 134);
+    			attr_dev(div2, "class", "noti-box svelte-l5gzi2");
+    			add_location(div2, file$7, 5, 4, 60);
+    			attr_dev(div3, "class", "noti-box-outline svelte-l5gzi2");
+    			add_location(div3, file$7, 4, 0, 25);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div2);
+    			append_dev(div2, div0);
+    			append_dev(div2, t1);
+    			append_dev(div2, div1);
+    			append_dev(div1, t2);
+    			append_dev(div1, br0);
+    			append_dev(div1, t3);
+    			append_dev(div1, br1);
+    			append_dev(div1, t4);
+    			append_dev(div1, br2);
+    			append_dev(div1, br3);
+    			append_dev(div1, t5);
+    			append_dev(div1, br4);
+    			append_dev(div1, t6);
+    			append_dev(div1, br5);
+    			append_dev(div1, t7);
+    			append_dev(div1, br6);
+    			append_dev(div1, t8);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div3);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$7.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$7($$self, $$props) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('NotiBox', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NotiBox> was created with unknown prop '${key}'`);
+    	});
+
+    	return [];
+    }
+
+    class NotiBox extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "NotiBox",
+    			options,
+    			id: create_fragment$7.name
+    		});
+    	}
+    }
+
+    /* src/guestbook/writing.svelte generated by Svelte v3.55.1 */
+
+    const { console: console_1$2 } = globals;
+    const file$6 = "src/guestbook/writing.svelte";
+
+    function create_fragment$6(ctx) {
+    	let div6;
+    	let button0;
+    	let fa;
+    	let t0;
+    	let div5;
+    	let div0;
+    	let t2;
+    	let div1;
+    	let span1;
+    	let span0;
+    	let t3;
+    	let b0;
+    	let t5;
+    	let input0;
+    	let t6;
+    	let div2;
+    	let span3;
+    	let span2;
+    	let t7;
+    	let b1;
+    	let t9;
+    	let input1;
+    	let t10;
+    	let div3;
+    	let span5;
+    	let span4;
+    	let t11;
+    	let b2;
+    	let t13;
+    	let textarea;
+    	let t14;
+    	let div4;
+    	let button1;
+    	let t15;
+    	let b3;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	fa = new Fa({
+    			props: {
+    				icon: faXmark,
+    				size: "0.8x",
+    				color: "black"
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div6 = element("div");
+    			button0 = element("button");
+    			create_component(fa.$$.fragment);
+    			t0 = space();
+    			div5 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "방명록 축하글 작성";
+    			t2 = space();
+    			div1 = element("div");
+    			span1 = element("span");
+    			span0 = element("span");
+    			t3 = text("이름");
+    			b0 = element("b");
+    			b0.textContent = "*";
+    			t5 = space();
+    			input0 = element("input");
+    			t6 = space();
+    			div2 = element("div");
+    			span3 = element("span");
+    			span2 = element("span");
+    			t7 = text("비밀번호");
+    			b1 = element("b");
+    			b1.textContent = "*";
+    			t9 = space();
+    			input1 = element("input");
+    			t10 = space();
+    			div3 = element("div");
+    			span5 = element("span");
+    			span4 = element("span");
+    			t11 = text("내용");
+    			b2 = element("b");
+    			b2.textContent = "*";
+    			t13 = space();
+    			textarea = element("textarea");
+    			t14 = space();
+    			div4 = element("div");
+    			button1 = element("button");
+    			t15 = text("신랑 & 신부에게 ");
+    			b3 = element("b");
+    			b3.textContent = "축하 글 전달하기";
+    			attr_dev(button0, "class", "close-bnt svelte-1rntlah");
+    			add_location(button0, file$6, 60, 4, 1589);
+    			attr_dev(div0, "class", "header svelte-1rntlah");
+    			add_location(div0, file$6, 64, 8, 1749);
+    			set_style(b0, "color", "red");
+    			set_style(b0, "margin-left", "3px");
+    			add_location(b0, file$6, 70, 22, 1939);
+    			attr_dev(span0, "class", "column-text svelte-1rntlah");
+    			add_location(span0, file$6, 69, 16, 1890);
+    			attr_dev(span1, "class", "column-title svelte-1rntlah");
+    			add_location(span1, file$6, 68, 12, 1846);
+    			attr_dev(input0, "type", "text");
+    			attr_dev(input0, "placeholder", "이름을 입력해주세요.");
+    			attr_dev(input0, "name", "name");
+    			attr_dev(input0, "maxlength", "30");
+    			attr_dev(input0, "autocomplete", "off");
+    			attr_dev(input0, "class", "svelte-1rntlah");
+    			add_location(input0, file$6, 73, 12, 2040);
+    			attr_dev(div1, "class", "row svelte-1rntlah");
+    			add_location(div1, file$6, 67, 8, 1816);
+    			set_style(b1, "color", "red");
+    			set_style(b1, "margin-left", "3px");
+    			add_location(b1, file$6, 78, 24, 2298);
+    			attr_dev(span2, "class", "column-text svelte-1rntlah");
+    			add_location(span2, file$6, 77, 16, 2247);
+    			attr_dev(span3, "class", "column-title svelte-1rntlah");
+    			add_location(span3, file$6, 76, 12, 2203);
+    			attr_dev(input1, "type", "password");
+    			attr_dev(input1, "placeholder", "비밀번호를 입력해주세요.");
+    			attr_dev(input1, "name", "password");
+    			attr_dev(input1, "maxlength", "30");
+    			attr_dev(input1, "autocomplete", "off");
+    			attr_dev(input1, "class", "svelte-1rntlah");
+    			add_location(input1, file$6, 81, 12, 2399);
+    			attr_dev(div2, "class", "row svelte-1rntlah");
+    			add_location(div2, file$6, 75, 8, 2173);
+    			set_style(b2, "color", "red");
+    			set_style(b2, "margin-left", "3px");
+    			add_location(b2, file$6, 86, 22, 2669);
+    			attr_dev(span4, "class", "column-text svelte-1rntlah");
+    			add_location(span4, file$6, 85, 16, 2620);
+    			attr_dev(span5, "class", "column-title svelte-1rntlah");
+    			add_location(span5, file$6, 84, 12, 2576);
+    			attr_dev(textarea, "type", "text");
+    			attr_dev(textarea, "placeholder", "내용을 입력해주세요. (최대 100자)");
+    			attr_dev(textarea, "name", "content");
+    			attr_dev(textarea, "maxlength", "100");
+    			attr_dev(textarea, "autocomplete", "off");
+    			attr_dev(textarea, "class", "svelte-1rntlah");
+    			add_location(textarea, file$6, 89, 12, 2770);
+    			attr_dev(div3, "class", "row svelte-1rntlah");
+    			add_location(div3, file$6, 83, 8, 2546);
+    			add_location(b3, file$6, 93, 26, 3061);
+    			attr_dev(button1, "class", "create-writing svelte-1rntlah");
+    			add_location(button1, file$6, 92, 12, 2977);
+    			set_style(div4, "margin-top", "40px");
+    			add_location(div4, file$6, 91, 8, 2934);
+    			attr_dev(div5, "class", "writing-main svelte-1rntlah");
+    			add_location(div5, file$6, 63, 4, 1714);
+    			attr_dev(div6, "class", "writing-outline svelte-1rntlah");
+    			set_style(div6, "display", /*display*/ ctx[0]);
+    			add_location(div6, file$6, 59, 0, 1528);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, button0);
+    			mount_component(fa, button0, null);
+    			append_dev(div6, t0);
+    			append_dev(div6, div5);
+    			append_dev(div5, div0);
+    			append_dev(div5, t2);
+    			append_dev(div5, div1);
+    			append_dev(div1, span1);
+    			append_dev(span1, span0);
+    			append_dev(span0, t3);
+    			append_dev(span0, b0);
+    			append_dev(div1, t5);
+    			append_dev(div1, input0);
+    			set_input_value(input0, /*name*/ ctx[2]);
+    			append_dev(div5, t6);
+    			append_dev(div5, div2);
+    			append_dev(div2, span3);
+    			append_dev(span3, span2);
+    			append_dev(span2, t7);
+    			append_dev(span2, b1);
+    			append_dev(div2, t9);
+    			append_dev(div2, input1);
+    			set_input_value(input1, /*password*/ ctx[3]);
+    			append_dev(div5, t10);
+    			append_dev(div5, div3);
+    			append_dev(div3, span5);
+    			append_dev(span5, span4);
+    			append_dev(span4, t11);
+    			append_dev(span4, b2);
+    			append_dev(div3, t13);
+    			append_dev(div3, textarea);
+    			set_input_value(textarea, /*content*/ ctx[4]);
+    			append_dev(div5, t14);
+    			append_dev(div5, div4);
+    			append_dev(div4, button1);
+    			append_dev(button1, t15);
+    			append_dev(button1, b3);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(
+    						button0,
+    						"click",
+    						function () {
+    							if (is_function(/*change_display*/ ctx[1])) /*change_display*/ ctx[1].apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					),
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[8]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[9]),
+    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[10]),
+    					listen_dev(button1, "click", /*create_comment*/ ctx[5], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, [dirty]) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*name*/ 4 && input0.value !== /*name*/ ctx[2]) {
+    				set_input_value(input0, /*name*/ ctx[2]);
+    			}
+
+    			if (dirty & /*password*/ 8 && input1.value !== /*password*/ ctx[3]) {
+    				set_input_value(input1, /*password*/ ctx[3]);
+    			}
+
+    			if (dirty & /*content*/ 16) {
+    				set_input_value(textarea, /*content*/ ctx[4]);
+    			}
+
+    			if (!current || dirty & /*display*/ 1) {
+    				set_style(div6, "display", /*display*/ ctx[0]);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div6);
+    			destroy_component(fa);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$6.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$6($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Writing', slots, []);
+    	let { display = "none" } = $$props;
+    	let { change_display } = $$props;
+    	let { backend_url } = $$props;
+    	let { swap_to_comment_display } = $$props;
+    	let name = "";
+    	let password = "";
+    	let content = "";
+
+    	async function create_comment() {
+    		if (name == "") {
+    			alert("이름을 입력해주세요.");
+    			return;
+    		} else if (password == "") {
+    			alert("비밀번호를 입력해주세요.");
+    			return;
+    		} else if (content == "") {
+    			alert("내용을 입력해주세요.");
+    			return;
+    		}
+
+    		await fetch(backend_url, {
+    			method: "POST",
+    			headers: { "Content-Type": "application/json" },
+    			body: JSON.stringify({ name, password, content })
+    		}).then(res => {
+    			if (res.status == 200) {
+    				return res.json();
+    			} else {
+    				throw res.status;
+    			}
+    		}).then(data => {
+    			$$invalidate(2, name = "");
+    			$$invalidate(3, password = "");
+    			$$invalidate(4, content = "");
+    			swap_to_comment_display();
+    			alert("축하글이 작성되었습니다!");
+    		}).catch(error => {
+    			console.log("Unexpected error (" + error + ")");
+    			alert("현재 축하글을 작성할 수 없습니다.\n잠시 후 이용해주세요.");
+    		});
+    	}
+
+    	$$self.$$.on_mount.push(function () {
+    		if (change_display === undefined && !('change_display' in $$props || $$self.$$.bound[$$self.$$.props['change_display']])) {
+    			console_1$2.warn("<Writing> was created without expected prop 'change_display'");
+    		}
+
+    		if (backend_url === undefined && !('backend_url' in $$props || $$self.$$.bound[$$self.$$.props['backend_url']])) {
+    			console_1$2.warn("<Writing> was created without expected prop 'backend_url'");
+    		}
+
+    		if (swap_to_comment_display === undefined && !('swap_to_comment_display' in $$props || $$self.$$.bound[$$self.$$.props['swap_to_comment_display']])) {
+    			console_1$2.warn("<Writing> was created without expected prop 'swap_to_comment_display'");
+    		}
+    	});
+
+    	const writable_props = ['display', 'change_display', 'backend_url', 'swap_to_comment_display'];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$2.warn(`<Writing> was created with unknown prop '${key}'`);
+    	});
+
+    	function input0_input_handler() {
+    		name = this.value;
+    		$$invalidate(2, name);
+    	}
+
+    	function input1_input_handler() {
+    		password = this.value;
+    		$$invalidate(3, password);
+    	}
+
+    	function textarea_input_handler() {
+    		content = this.value;
+    		$$invalidate(4, content);
+    	}
+
+    	$$self.$$set = $$props => {
+    		if ('display' in $$props) $$invalidate(0, display = $$props.display);
+    		if ('change_display' in $$props) $$invalidate(1, change_display = $$props.change_display);
+    		if ('backend_url' in $$props) $$invalidate(6, backend_url = $$props.backend_url);
+    		if ('swap_to_comment_display' in $$props) $$invalidate(7, swap_to_comment_display = $$props.swap_to_comment_display);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		Fa,
+    		faXmark,
+    		display,
+    		change_display,
+    		backend_url,
+    		swap_to_comment_display,
+    		name,
+    		password,
+    		content,
+    		create_comment
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('display' in $$props) $$invalidate(0, display = $$props.display);
+    		if ('change_display' in $$props) $$invalidate(1, change_display = $$props.change_display);
+    		if ('backend_url' in $$props) $$invalidate(6, backend_url = $$props.backend_url);
+    		if ('swap_to_comment_display' in $$props) $$invalidate(7, swap_to_comment_display = $$props.swap_to_comment_display);
+    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
+    		if ('password' in $$props) $$invalidate(3, password = $$props.password);
+    		if ('content' in $$props) $$invalidate(4, content = $$props.content);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		display,
+    		change_display,
+    		name,
+    		password,
+    		content,
+    		create_comment,
+    		backend_url,
+    		swap_to_comment_display,
+    		input0_input_handler,
+    		input1_input_handler,
+    		textarea_input_handler
+    	];
+    }
+
+    class Writing extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {
+    			display: 0,
+    			change_display: 1,
+    			backend_url: 6,
+    			swap_to_comment_display: 7
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Writing",
+    			options,
+    			id: create_fragment$6.name
+    		});
+    	}
+
+    	get display() {
+    		throw new Error("<Writing>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set display(value) {
+    		throw new Error("<Writing>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get change_display() {
+    		throw new Error("<Writing>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set change_display(value) {
+    		throw new Error("<Writing>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get backend_url() {
+    		throw new Error("<Writing>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set backend_url(value) {
+    		throw new Error("<Writing>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get swap_to_comment_display() {
+    		throw new Error("<Writing>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set swap_to_comment_display(value) {
+    		throw new Error("<Writing>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/guestbook/comment.svelte generated by Svelte v3.55.1 */
+
+    const { console: console_1$1 } = globals;
+    const file$5 = "src/guestbook/comment.svelte";
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[7] = list[i];
+    	return child_ctx;
+    }
+
+    // (88:0) {:catch error}
+    function create_catch_block(ctx) {
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			p.textContent = "문제가 발생했습니다. 다시 시도해주세요.";
+    			add_location(p, file$5, 88, 8, 2634);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_catch_block.name,
+    		type: "catch",
+    		source: "(88:0) {:catch error}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (71:0) {:then comments}
+    function create_then_block(ctx) {
+    	let ul;
+    	let current;
+    	let each_value = /*comments*/ ctx[2];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	const block = {
+    		c: function create() {
+    			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(ul, "class", "padding-zero svelte-6m3od6");
+    			add_location(ul, file$5, 71, 8, 1955);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, ul, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*comments, delete_comment, faSquareMinus*/ 12) {
+    				each_value = /*comments*/ ctx[2];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
+    				group_outros();
+
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(ul);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_then_block.name,
+    		type: "then",
+    		source: "(71:0) {:then comments}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (73:4) {#each comments as comment}
+    function create_each_block(ctx) {
+    	let li;
+    	let div0;
+    	let span0;
+    	let t0_value = /*comment*/ ctx[7].name + "";
+    	let t0;
+    	let t1;
+    	let button;
+    	let fa;
+    	let button_id_value;
+    	let t2;
+    	let span1;
+    	let t3_value = /*comment*/ ctx[7].created + "";
+    	let t3;
+    	let t4;
+    	let div1;
+    	let t5_value = /*comment*/ ctx[7].content + "";
+    	let t5;
+    	let t6;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	fa = new Fa({
+    			props: { icon: faSquareMinus, color: "gray" },
+    			$$inline: true
+    		});
+
+    	function click_handler() {
+    		return /*click_handler*/ ctx[5](/*comment*/ ctx[7]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			div0 = element("div");
+    			span0 = element("span");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			button = element("button");
+    			create_component(fa.$$.fragment);
+    			t2 = space();
+    			span1 = element("span");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			div1 = element("div");
+    			t5 = text(t5_value);
+    			t6 = space();
+    			attr_dev(span0, "class", "comment-name svelte-6m3od6");
+    			add_location(span0, file$5, 75, 20, 2110);
+    			attr_dev(button, "id", button_id_value = /*comment*/ ctx[7].id);
+    			attr_dev(button, "class", "delete-bnt svelte-6m3od6");
+    			add_location(button, file$5, 76, 20, 2179);
+    			attr_dev(span1, "class", "comment-created svelte-6m3od6");
+    			add_location(span1, file$5, 79, 20, 2382);
+    			attr_dev(div0, "class", "comment-title svelte-6m3od6");
+    			add_location(div0, file$5, 74, 16, 2062);
+    			attr_dev(div1, "class", "comment-content svelte-6m3od6");
+    			add_location(div1, file$5, 81, 16, 2476);
+    			attr_dev(li, "class", "comment svelte-6m3od6");
+    			add_location(li, file$5, 73, 12, 2025);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, div0);
+    			append_dev(div0, span0);
+    			append_dev(span0, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, button);
+    			mount_component(fa, button, null);
+    			append_dev(div0, t2);
+    			append_dev(div0, span1);
+    			append_dev(span1, t3);
+    			append_dev(li, t4);
+    			append_dev(li, div1);
+    			append_dev(div1, t5);
+    			append_dev(li, t6);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", click_handler, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*comments*/ 4) && t0_value !== (t0_value = /*comment*/ ctx[7].name + "")) set_data_dev(t0, t0_value);
+
+    			if (!current || dirty & /*comments*/ 4 && button_id_value !== (button_id_value = /*comment*/ ctx[7].id)) {
+    				attr_dev(button, "id", button_id_value);
+    			}
+
+    			if ((!current || dirty & /*comments*/ 4) && t3_value !== (t3_value = /*comment*/ ctx[7].created + "")) set_data_dev(t3, t3_value);
+    			if ((!current || dirty & /*comments*/ 4) && t5_value !== (t5_value = /*comment*/ ctx[7].content + "")) set_data_dev(t5, t5_value);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			destroy_component(fa);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block.name,
+    		type: "each",
+    		source: "(73:4) {#each comments as comment}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (69:17)          <p>...Loading</p> {:then comments}
+    function create_pending_block(ctx) {
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			p.textContent = "...Loading";
+    			add_location(p, file$5, 69, 8, 1912);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_pending_block.name,
+    		type: "pending",
+    		source: "(69:17)          <p>...Loading</p> {:then comments}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$5(ctx) {
+    	let div2;
+    	let button;
+    	let fa;
+    	let t0;
+    	let div1;
+    	let div0;
+    	let t2;
+    	let promise;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	fa = new Fa({
+    			props: {
+    				icon: faXmark,
+    				size: ".8x",
+    				color: "black"
+    			},
+    			$$inline: true
+    		});
+
+    	let info = {
+    		ctx,
+    		current: null,
+    		token: null,
+    		hasCatch: true,
+    		pending: create_pending_block,
+    		then: create_then_block,
+    		catch: create_catch_block,
+    		value: 2,
+    		error: 10,
+    		blocks: [,,,]
+    	};
+
+    	handle_promise(promise = /*comments*/ ctx[2], info);
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			button = element("button");
+    			create_component(fa.$$.fragment);
+    			t0 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "방명록 축하글 전체보기";
+    			t2 = space();
+    			info.block.c();
+    			attr_dev(button, "class", "close-bnt svelte-6m3od6");
+    			add_location(button, file$5, 60, 4, 1661);
+    			attr_dev(div0, "class", "header svelte-6m3od6");
+    			add_location(div0, file$5, 65, 8, 1825);
+    			attr_dev(div1, "class", "comment-list svelte-6m3od6");
+    			add_location(div1, file$5, 64, 4, 1790);
+    			attr_dev(div2, "class", "comment-outline svelte-6m3od6");
+    			set_style(div2, "display", /*display*/ ctx[0]);
+    			add_location(div2, file$5, 59, 0, 1600);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, button);
+    			mount_component(fa, button, null);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			append_dev(div1, div0);
+    			append_dev(div1, t2);
+    			info.block.m(div1, info.anchor = null);
+    			info.mount = () => div1;
+    			info.anchor = null;
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(
+    					button,
+    					"click",
+    					function () {
+    						if (is_function(/*change_display*/ ctx[1])) /*change_display*/ ctx[1].apply(this, arguments);
+    					},
+    					false,
+    					false,
+    					false
+    				);
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, [dirty]) {
+    			ctx = new_ctx;
+    			info.ctx = ctx;
+
+    			if (dirty & /*comments*/ 4 && promise !== (promise = /*comments*/ ctx[2]) && handle_promise(promise, info)) ; else {
+    				update_await_block_branch(info, ctx, dirty);
+    			}
+
+    			if (!current || dirty & /*display*/ 1) {
+    				set_style(div2, "display", /*display*/ ctx[0]);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa.$$.fragment, local);
+    			transition_in(info.block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa.$$.fragment, local);
+
+    			for (let i = 0; i < 3; i += 1) {
+    				const block = info.blocks[i];
+    				transition_out(block);
+    			}
+
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div2);
+    			destroy_component(fa);
+    			info.block.d();
+    			info.token = null;
+    			info = null;
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$5.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$5($$self, $$props, $$invalidate) {
+    	let comments;
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Comment', slots, []);
+    	let { display = "none" } = $$props;
+    	let { change_display } = $$props;
+    	let { backend_url } = $$props;
+
+    	async function fetch_all_comments() {
+    		return await fetch(backend_url).then(res => res.json()).then(data => data.results);
+    	}
+
+    	async function delete_comment(comment_id) {
+    		let password = prompt("비밀번호를 입력해주세요.");
+
+    		if (password == null || password == "") {
+    			return;
+    		}
+
+    		await fetch(backend_url, {
+    			method: "DELETE",
+    			headers: { "Content-Type": "application/json" },
+    			body: JSON.stringify({ "id": comment_id, password })
+    		}).then(res => {
+    			if (res.status == 200) {
+    				return res.json();
+    			} else {
+    				throw res.status;
+    			}
+    		}).then(data => {
+    			alert("삭제되었습니다.");
+    			$$invalidate(2, comments = fetch_all_comments());
+    		}).catch(status => {
+    			if (status == "401") {
+    				alert("비밀번호가 틀렸습니다.\n다시 한 번 확인해주세요.");
+    			} else {
+    				console.log("Unexpected error (" + status + ")");
+    				alert("현재 축하글을 삭제할 수 없습니다.\n잠시 후 이용해주세요.");
+    			}
+    		});
+    	}
+
+    	$$self.$$.on_mount.push(function () {
+    		if (change_display === undefined && !('change_display' in $$props || $$self.$$.bound[$$self.$$.props['change_display']])) {
+    			console_1$1.warn("<Comment> was created without expected prop 'change_display'");
+    		}
+
+    		if (backend_url === undefined && !('backend_url' in $$props || $$self.$$.bound[$$self.$$.props['backend_url']])) {
+    			console_1$1.warn("<Comment> was created without expected prop 'backend_url'");
+    		}
+    	});
+
+    	const writable_props = ['display', 'change_display', 'backend_url'];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<Comment> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = comment => delete_comment(comment.id);
+
+    	$$self.$$set = $$props => {
+    		if ('display' in $$props) $$invalidate(0, display = $$props.display);
+    		if ('change_display' in $$props) $$invalidate(1, change_display = $$props.change_display);
+    		if ('backend_url' in $$props) $$invalidate(4, backend_url = $$props.backend_url);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		Fa,
+    		faXmark,
+    		faSquareMinus,
+    		display,
+    		change_display,
+    		backend_url,
+    		fetch_all_comments,
+    		delete_comment,
+    		comments
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('display' in $$props) $$invalidate(0, display = $$props.display);
+    		if ('change_display' in $$props) $$invalidate(1, change_display = $$props.change_display);
+    		if ('backend_url' in $$props) $$invalidate(4, backend_url = $$props.backend_url);
+    		if ('comments' in $$props) $$invalidate(2, comments = $$props.comments);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*display*/ 1) {
+    			{
+    				if (display != "none") {
+    					$$invalidate(2, comments = fetch_all_comments());
+    				}
+    			}
+    		}
+    	};
+
+    	$$invalidate(2, comments = fetch_all_comments());
+    	return [display, change_display, comments, delete_comment, backend_url, click_handler];
+    }
+
+    class Comment extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {
+    			display: 0,
+    			change_display: 1,
+    			backend_url: 4
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Comment",
+    			options,
+    			id: create_fragment$5.name
+    		});
+    	}
+
+    	get display() {
+    		throw new Error("<Comment>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set display(value) {
+    		throw new Error("<Comment>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get change_display() {
+    		throw new Error("<Comment>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set change_display(value) {
+    		throw new Error("<Comment>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get backend_url() {
+    		throw new Error("<Comment>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set backend_url(value) {
+    		throw new Error("<Comment>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/guestbook/guestbook.svelte generated by Svelte v3.55.1 */
+    const file$4 = "src/guestbook/guestbook.svelte";
+
+    function create_fragment$4(ctx) {
+    	let writing;
+    	let t0;
+    	let comment;
+    	let t1;
+    	let div4;
+    	let div0;
+    	let t3;
+    	let div3;
+    	let div1;
+    	let fa;
+    	let t4;
+    	let br0;
+    	let t5;
+    	let br1;
+    	let t6;
+    	let t7;
+    	let div2;
+    	let button0;
+    	let t9;
+    	let button1;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	writing = new Writing({
+    			props: {
+    				display: /*writing_display*/ ctx[0],
+    				change_display: /*change_writing_display*/ ctx[2],
+    				backend_url,
+    				swap_to_comment_display: /*swap_to_comment_display*/ ctx[4]
+    			},
+    			$$inline: true
+    		});
+
+    	comment = new Comment({
+    			props: {
+    				display: /*comment_display*/ ctx[1],
+    				change_display: /*change_comment_display*/ ctx[3],
+    				backend_url
+    			},
+    			$$inline: true
+    		});
+
+    	fa = new Fa({
+    			props: {
+    				icon: faPencil,
+    				color: "#f79e9e",
+    				style: "margin-bottom: 10px;"
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(writing.$$.fragment);
+    			t0 = space();
+    			create_component(comment.$$.fragment);
+    			t1 = space();
+    			div4 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "방명록";
+    			t3 = space();
+    			div3 = element("div");
+    			div1 = element("div");
+    			create_component(fa.$$.fragment);
+    			t4 = space();
+    			br0 = element("br");
+    			t5 = text("\n            신랑, 신부에게\n            ");
+    			br1 = element("br");
+    			t6 = text("\n            축하하는 글을 남겨보세요.");
+    			t7 = space();
+    			div2 = element("div");
+    			button0 = element("button");
+    			button0.textContent = "축하글 작성하기";
+    			t9 = space();
+    			button1 = element("button");
+    			button1.textContent = "방명록 전체보기";
+    			attr_dev(div0, "class", "title svelte-1hyvqfg");
+    			add_location(div0, file$4, 39, 4, 1407);
+    			add_location(br0, file$4, 43, 12, 1605);
+    			add_location(br1, file$4, 45, 12, 1643);
+    			set_style(div1, "padding-bottom", "25px");
+    			add_location(div1, file$4, 41, 8, 1477);
+    			attr_dev(button0, "class", "writing-guestbook svelte-1hyvqfg");
+    			add_location(button0, file$4, 49, 12, 1716);
+    			attr_dev(button1, "class", "comment-guestbook svelte-1hyvqfg");
+    			add_location(button1, file$4, 52, 12, 1867);
+    			add_location(div2, file$4, 48, 8, 1698);
+    			attr_dev(div3, "class", "guestbook-main svelte-1hyvqfg");
+    			add_location(div3, file$4, 40, 4, 1440);
+    			attr_dev(div4, "class", "guestbook-outline svelte-1hyvqfg");
+    			add_location(div4, file$4, 38, 0, 1371);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(writing, target, anchor);
+    			insert_dev(target, t0, anchor);
+    			mount_component(comment, target, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div0);
+    			append_dev(div4, t3);
+    			append_dev(div4, div3);
+    			append_dev(div3, div1);
+    			mount_component(fa, div1, null);
+    			append_dev(div1, t4);
+    			append_dev(div1, br0);
+    			append_dev(div1, t5);
+    			append_dev(div1, br1);
+    			append_dev(div1, t6);
+    			append_dev(div3, t7);
+    			append_dev(div3, div2);
+    			append_dev(div2, button0);
+    			append_dev(div2, t9);
+    			append_dev(div2, button1);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(button0, "click", /*click_handler*/ ctx[5], false, false, false),
+    					listen_dev(button1, "click", /*click_handler_1*/ ctx[6], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const writing_changes = {};
+    			if (dirty & /*writing_display*/ 1) writing_changes.display = /*writing_display*/ ctx[0];
+    			writing.$set(writing_changes);
+    			const comment_changes = {};
+    			if (dirty & /*comment_display*/ 2) comment_changes.display = /*comment_display*/ ctx[1];
+    			comment.$set(comment_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(writing.$$.fragment, local);
+    			transition_in(comment.$$.fragment, local);
+    			transition_in(fa.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(writing.$$.fragment, local);
+    			transition_out(comment.$$.fragment, local);
+    			transition_out(fa.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(writing, detaching);
+    			if (detaching) detach_dev(t0);
+    			destroy_component(comment, detaching);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div4);
+    			destroy_component(fa);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$4.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const backend_url = "https://api.leechohyuntaeryong.com/comments";
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Guestbook', slots, []);
+    	let writing_display = "none";
+    	let comment_display = "none";
+    	let body_overflow_y = "visible";
+
+    	function change_writing_display() {
+    		if (writing_display == "none") {
+    			$$invalidate(0, writing_display = "block");
+    			document.body.style["overflow-y"] = "hidden";
+    		} else {
+    			$$invalidate(0, writing_display = "none");
+    			document.body.style["overflow-y"] = "visible";
+    		}
+    	}
+
+    	function change_comment_display() {
+    		if (comment_display == "none") {
+    			$$invalidate(1, comment_display = "block");
+    			document.body.style["overflow-y"] = "hidden";
+    		} else {
+    			$$invalidate(1, comment_display = "none");
+    			document.body.style["overflow-y"] = "visible";
+    		}
+    	}
+
+    	function swap_to_comment_display() {
+    		$$invalidate(0, writing_display = "none");
+    		$$invalidate(1, comment_display = "block");
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Guestbook> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = () => change_writing_display();
+    	const click_handler_1 = () => change_comment_display();
+
+    	$$self.$capture_state = () => ({
+    		Fa,
+    		faPencil,
+    		Writing,
+    		Comment,
+    		backend_url,
+    		writing_display,
+    		comment_display,
+    		body_overflow_y,
+    		change_writing_display,
+    		change_comment_display,
+    		swap_to_comment_display
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('writing_display' in $$props) $$invalidate(0, writing_display = $$props.writing_display);
+    		if ('comment_display' in $$props) $$invalidate(1, comment_display = $$props.comment_display);
+    		if ('body_overflow_y' in $$props) body_overflow_y = $$props.body_overflow_y;
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		writing_display,
+    		comment_display,
+    		change_writing_display,
+    		change_comment_display,
+    		swap_to_comment_display,
+    		click_handler,
+    		click_handler_1
+    	];
+    }
+
+    class Guestbook extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Guestbook",
+    			options,
+    			id: create_fragment$4.name
+    		});
+    	}
+    }
+
+    /* src/contact.svelte generated by Svelte v3.55.1 */
+    const file$3 = "src/contact.svelte";
+
+    function create_fragment$3(ctx) {
+    	let div3;
+    	let div0;
+    	let t1;
+    	let div2;
+    	let ul0;
+    	let li0;
+    	let span0;
+    	let t3;
+    	let span1;
+    	let a0;
+    	let fa0;
+    	let t4;
+    	let a1;
+    	let fa1;
+    	let t5;
+    	let li1;
+    	let span2;
+    	let t7;
+    	let span3;
+    	let a2;
+    	let fa2;
+    	let t8;
+    	let a3;
+    	let fa3;
+    	let t9;
+    	let div1;
+    	let t11;
+    	let ul1;
+    	let li2;
+    	let span4;
+    	let t13;
+    	let span5;
+    	let t15;
+    	let span6;
+    	let a4;
+    	let fa4;
+    	let t16;
+    	let a5;
+    	let fa5;
+    	let t17;
+    	let span7;
+    	let t19;
+    	let span8;
+    	let a6;
+    	let fa6;
+    	let t20;
+    	let a7;
+    	let fa7;
+    	let t21;
+    	let li3;
+    	let span9;
+    	let t23;
+    	let span10;
+    	let t25;
+    	let span11;
+    	let a8;
+    	let fa8;
+    	let t26;
+    	let a9;
+    	let fa9;
+    	let t27;
+    	let span12;
+    	let t29;
+    	let span13;
+    	let a10;
+    	let fa10;
+    	let t30;
+    	let a11;
+    	let fa11;
+    	let current;
+
+    	fa0 = new Fa({
+    			props: {
+    				icon: faPhoneAlt,
+    				color: "#78c0e9",
+    				flip: "horizontal"
+    			},
+    			$$inline: true
+    		});
+
+    	fa1 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faEnvelope,
+    				color: "#444"
+    			},
+    			$$inline: true
+    		});
+
+    	fa2 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faPhoneAlt,
+    				color: "#f79e9e",
+    				flip: "horizontal"
+    			},
+    			$$inline: true
+    		});
+
+    	fa3 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faEnvelope,
+    				color: "#444"
+    			},
+    			$$inline: true
+    		});
+
+    	fa4 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faPhoneAlt,
+    				color: "#78c0e9",
+    				flip: "horizontal"
+    			},
+    			$$inline: true
+    		});
+
+    	fa5 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faEnvelope,
+    				color: "#444"
+    			},
+    			$$inline: true
+    		});
+
+    	fa6 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faPhoneAlt,
+    				color: "#78c0e9",
+    				flip: "horizontal"
+    			},
+    			$$inline: true
+    		});
+
+    	fa7 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faEnvelope,
+    				color: "#444"
+    			},
+    			$$inline: true
+    		});
+
+    	fa8 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faPhoneAlt,
+    				color: "#f79e9e",
+    				flip: "horizontal"
+    			},
+    			$$inline: true
+    		});
+
+    	fa9 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faEnvelope,
+    				color: "#444"
+    			},
+    			$$inline: true
+    		});
+
+    	fa10 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faPhoneAlt,
+    				color: "#f79e9e",
+    				flip: "horizontal"
+    			},
+    			$$inline: true
+    		});
+
+    	fa11 = new Fa({
+    			props: {
+    				class: "fa-icon",
+    				icon: faEnvelope,
+    				color: "#444"
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div3 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "마음 전하실 곳";
+    			t1 = space();
+    			div2 = element("div");
+    			ul0 = element("ul");
+    			li0 = element("li");
+    			span0 = element("span");
+    			span0.textContent = "신랑에게 연락하기";
+    			t3 = space();
+    			span1 = element("span");
+    			a0 = element("a");
+    			create_component(fa0.$$.fragment);
+    			t4 = space();
+    			a1 = element("a");
+    			create_component(fa1.$$.fragment);
+    			t5 = space();
+    			li1 = element("li");
+    			span2 = element("span");
+    			span2.textContent = "신부에게 연락하기";
+    			t7 = space();
+    			span3 = element("span");
+    			a2 = element("a");
+    			create_component(fa2.$$.fragment);
+    			t8 = space();
+    			a3 = element("a");
+    			create_component(fa3.$$.fragment);
+    			t9 = space();
+    			div1 = element("div");
+    			div1.textContent = "혼주에게 연락하기";
+    			t11 = space();
+    			ul1 = element("ul");
+    			li2 = element("li");
+    			span4 = element("span");
+    			span4.textContent = "신랑측 혼주";
+    			t13 = space();
+    			span5 = element("span");
+    			span5.textContent = "아버지 현상진";
+    			t15 = space();
+    			span6 = element("span");
+    			a4 = element("a");
+    			create_component(fa4.$$.fragment);
+    			t16 = space();
+    			a5 = element("a");
+    			create_component(fa5.$$.fragment);
+    			t17 = space();
+    			span7 = element("span");
+    			span7.textContent = "어머니 김수현";
+    			t19 = space();
+    			span8 = element("span");
+    			a6 = element("a");
+    			create_component(fa6.$$.fragment);
+    			t20 = space();
+    			a7 = element("a");
+    			create_component(fa7.$$.fragment);
+    			t21 = space();
+    			li3 = element("li");
+    			span9 = element("span");
+    			span9.textContent = "신부측 혼주";
+    			t23 = space();
+    			span10 = element("span");
+    			span10.textContent = "아버지 이택승";
+    			t25 = space();
+    			span11 = element("span");
+    			a8 = element("a");
+    			create_component(fa8.$$.fragment);
+    			t26 = space();
+    			a9 = element("a");
+    			create_component(fa9.$$.fragment);
+    			t27 = space();
+    			span12 = element("span");
+    			span12.textContent = "어머니 이순란";
+    			t29 = space();
+    			span13 = element("span");
+    			a10 = element("a");
+    			create_component(fa10.$$.fragment);
+    			t30 = space();
+    			a11 = element("a");
+    			create_component(fa11.$$.fragment);
+    			attr_dev(div0, "class", "title svelte-15s9n7q");
+    			add_location(div0, file$3, 6, 4, 164);
+    			attr_dev(span0, "class", "contact-block f17 svelte-15s9n7q");
+    			add_location(span0, file$3, 12, 16, 329);
+    			attr_dev(a0, "href", "tel:010-4193-2615");
+    			attr_dev(a0, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a0, file$3, 14, 20, 421);
+    			attr_dev(a1, "href", "sms:010-4193-2615");
+    			attr_dev(a1, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a1, file$3, 17, 20, 592);
+    			add_location(span1, file$3, 13, 16, 394);
+    			attr_dev(li0, "class", "contact-list svelte-15s9n7q");
+    			add_location(li0, file$3, 11, 12, 287);
+    			attr_dev(span2, "class", "contact-block f17 svelte-15s9n7q");
+    			add_location(span2, file$3, 23, 16, 833);
+    			attr_dev(a2, "href", "tel:010-5067-3805");
+    			attr_dev(a2, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a2, file$3, 25, 20, 925);
+    			attr_dev(a3, "href", "sms:010-5067-3805");
+    			attr_dev(a3, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a3, file$3, 28, 20, 1112);
+    			add_location(span3, file$3, 24, 16, 898);
+    			attr_dev(li1, "class", "contact-list svelte-15s9n7q");
+    			add_location(li1, file$3, 22, 12, 791);
+    			attr_dev(ul0, "class", "contact-us svelte-15s9n7q");
+    			add_location(ul0, file$3, 10, 8, 251);
+    			attr_dev(div1, "class", "contact-honju f16 svelte-15s9n7q");
+    			add_location(div1, file$3, 34, 8, 1322);
+    			attr_dev(span4, "class", "honju svelte-15s9n7q");
+    			set_style(span4, "color", "#78c0e9");
+    			add_location(span4, file$3, 39, 16, 1477);
+    			attr_dev(span5, "class", "contact-block svelte-15s9n7q");
+    			add_location(span5, file$3, 40, 16, 1550);
+    			attr_dev(a4, "href", "tel:010-4675-2615");
+    			attr_dev(a4, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a4, file$3, 42, 20, 1636);
+    			attr_dev(a5, "href", "sms:010-4675-2615");
+    			attr_dev(a5, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a5, file$3, 45, 20, 1823);
+    			add_location(span6, file$3, 41, 16, 1609);
+    			attr_dev(span7, "class", "contact-block svelte-15s9n7q");
+    			add_location(span7, file$3, 49, 16, 2009);
+    			attr_dev(a6, "href", "tel:010-7538-2605");
+    			attr_dev(a6, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a6, file$3, 51, 20, 2095);
+    			attr_dev(a7, "href", "sms:010-7538-2605");
+    			attr_dev(a7, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a7, file$3, 54, 20, 2282);
+    			add_location(span8, file$3, 50, 16, 2068);
+    			attr_dev(li2, "class", "contact-list svelte-15s9n7q");
+    			add_location(li2, file$3, 38, 12, 1435);
+    			attr_dev(span9, "class", "honju svelte-15s9n7q");
+    			set_style(span9, "color", "#f79e9e");
+    			add_location(span9, file$3, 60, 16, 2524);
+    			attr_dev(span10, "class", "contact-block svelte-15s9n7q");
+    			add_location(span10, file$3, 61, 16, 2597);
+    			attr_dev(a8, "href", "tel:010-4020-3804");
+    			attr_dev(a8, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a8, file$3, 63, 20, 2683);
+    			attr_dev(a9, "href", "sms:010-4020-3804");
+    			attr_dev(a9, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a9, file$3, 66, 20, 2870);
+    			add_location(span11, file$3, 62, 16, 2656);
+    			attr_dev(span12, "class", "contact-block svelte-15s9n7q");
+    			add_location(span12, file$3, 70, 16, 3056);
+    			attr_dev(a10, "href", "tel:010-4468-3805");
+    			attr_dev(a10, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a10, file$3, 72, 20, 3142);
+    			attr_dev(a11, "href", "sms:010-4468-3805");
+    			attr_dev(a11, "class", "fa-icon svelte-15s9n7q");
+    			add_location(a11, file$3, 75, 20, 3329);
+    			add_location(span13, file$3, 71, 16, 3115);
+    			attr_dev(li3, "class", "contact-list svelte-15s9n7q");
+    			add_location(li3, file$3, 59, 12, 2482);
+    			attr_dev(ul1, "class", "contact-us svelte-15s9n7q");
+    			add_location(ul1, file$3, 37, 8, 1399);
+    			attr_dev(div2, "class", "contact-main");
+    			add_location(div2, file$3, 9, 4, 216);
+    			attr_dev(div3, "class", "contact-outline svelte-15s9n7q");
+    			add_location(div3, file$3, 5, 0, 130);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div0);
+    			append_dev(div3, t1);
+    			append_dev(div3, div2);
+    			append_dev(div2, ul0);
+    			append_dev(ul0, li0);
+    			append_dev(li0, span0);
+    			append_dev(li0, t3);
+    			append_dev(li0, span1);
+    			append_dev(span1, a0);
+    			mount_component(fa0, a0, null);
+    			append_dev(span1, t4);
+    			append_dev(span1, a1);
+    			mount_component(fa1, a1, null);
+    			append_dev(ul0, t5);
+    			append_dev(ul0, li1);
+    			append_dev(li1, span2);
+    			append_dev(li1, t7);
+    			append_dev(li1, span3);
+    			append_dev(span3, a2);
+    			mount_component(fa2, a2, null);
+    			append_dev(span3, t8);
+    			append_dev(span3, a3);
+    			mount_component(fa3, a3, null);
+    			append_dev(div2, t9);
+    			append_dev(div2, div1);
+    			append_dev(div2, t11);
+    			append_dev(div2, ul1);
+    			append_dev(ul1, li2);
+    			append_dev(li2, span4);
+    			append_dev(li2, t13);
+    			append_dev(li2, span5);
+    			append_dev(li2, t15);
+    			append_dev(li2, span6);
+    			append_dev(span6, a4);
+    			mount_component(fa4, a4, null);
+    			append_dev(span6, t16);
+    			append_dev(span6, a5);
+    			mount_component(fa5, a5, null);
+    			append_dev(li2, t17);
+    			append_dev(li2, span7);
+    			append_dev(li2, t19);
+    			append_dev(li2, span8);
+    			append_dev(span8, a6);
+    			mount_component(fa6, a6, null);
+    			append_dev(span8, t20);
+    			append_dev(span8, a7);
+    			mount_component(fa7, a7, null);
+    			append_dev(ul1, t21);
+    			append_dev(ul1, li3);
+    			append_dev(li3, span9);
+    			append_dev(li3, t23);
+    			append_dev(li3, span10);
+    			append_dev(li3, t25);
+    			append_dev(li3, span11);
+    			append_dev(span11, a8);
+    			mount_component(fa8, a8, null);
+    			append_dev(span11, t26);
+    			append_dev(span11, a9);
+    			mount_component(fa9, a9, null);
+    			append_dev(li3, t27);
+    			append_dev(li3, span12);
+    			append_dev(li3, t29);
+    			append_dev(li3, span13);
+    			append_dev(span13, a10);
+    			mount_component(fa10, a10, null);
+    			append_dev(span13, t30);
+    			append_dev(span13, a11);
+    			mount_component(fa11, a11, null);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fa0.$$.fragment, local);
+    			transition_in(fa1.$$.fragment, local);
+    			transition_in(fa2.$$.fragment, local);
+    			transition_in(fa3.$$.fragment, local);
+    			transition_in(fa4.$$.fragment, local);
+    			transition_in(fa5.$$.fragment, local);
+    			transition_in(fa6.$$.fragment, local);
+    			transition_in(fa7.$$.fragment, local);
+    			transition_in(fa8.$$.fragment, local);
+    			transition_in(fa9.$$.fragment, local);
+    			transition_in(fa10.$$.fragment, local);
+    			transition_in(fa11.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fa0.$$.fragment, local);
+    			transition_out(fa1.$$.fragment, local);
+    			transition_out(fa2.$$.fragment, local);
+    			transition_out(fa3.$$.fragment, local);
+    			transition_out(fa4.$$.fragment, local);
+    			transition_out(fa5.$$.fragment, local);
+    			transition_out(fa6.$$.fragment, local);
+    			transition_out(fa7.$$.fragment, local);
+    			transition_out(fa8.$$.fragment, local);
+    			transition_out(fa9.$$.fragment, local);
+    			transition_out(fa10.$$.fragment, local);
+    			transition_out(fa11.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div3);
+    			destroy_component(fa0);
+    			destroy_component(fa1);
+    			destroy_component(fa2);
+    			destroy_component(fa3);
+    			destroy_component(fa4);
+    			destroy_component(fa5);
+    			destroy_component(fa6);
+    			destroy_component(fa7);
+    			destroy_component(fa8);
+    			destroy_component(fa9);
+    			destroy_component(fa10);
+    			destroy_component(fa11);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$3.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Contact', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Contact> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ Fa, faPhoneAlt, faEnvelope });
+    	return [];
+    }
+
+    class Contact extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Contact",
+    			options,
+    			id: create_fragment$3.name
+    		});
+    	}
+    }
+
+    /* src/bottomImg.svelte generated by Svelte v3.55.1 */
+
+    const file$2 = "src/bottomImg.svelte";
+
+    function create_fragment$2(ctx) {
+    	let div3;
+    	let div2;
+    	let div1;
+    	let div0;
+    	let t0;
+    	let br0;
+    	let t1;
+    	let br1;
+    	let t2;
+
+    	const block = {
+    		c: function create() {
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			t0 = text("예쁜 예감이 들었다.\n                ");
+    			br0 = element("br");
+    			t1 = text("\n                우리는 언제나 손을 잡고 있게 될 것이다.\n                ");
+    			br1 = element("br");
+    			t2 = text("\n                이이체, 인연");
+    			add_location(br0, file$2, 9, 16, 196);
+    			add_location(br1, file$2, 11, 16, 257);
+    			attr_dev(div0, "class", "bottom-content svelte-1ccxwmz");
+    			add_location(div0, file$2, 7, 12, 123);
+    			attr_dev(div1, "class", "cover svelte-1ccxwmz");
+    			add_location(div1, file$2, 6, 8, 91);
+    			attr_dev(div2, "class", "bottom-img svelte-1ccxwmz");
+    			add_location(div2, file$2, 5, 4, 58);
+    			attr_dev(div3, "class", "bottom-img-outline");
+    			add_location(div3, file$2, 4, 0, 21);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div2);
+    			append_dev(div2, div1);
+    			append_dev(div1, div0);
+    			append_dev(div0, t0);
+    			append_dev(div0, br0);
+    			append_dev(div0, t1);
+    			append_dev(div0, br1);
+    			append_dev(div0, t2);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div3);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$2.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$2($$self, $$props) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('BottomImg', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<BottomImg> was created with unknown prop '${key}'`);
+    	});
+
+    	return [];
+    }
+
+    class BottomImg extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "BottomImg",
+    			options,
+    			id: create_fragment$2.name
+    		});
+    	}
+    }
+
+    /* src/share.svelte generated by Svelte v3.55.1 */
+
+    const file$1 = "src/share.svelte";
+
+    function create_fragment$1(ctx) {
+    	let div1;
+    	let button;
+    	let div0;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			button = element("button");
+    			div0 = element("div");
+    			div0.textContent = "카카오톡으로 초대장 보내기";
+    			attr_dev(div0, "class", "share-content svelte-1srld98");
+    			add_location(div0, file$1, 31, 8, 976);
+    			attr_dev(button, "class", "share-kakao svelte-1srld98");
+    			add_location(button, file$1, 30, 4, 915);
+    			attr_dev(div1, "class", "share-outline");
+    			add_location(div1, file$1, 29, 0, 883);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, button);
+    			append_dev(button, div0);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", shareMessage, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div1);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$1.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function shareMessage() {
+    	Kakao.Share.sendDefault({
+    		objectType: 'feed',
+    		content: {
+    			title: '4월 22일 현태룡 ♥ 이초현 결혼합니다.',
+    			imageUrl: 'https://lh3.googleusercontent.com/rY9Wii-4nEcPrpI1QITGOP7DqBeYg4fy8_53o7zCVWQERI9lcYog2jfYMGaB2txRB1nNkMng430EjxF789JQUwDSGxafXjZxjnC2O-WoOg9fofWIv5LOvmlqfWg8FNMPerEuMhzTM_U=w2400',
+    			link: {
+    				// [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+    				mobileWebUrl: 'https://bb-worm.github.io/wedding',
+    				webUrl: 'https://bb-worm.github.io/wedding'
+    			}
+    		},
+    		buttons: [
+    			{
+    				title: '모바일청첩장',
+    				link: {
+    					mobileWebUrl: 'https://bb-worm.github.io/wedding',
+    					webUrl: 'https://bb-worm.github.io/wedding'
+    				}
+    			}
+    		]
+    	});
+    }
+
+    function instance$1($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Share', slots, []);
+    	Kakao.init("528e6b27db4ad1b8217f3c6a70126fed");
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Share> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ shareMessage });
+    	return [];
+    }
+
+    class Share extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Share",
+    			options,
+    			id: create_fragment$1.name
+    		});
+    	}
+    }
+
+    /* src/App.svelte generated by Svelte v3.55.1 */
+
+    const { console: console_1 } = globals;
+    const file = "src/App.svelte";
+
+    // (59:0) {#if show_guestbook}
+    function create_if_block(ctx) {
+    	let guestbook;
+    	let current;
+    	guestbook = new Guestbook({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(guestbook.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(guestbook, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(guestbook.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(guestbook.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(guestbook, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(59:0) {#if show_guestbook}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	let audio;
+    	let t0;
+    	let div;
+    	let header;
+    	let t1;
+    	let mainimg;
+    	let t2;
+    	let greeting;
+    	let t3;
+    	let calander;
+    	let t4;
+    	let snap;
+    	let t5;
+    	let video;
+    	let t6;
+    	let notibox;
+    	let t7;
+    	let t8;
+    	let contact;
+    	let t9;
+    	let bottomimg;
+    	let t10;
+    	let share;
+    	let current;
+    	audio = new Audio({ $$inline: true });
+    	header = new Header({ $$inline: true });
+    	mainimg = new MainImg({ $$inline: true });
+    	greeting = new Greeting({ $$inline: true });
+    	calander = new Calander({ $$inline: true });
+    	snap = new Snap({ $$inline: true });
+    	video = new Video({ $$inline: true });
+    	notibox = new NotiBox({ $$inline: true });
+    	let if_block = /*show_guestbook*/ ctx[0] && create_if_block(ctx);
+    	contact = new Contact({ $$inline: true });
+    	bottomimg = new BottomImg({ $$inline: true });
+    	share = new Share({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(audio.$$.fragment);
+    			t0 = space();
+    			div = element("div");
+    			create_component(header.$$.fragment);
+    			t1 = space();
+    			create_component(mainimg.$$.fragment);
+    			t2 = space();
+    			create_component(greeting.$$.fragment);
+    			t3 = space();
+    			create_component(calander.$$.fragment);
+    			t4 = space();
+    			create_component(snap.$$.fragment);
+    			t5 = space();
+    			create_component(video.$$.fragment);
+    			t6 = space();
+    			create_component(notibox.$$.fragment);
+    			t7 = space();
+    			if (if_block) if_block.c();
+    			t8 = space();
+    			create_component(contact.$$.fragment);
+    			t9 = space();
+    			create_component(bottomimg.$$.fragment);
+    			t10 = space();
+    			create_component(share.$$.fragment);
+    			attr_dev(div, "class", "page-cover svelte-1nibao8");
+    			add_location(div, file, 50, 0, 3234);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(audio, target, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div, anchor);
+    			mount_component(header, div, null);
+    			append_dev(div, t1);
+    			mount_component(mainimg, div, null);
+    			append_dev(div, t2);
+    			mount_component(greeting, div, null);
+    			append_dev(div, t3);
+    			mount_component(calander, div, null);
+    			append_dev(div, t4);
+    			mount_component(snap, div, null);
+    			append_dev(div, t5);
+    			mount_component(video, div, null);
+    			append_dev(div, t6);
+    			mount_component(notibox, div, null);
+    			append_dev(div, t7);
+    			if (if_block) if_block.m(div, null);
+    			append_dev(div, t8);
+    			mount_component(contact, div, null);
+    			append_dev(div, t9);
+    			mount_component(bottomimg, div, null);
+    			append_dev(div, t10);
+    			mount_component(share, div, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (/*show_guestbook*/ ctx[0]) {
+    				if (if_block) {
+    					if (dirty & /*show_guestbook*/ 1) {
+    						transition_in(if_block, 1);
+    					}
+    				} else {
+    					if_block = create_if_block(ctx);
+    					if_block.c();
+    					transition_in(if_block, 1);
+    					if_block.m(div, t8);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+
+    				transition_out(if_block, 1, 1, () => {
+    					if_block = null;
+    				});
+
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(audio.$$.fragment, local);
+    			transition_in(header.$$.fragment, local);
+    			transition_in(mainimg.$$.fragment, local);
+    			transition_in(greeting.$$.fragment, local);
+    			transition_in(calander.$$.fragment, local);
+    			transition_in(snap.$$.fragment, local);
+    			transition_in(video.$$.fragment, local);
+    			transition_in(notibox.$$.fragment, local);
+    			transition_in(if_block);
+    			transition_in(contact.$$.fragment, local);
+    			transition_in(bottomimg.$$.fragment, local);
+    			transition_in(share.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(audio.$$.fragment, local);
+    			transition_out(header.$$.fragment, local);
+    			transition_out(mainimg.$$.fragment, local);
+    			transition_out(greeting.$$.fragment, local);
+    			transition_out(calander.$$.fragment, local);
+    			transition_out(snap.$$.fragment, local);
+    			transition_out(video.$$.fragment, local);
+    			transition_out(notibox.$$.fragment, local);
+    			transition_out(if_block);
+    			transition_out(contact.$$.fragment, local);
+    			transition_out(bottomimg.$$.fragment, local);
+    			transition_out(share.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(audio, detaching);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div);
+    			destroy_component(header);
+    			destroy_component(mainimg);
+    			destroy_component(greeting);
+    			destroy_component(calander);
+    			destroy_component(snap);
+    			destroy_component(video);
+    			destroy_component(notibox);
+    			if (if_block) if_block.d();
+    			destroy_component(contact);
+    			destroy_component(bottomimg);
+    			destroy_component(share);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function health_check() {
+    	return await fetch("https://api.leechohyuntaeryong.com").then(res => {
+    		return res.status;
+    	}).catch(error => {
+    		console.log("Unexpected error (" + error + ")");
+    		return "500";
+    	});
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('App', slots, []);
+
+    	window.mobileCheck = function () {
+    		let check = false;
+
+    		(function (a) {
+    			if ((/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i).test(a) || (/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i).test(a.substr(0, 4))) check = true;
+    		})(navigator.userAgent || navigator.vendor || window.opera);
+
+    		return check;
+    	};
+
+    	let show_guestbook = false;
+    	const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
+
+    	onMount(async () => {
+    		for (let i = 0; i < 3; i++) {
+    			let health_status = await health_check();
+
+    			if (health_status == "200") {
+    				$$invalidate(0, show_guestbook = true);
+    				return;
+    			}
+
+    			sleep(3000);
+    		}
+    	});
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({
+    		Audio,
+    		Header,
+    		MainImg,
+    		Greeting,
+    		Calander,
+    		Snap,
+    		Video,
+    		NotiBox,
+    		Guestbook,
+    		Contact,
+    		BottomImg,
+    		Share,
+    		onMount,
+    		show_guestbook,
+    		health_check,
+    		sleep
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('show_guestbook' in $$props) $$invalidate(0, show_guestbook = $$props.show_guestbook);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [show_guestbook];
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "App",
+    			options,
+    			id: create_fragment.name
+    		});
+    	}
+    }
+
+    var app = new App({
+    	target: document.body
+    });
+
+    return app;
+
+})();
 //# sourceMappingURL=bundle.js.map
