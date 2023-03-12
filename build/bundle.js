@@ -12199,10 +12199,11 @@ var app = (function () {
     			attr_dev(img, "class", "image svelte-oxhna2");
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[12])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$9, 64, 20, 3467);
+    			attr_dev(img, "loading", "lazy");
+    			add_location(img, file$9, 64, 20, 3480);
     			attr_dev(div, "class", "snap-image svelte-oxhna2");
     			set_style(div, "margin-right", "5px");
-    			add_location(div, file$9, 63, 16, 3396);
+    			add_location(div, file$9, 63, 16, 3409);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12261,6 +12262,7 @@ var app = (function () {
     			attr_dev(img, "class", "image svelte-oxhna2");
     			if (!src_url_equal(img.src, img_src_value = /*img*/ ctx[12])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
+    			attr_dev(img, "loading", "lazy");
     			add_location(img, file$9, 60, 20, 3216);
     			attr_dev(div, "class", "snap-image svelte-oxhna2");
     			add_location(div, file$9, 59, 16, 3171);
