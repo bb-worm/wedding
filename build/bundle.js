@@ -1820,7 +1820,7 @@ var app = (function () {
     			t1 = text("2023. 04. 22. (토) 저녁 6시\n        ");
     			br = element("br");
     			t2 = text("\n        더갤러리, 제주 제주시 조천읍 남조로 1717-24");
-    			if (!src_url_equal(img.src, img_src_value = "https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "https://lh3.googleusercontent.com/gEullQsmFlvKCC3vQA1yoT_4suAB31RkVd56VgSk4wX6Yg8qQKQ0Vso-mtSKaEASuaWVGmGksdmsR8-VvcAFko2yhR8FvOBYPQSh-zWgqSNcIlPQXWaQwhTcuGQDnja0HuvzT8quhFE=w2400")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "main");
     			attr_dev(img, "width", "425px");
     			add_location(img, file$c, 6, 8, 90);
@@ -12357,7 +12357,7 @@ var app = (function () {
     		"https://lh3.googleusercontent.com/Lw4qYuVUtWTMPCySq8fDbjOoPTGa_IbkXd65eZ0mv5_VbQnnmOvR1AeMcJZUA6--4tbtWVWp5A7mdf7AgJaDuL18dTIKzN96fJXPFbKYDMcpTIcY3_aem2s8Dr31izV79hWrnPN0zcI=w2400",
     		"https://lh3.googleusercontent.com/_gAynoYUKdOySeYpjD36I9T3EombhahfWN9JRwtOmlifA7z2TBrU01kIeT369IgWBFrHFEoeCklof94lboaVcpGvJwjTco0E0uiCxhabIQCEXZf11qNMRoNZ2IwFQ6DDeWEB2fexMkQ=w2400",
     		"https://lh3.googleusercontent.com/gpt5tcs2abRFaej_FZrI_DFSp3Km1eteVlUFqmVbd1pmj2jx0oUGQM8RqqCGa3e8pyI8FBnolbD-sbQUqtI1_YzBfHSjrX5tZRbPvwdKQqwwHGzDuD6sTmG4JIFLwThn7nhu8d72BwY=w2400",
-    		"https://lh3.googleusercontent.com/tKxrImBpb_LGvanoSBzEPp6UA6guQ_7G-B64qq5Le3z34KhsFidGF4CSRuOW3hTsWShe5hPeEQBns5T-Elr95a4bP3e0qjPYY9NIpZQ4ia34g2jKCsnSXKA-a17qkhkPasv7P_UMK18=w2400",
+    		"https://lh3.googleusercontent.com/gEullQsmFlvKCC3vQA1yoT_4suAB31RkVd56VgSk4wX6Yg8qQKQ0Vso-mtSKaEASuaWVGmGksdmsR8-VvcAFko2yhR8FvOBYPQSh-zWgqSNcIlPQXWaQwhTcuGQDnja0HuvzT8quhFE=w2400",
     		"https://lh3.googleusercontent.com/y4Wc1wCGQLcJdfJjjixKDaSI2x2PWCprF3vIPG9_H9OKKkDikG0k-2DKdw9uiAguP_WjbMceSTga9oBul3G3EIPH2xqVcReJXew5rVWKlTthqbfqZwzbjSXtiomoC5hxFM2z8kcUbwQ=w2400",
     		"https://lh3.googleusercontent.com/Yp98HDtQekQlpVPo0GkeGw1Jr2MMH3iRm0zelWbVmr-tIKgDLvGQizg4FwoQBI3ojUsqOyTE0hVBtd4rgG0P766NHObpMHdC7kU51JbfQXp5k4NYHMf8XE1CrVLKrLqEk9rLbTfqaf8=w2400",
     		"https://lh3.googleusercontent.com/u7YyqVGaDLFCnqw_jkESCbIXUTN9GQGQtONiwRJ3m3j5Z9bL9nLPBjIXTvhaCeTZHHYZuK_hX1mZjAmZliDREJA36wIJHJyYa0MLjLDdTyTf7SZolAP7ZSv7cvIA5JNTkCQd3iDDc5E=w2400",
