@@ -1791,9 +1791,12 @@ var app = (function () {
     	let img_src_value;
     	let t0;
     	let div1;
-    	let t1;
-    	let br;
+    	let b0;
     	let t2;
+    	let br;
+    	let t3;
+    	let b1;
+    	let t5;
 
     	const block = {
     		c: function create() {
@@ -1802,17 +1805,24 @@ var app = (function () {
     			img = element("img");
     			t0 = space();
     			div1 = element("div");
-    			t1 = text("2023. 04. 22. (토) 저녁 6시\n        ");
+    			b0 = element("b");
+    			b0.textContent = "일 시";
+    			t2 = text("   2023년 04월 22일 (토) 18시  \n        ");
     			br = element("br");
-    			t2 = text("\n        더갤러리, 제주 제주시 조천읍 남조로 1717-24");
+    			t3 = space();
+    			b1 = element("b");
+    			b1.textContent = "장 소";
+    			t5 = text("   제주 제주시 조천읍 더 갤러리");
     			if (!src_url_equal(img.src, img_src_value = "https://lh3.googleusercontent.com/gEullQsmFlvKCC3vQA1yoT_4suAB31RkVd56VgSk4wX6Yg8qQKQ0Vso-mtSKaEASuaWVGmGksdmsR8-VvcAFko2yhR8FvOBYPQSh-zWgqSNcIlPQXWaQwhTcuGQDnja0HuvzT8quhFE=w2400")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "main");
     			attr_dev(img, "width", "425px");
     			add_location(img, file$c, 6, 8, 90);
-    			attr_dev(div0, "class", "mainImg svelte-lr9w7");
+    			attr_dev(div0, "class", "mainImg svelte-2iuabb");
     			add_location(div0, file$c, 5, 4, 60);
-    			add_location(br, file$c, 10, 8, 383);
-    			attr_dev(div1, "class", "bottom svelte-lr9w7");
+    			add_location(b0, file$c, 9, 8, 351);
+    			add_location(br, file$c, 10, 8, 411);
+    			add_location(b1, file$c, 11, 8, 424);
+    			attr_dev(div1, "class", "bottom svelte-2iuabb");
     			add_location(div1, file$c, 8, 4, 322);
     			attr_dev(div2, "class", "main-img-outline");
     			add_location(div2, file$c, 4, 0, 25);
@@ -1826,9 +1836,12 @@ var app = (function () {
     			append_dev(div0, img);
     			append_dev(div2, t0);
     			append_dev(div2, div1);
-    			append_dev(div1, t1);
-    			append_dev(div1, br);
+    			append_dev(div1, b0);
     			append_dev(div1, t2);
+    			append_dev(div1, br);
+    			append_dev(div1, t3);
+    			append_dev(div1, b1);
+    			append_dev(div1, t5);
     		},
     		p: noop,
     		i: noop,
@@ -12847,7 +12860,7 @@ var app = (function () {
     			button1 = element("button");
     			t15 = text("신랑 & 신부에게 ");
     			b3 = element("b");
-    			b3.textContent = "축하 글 전달하기";
+    			b3.textContent = "축하글 전달하기";
     			attr_dev(button0, "class", "close-bnt svelte-1rntlah");
     			add_location(button0, file$7, 60, 4, 1589);
     			attr_dev(div0, "class", "header svelte-1rntlah");
