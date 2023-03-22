@@ -13868,20 +13868,20 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "방명록 전체보기";
     			attr_dev(div0, "class", "title svelte-1hyvqfg");
-    			add_location(div0, file$5, 39, 4, 1402);
-    			add_location(br, file$5, 44, 12, 1646);
+    			add_location(div0, file$5, 39, 4, 1407);
+    			add_location(br, file$5, 44, 12, 1651);
     			set_style(div1, "line-height", "2");
     			set_style(div1, "padding-bottom", "25px");
-    			add_location(div1, file$5, 41, 8, 1472);
+    			add_location(div1, file$5, 41, 8, 1477);
     			attr_dev(button0, "class", "writing-guestbook svelte-1hyvqfg");
-    			add_location(button0, file$5, 48, 12, 1721);
+    			add_location(button0, file$5, 48, 12, 1726);
     			attr_dev(button1, "class", "comment-guestbook svelte-1hyvqfg");
-    			add_location(button1, file$5, 51, 12, 1872);
-    			add_location(div2, file$5, 47, 8, 1703);
+    			add_location(button1, file$5, 51, 12, 1877);
+    			add_location(div2, file$5, 47, 8, 1708);
     			attr_dev(div3, "class", "guestbook-main svelte-1hyvqfg");
-    			add_location(div3, file$5, 40, 4, 1435);
+    			add_location(div3, file$5, 40, 4, 1440);
     			attr_dev(div4, "class", "guestbook-outline svelte-1hyvqfg");
-    			add_location(div4, file$5, 38, 0, 1366);
+    			add_location(div4, file$5, 38, 0, 1371);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13956,7 +13956,7 @@ var app = (function () {
     	return block;
     }
 
-    const backend_url = "https://api.leechohyuntaeryong.com/xyz";
+    const backend_url = "https://api.leechohyuntaeryong.xyz/comments";
 
     function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
