@@ -11,21 +11,57 @@
 	<link rel='stylesheet' href='./build/bundle.css'>
 	<link rel="stylesheet" href="./animations.css">
 	<link rel="stylesheet" href="./font/font.css">
+	<link rel="stylesheet" href="./sakura/sakura.css">
 
 	<script defer src='./build/bundle.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
 	<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
   integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
 </head>
-<body style="padding:0px; margin:0px; background-color:#efefef;">
+<body>
+	<div class="sakura">
+<script src="./sakura/sakura.js"></script>
+<script>
+	let sakura = new Sakura("div", {
+		className: "sakura",
+		fallSpeed: 1,
+		delay: 300,
+		maxSize: 15,
+		minSize: 5,
+		colors: [
+			{
+				gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+				gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+				gradientColorDegree: 0,
+			}
+		]
+	});
+</script>
+	</div>
 </body>
 </html>
 
 <style>
+	html {
+		height: auto;
+		width: auto;
+	}
+
 	body {
+		width: 425px;
 		padding: 0px;
-		margin: 0px;
+		margin: auto;
 		background-color: #efefef;
 		font-family: "RIDIBatang" !important;
+	}
+
+	.sakura {
+		position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+		margin: auto;
+		width: 425px;
+		z-index: 10000;
 	}
 </style>
